@@ -1,16 +1,12 @@
 ---
 layout: post
-title: "A new start"
+title: "First post!"
 date: 2013-01-25 22:38
 comments: true
 sharing: true
 categories: 
 ---
 
-----------
-
-
-#First blog post!#
 
 There comes a point in everyoneâs life when one thinks, I should have a blog. I had that thought in my head a couple times, a couple years apart. First time, it was the summer of 2008 and I was ready for a huge direction change in my life, going to college in the United States. And it was supposed to be about the experiences. Well lets just say college handed me enough on my plate to forget that idea soon. Second time, I was a sophomore at college when I wanted to make a tech-news-opinion blog. Few posts after, I realized it was quite unappealing to me. I did enjoy writing, but it was just not my thing to write a blog solely about outside events. Specially since Facebook made expressing your opinions so to all your friends as easy as typing a status message.
 
@@ -23,8 +19,6 @@ Directly related to 1, I hope documenting my learning and getting started with p
 
  3. **Blogging is fun with Octopress** I discovered Github pages and hosting only a month ago, and just makes blogging plain fun for a coder. You get the minimalism with the Octopress scaffolding and publishing, get to blog in the terminal with Vim and is very extensible and Jeckyll, the static site generator underneath, is very extensible. 
 
-There are plenty others I suppose, but enough for the first post. This will be a blog mostly for my code, projects and discoveries I make along the way. Hopefully something shared here will be helpful to the reader, the way countless blogs on the webs help me everyday.
+There are plenty others I suppose, but enough for the first post. This will be a blog mostly for my code, projects and discoveries I make along the way. Hopefully something shared here will be helpful to the reader, the way countless blogs on the interwebs help me everyday.
 
-
-----------
 
