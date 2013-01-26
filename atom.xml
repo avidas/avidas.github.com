@@ -4,7 +4,7 @@
   <title><![CDATA[Avi Das]]></title>
   <link href="http://avidas.github.com/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2013-01-25T22:47:26-05:00</updated>
+  <updated>2013-01-25T22:49:42-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -31,15 +31,6 @@ Directly related to 1, I hope documenting my learning and getting started with p
 
 
 <p>There are plenty others I suppose, but enough for the first post. This will be a blog mostly for my code, projects and discoveries I make along the way. Hopefully something shared here will be helpful to the reader, the way countless blogs on the interwebs help me everyday.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[First Post]]></title>
-    <link href="http://avidas.github.com/blog/2013/01/13/first-post/"/>
-    <updated>2013-01-13T20:12:00-05:00</updated>
-    <id>http://avidas.github.com/blog/2013/01/13/first-post</id>
-    <content type="html"><![CDATA[<p>So finally got around to setting up octopress. Fun afternoon. Now to learn Markdown!</p>
 ]]></content>
   </entry>
   
