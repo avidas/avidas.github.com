@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Avi Das]]></title>
+  <link href="http://avidas.github.com/atom.xml" rel="self"/>
+  <link href="http://avidas.github.com/"/>
+  <updated>2013-07-04T23:42:26-04:00</updated>
+  <id>http://avidas.github.com/</id>
+  <author>
+    <name><![CDATA[Avi (Ananya Das)]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hacking health - Third times the charm]]></title>
+    <link href="http://avidas.github.com/blog/2013/07/04/hacking-health-third-times-the-charm/"/>
+    <updated>2013-07-04T23:37:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2013/07/04/hacking-health-third-times-the-charm</id>
+    <content type="html"><![CDATA[<p>When I think of healthcare industry from a technical view, it seems like a story of regulations, walled gardens and aged systems. It remains a sector where tech really needs to deliver, and we are currently seeing a surge of start-ups such as Quantified Self taking on different issues. So when I stepped into the Northside Festival&#8217;s &#8220;Hacking Health&#8221;, I was not entirely sure what to expect. It was also an unusual hackathon in that the venues were different on two different days.</p>
+
+<p>The project I ended up working on was definitely something I would want myself. I worked on PocketHealth, and the idea? Carry, check and transfer your medical information like you do a contact. The user can select care givers who can potentially have edit access to the history. But the kicker is in the UI. We worked on a facebook timeline like view for the history, and carrying and sharing your medical medication can be as easily as sharing a facebook profile. Although privacy would need to matter more than a facebook profile, specially with information that is by definition very personal.</p>
+
+<p>I worked on the backend of the project, working with the Shin-ny API, which provided sample client data. Even though, it did work out in the end, one suggestion to the API providers would be to move away from SOAP and provide a JSON API alongside XML. That is the direction in which the world is going in 2013, and precious moments can be saved by not having to parse through the vortex of XML. Moreover, want to have more developers using your API? Use the specifications with the widest and easiest use cases.</p>
+
+<p>The app was running on Flask, a micro web-framework written in Python. Python&#8217;s philosophy of &#8220;what you see is what you get&#8221; seems to be followed by flask. Together with the fast setup, Flask really wins as a hackathon-friendly backend framework. It would be interesting to compare the hurdles of building a larger scale web app vs other web frameworks. However, setting up assets, routes and getting up and running was possible in a matter of minutes. This is hugely valuable in time crunching hackathons, freeing up time for third-party APIs, application logic and UI.</p>
+
+<p>We ended up winning the hackathon! It felt great since we only worked for around six hours and were racing on till the last minute for submission. The judges were appreciative of the different sides we managed to involve and deliver value to, and it was great to be validated. There were some other interesting projects as well, one in particular about gamifying medication reminders for diabetic patients.</p>
+
+<p>In the coming weeks, it would be fun to take it past a hackathon project. A centralized solution for accessing and sharing health information is rather difficult, as there are many players involved, hospitals, insurance, doctors and patients. Many aspects of it seems to call for experience. Healthcare has a lot of room for innovation, and we believe that our app would solve a very real problem. At any rate, it felt great as a newbie to have contributed in a small way to the changing tides of healthcare.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Angelhacking at Dumbo]]></title>
+    <link href="http://avidas.github.com/blog/2013/06/08/angelhacking-at-dumbo/"/>
+    <updated>2013-06-08T16:42:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2013/06/08/angelhacking-at-dumbo</id>
+    <content type="html"><![CDATA[<p>&#8220;This is not your ordinary hackathon. This is the big leagues&#8221;. Such was the claim of Angelhack this past weekend, and two weeks after participating in my first ever serious hackathon, I found myself at another one. There really is something about the mix of meeting cool people, hacking unfamiliar platforms and testing your coding chops in a small amount of time that can be quite addicting.</p>
+
+<p>Shakere, the product I worked on, is an iPhone app for finding people based on skills or interests in social gatherings. Yes, your umpteenth social product, guilty as charged. The space for social discovery really is a heavily contested one, which made me hesitant at first since variants of the idea has been tried by many. I joined however, after realizing that the team would work well together (we actually had a UX designer in the team. Yay!) and this was my chance to experience iOS development, even though I would be developing the backend.</p>
+
+<p>I worked on rolling a RESTful API (https://github.com/shakere/backend), working on the LAMP stack. Though I have not worked too much on LAMP backends before, I must admit that the stack is well suited for rapid prototyping. PHP in particular was a pleasant surprise to work with, in parts because of working with Perl for most of last year. I have had a little stint with Rails, and while Rails seems far more powerful, PHP is more explicit with less magic going on behind the scenes which makes it easier for starters to tinker. However, I did find myself handling quite a few inc files soon and was grepping to find which function was defined where. If I am working on a larger scale PHP project, it would definitely be worth looking into frameworks/best practices for PHP code organization.</p>
+
+<p>We got a neat version working well in time for the demo. The app being frontend heavy, I was done with a bit of time in hand, making it a more pleasant hackathon than the last one. Yet during presentation, we did run into the pitfall of not having tested our demo machines to the projector, and this is really a must if you want to avoid delays during your demos.</p>
+
+<p>The ideas were definitely interesting to look at since the hackathon was not restricted to any particular domain. Some were targeting specifically Microsoft, Paypal or Amazon platforms, who were present at the event and provided prizes for the best app using their APIs. It was specifically interesting when domain experts (such as a scientist in a Columbia lab) came to the hackathon trying to device a service for their community. Field experts can have a certain deep understanding of a space and their demos were a good reflection of that.</p>
+
+<p>We did not win unfortunately but judging did seem fair. The ideas winning were generally the apps which were the most mature or demonstrated a clear need base for their ideas. I particularly enjoyed prepared.ly and their combining the job skill-set with learning tools such as Udacity or CodeAcademy. With some personal analytics and initiatives to pick up the skills fast enough, this service can be very useful for coding job seekers.</p>
+
+<p>For the next such event, I would definitely focus more on rolling out more features faster. We were perhaps guilty of actually going around and getting real user data to populate our databases. I would imagine for pre-shipping products you would want this, and MVPs these days certainly value user early user feedback. Hackathons have different needs from production apps though, and rapid feature deployment wins over iterating and getting existing features perfect. You live and you learn.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Publishing Hackathon]]></title>
+    <link href="http://avidas.github.com/blog/2013/05/30/publishing-hackathon/"/>
+    <updated>2013-05-30T07:08:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2013/05/30/publishing-hackathon</id>
+    <content type="html"><![CDATA[<p>Alley NYC is a very exciting location that I recently discovered. Its a collaborative workspace for startups, and on weekends they even open their doors for people trying to learn or fine tune their coding skills. On my second visit, I found out about the publishing hackathon, an attempt by the book publishing industry to generate new ideas in a field where profits are seemingly declining. I love books, and it seemed like a good opportunity to see what I could contribute and I signed up.</p>
+
+<p>This past weekend on the day of the hackathon, I arrived early not entirely sure what to expect. There were quite a few volunteers (from the publishing industry sponsors) and mentors (usually the startup founders who work at Alley NYC) and they seemed rather vibrant and chatty, as people in the startup universe tend to be. I immediately found myself talking to several founders about their projects. The breath of industries startups target always fascinate me, but I needed a project.</p>
+
+<p>At the meetup of participants, it seemed like a lot of people came in teamed with ideas they were going to work on or have already been working on. I soon ran into John, who was in the same boat as me in terms of not having a project. John was an UI/UX person, so we thought it would be a good idea to team up and work on something.</p>
+
+<p>The coding part started at noon, and continued for 24 hours. However, it was interesting being developers, we were sought out frequently as the people with ideas outweighed the developers. After discussing a few ideas, we decided on a project. At that moment, we did not expand the team since there was no clear benefit in doing so.</p>
+
+<p>We decided to make Quiply, a book recommendation service aimed at teens based on their online video watching habits. We thought the playlists, favorites and viewing habits of kids gives a good idea of what they are interested in, and giving them small summaries of books they could potentially read to expand on their interests. We decided on making it as a Node js web application to start with, integrating youtube watch history to give results from Amazon.
+The rest of the 24 hours, skipping amusing acts by participants which deserve their separate blog post, was a whirlwind of code, coffee, running into hurdles and staggered progress. In the end we managed make the basic prototype work and submitted down to the last minute!</p>
+
+<p>Here are a few things that I realized at the end of the hackathon, tips to help out a hackathon novice.</p>
+
+<ol>
+<li><p><strong>Have a solid idea of what you are going to do even if you do not have a team yet : </strong> A solid worked out plan helps you convince and recruit team members. Hackers by nature are very good readers of someones preparedness, knowledge and value addition to a project, so if you want the good people to team up with you, get in there ready. A very generic idea approaching a unclearly defined problem would likely not get you many co founders. Lot of hackathons do not allow any code being done before the event, but I am not sure how this is implemented since someone could write a library beforehand with quite a bit of logic that they can just import.</p></li>
+<li><p><strong>Know your apis if you are making an web app : </strong> If you are coding in a hackathon, you want to get to the point where your boilerplate is set up and you are spending the bulk of time building the logic or enhancing the UI. Hence, calling your APIs and knowing the limits and associated delays is critical. For this hackathon, this was not the case for us. After prototyping with youtube, we realized that their APIs no longer allow getting tags from videos and scraping was certainly not an option. We had to switch to Vimeo to get the same functionality. The other problem we ran into was Amazon throttling us for API usage. They had a limit of 2000 requests which we reached fast, and had to create stub accounts to continue testing. Thankfully this was not a problem during our demo, and we were able to show the working app.</p></li>
+<li><p><strong>Find a good spot quickly with least distractions : </strong> When the participants are not a defined class of people, you get unexpected behaviors and situations that will come up. And once you start coding, these can really harm your productivity. Try to get a nice and quiet place early, and if you find a room with a white board, its a home run for your team.</p></li>
+<li><p><strong>Keep focused and realistic : </strong> When we started working, I was particularly excited about writing the recommendation engine and wrote out an algorithm to weigh in several factors and generate tiered results based on the particular website queries. (For example, different custom playlists may give us different interests, how the age of the playlist would factor in, etc). However, with the discovery that youtube was not an option, we had to work with Vimeo API which was much limited in terms of features. That resulted in hours of wasted work. Following this setback, we did a better job of focusing hard on getting the one feature of our app working which was getting the recommended books, without much of the initial breadth or depth of the algorithms we were thinking of. Being realistic about what was achievable in 24 hours allowed us to get a working prototype, and this is very important in hackathons where wealth of APIs and possibilities can hinder your progress.</p></li>
+</ol>
+
+
+<p>There were an interesting array of projects presented, some more matured than others by virtue of being worked on before. But they were mostly web apps or mobile apps, simply because that is what most developers are working on these days. We were not one of the finalists, but overall I was very glad to reach and idea, and generate a fully working app within the 24 hours and it was a whole lot of fun! I would absolutely do more hackathons from now on, just not every weekend.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[First post!]]></title>
+    <link href="http://avidas.github.com/blog/2013/01/25/a-new-start/"/>
+    <updated>2013-01-25T22:38:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2013/01/25/a-new-start</id>
+    <content type="html"><![CDATA[<p>There comes a point in everyoneâs life when one thinks, I should have a blog. I had that thought in my head a couple times, a couple years apart. First time, it was the summer of 2008 and I was ready for a huge direction change in my life, going to college in the United States. And it was supposed to be about the experiences. Well lets just say college handed me enough on my plate to forget that idea soon. Second time, I was a sophomore at college when I wanted to make a tech-news-opinion blog. Few posts after, I realized it was quite unappealing to me. I did enjoy writing, but it was just not my thing to write a blog solely about outside events. Specially since Facebook made expressing your opinions so to all your friends as easy as typing a status message.</p>
+
+<p>I cannot see into the future, so I cannot predict the longevity of my blog. I graduated college in May 2012, and have been working as a software engineer ever since. My hope is that my status as a grownup would discount an early demise for my blog. Kidding aside, there are real reasons why I feel more than at any point, I really do need a blog.</p>
+
+<ol>
+<li><p><strong>Express self-learnings</strong> Post college, I am getting the opportunity to learn a lot more on my own. I needed a place to share what I am learning.</p></li>
+<li><p><strong>Bring cohesiveness to my work</strong>
+Directly related to 1, I hope documenting my learning and getting started with projects of increasing complexity will be a nice side effect of this blog. In the past, I have been guilty of starting projects and not donating enough time to them. I mean to change this habit for projects I start caring about.</p></li>
+<li><p><strong>Blogging is fun with Octopress</strong> I discovered Github pages and hosting only a month ago, and just makes blogging plain fun for a coder. You get the minimalism with the Octopress scaffolding and publishing, get to blog in the terminal with Vim and is very extensible and Jeckyll, the static site generator underneath, is very extensible.</p></li>
+</ol>
+
+
+<p>There are plenty others I suppose, but enough for the first post. This will be a blog mostly for my code, projects and discoveries I make along the way. Hopefully something shared here will be helpful to the reader, the way countless blogs on the interwebs help me everyday.</p>
+]]></content>
+  </entry>
+  
+</feed>

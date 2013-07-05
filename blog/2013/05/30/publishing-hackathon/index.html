@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Publishing Hackathon - Avi Das</title>
+  <meta name="author" content="Avi (Ananya Das)">
+
+  
+  <meta name="description" content="Alley NYC is a very exciting location that I recently discovered. Its a collaborative workspace for startups, and on weekends they even open their &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://avidas.github.com/blog/2013/05/30/publishing-hackathon/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Avi Das" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Avi Das</a></h1>
+  
+    <h2>Home for my code, thoughts and else.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:avidas.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Publishing Hackathon</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-30T07:08:00-04:00" pubdate data-updated="true">May 30<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Alley NYC is a very exciting location that I recently discovered. Its a collaborative workspace for startups, and on weekends they even open their doors for people trying to learn or fine tune their coding skills. On my second visit, I found out about the publishing hackathon, an attempt by the book publishing industry to generate new ideas in a field where profits are seemingly declining. I love books, and it seemed like a good opportunity to see what I could contribute and I signed up.</p>
+
+<p>This past weekend on the day of the hackathon, I arrived early not entirely sure what to expect. There were quite a few volunteers (from the publishing industry sponsors) and mentors (usually the startup founders who work at Alley NYC) and they seemed rather vibrant and chatty, as people in the startup universe tend to be. I immediately found myself talking to several founders about their projects. The breath of industries startups target always fascinate me, but I needed a project.</p>
+
+<p>At the meetup of participants, it seemed like a lot of people came in teamed with ideas they were going to work on or have already been working on. I soon ran into John, who was in the same boat as me in terms of not having a project. John was an UI/UX person, so we thought it would be a good idea to team up and work on something.</p>
+
+<p>The coding part started at noon, and continued for 24 hours. However, it was interesting being developers, we were sought out frequently as the people with ideas outweighed the developers. After discussing a few ideas, we decided on a project. At that moment, we did not expand the team since there was no clear benefit in doing so.</p>
+
+<p>We decided to make Quiply, a book recommendation service aimed at teens based on their online video watching habits. We thought the playlists, favorites and viewing habits of kids gives a good idea of what they are interested in, and giving them small summaries of books they could potentially read to expand on their interests. We decided on making it as a Node js web application to start with, integrating youtube watch history to give results from Amazon.
+The rest of the 24 hours, skipping amusing acts by participants which deserve their separate blog post, was a whirlwind of code, coffee, running into hurdles and staggered progress. In the end we managed make the basic prototype work and submitted down to the last minute!</p>
+
+<p>Here are a few things that I realized at the end of the hackathon, tips to help out a hackathon novice.</p>
+
+<ol>
+<li><p><strong>Have a solid idea of what you are going to do even if you do not have a team yet : </strong> A solid worked out plan helps you convince and recruit team members. Hackers by nature are very good readers of someones preparedness, knowledge and value addition to a project, so if you want the good people to team up with you, get in there ready. A very generic idea approaching a unclearly defined problem would likely not get you many co founders. Lot of hackathons do not allow any code being done before the event, but I am not sure how this is implemented since someone could write a library beforehand with quite a bit of logic that they can just import.</p></li>
+<li><p><strong>Know your apis if you are making an web app : </strong> If you are coding in a hackathon, you want to get to the point where your boilerplate is set up and you are spending the bulk of time building the logic or enhancing the UI. Hence, calling your APIs and knowing the limits and associated delays is critical. For this hackathon, this was not the case for us. After prototyping with youtube, we realized that their APIs no longer allow getting tags from videos and scraping was certainly not an option. We had to switch to Vimeo to get the same functionality. The other problem we ran into was Amazon throttling us for API usage. They had a limit of 2000 requests which we reached fast, and had to create stub accounts to continue testing. Thankfully this was not a problem during our demo, and we were able to show the working app.</p></li>
+<li><p><strong>Find a good spot quickly with least distractions : </strong> When the participants are not a defined class of people, you get unexpected behaviors and situations that will come up. And once you start coding, these can really harm your productivity. Try to get a nice and quiet place early, and if you find a room with a white board, its a home run for your team.</p></li>
+<li><p><strong>Keep focused and realistic : </strong> When we started working, I was particularly excited about writing the recommendation engine and wrote out an algorithm to weigh in several factors and generate tiered results based on the particular website queries. (For example, different custom playlists may give us different interests, how the age of the playlist would factor in, etc). However, with the discovery that youtube was not an option, we had to work with Vimeo API which was much limited in terms of features. That resulted in hours of wasted work. Following this setback, we did a better job of focusing hard on getting the one feature of our app working which was getting the recommended books, without much of the initial breadth or depth of the algorithms we were thinking of. Being realistic about what was achievable in 24 hours allowed us to get a working prototype, and this is very important in hackathons where wealth of APIs and possibilities can hinder your progress.</p></li>
+</ol>
+
+
+<p>There were an interesting array of projects presented, some more matured than others by virtue of being worked on before. But they were mostly web apps or mobile apps, simply because that is what most developers are working on these days. We were not one of the finalists, but overall I was very glad to reach and idea, and generate a fully working app within the 24 hours and it was a whole lot of fun! I would absolutely do more hackathons from now on, just not every weekend.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Avi (Ananya Das)</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-30T07:08:00-04:00" pubdate data-updated="true">May 30<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/coding/'>Coding</a>, <a class='category' href='/blog/categories/hackathon-/'>Hackathon,</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avidas.github.com/blog/2013/05/30/publishing-hackathon/" data-via="avidas" data-counturl="http://avidas.github.com/blog/2013/05/30/publishing-hackathon/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/01/25/a-new-start/" title="Previous Post: First post!">&laquo; First post!</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/06/08/angelhacking-at-dumbo/" title="Next Post: Angelhacking at Dumbo">Angelhacking at Dumbo &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/07/04/hacking-health-third-times-the-charm/">Hacking health - Third times the charm</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/08/angelhacking-at-dumbo/">Angelhacking at Dumbo</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/30/publishing-hackathon/">Publishing Hackathon</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/25/a-new-start/">First post!</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/avidas">@avidas</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'avidas',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("avidas", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/avidas" class="twitter-follow-button" data-show-count="false">Follow @avidas</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Avi (Ananya Das) -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

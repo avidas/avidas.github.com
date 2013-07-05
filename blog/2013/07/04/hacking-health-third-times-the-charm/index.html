@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Hacking health - Third times the charm - Avi Das</title>
+  <meta name="author" content="Avi (Ananya Das)">
+
+  
+  <meta name="description" content="When I think of healthcare industry from a technical view, it seems like a story of regulations, walled gardens and aged systems. It remains a sector &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://avidas.github.com/blog/2013/07/04/hacking-health-third-times-the-charm/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Avi Das" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Avi Das</a></h1>
+  
+    <h2>Home for my code, thoughts and else.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:avidas.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Hacking Health - Third Times the Charm</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-04T23:37:00-04:00" pubdate data-updated="true">Jul 4<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>When I think of healthcare industry from a technical view, it seems like a story of regulations, walled gardens and aged systems. It remains a sector where tech really needs to deliver, and we are currently seeing a surge of start-ups such as Quantified Self taking on different issues. So when I stepped into the Northside Festival&#8217;s &#8220;Hacking Health&#8221;, I was not entirely sure what to expect. It was also an unusual hackathon in that the venues were different on two different days.</p>
+
+<p>The project I ended up working on was definitely something I would want myself. I worked on PocketHealth, and the idea? Carry, check and transfer your medical information like you do a contact. The user can select care givers who can potentially have edit access to the history. But the kicker is in the UI. We worked on a facebook timeline like view for the history, and carrying and sharing your medical medication can be as easily as sharing a facebook profile. Although privacy would need to matter more than a facebook profile, specially with information that is by definition very personal.</p>
+
+<p>I worked on the backend of the project, working with the Shin-ny API, which provided sample client data. Even though, it did work out in the end, one suggestion to the API providers would be to move away from SOAP and provide a JSON API alongside XML. That is the direction in which the world is going in 2013, and precious moments can be saved by not having to parse through the vortex of XML. Moreover, want to have more developers using your API? Use the specifications with the widest and easiest use cases.</p>
+
+<p>The app was running on Flask, a micro web-framework written in Python. Python&#8217;s philosophy of &#8220;what you see is what you get&#8221; seems to be followed by flask. Together with the fast setup, Flask really wins as a hackathon-friendly backend framework. It would be interesting to compare the hurdles of building a larger scale web app vs other web frameworks. However, setting up assets, routes and getting up and running was possible in a matter of minutes. This is hugely valuable in time crunching hackathons, freeing up time for third-party APIs, application logic and UI.</p>
+
+<p>We ended up winning the hackathon! It felt great since we only worked for around six hours and were racing on till the last minute for submission. The judges were appreciative of the different sides we managed to involve and deliver value to, and it was great to be validated. There were some other interesting projects as well, one in particular about gamifying medication reminders for diabetic patients.</p>
+
+<p>In the coming weeks, it would be fun to take it past a hackathon project. A centralized solution for accessing and sharing health information is rather difficult, as there are many players involved, hospitals, insurance, doctors and patients. Many aspects of it seems to call for experience. Healthcare has a lot of room for innovation, and we believe that our app would solve a very real problem. At any rate, it felt great as a newbie to have contributed in a small way to the changing tides of healthcare.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Avi (Ananya Das)</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-04T23:37:00-04:00" pubdate data-updated="true">Jul 4<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/coding/'>Coding</a>, <a class='category' href='/blog/categories/flask-/'>Flask,</a>, <a class='category' href='/blog/categories/hackathon-/'>Hackathon,</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avidas.github.com/blog/2013/07/04/hacking-health-third-times-the-charm/" data-via="avidas" data-counturl="http://avidas.github.com/blog/2013/07/04/hacking-health-third-times-the-charm/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/06/08/angelhacking-at-dumbo/" title="Previous Post: Angelhacking at Dumbo">&laquo; Angelhacking at Dumbo</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/07/04/hacking-health-third-times-the-charm/">Hacking health - Third times the charm</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/08/angelhacking-at-dumbo/">Angelhacking at Dumbo</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/30/publishing-hackathon/">Publishing Hackathon</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/25/a-new-start/">First post!</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/avidas">@avidas</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'avidas',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("avidas", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/avidas" class="twitter-follow-button" data-show-count="false">Follow @avidas</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Avi (Ananya Das) -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
