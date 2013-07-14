@@ -30,6 +30,18 @@
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
   
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-42293414-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 
 </head>
 
@@ -95,7 +107,14 @@
 <p>I cannot see into the future, so I cannot predict the longevity of my blog. I graduated college in May 2012, and have been working as a software engineer ever since. My hope is that my status as a grownup would discount an early demise for my blog. Kidding aside, there are real reasons why I feel more than at any point, I really do need a blog.</p>
 
 <ol>
-<li><p><strong>Express self-learnings</strong> Post college, I am getting the opportunity to learn a lot more on my own. I needed a place to share what I am learning.</p></li>
+<li><strong>Express self-learnings</strong> Post college, I am getting the opportunity to learn a lot more on my own. I needed a place to share what I am learning.</li>
+</ol>
+
+
+<!--more-->
+
+
+<ol>
 <li><p><strong>Bring cohesiveness to my work</strong>
 Directly related to 1, I hope documenting my learning and getting started with projects of increasing complexity will be a nice side effect of this blog. In the past, I have been guilty of starting projects and not donating enough time to them. I mean to change this habit for projects I start caring about.</p></li>
 <li><p><strong>Blogging is fun with Octopress</strong> I discovered Github pages and hosting only a month ago, and just makes blogging plain fun for a coder. You get the minimalism with the Octopress scaffolding and publishing, get to blog in the terminal with Vim and is very extensible and Jeckyll, the static site generator underneath, is very extensible.</p></li>
@@ -137,6 +156,8 @@ Directly related to 1, I hope documenting my learning and getting started with p
   
   
   
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
 </div>
 
     
@@ -149,11 +170,23 @@ Directly related to 1, I hope documenting my learning and getting started with p
   </footer>
 </article>
 
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
 </div>
 
 <aside class="sidebar">
   
-    <section>
+    
+<section>
+  <span>
+    <img src="http://www.gravatar.com/avatar/971bf27d07f3f46450cc2ebb27399fb1?s=200" alt="Gravatar of Avi (Ananya Das) " title="Gravatar of Avi (Ananya Das)" />
+  </span>
+</section>
+<section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
@@ -240,7 +273,32 @@ Directly related to 1, I hope documenting my learning and getting started with p
 </footer>
   
 
+<script type="text/javascript">
+      var disqus_shortname = 'avidas';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://avidas.github.com/blog/2013/01/25/a-new-start/';
+        var disqus_url = 'http://avidas.github.com/blog/2013/01/25/a-new-start/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Coding | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/coding/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2013-07-04T23:42:26-04:00</updated>
+  <updated>2013-07-13T21:57:58-04:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -18,15 +18,18 @@
     <link href="http://avidas.github.com/blog/2013/07/04/hacking-health-third-times-the-charm/"/>
     <updated>2013-07-04T23:37:00-04:00</updated>
     <id>http://avidas.github.com/blog/2013/07/04/hacking-health-third-times-the-charm</id>
-    <content type="html"><![CDATA[<p>When I think of healthcare industry from a technical view, it seems like a story of regulations, walled gardens and aged systems. It remains a sector where tech really needs to deliver, and we are currently seeing a surge of start-ups such as Quantified Self taking on different issues. So when I stepped into the Northside Festival's "Hacking Health", I was not entirely sure what to expect. It was also an unusual hackathon in that the venues were different on two different days.</p>
+    <content type="html"><![CDATA[<p>When I think of healthcare industry from a technical view, it seems like a story of regulations, walled gardens and aged systems. It remains a sector where tech really needs to deliver, and we are currently seeing a surge of start-ups such as Quantified Self taking on different issues. So when I stepped into the Northside Festival's "Hacking Health", I was not entirely sure what to expect. It was also an unusual hackathon in that the venues were different on two different days. All the pleasant surprise that we ended up winning the hackathon!</p>
 
 <p>The project I ended up working on was definitely something I would want myself. I worked on PocketHealth, and the idea? Carry, check and transfer your medical information like you do a contact. The user can select care givers who can potentially have edit access to the history. But the kicker is in the UI. We worked on a facebook timeline like view for the history, and carrying and sharing your medical medication can be as easily as sharing a facebook profile. Although privacy would need to matter more than a facebook profile, specially with information that is by definition very personal.</p>
 
-<p>I worked on the backend of the project, working with the Shin-ny API, which provided sample client data. Even though, it did work out in the end, one suggestion to the API providers would be to move away from SOAP and provide a JSON API alongside XML. That is the direction in which the world is going in 2013, and precious moments can be saved by not having to parse through the vortex of XML. Moreover, want to have more developers using your API? Use the specifications with the widest and easiest use cases.</p>
+<!--more-->
+
+
+<p>I worked on the backend, working with the Shin-ny API, which provided sample client data. Even though, it did work out in the end, one suggestion to the API providers would be to move away from SOAP and provide a JSON API alongside XML. That is the direction in which the world is going in 2013, and precious moments can be saved by not having to parse through the vortex of XML. Moreover, want to have more developers using your API? Use the specifications with the widest and easiest use cases.</p>
 
 <p>The app was running on Flask, a micro web-framework written in Python. Python's philosophy of "what you see is what you get" seems to be followed by flask. Together with the fast setup, Flask really wins as a hackathon-friendly backend framework. It would be interesting to compare the hurdles of building a larger scale web app vs other web frameworks. However, setting up assets, routes and getting up and running was possible in a matter of minutes. This is hugely valuable in time crunching hackathons, freeing up time for third-party APIs, application logic and UI.</p>
 
-<p>We ended up winning the hackathon! It felt great since we only worked for around six hours and were racing on till the last minute for submission. The judges were appreciative of the different sides we managed to involve and deliver value to, and it was great to be validated. There were some other interesting projects as well, one in particular about gamifying medication reminders for diabetic patients.</p>
+<p>Judges came from the NYeC, Bing and the NorthSide Festival. It felt great since we only worked for around six hours and were racing on till the last minute for submission. The judges were appreciative of the different sides we managed to involve and deliver value to, and it was great to be validated. There were some other interesting projects as well, one in particular about gamifying medication reminders for diabetic patients.</p>
 
 <p>In the coming weeks, it would be fun to take it past a hackathon project. A centralized solution for accessing and sharing health information is rather difficult, as there are many players involved, hospitals, insurance, doctors and patients. Many aspects of it seems to call for experience. Healthcare has a lot of room for innovation, and we believe that our app would solve a very real problem. At any rate, it felt great as a newbie to have contributed in a small way to the changing tides of healthcare.</p>
 ]]></content>
@@ -42,6 +45,9 @@
 <p>Shakere, the product I worked on, is an iPhone app for finding people based on skills or interests in social gatherings. Yes, your umpteenth social product, guilty as charged. The space for social discovery really is a heavily contested one, which made me hesitant at first since variants of the idea has been tried by many. I joined however, after realizing that the team would work well together (we actually had a UX designer in the team. Yay!) and this was my chance to experience iOS development, even though I would be developing the backend.</p>
 
 <p>I worked on rolling a RESTful API (https://github.com/shakere/backend), working on the LAMP stack. Though I have not worked too much on LAMP backends before, I must admit that the stack is well suited for rapid prototyping. PHP in particular was a pleasant surprise to work with, in parts because of working with Perl for most of last year. I have had a little stint with Rails, and while Rails seems far more powerful, PHP is more explicit with less magic going on behind the scenes which makes it easier for starters to tinker. However, I did find myself handling quite a few inc files soon and was grepping to find which function was defined where. If I am working on a larger scale PHP project, it would definitely be worth looking into frameworks/best practices for PHP code organization.</p>
+
+<!--more-->
+
 
 <p>We got a neat version working well in time for the demo. The app being frontend heavy, I was done with a bit of time in hand, making it a more pleasant hackathon than the last one. Yet during presentation, we did run into the pitfall of not having tested our demo machines to the projector, and this is really a must if you want to avoid delays during your demos.</p>
 
@@ -72,7 +78,14 @@ The rest of the 24 hours, skipping amusing acts by participants which deserve th
 <p>Here are a few things that I realized at the end of the hackathon, tips to help out a hackathon novice.</p>
 
 <ol>
-<li><p><strong>Have a solid idea of what you are going to do even if you do not have a team yet : </strong> A solid worked out plan helps you convince and recruit team members. Hackers by nature are very good readers of someones preparedness, knowledge and value addition to a project, so if you want the good people to team up with you, get in there ready. A very generic idea approaching a unclearly defined problem would likely not get you many co founders. Lot of hackathons do not allow any code being done before the event, but I am not sure how this is implemented since someone could write a library beforehand with quite a bit of logic that they can just import.</p></li>
+<li><strong>Have a solid idea of what you are going to do even if you do not have a team yet : </strong> A solid worked out plan helps you convince and recruit team members. Hackers by nature are very good readers of someones preparedness, knowledge and value addition to a project, so if you want the good people to team up with you, get in there ready. A very generic idea approaching a unclearly defined problem would likely not get you many co founders. Lot of hackathons do not allow any code being done before the event, but I am not sure how this is implemented since someone could write a library beforehand with quite a bit of logic that they can just import.</li>
+</ol>
+
+
+<!--more-->
+
+
+<ol>
 <li><p><strong>Know your apis if you are making an web app : </strong> If you are coding in a hackathon, you want to get to the point where your boilerplate is set up and you are spending the bulk of time building the logic or enhancing the UI. Hence, calling your APIs and knowing the limits and associated delays is critical. For this hackathon, this was not the case for us. After prototyping with youtube, we realized that their APIs no longer allow getting tags from videos and scraping was certainly not an option. We had to switch to Vimeo to get the same functionality. The other problem we ran into was Amazon throttling us for API usage. They had a limit of 2000 requests which we reached fast, and had to create stub accounts to continue testing. Thankfully this was not a problem during our demo, and we were able to show the working app.</p></li>
 <li><p><strong>Find a good spot quickly with least distractions : </strong> When the participants are not a defined class of people, you get unexpected behaviors and situations that will come up. And once you start coding, these can really harm your productivity. Try to get a nice and quiet place early, and if you find a room with a white board, its a home run for your team.</p></li>
 <li><p><strong>Keep focused and realistic : </strong> When we started working, I was particularly excited about writing the recommendation engine and wrote out an algorithm to weigh in several factors and generate tiered results based on the particular website queries. (For example, different custom playlists may give us different interests, how the age of the playlist would factor in, etc). However, with the discovery that youtube was not an option, we had to work with Vimeo API which was much limited in terms of features. That resulted in hours of wasted work. Following this setback, we did a better job of focusing hard on getting the one feature of our app working which was getting the recommended books, without much of the initial breadth or depth of the algorithms we were thinking of. Being realistic about what was achievable in 24 hours allowed us to get a working prototype, and this is very important in hackathons where wealth of APIs and possibilities can hinder your progress.</p></li>
