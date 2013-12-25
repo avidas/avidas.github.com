@@ -15,6 +15,8 @@ I worked on rolling a RESTful API (https://github.com/shakere/backend), working 
 
 <!--more-->
 
+{% img left /images/Shakere_Profile.jpg 300 800 'Shakere Profile' 'Shakere Profile' %}
+
 We got a neat version working well in time for the demo. The app being frontend heavy, I was done with a bit of time in hand, making it a more pleasant hackathon than the last one. Yet during presentation, we did run into the pitfall of not having tested our demo machines to the projector, and this is really a must if you want to avoid delays during your demos.
 
 The ideas were definitely interesting to look at since the hackathon was not restricted to any particular domain. Some were targeting specifically Microsoft, Paypal or Amazon platforms, who were present at the event and provided prizes for the best app using their APIs. It was specifically interesting when domain experts (such as a scientist in a Columbia lab) came to the hackathon trying to device a service for their community. Field experts can have a certain deep understanding of a space and their demos were a good reflection of that.
