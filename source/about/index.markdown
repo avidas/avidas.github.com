@@ -12,4 +12,3 @@ Things I like: reading, running, lifting, hackathons, festivals, a good conversa
 
 Things that bug me: filling up forms, how little we know about the human body.
 
-Here is my [Resume](https://dl.dropboxusercontent.com/u/41948073/Resume-Avi_\(Ananya\)_Das.pdf).
