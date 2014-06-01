@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Flask, | Avi Das]]></title>
+  <link href="http://avidas.github.com/blog/categories/flask-/atom.xml" rel="self"/>
+  <link href="http://avidas.github.com/"/>
+  <updated>2014-06-01T16:41:43-05:00</updated>
+  <id>http://avidas.github.com/</id>
+  <author>
+    <name><![CDATA[Avi (Ananya Das)]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Connected car: Meticulous.io @Angelhack]]></title>
+    <link href="http://avidas.github.com/blog/2014/01/07/connected-car-at-angelhack/"/>
+    <updated>2014-01-07T23:00:00-06:00</updated>
+    <id>http://avidas.github.com/blog/2014/01/07/connected-car-at-angelhack</id>
+    <content type="html"><![CDATA[<p>Angelhack looks for startups to come out of hackathons rather than just weekend hacks. As a result, it tends to get very product driven as teams compete for the Angelpad recognition. The theme this year was Apphack, and mobile apps were the key focus. Not really a surprise, as more and more startups build mobile first.</p>
+
+<p>We worked on the verizon telematics data. <a href="http://www.verizontelematics.com/">Verizon telematics</a> is something I did not know about before. Car companies have been working with Verizon to install a device in the cars that could send data about speed, location, rpm, condition of the car in terms of last time since gas, particular model of car, wear and tear to the cloud. I expect Verizon is able to collect a lot more than the columns we saw. Needless to say, this would be a very powerful dataset and it is surprising that there aren't more going on in this space.</p>
+
+<p><a href="http://ipython.org/">iPython</a> and <a href="http://pandas.pydata.org/">Pandas</a> are built for analyzing and visualizing tabular data like this. Questions such as which brand of car gave the best milage per gallon, which brand was driven more on the highway vs which was more popular on the city roads were fairly easy to answer. It was not clear if the data given to us was indeed an uniform sample, but results were interesting. However, they are hardly hackathon worthy ideas.</p>
+
+<p>Needed an idea. One set of data had trip ids tied to driver ids, the other set had per trip latitudes and longitudes. Aggregating them somehow would be interesting. Geographical history of most visited places can be found since trips could be tied to drivers. Historical driving records could be obtained from individual trips and the overall history of the driver measured. Global driving records could be obtained so that the best driver's can be found.</p>
+
+<p>Once noting those features, the next step was to think how this would make sense as a product. Context sensitive software is hugely in demand and this is a great dataset for revealing patterns of drivers. Buisnesses aware of customers frequenting particular location can push deals and coupons to those individuals to drive buisness. Timeliness of visit can be used to fine tune the deals even more, e.g. lunch deals would make sense around the Grand Central area in NYC to a busy professional. The brand of car can be used to push vehicle specific ads. This would also be a treasure trove of information for car insurance companies figuring out insurance rates. Finally, it is quite possible that driving patterns can be used to trigger alert that may detect an accident ahead of time.</p>
+
+<p>Its hard to argue that driving patterns are valuable data. However, as with any user specific information used for personalization experiences curated by businesses, privacy would be a big concern. It was not entirely clear who would own the data, the driver, the provider, or else. It should be made very clear to the driver of the nature of the tracking going on and how the data may be used. Since data like this could easily be used by a malicious third party to monitor you in real time when you are driving, there is inherent danger in it being available without the driver being informed. Tracking is an issue users of any clowd aware system needs to be aware of.</p>
+
+<p>We did win the Verizon prize for the hackathon, and it was nice having our idea at the eleventh hour being well accepted. Angelhack put on a good show, and I must mention the apps "Make it Rain" (literally, on the phone screen) and "Kanye"(alerts if you are nearby Kanye West) for the hilarity during the presentation!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[DevsNearMe : July 26-27 Big Data Hackathon]]></title>
+    <link href="http://avidas.github.com/blog/2013/07/28/devsnearme-july-26-27-big-data-hackathon/"/>
+    <updated>2013-07-28T12:54:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2013/07/28/devsnearme-july-26-27-big-data-hackathon</id>
+    <content type="html"><![CDATA[<p><iframe src="http://www.slideshare.net/slideshow/embed_code/24686054 " width="595" height="446" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen></iframe> </p>
+
+<p>Built and won the first prize at the big data hackathon at Alley NYC on July 26-27. The goal is to discover how many people are at a venue at a particular point in time and this app will try to do that for hackers, categorized by skills.</p>
+
+<p>With more and more realtime data being available for the public, identifying knowledge clusters at the right point in time becomes really valuable. DevsNearMe is an Android app that attempts to combine data from popular realtime sharing websites such as FourSquare, Twitter, Facebook, Instagram and MeetUp. It will attempts to predict users at a particular location by taking into account absolute numbers, and weighed prediction based on local context based information and learnt knowledge from past user behavior.</p>
+
+<p>This could be highly useful for knowledge sharing, recruiting and demographic analysis. Prototype code is at https://github.com/DevsNearMe .</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hacking health - Third times the charm]]></title>
+    <link href="http://avidas.github.com/blog/2013/07/04/hacking-health-third-times-the-charm/"/>
+    <updated>2013-07-04T23:37:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2013/07/04/hacking-health-third-times-the-charm</id>
+    <content type="html"><![CDATA[<p><img class="left" src="/images/PocketHealth_home.jpg" width="275" height="670" title="PocketHealth home" alt="PocketHealth home"></p>
+
+<p>When I think of healthcare industry from a technical view, it seems like a story of regulations, walled gardens and aged systems. It remains a sector where tech really needs to deliver, and we are currently seeing a surge of start-ups such as Quantified Self taking on different issues. So when I stepped into the Northside Festival's "Hacking Health", I was not entirely sure what to expect. It was also an unusual hackathon in that the venues were different on two different days. All the pleasant surprise that we ended up winning the hackathon!</p>
+
+<p>The project I ended up working on was definitely something I would want myself. I worked on PocketHealth, and the idea? Carry, check and transfer your medical information like you do a contact. The user can select care givers who can potentially have edit access to the history. But the kicker is in the UI. We worked on a facebook timeline like view for the history, and carrying and sharing your medical medication can be as easily as sharing a facebook profile. Although privacy would need to matter more than a facebook profile, specially with information that is by definition very personal.</p>
+
+<!--more-->
+
+
+<p>I worked on the backend, working with the Shin-ny API, which provided sample client data. Even though, it did work out in the end, one suggestion to the API providers would be to move away from SOAP and provide a JSON API alongside XML. That is the direction in which the world is going in 2013, and precious moments can be saved by not having to parse through the vortex of XML. Moreover, want to have more developers using your API? Use the specifications with the widest and easiest use cases.</p>
+
+<p>The app was running on Flask, a micro web-framework written in Python. Python's philosophy of "what you see is what you get" seems to be followed by flask. Together with the fast setup, Flask really wins as a hackathon-friendly backend framework. It would be interesting to compare the hurdles of building a larger scale web app vs other web frameworks. However, setting up assets, routes and getting up and running was possible in a matter of minutes. This is hugely valuable in time crunching hackathons, freeing up time for third-party APIs, application logic and UI.</p>
+
+<p>Judges came from the NYeC, Bing and the NorthSide Festival. It felt great since we only worked for around six hours and were racing on till the last minute for submission. The judges were appreciative of the different sides we managed to involve and deliver value to, and it was great to be validated. There were some other interesting projects as well, one in particular about gamifying medication reminders for diabetic patients.</p>
+
+<p>In the coming weeks, it would be fun to take it past a hackathon project. A centralized solution for accessing and sharing health information is rather difficult, as there are many players involved, hospitals, insurance, doctors and patients. Many aspects of it seems to call for experience. Healthcare has a lot of room for innovation, and we believe that our app would solve a very real problem. At any rate, it felt great as a newbie to have contributed in a small way to the changing tides of healthcare.</p>
+
+<p><img class="left" src="/images/Patient_forms.jpg" width="350" height="350" title="Patient forms" alt="Patient forms">
+<img class="right" src="/images/Patient_status.jpg" width="350" height="350" title="Patient status" alt="Patient status"></p>
+]]></content>
+  </entry>
+  
+</feed>

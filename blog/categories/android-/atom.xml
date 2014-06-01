@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Android, | Avi Das]]></title>
+  <link href="http://avidas.github.com/blog/categories/android-/atom.xml" rel="self"/>
+  <link href="http://avidas.github.com/"/>
+  <updated>2014-06-01T16:41:43-05:00</updated>
+  <id>http://avidas.github.com/</id>
+  <author>
+    <name><![CDATA[Avi (Ananya Das)]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[DevsNearMe : July 26-27 Big Data Hackathon]]></title>
+    <link href="http://avidas.github.com/blog/2013/07/28/devsnearme-july-26-27-big-data-hackathon/"/>
+    <updated>2013-07-28T12:54:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2013/07/28/devsnearme-july-26-27-big-data-hackathon</id>
+    <content type="html"><![CDATA[<p><iframe src="http://www.slideshare.net/slideshow/embed_code/24686054 " width="595" height="446" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen></iframe> </p>
+
+<p>Built and won the first prize at the big data hackathon at Alley NYC on July 26-27. The goal is to discover how many people are at a venue at a particular point in time and this app will try to do that for hackers, categorized by skills.</p>
+
+<p>With more and more realtime data being available for the public, identifying knowledge clusters at the right point in time becomes really valuable. DevsNearMe is an Android app that attempts to combine data from popular realtime sharing websites such as FourSquare, Twitter, Facebook, Instagram and MeetUp. It will attempts to predict users at a particular location by taking into account absolute numbers, and weighed prediction based on local context based information and learnt knowledge from past user behavior.</p>
+
+<p>This could be highly useful for knowledge sharing, recruiting and demographic analysis. Prototype code is at https://github.com/DevsNearMe .</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Python | Avi Das]]></title>
+  <link href="http://avidas.github.com/blog/categories/python/atom.xml" rel="self"/>
+  <link href="http://avidas.github.com/"/>
+  <updated>2014-06-01T16:41:43-05:00</updated>
+  <id>http://avidas.github.com/</id>
+  <author>
+    <name><![CDATA[Avi (Ananya Das)]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hack the Trackers]]></title>
+    <link href="http://avidas.github.com/blog/2013/12/25/hack-the-trackers-november/"/>
+    <updated>2013-12-25T15:49:00-06:00</updated>
+    <id>http://avidas.github.com/blog/2013/12/25/hack-the-trackers-november</id>
+    <content type="html"><![CDATA[<p>Online tracking has been a peak topic of debate this year and by the look of things will continue to be. NSA programs, Snowden and the reactions from top tech companies brought in more attention to tracking than ever before. It was hence very timely for Evidon/Ghostery to organize hack the trackers in early November.</p>
+
+<p><a href="https://www.ghostery.com/">Ghostery</a> is a chrome extension that displays trackers on a particular webpage. Not only that, they allow features to block particular trackers and include detailed information about the trackers. The emphasis seems to make web users aware of tracking and let them make the choice.</p>
+
+<p>We built Falcon, which we thought would complement Ghostery's offering quite well. Falcon is a chrome extension where we displayed the overall lost time due to the trackers and which trackers were the most resource intensive. Our hypothesis was that to increase awareness of online tracking, we needed to provide tangible ways in which tracking affects online browsing experience. Ghostery provided us with a data set with a lot of interesting information, among which average load time for trackers was a key indicator. Even with caching, users could lose time which would take to load the trackers, if trackers are loaded synchronously. This could particularly matter for mobile and locations with poor wi-fi as poorly created trackers would slow down the browsing experience.</p>
+
+<p><img class="right" src="/images/falcon.png" width="500" height="900" title="Falcon Demo" alt="Falcon Demo"></p>
+
+<p>Building a chrome extension for a first time was not too complicated as it is very similar to building a web page and chrome is as reliable as platforms get. We ended up being one of the two semi finalists, the other being a cool way to link the trackers with their public figures as a fun way to raise attention to tracking.</p>
+
+<p>This hackathon was particularly a great learning experience. Companies are taking highly innovative routes to glean more information about the users. Cookies have always existed, but two other forms of tracking I learnt was autocomplete fields tracking and <a href="http://en.wikipedia.org/wiki/Device_fingerprint">browser fingerprinting</a>. Browser fingerprinting tries to get information from user-agent, the OS, extensions installed and other configurations to bind a particular browser to an user and this can happen completely on the server side. I have only learnt fairly recently about the bidding platforms for display advertisement and it was pretty interesting to see dictionary.com revealing on their console the bids as they happened in real time.</p>
+
+<p>Computer security is a dynamic and fast changing field and this hackathon was an interesting mix of people in different niches of the industry. Tracking will continue to be an issue and it was good to see Ghostery taking the initiative to search for innovations in this space.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Prioritized date interval merge]]></title>
+    <link href="http://avidas.github.com/blog/2013/08/30/prioritized-date-interval-merge/"/>
+    <updated>2013-08-30T23:57:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2013/08/30/prioritized-date-interval-merge</id>
+    <content type="html"><![CDATA[<p>Ran into this interesting problem lately and wanted to code up a recursive solution in Python. Essentially an extension of merge from merge sort but for intervals. There is definitely something very satisfying about coding up a recursive solution, as they tend to produce clean solutions despite the ugly formatting in this case to make list concatenation work.</p>
+
+<p>``` python Merge date intervals by priority https://github.com/avidas/Code_snippets/blob/master/merge_interval.py Source
+def merge_interval(low_priority_lst,high_priority_lst):</p>
+
+<pre><code>'''
+Given two lists with sorted date ranges, return merged list with high_priority_lst 
+ranges preferred over low_priority_lst ranges in case of intersection.
+Partial intervals are allowed.
+'''
+if low_priority_lst == [] or low_priority_lst == None: return high_priority_lst
+if high_priority_lst == [] or high_priority_lst == None: return low_priority_lst
+
+# case :               |-------|
+#        |-------|            
+if low_priority_lst[0][0] &gt; high_priority_lst[0][1]:
+ return [high_priority_lst[0]] + 
+        merge_interval(low_priority_lst,high_priority_lst[1:])
+# case :   |-------|
+#                     |-------|      
+elif low_priority_lst[0][1] &lt; high_priority_lst[0][0]:
+    return [low_priority_lst[0]] + 
+        merge_interval(low_priority_lst[1:],high_priority_lst)
+# case :|-------|
+#            |-------|  
+elif low_priority_lst[0][0] &lt; high_priority_lst[0][0]:
+    return [[low_priority_lst[0][0],high_priority_lst[0][0]]] + 
+        merge_interval( [[high_priority_lst[0][0],low_priority_lst[0][1]]] +
+                             low_priority_lst[1:], high_priority_lst)
+# case :      |-------|
+#        |-------|  
+elif low_priority_lst[0][1] &gt; high_priority_lst[0][1]:
+    return [high_priority_lst[0]] + 
+        merge_interval( [[high_priority_lst[0][1],low_priority_lst[0][1]]] +
+                            low_priority_lst[1:] , high_priority_lst[1:])
+# case :  |-------| |---| |----|
+#        |-----------------| 
+else:
+    return merge_interval(low_priority_lst[1:],high_priority_lst)
+</code></pre>
+
+<p>```</p>
+
+<p>Complexity :</p>
+
+<!--more-->
+
+
+<p>Analyzing time complexity for this gets interesting. Consider low_priority_lst to be of length l and high_priority_lst to be of length h. In the worst case each h interval is a sub interval of each l interval. That would give us a result set with 2*l + h elements and the thus the complexity of the algorithm is O(l+h) in the worst case.</p>
+
+<p>Clearly this is not tail recursive, but as far as I know Python does not optimize for tail recursion. Something to think of is to extend it to lists 1...n, with priority p1 &lt; p2 &lt; .... pn, and which would give us a complexity of sum(si), 0&lt; i &lt; n-1 where si is the size of the ith interval.</p>
+
+<p>If the lists are unsorted, adapting this method as is would require the caller method to sort the lists beforehand. Sorting being nlogn, it would dominate the linear compexity for and the complexity would be sum(si*log(si)), 0&lt; i &lt; n-1 for the case with n intervals.</p>
+]]></content>
+  </entry>
+  
+</feed>
