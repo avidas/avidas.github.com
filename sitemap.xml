@@ -2,70 +2,76 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://avidas.github.com/blog/2013/01/25/a-new-start/</loc>
-        <lastmod>2014-06-01T16:37:18-05:00</lastmod>
+        <lastmod>2015-06-06T15:26:50-05:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/blog/2013/05/30/publishing-hackathon/</loc>
-        <lastmod>2014-06-01T16:37:18-05:00</lastmod>
+        <lastmod>2015-06-06T15:26:50-05:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/blog/2013/06/08/angelhacking-at-dumbo/</loc>
-        <lastmod>2014-06-01T16:37:18-05:00</lastmod>
+        <lastmod>2015-06-06T15:26:50-05:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/blog/2013/07/04/hacking-health-third-times-the-charm/</loc>
-        <lastmod>2014-06-01T16:37:18-05:00</lastmod>
+        <lastmod>2015-06-06T15:26:50-05:00</lastmod>
     </url>
     <url>
         <loc>
             http://avidas.github.com/blog/2013/07/28/devsnearme-july-26-27-big-data-hackathon/
         </loc>
-        <lastmod>2014-06-01T16:37:18-05:00</lastmod>
+        <lastmod>2015-06-06T15:26:50-05:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/blog/2013/08/04/viphackathon-know-your-reps/</loc>
-        <lastmod>2014-06-01T16:37:18-05:00</lastmod>
+        <lastmod>2015-06-06T15:26:50-05:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/blog/2013/08/30/prioritized-date-interval-merge/</loc>
-        <lastmod>2014-06-01T16:37:18-05:00</lastmod>
+        <lastmod>2015-06-06T15:26:50-05:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/blog/2013/12/25/hack-the-trackers-november/</loc>
-        <lastmod>2014-06-01T16:37:18-05:00</lastmod>
+        <lastmod>2015-06-06T15:26:50-05:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/blog/2014/01/07/connected-car-at-angelhack/</loc>
-        <lastmod>2014-06-01T16:37:18-05:00</lastmod>
+        <lastmod>2015-06-06T15:26:50-05:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/blog/2014/06/01/best-chrome-productivity-extensions/</loc>
-        <lastmod>2014-06-05T22:54:57-05:00</lastmod>
+        <lastmod>2015-06-06T15:26:50-05:00</lastmod>
     </url>
     <url>
         <loc>
             http://avidas.github.com/blog/2014/07/13/scipy-2014-python-as-expression-to-push-boundaries-in-science/
         </loc>
-        <lastmod>2014-07-13T20:30:27-05:00</lastmod>
+        <lastmod>2015-06-06T15:26:50-05:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/blog/2014/08/30/bug-hunting-with-git-bisect/</loc>
-        <lastmod>2014-09-12T14:00:06-05:00</lastmod>
+        <lastmod>2015-06-06T15:26:50-05:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://avidas.github.com/blog/2015/06/06/building-realtime-user-monitoring-and-targeting-platform-with-node/
+        </loc>
+        <lastmod>2015-06-06T15:42:47-05:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/about/</loc>
-        <lastmod>2014-06-01T16:37:18-05:00</lastmod>
+        <lastmod>2015-06-06T15:26:50-05:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/blog/archives/</loc>
-        <lastmod>2014-09-12T14:00:06-05:00</lastmod>
+        <lastmod>2015-06-06T15:42:47-05:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/</loc>
-        <lastmod>2014-09-12T14:00:06-05:00</lastmod>
+        <lastmod>2015-06-06T15:42:47-05:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/robots.txt</loc>
-        <lastmod>2014-06-01T16:37:18-05:00</lastmod>
+        <lastmod>2015-06-06T15:26:50-05:00</lastmod>
     </url>
 </urlset>
