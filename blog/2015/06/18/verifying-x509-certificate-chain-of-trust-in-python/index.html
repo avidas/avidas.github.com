@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Bug hunting with git bisect - Avi Das</title>
+  <title>Verifying X509 Certificate Chain of Trust in Python - Avi Das</title>
   <meta name="author" content="Avi (Ananya Das)">
 
   
-  <meta name="description" content="With large projects with Git, feature development tends to happen often in separate branches before they are ready for merge. However, once the merge &hellip;">
+  <meta name="description" content="Executing network spoofing and man in the middle attacks have become easier than ever. This is more of an issue if a client has an open server for &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://avidas.github.com/blog/2014/08/30/bug-hunting-with-git-bisect/">
+  <link rel="canonical" href="http://avidas.github.com/blog/2015/06/18/verifying-x509-certificate-chain-of-trust-in-python/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -81,7 +81,7 @@
   
   <header>
     
-      <h1 class="entry-title">Bug Hunting With Git Bisect</h1>
+      <h1 class="entry-title">Verifying X509 Certificate Chain of Trust in Python</h1>
     
     
       <p class="meta">
@@ -97,22 +97,33 @@
   
 
 
-<time datetime="2014-08-30T12:55:00-05:00" pubdate data-updated="true">Aug 30<span>th</span>, 2014</time>
+<time datetime="2015-06-18T17:07:00-05:00" pubdate data-updated="true">Jun 18<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>With large projects with Git, feature development tends to happen often in separate branches before they are ready for merge. However, once the merge happens and tests break, it&#8217;s often challenging to figure out the commit at which the bug got introduced. Git bisect is an excellent tool to triage that commit. It does so in a binary search like fashion, marking good and bad commits and reducing problem space of commits by half every time.</p>
+<div class="entry-content"><p>Executing network spoofing and man in the middle attacks have become easier than ever. This is more of an issue if a client has an open server for you to send push notifications, since the open port can be detected by methods such as port scanning. As such, it is important to sign data, and ship the signature and metadata about verifying the data against the signature along with the data itself. This provides a way for the client to verify that the data received is unaltered, from the correct sender and indented for the correct recipient. Python&#8217;s pyopenssl has a handy method called <a href="http://pyopenssl.readthedocs.org/en/latest/api/crypto.html?highlight=verify#OpenSSL.crypto.verify">verify</a> for checking the authenticity of data.</p>
 
-<p>However, this process can be quite manual so git bisect has a run command. This allows you to set a testing scipt and based on the output of the testing script, it automatically finds the middle commits and continues searching till it finds the breaking commit.</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">OpenSSL</span><span class="o">.</span><span class="n">crypto</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="n">certificate</span><span class="p">,</span> <span class="n">signature</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">digest</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>Another neat feature is its ability to log out the output, record and rerun the bisect for further debugging. The git-scm book has some excellent documentation for the <a href="http://git-scm.com/docs/git-bisect">complete api</a> and <a href="http://git-scm.com/docs/git-bisect-lk2009.html">technical details</a>.</p>
 
-<p>There are still a few manual steps, as you would want to stash for saving and recovering state of uncommitted work, get to HEAD and view the log available for record and replay.</p>
+<p>The problem then becomes how to provide the certificate while retaining the flexibility necessary to update the certificate without clients needing to modify their certificate stores every time. Providing a url that can be used to download the cert provides that but leaves the door open for the same kind of attacks.</p>
 
-<p>For reusability, I wrote the following script to make git bisecting and setup into a handy bash function.</p>
+<p>Therefore, clients will need to ensure that the downloaded certificate is trustworthy before using it to verify the authenticity of a message. The openssl module on the terminal has a <a href="https://www.openssl.org/docs/apps/verify.html">verify method</a> that can be used to verify the certificate against a chain of trusted certificates, going all the way back to the root CA. The builtin ssl module has create_default_context(), which can build a certificate chain while creating a new SSLContext. However, it does not expose that functionality for adhoc post processing when you are not opening new connections.</p>
+
+<p>pyopenssl provides some very handy abstractions for exactly this purpose:</p>
+
+<ul>
+<li><p><a href="http://pyopenssl.readthedocs.org/en/latest/api/crypto.html#x509store-objects">X509Store</a>: The chain of certificates you have chosen to trust going back to root Certificate Authority</p></li>
+<li><p><a href="http://pyopenssl.readthedocs.org/en/latest/api/crypto.html#x509storecontext-objects">X509StoreContext</a> - Takes in a X509Store and a new certificate which you can now validate against your store by calling verify_certificate. It raises exceptions if the intermediate or root CA is missing in the chain or the certificate is invalid.</p></li>
+</ul>
+
+
+<p> The full example of verifying a downloaded certificate against a trust chain is given below</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -137,40 +148,43 @@
 <span class='line-number'>21</span>
 <span class='line-number'>22</span>
 <span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># Stash current work and and git bisect with given good and </span>
-</span><span class='line'><span class="c"># bad commit ids, running given script that exits with 0 on failure</span>
-</span><span class='line'><span class="c"># and positive number on success</span>
-</span><span class='line'>gbisect<span class="o">()</span> <span class="o">{</span>
-</span><span class='line'>    <span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$#&quot;</span> -ne 1 <span class="o">]</span>; <span class="k">then</span>
-</span><span class='line'><span class="k">        </span><span class="nb">echo</span> <span class="s2">&quot;gbisect good-commit-id bad-commit-id script &lt;arguments&gt;&quot;</span>
-</span><span class='line'>    <span class="k">else</span>
-</span><span class='line'><span class="k">        </span>git stash <span class="c"># stash current state</span>
-</span><span class='line'>        git checkout HEAD
-</span><span class='line'>        git bisect start <span class="c"># initialize git bisect</span>
-</span><span class='line'>        git bisect good <span class="nv">$1</span>
-</span><span class='line'>        <span class="nb">shift</span>
-</span><span class='line'><span class="nb">        </span>git bisect bad <span class="nv">$1</span>
-</span><span class='line'>        <span class="nb">shift</span>
-</span><span class='line'><span class="nb">        </span>git bisect run <span class="s2">&quot;$@&quot;</span> <span class="c"># # git bisect </span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">requests</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">OpenSSL</span> <span class="kn">import</span> <span class="n">crypto</span>
 </span><span class='line'>
-</span><span class='line'>        git bisect log
-</span><span class='line'>        git bisect reset
+</span><span class='line'><span class="k">def</span> <span class="nf">_verify_certificate_chain</span><span class="p">(</span><span class="n">cert_url</span><span class="p">,</span> <span class="n">trusted_certs</span><span class="p">):</span>
 </span><span class='line'>
-</span><span class='line'>        git stash list
-</span><span class='line'>        git stash apply
-</span><span class='line'>    <span class="k">fi</span>
-</span><span class='line'><span class="o">}</span>
+</span><span class='line'>    <span class="c"># Download the certificate from the url and load the certificate</span>
+</span><span class='line'>    <span class="n">cert_str</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cert_url</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">certificate</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">load_certificate</span><span class="p">(</span><span class="n">crypto</span><span class="o">.</span><span class="n">FILETYPE_PEM</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">cert_str</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c">#Create a certificate store and add your trusted certs</span>
+</span><span class='line'>    <span class="k">try</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">store</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">X509Store</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c"># Assuming the certificates are in PEM format in a trusted_certs list</span>
+</span><span class='line'>        <span class="k">for</span> <span class="n">_cert</span> <span class="ow">in</span> <span class="n">trusted_certs</span><span class="p">:</span>
+</span><span class='line'>            <span class="n">store</span><span class="o">.</span><span class="n">add_cert</span><span class="p">(</span><span class="n">_cert</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c"># Create a certificate context using the store and the downloaded certificate</span>
+</span><span class='line'>        <span class="n">store_ctx</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">X509StoreContext</span><span class="p">(</span><span class="n">store</span><span class="p">,</span> <span class="n">certificate</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c"># Verify the certificate, returns None if it can validate the certificate</span>
+</span><span class='line'>        <span class="n">store_ctx</span><span class="o">.</span><span class="n">verify_certificate</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">return</span> <span class="bp">True</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">return</span> <span class="bp">False</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>If you are using mocha as a test runner, you could use the script as following</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>gbisect 23df33 56dg23 mocha -t 15000
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Git is like an iceberg, in a good way. Generally instead of perusing heavy books on something, I like learning as I run into challenges. Once something clicks though, it is great as it has a N times effect into your workflow if you are using git for work and personal projects.</p>
+<p>Using this can be really useful for client libaries where you cannot rely on the system to provide the certificates, so you can ship your trust chain along with the library. There are also other useful abstractions in the pyopenssl library for some useful checks against the certificate. get_subject() provides information about the certificate such as common name, has_expired() which checks if the certificate is within valid time range and other features such as blacklisting potentially compromised certificates are possible. Thus pyopenssl is really handy when you need ssl abstractions beyond the standard library while not needing to execute the openssl shell calls via a subprocess.</p>
 </div>
 
 
@@ -193,12 +207,12 @@
   
 
 
-<time datetime="2014-08-30T12:55:00-05:00" pubdate data-updated="true">Aug 30<span>th</span>, 2014</time>
+<time datetime="2015-06-18T17:07:00-05:00" pubdate data-updated="true">Jun 18<span>th</span>, 2015</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/bash-/'>Bash,</a>, <a class='category' href='/blog/categories/debugging-/'>Debugging,</a>, <a class='category' href='/blog/categories/git-/'>Git,</a>, <a class='category' href='/blog/categories/shell/'>Shell</a>
+    <a class='category' href='/blog/categories/certificate-/'>Certificate,</a>, <a class='category' href='/blog/categories/python-/'>Python,</a>, <a class='category' href='/blog/categories/security/'>Security</a>, <a class='category' href='/blog/categories/x509-/'>X509,</a>
   
 </span>
 
@@ -207,7 +221,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avidas.github.com/blog/2014/08/30/bug-hunting-with-git-bisect/" data-via="avidas" data-counturl="http://avidas.github.com/blog/2014/08/30/bug-hunting-with-git-bisect/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avidas.github.com/blog/2015/06/18/verifying-x509-certificate-chain-of-trust-in-python/" data-via="avidas" data-counturl="http://avidas.github.com/blog/2015/06/18/verifying-x509-certificate-chain-of-trust-in-python/" >Tweet</a>
   
   
   
@@ -218,10 +232,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/07/13/scipy-2014-python-as-expression-to-push-boundaries-in-science/" title="Previous Post: Scipy 2014: Python as expression to push boundaries in science">&laquo; Scipy 2014: Python as expression to push boundaries in science</a>
+        <a class="basic-alignment left" href="/blog/2015/06/06/building-realtime-user-monitoring-and-targeting-platform-with-node/" title="Previous Post: Building Realtime user monitoring and targeting platform with Node, Express and Socket.io">&laquo; Building Realtime user monitoring and targeting platform with Node, Express and Socket.io</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2015/06/06/building-realtime-user-monitoring-and-targeting-platform-with-node/" title="Next Post: Building Realtime user monitoring and targeting platform with Node, Express and Socket.io">Building Realtime user monitoring and targeting platform with Node, Express and Socket.io &raquo;</a>
       
     </p>
   </footer>
@@ -393,8 +405,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://avidas.github.com/blog/2014/08/30/bug-hunting-with-git-bisect/';
-        var disqus_url = 'http://avidas.github.com/blog/2014/08/30/bug-hunting-with-git-bisect/';
+        var disqus_identifier = 'http://avidas.github.com/blog/2015/06/18/verifying-x509-certificate-chain-of-trust-in-python/';
+        var disqus_url = 'http://avidas.github.com/blog/2015/06/18/verifying-x509-certificate-chain-of-trust-in-python/';
         var disqus_script = 'embed.js';
       
     (function () {

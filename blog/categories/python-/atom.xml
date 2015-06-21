@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Python, | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/python-/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2015-06-06T15:43:00-05:00</updated>
+  <updated>2015-06-21T14:27:12-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -12,6 +12,68 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Verifying X509 Certificate Chain of Trust in Python]]></title>
+    <link href="http://avidas.github.com/blog/2015/06/18/verifying-x509-certificate-chain-of-trust-in-python/"/>
+    <updated>2015-06-18T17:07:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2015/06/18/verifying-x509-certificate-chain-of-trust-in-python</id>
+    <content type="html"><![CDATA[<p>Executing network spoofing and man in the middle attacks have become easier than ever. This is more of an issue if a client has an open server for you to send push notifications, since the open port can be detected by methods such as port scanning. As such, it is important to sign data, and ship the signature and metadata about verifying the data against the signature along with the data itself. This provides a way for the client to verify that the data received is unaltered, from the correct sender and indented for the correct recipient. Python's pyopenssl has a handy method called <a href="http://pyopenssl.readthedocs.org/en/latest/api/crypto.html?highlight=verify#OpenSSL.crypto.verify">verify</a> for checking the authenticity of data.</p>
+
+<p><code>python
+OpenSSL.crypto.verify(certificate, signature, data, digest)
+</code></p>
+
+<p>The problem then becomes how to provide the certificate while retaining the flexibility necessary to update the certificate without clients needing to modify their certificate stores every time. Providing a url that can be used to download the cert provides that but leaves the door open for the same kind of attacks.</p>
+
+<p>Therefore, clients will need to ensure that the downloaded certificate is trustworthy before using it to verify the authenticity of a message. The openssl module on the terminal has a <a href="https://www.openssl.org/docs/apps/verify.html">verify method</a> that can be used to verify the certificate against a chain of trusted certificates, going all the way back to the root CA. The builtin ssl module has create_default_context(), which can build a certificate chain while creating a new SSLContext. However, it does not expose that functionality for adhoc post processing when you are not opening new connections.</p>
+
+<p>pyopenssl provides some very handy abstractions for exactly this purpose:</p>
+
+<ul>
+<li><p><a href="http://pyopenssl.readthedocs.org/en/latest/api/crypto.html#x509store-objects">X509Store</a>: The chain of certificates you have chosen to trust going back to root Certificate Authority</p></li>
+<li><p><a href="http://pyopenssl.readthedocs.org/en/latest/api/crypto.html#x509storecontext-objects">X509StoreContext</a> - Takes in a X509Store and a new certificate which you can now validate against your store by calling verify_certificate. It raises exceptions if the intermediate or root CA is missing in the chain or the certificate is invalid.</p></li>
+</ul>
+
+
+<p> The full example of verifying a downloaded certificate against a trust chain is given below</p>
+
+<p>```python
+import requests
+from OpenSSL import crypto</p>
+
+<p>def _verify_certificate_chain(cert_url, trusted_certs):</p>
+
+<pre><code># Download the certificate from the url and load the certificate
+cert_str = requests.get(cert_url)
+certificate = crypto.load_certificate(crypto.FILETYPE_PEM, str(cert_str.text))
+
+#Create a certificate store and add your trusted certs
+try:
+    store = crypto.X509Store()
+
+    # Assuming the certificates are in PEM format in a trusted_certs list
+    for _cert in trusted_certs:
+        store.add_cert(_cert)
+
+    # Create a certificate context using the store and the downloaded certificate
+    store_ctx = crypto.X509StoreContext(store, certificate)
+
+    # Verify the certificate, returns None if it can validate the certificate
+    store_ctx.verify_certificate()
+
+    return True
+
+except Exception as e:
+    print(e)
+    return False
+</code></pre>
+
+<p>```</p>
+
+<p>Using this can be really useful for client libaries where you cannot rely on the system to provide the certificates, so you can ship your trust chain along with the library. There are also other useful abstractions in the pyopenssl library for some useful checks against the certificate. get_subject() provides information about the certificate such as common name, has_expired() which checks if the certificate is within valid time range and other features such as blacklisting potentially compromised certificates are possible. Thus pyopenssl is really handy when you need ssl abstractions beyond the standard library while not needing to execute the openssl shell calls via a subprocess.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Scipy 2014: Python as expression to push boundaries in science]]></title>

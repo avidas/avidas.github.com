@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Node.js, | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/node-js-/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2015-06-06T15:43:00-05:00</updated>
+  <updated>2015-06-21T14:27:12-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -148,6 +148,8 @@ When adminMessage is received on the server side, we broacast to the specific us
 ```</p>
 
 <p>There you have an end to end way in which a set of admins can track a set of users on a website and send notifications. This system can be particularly valuable when the user's primary reason for visit accompanies purchasing intent. E-commerce and SAAS platforms have recognized the importance to user segmentation and targeted outreach. This system enables you to minimize the latency of such outreach. On the plus side, you can get to rely on fully open source tools with broad user bases and support.</p>
+
+<p>This particular example used url endpoints as part of the data payload, but you can really strech it to any user events. For example, you can easily track where the user's cursor is and send that information back in real time. One can imagine High Frequency Trading firms using this technique in bots to track real time user behavior, e.g. user's cursor hovering on a buy button for a ticker, as information gathered for its trades. How much you want to track and react to can be an exercise in determining the bounderies of being responsive and creepiness for users.</p>
 
 <p>Props to my friend Shah for working with me on this. If you are doing some level of realtime tracking on your site, I would love to hear about it. Please feel free to send over any other <a href="mailto:avi@aviadas.com">feedback</a> as well.</p>
 ]]></content>
