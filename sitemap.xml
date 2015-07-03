@@ -2,7 +2,7 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://avidas.github.com/blog/2013/01/25/a-new-start/</loc>
-        <lastmod>2015-06-06T15:26:50-05:00</lastmod>
+        <lastmod>2015-07-03T15:42:39-05:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/blog/2013/05/30/publishing-hackathon/</loc>
@@ -14,7 +14,7 @@
     </url>
     <url>
         <loc>http://avidas.github.com/blog/2013/07/04/hacking-health-third-times-the-charm/</loc>
-        <lastmod>2015-06-06T15:26:50-05:00</lastmod>
+        <lastmod>2015-07-03T15:44:15-05:00</lastmod>
     </url>
     <url>
         <loc>
@@ -24,7 +24,7 @@
     </url>
     <url>
         <loc>http://avidas.github.com/blog/2013/08/04/viphackathon-know-your-reps/</loc>
-        <lastmod>2015-06-06T15:26:50-05:00</lastmod>
+        <lastmod>2015-07-03T15:42:17-05:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/blog/2013/08/30/prioritized-date-interval-merge/</loc>
@@ -40,13 +40,13 @@
     </url>
     <url>
         <loc>http://avidas.github.com/blog/2014/06/01/best-chrome-productivity-extensions/</loc>
-        <lastmod>2015-06-06T15:26:50-05:00</lastmod>
+        <lastmod>2015-07-03T15:42:50-05:00</lastmod>
     </url>
     <url>
         <loc>
             http://avidas.github.com/blog/2014/07/13/scipy-2014-python-as-expression-to-push-boundaries-in-science/
         </loc>
-        <lastmod>2015-06-06T15:26:50-05:00</lastmod>
+        <lastmod>2015-07-03T15:44:05-05:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/blog/2014/08/30/bug-hunting-with-git-bisect/</loc>
@@ -60,6 +60,12 @@
     </url>
     <url>
         <loc>
+            http://avidas.github.com/blog/2015/06/14/nodeconf-unconf-with-the-right-intentions/
+        </loc>
+        <lastmod>2015-07-03T15:41:49-05:00</lastmod>
+    </url>
+    <url>
+        <loc>
             http://avidas.github.com/blog/2015/06/18/verifying-x509-certificate-chain-of-trust-in-python/
         </loc>
         <lastmod>2015-06-21T14:26:11-05:00</lastmod>
@@ -70,11 +76,11 @@
     </url>
     <url>
         <loc>http://avidas.github.com/blog/archives/</loc>
-        <lastmod>2015-06-21T14:26:11-05:00</lastmod>
+        <lastmod>2015-07-03T15:44:15-05:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/</loc>
-        <lastmod>2015-06-21T14:26:11-05:00</lastmod>
+        <lastmod>2015-07-03T15:44:15-05:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/robots.txt</loc>

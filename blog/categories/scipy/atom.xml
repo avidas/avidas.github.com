@@ -4,7 +4,7 @@
   <title><![CDATA[Category: SciPy | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/scipy/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2015-06-21T14:27:12-05:00</updated>
+  <updated>2015-07-03T15:45:04-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -33,6 +33,13 @@ Performance, distribution, scalibility and reproducability were some of main the
 There are many tools which deserve a space here, but I was primarily exited to discover pyspark, yt, plotly, sumatra/vistrails, hashdist and airspeed velocity. Version control and workflow control are familiar terratories for software engineers, but the idea of event control was new to me, something explored in a Birds of a feather discussion.</p></li>
 <li><p><strong>Birds of a Feather talks are revealing</strong>:
 Birds of a feather discussions were sometimes my favorite, where there was candid sharing of painpoints and their solutions from the community members. It was also good to know what were the open problems in various areas are as they often indicate valuable areas to focus on.</p></li>
+</ol>
+
+
+<!-- more -->
+
+
+<ol>
 <li><p><strong>Contributions are needed</strong>:
 It was great to see a lot of egoless collaboration during the conference. Maintainers of projects were willing to deprecate their hard work in favor of a better accepted tool in the community. At the same time, lot of the development of very instrumental tools seem to be done by a small group of people, highlighting the need for more collaborators in this space.</p></li>
 <li><p><strong>Sprints are like speed dating for open source projects</strong>:

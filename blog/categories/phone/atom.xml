@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Phone | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/phone/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2015-06-21T14:27:12-05:00</updated>
+  <updated>2015-07-03T15:45:04-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -31,7 +31,7 @@
 </ol>
 
 
-<!--more-->
+<!-- more -->
 
 
 <p> The app was built with Windows Azure as Backend, Twilio is used for sms notification when officials respond to issues. Azavea is used to bring the elected officals information using the Geo Location.</p>

@@ -9,7 +9,7 @@
   <meta name="author" content="Avi (Ananya Das)">
 
   
-  <meta name="description" content="How many people know their representatives for council/state/congress? How many local issues gets routed to the most relevant elected official? How &hellip;">
+  <meta name="description" content="Ran into this interesting problem lately and wanted to code up a recursive solution in Python. Essentially an extension of merge from merge sort but &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -78,6 +78,122 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/30/prioritized-date-interval-merge/">Prioritized Date Interval Merge</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-30T23:57:00-05:00" pubdate data-updated="true">Aug 30<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Ran into this interesting problem lately and wanted to code up a recursive solution in Python. Essentially an extension of merge from merge sort but for intervals. There is definitely something very satisfying about coding up a recursive solution, as they tend to produce clean solutions despite the ugly formatting in this case to make list concatenation work.</p>
+
+<figure class='code'><figcaption><span>Merge date intervals by priority</span><a href='https://github.com/avidas/Code_snippets/blob/master/merge_interval.py'>Source</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">merge_interval</span><span class="p">(</span><span class="n">low_priority_lst</span><span class="p">,</span><span class="n">high_priority_lst</span><span class="p">):</span>
+</span><span class='line'>  <span class="sd">&#39;&#39;&#39;</span>
+</span><span class='line'><span class="sd"> Given two lists with sorted date ranges, return merged list with high_priority_lst </span>
+</span><span class='line'><span class="sd"> ranges preferred over low_priority_lst ranges in case of intersection.</span>
+</span><span class='line'><span class="sd"> Partial intervals are allowed.</span>
+</span><span class='line'><span class="sd"> &#39;&#39;&#39;</span>
+</span><span class='line'>  <span class="k">if</span> <span class="n">low_priority_lst</span> <span class="o">==</span> <span class="p">[]</span> <span class="ow">or</span> <span class="n">low_priority_lst</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span> <span class="k">return</span> <span class="n">high_priority_lst</span>
+</span><span class='line'>  <span class="k">if</span> <span class="n">high_priority_lst</span> <span class="o">==</span> <span class="p">[]</span> <span class="ow">or</span> <span class="n">high_priority_lst</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span> <span class="k">return</span> <span class="n">low_priority_lst</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="c"># case :               |-------|</span>
+</span><span class='line'>  <span class="c">#        |-------|            </span>
+</span><span class='line'>  <span class="k">if</span> <span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]:</span>
+</span><span class='line'>   <span class="k">return</span> <span class="p">[</span><span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span>
+</span><span class='line'>          <span class="n">merge_interval</span><span class="p">(</span><span class="n">low_priority_lst</span><span class="p">,</span><span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+</span><span class='line'>  <span class="c"># case :   |-------|</span>
+</span><span class='line'>  <span class="c">#                     |-------|      </span>
+</span><span class='line'>  <span class="k">elif</span> <span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span>
+</span><span class='line'>      <span class="k">return</span> <span class="p">[</span><span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span>
+</span><span class='line'>          <span class="n">merge_interval</span><span class="p">(</span><span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span><span class="n">high_priority_lst</span><span class="p">)</span>
+</span><span class='line'>  <span class="c"># case :|-------|</span>
+</span><span class='line'>  <span class="c">#            |-------|  </span>
+</span><span class='line'>  <span class="k">elif</span> <span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span>
+</span><span class='line'>      <span class="k">return</span> <span class="p">[[</span><span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]]]</span> <span class="o">+</span>
+</span><span class='line'>          <span class="n">merge_interval</span><span class="p">(</span> <span class="p">[[</span><span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]]]</span> <span class="o">+</span>
+</span><span class='line'>                               <span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">high_priority_lst</span><span class="p">)</span>
+</span><span class='line'>  <span class="c"># case :      |-------|</span>
+</span><span class='line'>  <span class="c">#        |-------|  </span>
+</span><span class='line'>  <span class="k">elif</span> <span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]:</span>
+</span><span class='line'>      <span class="k">return</span> <span class="p">[</span><span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span>
+</span><span class='line'>          <span class="n">merge_interval</span><span class="p">(</span> <span class="p">[[</span><span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]]]</span> <span class="o">+</span>
+</span><span class='line'>                              <span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="p">,</span> <span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+</span><span class='line'>  <span class="c"># case :  |-------| |---| |----|</span>
+</span><span class='line'>  <span class="c">#        |-----------------| </span>
+</span><span class='line'>  <span class="k">else</span><span class="p">:</span>
+</span><span class='line'>      <span class="k">return</span> <span class="n">merge_interval</span><span class="p">(</span><span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span><span class="n">high_priority_lst</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Complexity :</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/08/30/prioritized-date-interval-merge/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -391,15 +507,15 @@ The rest of the 24 hours, skipping amusing acts by participants which deserve th
       </li>
     
       <li class="post">
+        <a href="/blog/2015/06/14/nodeconf-unconf-with-the-right-intentions/">Nodeconf: Unconf with the right intentions</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/06/06/building-realtime-user-monitoring-and-targeting-platform-with-node/">Building Realtime user monitoring and targeting platform with Node, Express and Socket.io</a>
       </li>
     
       <li class="post">
         <a href="/blog/2014/08/30/bug-hunting-with-git-bisect/">Bug hunting with git bisect</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/07/13/scipy-2014-python-as-expression-to-push-boundaries-in-science/">Scipy 2014: Python as expression to push boundaries in science</a>
       </li>
     
   </ul>

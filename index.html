@@ -200,6 +200,57 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2015/06/14/nodeconf-unconf-with-the-right-intentions/">Nodeconf: Unconf With the Right Intentions</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-06-14T16:28:00-05:00" pubdate data-updated="true">Jun 14<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Conferences can be a great way to get the creative juices flowing, meet people in the community, share stories and problems and learn from people building the frameworks that a lot of your software runs on.</p>
+
+<p>Nodeconf managed to achieve all this, in the rather unusual form of an unconference. An unconference meant that the structure and events/presentations and talks at the conference were left to be decided by the community rather than a committee. That does make Nodeconf a conference not for everyone. Understanding the format and structure of Nodeconf is important before you make the hike to Walnut Creek Ranch next year.</p>
+
+<p>I thought to distill down the reasons why you might or might not be interested in attending Nodeconf. You might be interested in Nodeconf if you</p>
+
+<ol>
+<li><p><strong>Build for the web</strong>: For a lot of attendees, Nodeconf would feel like living in the future as a lot of attendees are very involved in making the decisions and tradeoff that would shape the future of the web. Specially discussions around packaging and parceling front end assets in npm (Modular UI) was really interesting as was Isomorphic JS, which covered the challenges involved in writing identical client and server side code. The JavaScript landscape is a fast evolving one and Nodeconf offers fantastic perspective on how the decision making can work.</p></li>
+<li><p><strong>Publish on npm/github</strong>: As someone who maintains projects on npm and github, the discussions around distributing node modules were very insightful. Issues such as broadening adoption, getting contributors for github modules and standards for publishing on npm came up and maintainers of hugely popular modules shared their experiences. Picking a good module scope, having really good examples for beginners to start with and publishing with concise yet searchable package descriptions were all emphasized.</p></li>
+</ol>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/06/14/nodeconf-unconf-with-the-right-intentions/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2015/06/06/building-realtime-user-monitoring-and-targeting-platform-with-node/">Building Realtime User Monitoring and Targeting Platform With Node, Express and Socket.io</a></h1>
     
     
@@ -538,21 +589,15 @@ Performance, distribution, scalibility and reproducability were some of main the
 There are many tools which deserve a space here, but I was primarily exited to discover pyspark, yt, plotly, sumatra/vistrails, hashdist and airspeed velocity. Version control and workflow control are familiar terratories for software engineers, but the idea of event control was new to me, something explored in a Birds of a feather discussion.</p></li>
 <li><p><strong>Birds of a Feather talks are revealing</strong>:
 Birds of a feather discussions were sometimes my favorite, where there was candid sharing of painpoints and their solutions from the community members. It was also good to know what were the open problems in various areas are as they often indicate valuable areas to focus on.</p></li>
-<li><p><strong>Contributions are needed</strong>:
-It was great to see a lot of egoless collaboration during the conference. Maintainers of projects were willing to deprecate their hard work in favor of a better accepted tool in the community. At the same time, lot of the development of very instrumental tools seem to be done by a small group of people, highlighting the need for more collaborators in this space.</p></li>
-<li><p><strong>Sprints are like speed dating for open source projects</strong>:
-SciPy sprints were very different environment from hackathons. With the removal of prize as a factor, what remains is people who enjoy their work and often are highly productive. With the large number of projects available and the acceptance by the core developers, I had the opportunity to work on the charting library Bokeh, serialization library Dill, hack on datasets with yt developers (because random access over a 32 TB file served by apache to generate a graph on Ipython fully client side is seriously impressive) and dig into dockerizing web apps and databases with the reproducable workflow group. All in two days work.</p></li>
 </ol>
 
 
-<p>As someone who is primarily an app developer, this conference was challenging as I have diverged from the path of scientific research a while back. Despite that, I have came away with a strong appreciation for the scientific python community and ecosystem and must thank PayPal for letting me attend the confrence.</p>
-
-<p>To finish, the keynote on the third day by Greg Wilson was quite fantastic and you should check it out if you haven&#8217;t already:</p>
-
-<div class="embed-video-container"><iframe src="http://www.youtube.com/embed/1e26rp6qPbA" allowfullscreen></iframe></div>
-
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/07/13/scipy-2014-python-as-expression-to-push-boundaries-in-science/">Read on &rarr;</a>
+    </footer>
   
 
 
@@ -713,122 +758,6 @@ Ok, this one is controversial. Adblock will stop advertisements on websites, kee
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/08/30/prioritized-date-interval-merge/">Prioritized Date Interval Merge</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-30T23:57:00-05:00" pubdate data-updated="true">Aug 30<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Ran into this interesting problem lately and wanted to code up a recursive solution in Python. Essentially an extension of merge from merge sort but for intervals. There is definitely something very satisfying about coding up a recursive solution, as they tend to produce clean solutions despite the ugly formatting in this case to make list concatenation work.</p>
-
-<figure class='code'><figcaption><span>Merge date intervals by priority</span><a href='https://github.com/avidas/Code_snippets/blob/master/merge_interval.py'>Source</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">merge_interval</span><span class="p">(</span><span class="n">low_priority_lst</span><span class="p">,</span><span class="n">high_priority_lst</span><span class="p">):</span>
-</span><span class='line'>  <span class="sd">&#39;&#39;&#39;</span>
-</span><span class='line'><span class="sd"> Given two lists with sorted date ranges, return merged list with high_priority_lst </span>
-</span><span class='line'><span class="sd"> ranges preferred over low_priority_lst ranges in case of intersection.</span>
-</span><span class='line'><span class="sd"> Partial intervals are allowed.</span>
-</span><span class='line'><span class="sd"> &#39;&#39;&#39;</span>
-</span><span class='line'>  <span class="k">if</span> <span class="n">low_priority_lst</span> <span class="o">==</span> <span class="p">[]</span> <span class="ow">or</span> <span class="n">low_priority_lst</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span> <span class="k">return</span> <span class="n">high_priority_lst</span>
-</span><span class='line'>  <span class="k">if</span> <span class="n">high_priority_lst</span> <span class="o">==</span> <span class="p">[]</span> <span class="ow">or</span> <span class="n">high_priority_lst</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span> <span class="k">return</span> <span class="n">low_priority_lst</span>
-</span><span class='line'>  
-</span><span class='line'>  <span class="c"># case :               |-------|</span>
-</span><span class='line'>  <span class="c">#        |-------|            </span>
-</span><span class='line'>  <span class="k">if</span> <span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]:</span>
-</span><span class='line'>   <span class="k">return</span> <span class="p">[</span><span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span>
-</span><span class='line'>          <span class="n">merge_interval</span><span class="p">(</span><span class="n">low_priority_lst</span><span class="p">,</span><span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
-</span><span class='line'>  <span class="c"># case :   |-------|</span>
-</span><span class='line'>  <span class="c">#                     |-------|      </span>
-</span><span class='line'>  <span class="k">elif</span> <span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span>
-</span><span class='line'>      <span class="k">return</span> <span class="p">[</span><span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span>
-</span><span class='line'>          <span class="n">merge_interval</span><span class="p">(</span><span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span><span class="n">high_priority_lst</span><span class="p">)</span>
-</span><span class='line'>  <span class="c"># case :|-------|</span>
-</span><span class='line'>  <span class="c">#            |-------|  </span>
-</span><span class='line'>  <span class="k">elif</span> <span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span>
-</span><span class='line'>      <span class="k">return</span> <span class="p">[[</span><span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]]]</span> <span class="o">+</span>
-</span><span class='line'>          <span class="n">merge_interval</span><span class="p">(</span> <span class="p">[[</span><span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]]]</span> <span class="o">+</span>
-</span><span class='line'>                               <span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">high_priority_lst</span><span class="p">)</span>
-</span><span class='line'>  <span class="c"># case :      |-------|</span>
-</span><span class='line'>  <span class="c">#        |-------|  </span>
-</span><span class='line'>  <span class="k">elif</span> <span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]:</span>
-</span><span class='line'>      <span class="k">return</span> <span class="p">[</span><span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span>
-</span><span class='line'>          <span class="n">merge_interval</span><span class="p">(</span> <span class="p">[[</span><span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]]]</span> <span class="o">+</span>
-</span><span class='line'>                              <span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="p">,</span> <span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
-</span><span class='line'>  <span class="c"># case :  |-------| |---| |----|</span>
-</span><span class='line'>  <span class="c">#        |-----------------| </span>
-</span><span class='line'>  <span class="k">else</span><span class="p">:</span>
-</span><span class='line'>      <span class="k">return</span> <span class="n">merge_interval</span><span class="p">(</span><span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span><span class="n">high_priority_lst</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Complexity :</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/08/30/prioritized-date-interval-merge/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -854,15 +783,15 @@ Ok, this one is controversial. Adblock will stop advertisements on websites, kee
       </li>
     
       <li class="post">
+        <a href="/blog/2015/06/14/nodeconf-unconf-with-the-right-intentions/">Nodeconf: Unconf with the right intentions</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/06/06/building-realtime-user-monitoring-and-targeting-platform-with-node/">Building Realtime user monitoring and targeting platform with Node, Express and Socket.io</a>
       </li>
     
       <li class="post">
         <a href="/blog/2014/08/30/bug-hunting-with-git-bisect/">Bug hunting with git bisect</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/07/13/scipy-2014-python-as-expression-to-push-boundaries-in-science/">Scipy 2014: Python as expression to push boundaries in science</a>
       </li>
     
   </ul>
