@@ -14,7 +14,7 @@ I cannot see into the future, so I cannot predict the longevity of my blog. I gr
 
  1. **Express self-learnings** Post college, I am getting the opportunity to learn a lot more on my own. I needed a place to share what I am learning.
 
-<!--more-->
+<!-- more -->
 
  2. **Bring cohesiveness to my work** 
 Directly related to 1, I hope documenting my learning and getting started with projects of increasing complexity will be a nice side effect of this blog. In the past, I have been guilty of starting projects and not donating enough time to them. I mean to change this habit for projects I start caring about.

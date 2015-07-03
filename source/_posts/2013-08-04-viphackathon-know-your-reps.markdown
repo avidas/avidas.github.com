@@ -19,7 +19,7 @@ To solve some of these issues, we worked on the "Know your representatives" app 
 
 3. Users can add their support to prioritize the high priority items by raising their support using the voting button.
 
-<!--more-->
+<!-- more -->
 
  The app was built with Windows Azure as Backend, Twilio is used for sms notification when officials respond to issues. Azavea is used to bring the elected officals information using the Geo Location.
 

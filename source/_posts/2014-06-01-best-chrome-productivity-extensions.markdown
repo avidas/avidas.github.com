@@ -28,7 +28,7 @@ Despite the rise of alternative logins, passwords are still integral parts of th
 6. [Adblock Plus](https://adblockplus.org/en/chrome):
 Ok, this one is controversial. Adblock will stop advertisements on websites, keeping you focused and saving time particularly for video ads. Now, ads power the web, and any website with ads as primary revenue stream should be aware of adblock. I particularly enjoy the cat and mouse chase between youtube and adblock: youtube refusing to play videos as long as adblock is enabled, adblock gets smarter, youtube catches up. However, it can make certain sites load faster, thus saving time.
 
-<!--more-->
+<!-- more -->
 
 Considering how valuable time is, it is important that we get done online what we meant to do. Hopefully, you have discovered an extension or two among this list that you were not aware of before and would help you save some extra time. The better Internet ADD is combated, the more time we spend doing what we love doing or be with family and friends and everybody wins. 
 

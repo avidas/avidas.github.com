@@ -23,6 +23,8 @@ There are many tools which deserve a space here, but I was primarily exited to d
 3. **Birds of a Feather talks are revealing**:
 Birds of a feather discussions were sometimes my favorite, where there was candid sharing of painpoints and their solutions from the community members. It was also good to know what were the open problems in various areas are as they often indicate valuable areas to focus on.
 
+<!-- more -->
+
 4. **Contributions are needed**:
 It was great to see a lot of egoless collaboration during the conference. Maintainers of projects were willing to deprecate their hard work in favor of a better accepted tool in the community. At the same time, lot of the development of very instrumental tools seem to be done by a small group of people, highlighting the need for more collaborators in this space.
 
