@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Nodeconf | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/nodeconf/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2015-07-03T15:46:01-05:00</updated>
+  <updated>2015-07-13T23:45:03-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -18,7 +18,7 @@
     <link href="http://avidas.github.com/blog/2015/06/14/nodeconf-unconf-with-the-right-intentions/"/>
     <updated>2015-06-14T16:28:00-05:00</updated>
     <id>http://avidas.github.com/blog/2015/06/14/nodeconf-unconf-with-the-right-intentions</id>
-    <content type="html"><![CDATA[<p>Conferences can be a great way to get the creative juices flowing, meet people in the community, share stories and problems and learn from people building the frameworks that a lot of your software runs on.</p>
+    <content type="html"><![CDATA[<p>Conferences can be a great way to get the creative juices flowing, meet people in the community and share stories and problems. They offer great opportunities to learn from core developers building the frameworks that your software depends on.</p>
 
 <p>Nodeconf managed to achieve all this, in the rather unusual form of an unconference. An unconference meant that the structure and events/presentations and talks at the conference were left to be decided by the community rather than a committee. That does make Nodeconf a conference not for everyone. Understanding the format and structure of Nodeconf is important before you make the hike to Walnut Creek Ranch next year.</p>
 
@@ -34,7 +34,7 @@
 
 
 <ol>
-<li><p><strong>Foster community growth</strong>: The node community is certainly dealing with the growing pains that comes with success. Having a well defined process for integrating new members is really important for large codebases and broadening mentorship was considered as a possibility for guiding new members through the steep learning curve.</p></li>
+<li><p><strong>Foster community growth</strong>: The node community is certainly dealing with the growing pains that comes with success. Having a well defined process for integrating new members is really important for large codebases. Broadening mentorship was considered as a possibility for guiding new members through the steep learning curve.</p></li>
 <li><p><strong>Want to get a deeper understanding of Node core</strong>: There was unparalleled opportunity to discuss Node core or API or critical libraries such as libuv with the people creating those software. This was also true for external node libraries, and it can be certainly valuable to take a set of well defined problems that you have with your Node codebases as you are bound to make progress in such an environment.</p></li>
 </ol>
 
