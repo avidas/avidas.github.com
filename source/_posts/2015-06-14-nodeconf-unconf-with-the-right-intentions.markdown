@@ -7,7 +7,7 @@ comments: true
 categories: Node.js, Nodeconf
 ---
 
-Conferences can be a great way to get the creative juices flowing, meet people in the community, share stories and problems and learn from people building the frameworks that a lot of your software runs on.
+Conferences can be a great way to get the creative juices flowing, meet people in the community and share stories and problems. They offer great opportunities to learn from core developers building the frameworks that your software depends on.
 
 Nodeconf managed to achieve all this, in the rather unusual form of an unconference. An unconference meant that the structure and events/presentations and talks at the conference were left to be decided by the community rather than a committee. That does make Nodeconf a conference not for everyone. Understanding the format and structure of Nodeconf is important before you make the hike to Walnut Creek Ranch next year.
 
@@ -19,7 +19,7 @@ I thought to distill down the reasons why you might or might not be interested i
 
 <!-- more -->
 
-3. **Foster community growth**: The node community is certainly dealing with the growing pains that comes with success. Having a well defined process for integrating new members is really important for large codebases and broadening mentorship was considered as a possibility for guiding new members through the steep learning curve. 
+3. **Foster community growth**: The node community is certainly dealing with the growing pains that comes with success. Having a well defined process for integrating new members is really important for large codebases. Broadening mentorship was considered as a possibility for guiding new members through the steep learning curve. 
 
 4. **Want to get a deeper understanding of Node core**: There was unparalleled opportunity to discuss Node core or API or critical libraries such as libuv with the people creating those software. This was also true for external node libraries, and it can be certainly valuable to take a set of well defined problems that you have with your Node codebases as you are bound to make progress in such an environment.
 
