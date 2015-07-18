@@ -122,6 +122,9 @@
 
 <p>Core Browserify only bundles modules written in the CommonJS syntax. However, there are other common ways of modularizing client side code, AMD and Global Variables being the two common ones. There are also lot of people writing in languages compiled in Javascript, such as CoffeeScript or TypeScript. Instead of handling every possibly of modules, Browserify exposes a Transforms API so that a plugin can be built which can preprocess a file into Javascript in CommonJS syntax which Browserify can then consume. There are plugins available for Bower modules (debowerify), globals (deglobalify), coffeescript(coffeeify), harmony (es6ify) etc. A simple search of Browserify on Github or npm brings up thousands of modules and attests to the <a href="https://github.com/substack/node-browserify/wiki/list-of-transforms">ecosystem around Browserify</a>. Delegating to transforms helps to keep the footprint of Browserify smaller, adhering to the single responsibility principle.</p>
 
+<!-- more -->
+
+
 <h4>Using with Build Tools</h4>
 
 <p>Software is great when it just works and you do not have tinker with it all the time. Grunt/Gulp are great for this kind of configure once, build whenever workflow. Browserify is available as a command line tool primarily, but has Grunt and Gulp plugins which can be used to easily integrate Browserify into your build. There is also watchify, which can reduce build time by monitoring source files and incrementally rebuilding the front end bundle on the fly. For large projects, this is really useful to keep the build times small.</p>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Node.js | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/node-js/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2015-07-18T12:36:47-05:00</updated>
+  <updated>2015-07-18T12:38:40-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -35,6 +35,9 @@
 <h4>Transforms</h4>
 
 <p>Core Browserify only bundles modules written in the CommonJS syntax. However, there are other common ways of modularizing client side code, AMD and Global Variables being the two common ones. There are also lot of people writing in languages compiled in Javascript, such as CoffeeScript or TypeScript. Instead of handling every possibly of modules, Browserify exposes a Transforms API so that a plugin can be built which can preprocess a file into Javascript in CommonJS syntax which Browserify can then consume. There are plugins available for Bower modules (debowerify), globals (deglobalify), coffeescript(coffeeify), harmony (es6ify) etc. A simple search of Browserify on Github or npm brings up thousands of modules and attests to the <a href="https://github.com/substack/node-browserify/wiki/list-of-transforms">ecosystem around Browserify</a>. Delegating to transforms helps to keep the footprint of Browserify smaller, adhering to the single responsibility principle.</p>
+
+<!-- more -->
+
 
 <h4>Using with Build Tools</h4>
 

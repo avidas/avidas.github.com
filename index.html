@@ -125,23 +125,12 @@
 
 <p>Core Browserify only bundles modules written in the CommonJS syntax. However, there are other common ways of modularizing client side code, AMD and Global Variables being the two common ones. There are also lot of people writing in languages compiled in Javascript, such as CoffeeScript or TypeScript. Instead of handling every possibly of modules, Browserify exposes a Transforms API so that a plugin can be built which can preprocess a file into Javascript in CommonJS syntax which Browserify can then consume. There are plugins available for Bower modules (debowerify), globals (deglobalify), coffeescript(coffeeify), harmony (es6ify) etc. A simple search of Browserify on Github or npm brings up thousands of modules and attests to the <a href="https://github.com/substack/node-browserify/wiki/list-of-transforms">ecosystem around Browserify</a>. Delegating to transforms helps to keep the footprint of Browserify smaller, adhering to the single responsibility principle.</p>
 
-<h4>Using with Build Tools</h4>
-
-<p>Software is great when it just works and you do not have tinker with it all the time. Grunt/Gulp are great for this kind of configure once, build whenever workflow. Browserify is available as a command line tool primarily, but has Grunt and Gulp plugins which can be used to easily integrate Browserify into your build. There is also watchify, which can reduce build time by monitoring source files and incrementally rebuilding the front end bundle on the fly. For large projects, this is really useful to keep the build times small.</p>
-
-<h4>Alternatives</h4>
-
-<p>There are always alternatives available in the JavaScript world, and Webpack, RequireJS and Component being some of the major ones. RequireJS has been around for longer and primarily supports the AMD specification, but has support for CommonJS too. Webpack tends to do better with static assets that your client side requires and tries to cover a broader issue of bundling all static assets. With picking any tool, it&#8217;s good to be aware of the alternatives, the problem they were designed to solve, and benefits and drawbacks of each. It makes for <a href="https://gist.github.com/substack/68f8d502be42d5cd4942">quite interesting debate</a> at times as well.</p>
-
-<h4>Resources</h4>
-
-<p>Browserify has really good documentation and the <a href="https://github.com/substack/browserify-handbook">browserify handbook</a> is a great resource for an extensive runthrough. For getting started, the nodeschool module called <a href="https://github.com/substack/browserify-adventure">browserify-adventure</a> is very handy.</p>
-
-<p>Since the browser community is unlikely to adopt a common module system anytime soon, Browserify offers a great way to abstract away that issue. With access to a vast amount of modules, there is much less of a need for reinventing the wheel on the client side, and fewer script tags thrown around everywhere. Client side software development is evolving fast, and Browserify has been a significant progress to minimize some of that complexity.</p>
-
-<p>If you are using browserify/webpack in production, I would love to know the tradeoffs/issues you have ran into. Comments/feedback here or <a href="mailto:avi@aviadas.com">contact</a>.</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/07/16/how-browserify-improves-client-side-development/">Read on &rarr;</a>
+    </footer>
   
 
 
