@@ -4,7 +4,7 @@ title: "DevsNearMe : July 26-27 Big Data Hackathon"
 date: 2013-07-28 12:54
 comments: true
 sharing : true
-categories: Android, Flask, Hackathons 
+categories: Android, Flask, Hackathon
 ---
 
 {% slideshare 24686054 %}

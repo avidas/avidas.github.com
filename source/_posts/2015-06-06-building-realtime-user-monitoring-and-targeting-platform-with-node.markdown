@@ -3,7 +3,7 @@ layout: post
 title: "Building Realtime user monitoring and targeting platform with Node, Express and Socket.io"
 date: 2015-06-06 15:31
 comments: true
-categories: Node.js, Express, Socket.io, Realtime
+categories: Node.js, Express, Socket.io, Realtime, JavaScript
 ---
 
 Being able to target users and send targeted notifications can be key to turn visitors into conversions and tighten your funnel. Offerings such as mailchimp and mixpanel offer ways to reach out to users but in most of those cases you only get to do them in post processing. However, there are situations when it would be really powerful is to be able to track users as they are navigating your website and send targeted notifications to them.

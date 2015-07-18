@@ -4,7 +4,7 @@ title: "Prioritized date interval merge"
 date: 2013-08-30 23:57
 comments: true
 sharing: true
-categories: Recursion, Python
+categories: Recursion, Python, Algorithm
 ---
 
 Ran into this interesting problem lately and wanted to code up a recursive solution in Python. Essentially an extension of merge from merge sort but for intervals. There is definitely something very satisfying about coding up a recursive solution, as they tend to produce clean solutions despite the ugly formatting in this case to make list concatenation work.

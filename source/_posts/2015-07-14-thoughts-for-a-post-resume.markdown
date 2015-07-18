@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Thoughts for a post-resume"
+title: "Thoughts for a post-resume, post recruiting industry job market"
 date: 2015-07-14 07:17
 comments: true
 published: false
-categories: Recruiting
+categories: Recruiting, Distributed Systems
 ---
 
 http://blogs.hbr.org/2014/04/bitcoins-promise-goes-far-beyond-payments/
@@ -42,16 +42,9 @@ blockchain -- blueprint for identity platform
 
 
 
-
-
 Assumption : Given the choice, people will prefer to work with the people they like, in the environment they like. Regardless of open spaces or cubicles, its hard to make a large group of people happy. Smaller groups have better shot at choosing ideal environment.
 
 Vision for future of job industry
-
-
-
-
-
 
 
 Missing component discovery for companies
@@ -65,7 +58,6 @@ Missing component discovery for companies
 I am not saying this model could replace existing recruitment industry any time in the near future, but it would be good to see its inception in some form.
 
 matching based on the person's 
-
 
 
 There's a lot of talk about how well 
