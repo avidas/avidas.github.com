@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Nodeconf | Avi Das]]></title>
-  <link href="http://avidas.github.com/blog/categories/nodeconf/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Nodeconf, | Avi Das]]></title>
+  <link href="http://avidas.github.com/blog/categories/nodeconf-/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2015-07-16T14:48:18-05:00</updated>
+  <updated>2015-07-18T12:29:22-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>

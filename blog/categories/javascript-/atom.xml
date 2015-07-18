@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: JavaScript, | Avi Das]]></title>
+  <title><![CDATA[Category: Javascript, | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/javascript-/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2015-07-16T14:48:18-05:00</updated>
+  <updated>2015-07-18T12:29:22-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -14,23 +14,43 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Connected car: Meticulous.io @Angelhack]]></title>
-    <link href="http://avidas.github.com/blog/2014/01/07/connected-car-at-angelhack/"/>
-    <updated>2014-01-07T23:00:00-06:00</updated>
-    <id>http://avidas.github.com/blog/2014/01/07/connected-car-at-angelhack</id>
-    <content type="html"><![CDATA[<p>Angelhack looks for startups to come out of hackathons rather than just weekend hacks. As a result, it tends to get very product driven as teams compete for the Angelpad recognition. The theme this year was Apphack, and mobile apps were the key focus. Not really a surprise, as more and more startups build mobile first.</p>
+    <title type="html"><![CDATA[How Browserify improves Client-side Development]]></title>
+    <link href="http://avidas.github.com/blog/2015/07/16/how-browserify-improves-client-side-development/"/>
+    <updated>2015-07-16T14:41:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2015/07/16/how-browserify-improves-client-side-development</id>
+    <content type="html"><![CDATA[<h4>For a more modular, maintainable Frontend</h4>
 
-<p>We worked on the verizon telematics data. <a href="http://www.verizontelematics.com/">Verizon telematics</a> is something I did not know about before. Car companies have been working with Verizon to install a device in the cars that could send data about speed, location, rpm, condition of the car in terms of last time since gas, particular model of car, wear and tear to the cloud. I expect Verizon is able to collect a lot more than the columns we saw. Needless to say, this would be a very powerful dataset and it is surprising that there aren't more going on in this space.</p>
+<p>As Single Page Applications gain in popularity, the size of front end codebases keeps growing rapidly. For keeping these codebases maintainable, modularity becomes a priority. The easier it is to modularize code, the more incentives developers will have for doing so. With the ease of modularity with CommonJS, npm has seen explosive growth of packages published which has helped the node ecosystem greatly. Browserify brings that ease to client side development leveraging the commonjs module system. When used with build tools such as Grunt or Gulp, you can write modular client side code just like you would write your server side node code, and Browserify takes care of the bundling for you. There is much less excuse these days to make everything global and attach to the window object!</p>
 
-<p><a href="http://ipython.org/">iPython</a> and <a href="http://pandas.pydata.org/">Pandas</a> are built for analyzing and visualizing tabular data like this. Questions such as which brand of car gave the best milage per gallon, which brand was driven more on the highway vs which was more popular on the city roads were fairly easy to answer. It was not clear if the data given to us was indeed an uniform sample, but results were interesting. However, they are hardly hackathon worthy ideas.</p>
+<h4>Leveraging npm modules</h4>
 
-<p>Needed an idea. One set of data had trip ids tied to driver ids, the other set had per trip latitudes and longitudes. Aggregating them somehow would be interesting. Geographical history of most visited places can be found since trips could be tied to drivers. Historical driving records could be obtained from individual trips and the overall history of the driver measured. Global driving records could be obtained so that the best driver's can be found.</p>
+<p><img class="left" src="/images/Modulecounts.jpg" width="275" height="670" title="Package Manager Traction" alt="Package Manager Traction"></p>
 
-<p>Once noting those features, the next step was to think how this would make sense as a product. Context sensitive software is hugely in demand and this is a great dataset for revealing patterns of drivers. Buisnesses aware of customers frequenting particular location can push deals and coupons to those individuals to drive buisness. Timeliness of visit can be used to fine tune the deals even more, e.g. lunch deals would make sense around the Grand Central area in NYC to a busy professional. The brand of car can be used to push vehicle specific ads. This would also be a treasure trove of information for car insurance companies figuring out insurance rates. Finally, it is quite possible that driving patterns can be used to trigger alert that may detect an accident ahead of time.</p>
+<p>Looking at the graph above is a big selling point when trying to evaluate the value Browserify can bring to your client side workflow. The graph is a comparison of the rate at which packages are getting published in different package managers Bower, PyPI, RubyGems. npm leads the pack easily. Recently, Jquery registry stopped accepting new plugins, with <a href="http://blog.npmjs.org/post/111475741445/publishing-your-jquery-plugin-to-npm-the-quick">new packages being published on npm</a>. npm is now hosting much broader range of modules than only server-side node.js modules and Browsrify can help you leverage these modules on the front-end. The flipside of this as a module publisher is that publishing modules on npm now gives you access to a much broader audience since people might run it on the browser, custom hardware etc.</p>
 
-<p>Its hard to argue that driving patterns are valuable data. However, as with any user specific information used for personalization experiences curated by businesses, privacy would be a big concern. It was not entirely clear who would own the data, the driver, the provider, or else. It should be made very clear to the driver of the nature of the tracking going on and how the data may be used. Since data like this could easily be used by a malicious third party to monitor you in real time when you are driving, there is inherent danger in it being available without the driver being informed. Tracking is an issue users of any clowd aware system needs to be aware of.</p>
+<h4>How it works</h4>
 
-<p>We did win the Verizon prize for the hackathon, and it was nice having our idea at the eleventh hour being well accepted. Angelhack put on a good show, and I must mention the apps "Make it Rain" (literally, on the phone screen) and "Kanye"(alerts if you are nearby Kanye West) for the hilarity during the presentation!</p>
+<p>In the CommonJS syntax, the "exports" object is the public API of a module and "require" can be used to include a module in your javascript file. Since browsers do not have require available, Browserify traverses the <a href="https://github.com/substack/browserify-handbook#how-browserify-works">dependency trees</a> of all the required modules, and bundles the dependencies into one self contained file that you can just include with a script tag on the browser. Browserify is aware of package.json and the order in which node_modules are resolved. Moreover, it supports built in node modules e.g. path and gloabls e.g. Buffer so you have access of those in the client side as well.</p>
+
+<h4>Transforms</h4>
+
+<p>Core Browserify only bundles modules written in the CommonJS syntax. However, there are other common ways of modularizing client side code, AMD and Global Variables being the two common ones. There are also lot of people writing in languages compiled in Javascript, such as CoffeeScript or TypeScript. Instead of handling every possibly of modules, Browserify exposes a Transforms API so that a plugin can be built which can preprocess a file into Javascript in CommonJS syntax which Browserify can then consume. There are plugins available for Bower modules (debowerify), globals (deglobalify), coffeescript(coffeeify), harmony (es6ify) etc. A simple search of Browserify on Github or npm brings up thousands of modules and attests to the <a href="https://github.com/substack/node-browserify/wiki/list-of-transforms">ecosystem around Browserify</a>. Delegating to transforms helps to keep the footprint of Browserify smaller, adhering to the single responsibility principle.</p>
+
+<h4>Using with Build Tools</h4>
+
+<p>Software is great when it just works and you do not have tinker with it all the time. Grunt/Gulp are great for this kind of configure once, build whenever workflow. Browserify is available as a command line tool primarily, but has Grunt and Gulp plugins which can be used to easily integrate Browserify into your build. There is also watchify, which can reduce build time by monitoring source files and incrementally rebuilding the front end bundle on the fly. For large projects, this is really useful to keep the build times small.</p>
+
+<h4>Alternatives</h4>
+
+<p>There are always alternatives available in the JavaScript world, and Webpack, RequireJS and Component being some of the major ones. RequireJS has been around for longer and primarily supports the AMD specification, but has support for CommonJS too. Webpack tends to do better with static assets that your client side requires and tries to cover a broader issue of bundling all static assets. With picking any tool, it's good to be aware of the alternatives, the problem they were designed to solve, and benefits and drawbacks of each. It makes for <a href="https://gist.github.com/substack/68f8d502be42d5cd4942">quite interesting debate</a> at times too!</p>
+
+<h4>Resources</h4>
+
+<p>Browserify has really good documentation and the <a href="https://github.com/substack/browserify-handbook">browserify handbook</a> is a great resource for an extensive runthrough. For getting started, the nodeschool module called <a href="https://github.com/substack/browserify-adventure">browserify-adventure</a> is very handy.</p>
+
+<p>Since the browser community is unlikely to adopt a common module system anytime soon, Browserify offers a great way to abstract away that issue. With access to a vast amount of modules, there is much less of a need for reinventing the wheel on the client side, and fewer script tags thrown around everywhere. If you are using browserify/webpack in production, I would love to know the tradeoffs/issues you have ran into.</p>
+
+<p>Comments/feedback here or <a href="mailto:avi@aviadas.com">contact</a>.</p>
 ]]></content>
   </entry>
   

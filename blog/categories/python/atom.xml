@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Python | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/python/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2015-07-16T14:48:18-05:00</updated>
+  <updated>2015-07-18T12:29:22-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -35,63 +35,29 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Prioritized date interval merge]]></title>
-    <link href="http://avidas.github.com/blog/2013/08/30/prioritized-date-interval-merge/"/>
-    <updated>2013-08-30T23:57:00-05:00</updated>
-    <id>http://avidas.github.com/blog/2013/08/30/prioritized-date-interval-merge</id>
-    <content type="html"><![CDATA[<p>Ran into this interesting problem lately and wanted to code up a recursive solution in Python. Essentially an extension of merge from merge sort but for intervals. There is definitely something very satisfying about coding up a recursive solution, as they tend to produce clean solutions despite the ugly formatting in this case to make list concatenation work.</p>
+    <title type="html"><![CDATA[Hacking health - Third times the charm]]></title>
+    <link href="http://avidas.github.com/blog/2013/07/04/hacking-health-third-times-the-charm/"/>
+    <updated>2013-07-04T23:37:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2013/07/04/hacking-health-third-times-the-charm</id>
+    <content type="html"><![CDATA[<p><img class="left" src="/images/PocketHealth_home.jpg" width="275" height="670" title="PocketHealth home" alt="PocketHealth home"></p>
 
-<p>``` python Merge date intervals by priority https://github.com/avidas/Code_snippets/blob/master/merge_interval.py Source
-def merge_interval(low_priority_lst,high_priority_lst):</p>
+<p>When I think of healthcare industry from a technical view, it seems like a story of regulations, walled gardens and aged systems. It remains a sector where tech really needs to deliver, and we are currently seeing a surge of start-ups such as Quantified Self taking on different issues. So when I stepped into the Northside Festival's "Hacking Health", I was not entirely sure what to expect. It was also an unusual hackathon in that the venues were different on two different days. All the pleasant surprise that we ended up winning the hackathon!</p>
 
-<pre><code>'''
-Given two lists with sorted date ranges, return merged list with high_priority_lst 
-ranges preferred over low_priority_lst ranges in case of intersection.
-Partial intervals are allowed.
-'''
-if low_priority_lst == [] or low_priority_lst == None: return high_priority_lst
-if high_priority_lst == [] or high_priority_lst == None: return low_priority_lst
+<p>The project I ended up working on was definitely something I would want myself. I worked on PocketHealth, and the idea? Carry, check and transfer your medical information like you do a contact. The user can select care givers who can potentially have edit access to the history. But the kicker is in the UI. We worked on a facebook timeline like view for the history, and carrying and sharing your medical medication can be as easily as sharing a facebook profile. Although privacy would need to matter more than a facebook profile, specially with information that is by definition very personal.</p>
 
-# case :               |-------|
-#        |-------|            
-if low_priority_lst[0][0] &gt; high_priority_lst[0][1]:
- return [high_priority_lst[0]] + 
-        merge_interval(low_priority_lst,high_priority_lst[1:])
-# case :   |-------|
-#                     |-------|      
-elif low_priority_lst[0][1] &lt; high_priority_lst[0][0]:
-    return [low_priority_lst[0]] + 
-        merge_interval(low_priority_lst[1:],high_priority_lst)
-# case :|-------|
-#            |-------|  
-elif low_priority_lst[0][0] &lt; high_priority_lst[0][0]:
-    return [[low_priority_lst[0][0],high_priority_lst[0][0]]] + 
-        merge_interval( [[high_priority_lst[0][0],low_priority_lst[0][1]]] +
-                             low_priority_lst[1:], high_priority_lst)
-# case :      |-------|
-#        |-------|  
-elif low_priority_lst[0][1] &gt; high_priority_lst[0][1]:
-    return [high_priority_lst[0]] + 
-        merge_interval( [[high_priority_lst[0][1],low_priority_lst[0][1]]] +
-                            low_priority_lst[1:] , high_priority_lst[1:])
-# case :  |-------| |---| |----|
-#        |-----------------| 
-else:
-    return merge_interval(low_priority_lst[1:],high_priority_lst)
-</code></pre>
-
-<p>```</p>
-
-<p>Complexity :</p>
-
-<!--more-->
+<!-- more -->
 
 
-<p>Analyzing time complexity for this gets interesting. Consider low_priority_lst to be of length l and high_priority_lst to be of length h. In the worst case each h interval is a sub interval of each l interval. That would give us a result set with 2*l + h elements and the thus the complexity of the algorithm is O(l+h) in the worst case.</p>
+<p>I worked on the backend, working with the Shin-ny API, which provided sample client data. Even though, it did work out in the end, one suggestion to the API providers would be to move away from SOAP and provide a JSON API alongside XML. That is the direction in which the world is going in 2013, and precious moments can be saved by not having to parse through the vortex of XML. Moreover, want to have more developers using your API? Use the specifications with the widest and easiest use cases.</p>
 
-<p>Clearly this is not tail recursive, but as far as I know Python does not optimize for tail recursion. Something to think of is to extend it to lists 1...n, with priority p1 &lt; p2 &lt; .... pn, and which would give us a complexity of sum(si), 0&lt; i &lt; n-1 where si is the size of the ith interval.</p>
+<p>The app was running on Flask, a micro web-framework written in Python. Python's philosophy of "what you see is what you get" seems to be followed by flask. Together with the fast setup, Flask really wins as a hackathon-friendly backend framework. It would be interesting to compare the hurdles of building a larger scale web app vs other web frameworks. However, setting up assets, routes and getting up and running was possible in a matter of minutes. This is hugely valuable in time crunching hackathons, freeing up time for third-party APIs, application logic and UI.</p>
 
-<p>If the lists are unsorted, adapting this method as is would require the caller method to sort the lists beforehand. Sorting being nlogn, it would dominate the linear compexity for and the complexity would be sum(si*log(si)), 0&lt; i &lt; n-1 for the case with n intervals.</p>
+<p>Judges came from the NYeC, Bing and the NorthSide Festival. It felt great since we only worked for around six hours and were racing on till the last minute for submission. The judges were appreciative of the different sides we managed to involve and deliver value to, and it was great to be validated. There were some other interesting projects as well, one in particular about gamifying medication reminders for diabetic patients.</p>
+
+<p>In the coming weeks, it would be fun to take it past a hackathon project. A centralized solution for accessing and sharing health information is rather difficult, as there are many players involved, hospitals, insurance, doctors and patients. Many aspects of it seems to call for experience. Healthcare has a lot of room for innovation, and we believe that our app would solve a very real problem. At any rate, it felt great as a newbie to have contributed in a small way to the changing tides of healthcare.</p>
+
+<p><img class="left" src="/images/Patient_forms.jpg" width="350" height="350" title="Patient forms" alt="Patient forms">
+<img class="right" src="/images/Patient_status.jpg" width="350" height="350" title="Patient status" alt="Patient status"></p>
 ]]></content>
   </entry>
   

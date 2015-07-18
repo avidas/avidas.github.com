@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Hackathon, | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/hackathon-/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2015-07-16T14:48:18-05:00</updated>
+  <updated>2015-07-18T12:29:22-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -31,6 +31,37 @@
 <p>This hackathon was particularly a great learning experience. Companies are taking highly innovative routes to glean more information about the users. Cookies have always existed, but two other forms of tracking I learnt was autocomplete fields tracking and <a href="http://en.wikipedia.org/wiki/Device_fingerprint">browser fingerprinting</a>. Browser fingerprinting tries to get information from user-agent, the OS, extensions installed and other configurations to bind a particular browser to an user and this can happen completely on the server side. I have only learnt fairly recently about the bidding platforms for display advertisement and it was pretty interesting to see dictionary.com revealing on their console the bids as they happened in real time.</p>
 
 <p>Computer security is a dynamic and fast changing field and this hackathon was an interesting mix of people in different niches of the industry. Tracking will continue to be an issue and it was good to see Ghostery taking the initiative to search for innovations in this space.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[VIPHackathon: Know Your Reps]]></title>
+    <link href="http://avidas.github.com/blog/2013/08/04/viphackathon-know-your-reps/"/>
+    <updated>2013-08-04T09:58:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2013/08/04/viphackathon-know-your-reps</id>
+    <content type="html"><![CDATA[<p><img class="left" src="/images/Obama_eagle.jpg" width="350" height="350" title="Obama eagle" alt="Obama eagle"></p>
+
+<p>How many people know their representatives for council/state/congress? How many local issues gets routed to the most relevant elected official? How do you know the status of the most relevant issues raised?</p>
+
+<p>To solve some of these issues, we worked on the "Know your representatives" app during the Voting Information Project hackathon on 8/3/2013 to introduce elected officials to the public. It is a Windows phone app geared to increase accountability of elected officials which in turn will promote voter engagement.</p>
+
+<ol>
+<li><p>Users can view and contact their official and raise their issues to the respective elected official and raise the most significant issues.</p></li>
+<li><p>Official can respond to uses and resolve the issues and update the status on the app.</p></li>
+<li><p>Users can add their support to prioritize the high priority items by raising their support using the voting button.</p></li>
+</ol>
+
+
+<!-- more -->
+
+
+<p> The app was built with Windows Azure as Backend, Twilio is used for sms notification when officials respond to issues. Azavea is used to bring the elected officals information using the Geo Location.</p>
+
+<p><img class="right" src="/images/VIPhack.jpg" width="350" height="350" title="VIP awards" alt="VIP awards"></p>
+
+<p> We ended up winning Microsoft's award for the hackathon! Sadly they only had two phones for the three developers.</p>
+
+<p> Verdict: Twilio's API is super cool, and I definitely intend on building more with it. Never built anything on the Windows Phone platform, but I must say in terms of responsiveness, Visual Studio betters eclipse in many ways. Sync Fusion is a great library for app resources, and a similar product for android would be a godsend. VIP did did a good job showing that many voting problems exist despite US being such a prominent democracy.</p>
 ]]></content>
   </entry>
   
