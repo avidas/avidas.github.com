@@ -7,6 +7,22 @@ published: false
 categories: Recruiting, Distributed Systems
 ---
 
+Here is my idea for a truly post resume, post recruiting industry model.
+
+Companies break down projects into tasks that require particular skillset and expertise. Companies will bid a certain amount for a particular task.
+
+Everyone is a consultant, but people can pool together to form a mutual fund like alliance (consulting firm), and they can sell fixed size chunks of their available bandwidth together or individually. Call it the ask price.
+
+You can use a blockchain based protocol to verify the ownership of the skillset/experience promised by the individual/fund. Since everyone would have the ledger of past completed work.
+
+Match is made automatically and you always know what you are working on, you don't need to care about who you are working for. (You could potentially whitelist/blacklist companies/institutions that you wouldn't work for -- terrorist orgs come to mind)
+
+1. The resume needs to be deconstructed and smarter systems come into play mapping past expereinces and interests.
+
+2. The financial sector have intelligently solved the problem of compartmentalizing assets into bite size chunks, combining resources to a level when often it is not necessary to understand what the underlying assets are.
+
+3. In the future, there will be a lot more people acting as consultants or groups of consultants. Given the choice, people will prefer to work with the people they like, in the environment they like. Regardless of open spaces or cubicles, it's hard to make a large group of people happy. Smaller groups have better shot at choosing ideal environment.
+
 http://blogs.hbr.org/2014/04/bitcoins-promise-goes-far-beyond-payments/
 
 http://www.michaelnielsen.org/ddi/how-the-bitcoin-protocol-actually-works/
@@ -41,12 +57,6 @@ blockchain -- blueprint for identity platform
 -- onename.io on top of namecoin
 
 
-
-Assumption : Given the choice, people will prefer to work with the people they like, in the environment they like. Regardless of open spaces or cubicles, its hard to make a large group of people happy. Smaller groups have better shot at choosing ideal environment.
-
-Vision for future of job industry
-
-
 Missing component discovery for companies
 
 1. verification of skill -- consulting companies where group of friends are already doing this.
@@ -62,17 +72,7 @@ matching based on the person's
 
 There's a lot of talk about how well 
 
-
-
-IDEA -- Here is my idea for a truly post resume, post recruiting industry model
-
-Companies break down projects into tasks that require particular skillset and expertise. Companies will bid a certain amount for a particular task.
-
-Everyone is a consultant, but people can pool together to form a mutual fund like alliance (consulting firm), and they can sell fixed size chunks of their available bandwidth together or individually. Call it the ask price.
-
-You can use a blockchain based protocol to verify the ownership of the skillset/experience promised by the individual/fund. Since everyone would have the ledger of past completed work.
-
-Match is made automatically and you always know what you are working on, you don't need to care about who you are working for. (You could potentially whitelist/blacklist companies/institutions that you wouldn't work for -- terrorist orgs come to mind)
+IDEA -- 
 
 I am sure this can be fine tuned more.
 
