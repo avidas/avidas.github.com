@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Socket.io | Avi Das]]></title>
+  <link href="http://avidas.github.com/blog/categories/socket-io/atom.xml" rel="self"/>
+  <link href="http://avidas.github.com/"/>
+  <updated>2015-09-06T11:23:30-05:00</updated>
+  <id>http://avidas.github.com/</id>
+  <author>
+    <name><![CDATA[Avi (Ananya Das)]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Building Realtime Apps with React, Socket.io and Node.js]]></title>
+    <link href="http://avidas.github.com/blog/2015/09/06/building-realtime-apps-with-react/"/>
+    <updated>2015-09-06T11:16:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2015/09/06/building-realtime-apps-with-react</id>
+    <content type="html"><![CDATA[<p>The importance of delivering realtime feedback to users is more than ever. Gone are the days when chats or games were the only applications of realtime software. Starting from finance, advertising or education, having a realtime component to your web application will elevate the user experience.</p>
+
+<h3>Socket.io</h3>
+
+<p>From <a href="http://socket.io/">socket.io's homepage</a>, it is a library that enables real-time bidirectional event-based communication. It has two parts, a client side library that runs in the browser and a server side library for node.js. In recent times, this has become the de facto way of doing realtime web applications in the node.js world. Key reasons behind this has been the way it abstracts away the overhead of maintaining multiple protocols, while carrying on similar primitives from <a href="https://nodejs.org/api/stream.html">Node streams</a> and <a href="https://nodejs.org/api/events.html">eventEmitter</a>. Some of its other powerful features include being able to stream Binary data, broadcast to multiple sockets and being able to manage connected client data from the server.</p>
+
+<h3>Architecture</h3>
+
+<p>The WebSocket protocol is a W3C standard that enables interactive communication between browser and server. It functions as an Upgrade request over HTTP 1.1. However, since all legacy browsers and devices do not have support for WebSockets, it's cross-platform abilities get limited.</p>
+
+<p>Socket.io itself is a library to build realtime applications. It will try to upgrade to and use the Websocket protocol if available. Socket.io depends on another libray called Engine.io which exposes a Websocket like API but provides fallbacks to other transport mechanisms such as XHR and JSONP polling. This enables application developers to write realtime codebases that are browser, device and transport implementation independent.</p>
+
+<h3>Getting started with Socket.io</h3>
+
+<p>This tutorial assumes that you have Node.js, npm and Express on your system.</p>
+
+<p>In a directory create two files called index.html and app.js. In your app.js file, add the following</p>
+
+<p>```javascript
+var app = require('express')();
+var server = require('http').Server(app);
+var swig = require('swig');
+var path = require('path');</p>
+
+<p>// view engine setup
+app.engine('html', swig.renderFile);
+app.set('view engine', 'html');</p>
+
+<p>// server and routing
+server.listen(8080);
+app.get('/', function (req, res) {
+  res.render('index');
+});
+```</p>
+
+<p>We set up the view engine and serve up a basic index page. If this part looks unfamiliar, please check out <a href="http://expressjs.com/guide/routing.html">Express docs</a>. Now add the following in app.js.</p>
+
+<p>```javascript
+var io = require('socket.io')(server);
+// socket.io demo
+io.on('connection', function (socket) {
+  socket.emit('server event', { foo: 'bar' });
+  socket.on('client event', function (data) {</p>
+
+<pre><code>console.log(data);
+</code></pre>
+
+<p>  });
+});
+```
+ We create a new instance of socket.io and pass in the created express server as a parameter. As the server listens, whenever a new client starts a connection, we emit an event called server event and send the payload { foo : 'bar' }. It also listens for 'client event' and logs the payload once it gets the event.</p>
+
+<p>In your index.html file add the following
+```html</p>
+
+<script src="http://avidas.github.com/socket.io/socket.io.js"></script>
+
+
+<script>
+  var socket = io();
+  socket.on('server event', function (data) {
+    console.log(data);
+    socket.emit('client event', { socket: 'io' });
+  });
+</script>
+
+
+<p>```
+It includes the client side socket io library. After instantiating a new connection, it listens for the 'server event' and when that event happens it logs the data and emits 'client event' and sends the payload { socket: 'io'}.</p>
+
+<p>Run node app.js and fire up localhost:8080 in your browser. On the terminal you should see { socket: 'io' } and on the console you should see { foo : 'bar' } printed out. Congrats, you just did your first Socket.io app!</p>
+
+<h3>Useful Socket.io Concepts</h3>
+
+<h5>Message sending/receiving</h5>
+
+<p>Socket.IO allows you to emit and receive custom events. Besides connect, message and disconnect, you can emit custom events and send with associated payload. Emit and Broadcast are ways to send events and on is the event listener.</p>
+
+<h5>Server vs Client API</h5>
+
+<p>There are some common functions between server and client side, but it is worth looking into the docs and understanding what is possible on the server vs client. Generally, the server side has much more features and capabilites and is capable of creating rooms and namespaces but both sides and send and respond to events.</p>
+
+<h5>Rooms and Namespaces</h5>
+
+<p>Socket.io provides built in abstractions to demultiplex the connected clients. Namespaces, identified by a path, can be connected via the following</p>
+
+<p><code>javascript
+var socket = io(); //connects to default namespace "/"
+var admin = io("/admin"); //connects to the namespace specified by the path "/path"
+</code></p>
+
+<p>After a client connects with <code>var socket = io('/admin')</code> , we can send message only to the admin namespace.</p>
+
+<p><code>javascript
+admin.emit("admin alert", "website traffic is up!"); //the event will only be sent to the clients who connected to the admin namespace
+</code></p>
+
+<p>This enables more role or other criteria based distribution of socket.io events/messages within your application.</p>
+
+<p>Rooms provide a way to further divide up clients within individual namespaces. Clients within a namespace can join and leave a room. By default, a client always is connected to a room idenfied by the sockets id. Hence it is possible to send targeted messages to a connected client via <code>socket.broadcast.to(&lt;SOCKET.ID&gt;).emit('test', 'message')</code>. Rooms could make more sense for particular themes whereas namespaces seem to fit well for user type/responsibilities.</p>
+
+<h3>React and Socket.io</h3>
+
+<p>Now for the exciting part, integrating React.js and Socket.io into an application. React.js is Javascript UI framework from facebook. You can follow some of the <a href="https://facebook.github.io/react/">initial docs</a> to get started with React. This tutorial will not go into great detail into the terminologies of React.js but refer to the official documentation if any of the React syntax looks confusing.</p>
+
+<p>The basic idea of the app is to have an html input and a label. When someone types in something into the input box, it will update the label for anyone else who have an window open except for the person typing.</p>
+
+<h5>Client side code</h5>
+
+<p>Let's start by changing your index.html to the following</p>
+
+<p>```html
+&lt;!DOCTYPE html>
+<html>
+  <head></p>
+
+<pre><code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/react.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/JSXTransformer.js"&gt;&lt;/script&gt;
+&lt;script src="http://avidas.github.com/socket.io/socket.io.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>  </head>
+  <body></p>
+
+<pre><code>&lt;div id="mount-point"&gt;&lt;/div&gt;
+&lt;div id="label-mount-point"&gt;&lt;/div&gt;
+&lt;script type="text/jsx"&gt;
+ /** @jsx React.DOM */
+var socket = io();
+
+var Input = React.createClass({
+  _notifyServer: function(event){
+    socket.emit('client event', { value: event.target.value });
+  },
+  render: function(){
+    return (
+      &lt;div className="update-label"&gt;
+        &lt;input type="text" placeholder="Enter text" onChange={this._notifyServer}/&gt;
+      &lt;/div&gt;
+    );
+  }
+});
+var Label = React.createClass({
+  _onUpdateLabel: function(data) {
+    this.setState(serverValue: data.value);
+  },
+  getInitialState: function(){
+    return { serverValue: '' };
+  },
+  render: function(){
+    return (
+      &lt;div class="my-label"&gt;
+        &lt;h2&gt;{this.state.serverValue}&lt;/h2&gt;
+      &lt;/div&gt;
+    )
+  }
+});
+var input = React.render(&lt;Input/&gt;, document.getElementById('mount-point'));
+var label = React.render(&lt;Label/&gt;, document.getElementById('label-mount-point'));
+socket.on('update label', function (data) {
+  label._onUpdateLabel(data);
+});
+&lt;/script&gt;
+</code></pre>
+
+<p>  </body>
+</html>
+```</p>
+
+<h5>Server side</h5>
+
+<p>The server side of the codebase can mostly stay the same, except we broadcast 'update label' when 'client event' is received.</p>
+
+<p>```javascript
+io.on('connection', function (socket) {
+  socket.emit('server event', { foo: 'bar' });
+  socket.on('client event', function (data) {</p>
+
+<pre><code>socket.broadcast.emit('update label', data);
+</code></pre>
+
+<p>  });
+});
+```</p>
+
+<h5>Explanation</h5>
+
+<p>On the client side, two React components called Input and Label are created and mounted by calling React.render. Input renders an html input box which calls the <em>notifyServer method whenever the someone types into the input field. The </em>notifyServer method then emits socket.io event called 'client event' with the value of the input box.</p>
+
+<p>On the server side, when 'client event' is received with the data, the server calls socket.broadcast.emit and passes the data payload along. This means that all the connected clients except for the socket that generated 'client event' will receive the 'update label' event and the payload. This sends the message to everyone except for the person typing.</p>
+
+<p>Back to the client side, the Label component consists on a div with a h2 element with is set to the serverValue state of the component. <a href="https://facebook.github.io/react/docs/component-specs.html#getinitialstate">getInitialState</a> sets the initial value to be '' so initially the Label is empty. When 'update label' is received, we call the _onUpdateLabel on label, which is an instance of Label. It sets the serverValue state of the Label component to data.value. This invokes the render method of the label component, and it generates a h2 header with the updated value of the serverValue.</p>
+
+<!-- more -->
+
+
+<h3>Advantages of Socket.io</h3>
+
+<p>Many advantages of socket.io are</p>
+
+<ol>
+<li>The simplicity of the integration. Rolling your own realtime library is considerably more difficult due to multi-protocol, browser and device requirements.</li>
+<li>Large community of users and support in multiple platforms. It is used from large companies to small startups, meaning developer support is in abundance. Socket.io released native clients on iOS and Android this year, expanding its reach.</li>
+<li>It is stable as 1.0.0 has been released in 2014</li>
+<li>It is completely free</li>
+</ol>
+
+
+<h3>Disadvantages of Socket.io</h3>
+
+<ol>
+<li>Socket.io has its own protocol, and it would not work with any custom Websocket implementation by default. The team has worked on this and support for this is getting better http://socket.io/docs/#using-it-just-as-a-cross-browser-websocket</li>
+<li>Scaling across multiple servers when you have too many open connections for a single server is not something that you will get out of the box with socket.io</li>
+<li>As with Realtime software, debugging can be complicated and you may need to include Redis or other layers of persistance if you want to gurantee message delivery</li>
+</ol>
+
+
+<p>Realtime on web and mobile is a secret sauce for many websites and apps these days and Socket.io is a dominant technology in that field. There are entire startups which would not be possible without Socket.io and definitely deserves a place in any web/mobile developers skills of expertise.</p>
+]]></content>
+  </entry>
+  
+</feed>
