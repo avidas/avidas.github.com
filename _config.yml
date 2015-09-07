@@ -103,3 +103,7 @@ facebook_like: true
 
 #Coderwall User
 coderwall_user: avidas
+
+# Portfolio
+portfolio_root: /portfolio
+portfolio_root: /Users/anadas/Dropbox/Code/octopress/source/portfolio
