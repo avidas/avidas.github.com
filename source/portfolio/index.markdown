@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "portfolio"
+title: "Projects"
 comments: false
 sharing: false
 footer: true
 ---
 
-{% portfolio %}
+## Zeek
