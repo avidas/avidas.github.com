@@ -3,7 +3,7 @@ layout: post
 title: "Guide to finding a technical cofounder"
 date: 2015-08-21 23:04
 comments: true
-published: false
+published: true
 categories: Hackathons, Startups
 ---
 
