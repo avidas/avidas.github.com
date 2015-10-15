@@ -41,7 +41,7 @@ module Jekyll
 
               if(screenshot.index "main")
                 content += '<div class="gallery-item viewport clearfix">'
-                content += '<a rel="gallery1" title="' + title + '" href="' + link + '" class="fancybox"><span class="dark-background">'+ project_name + '<em>by Sebastian Ruiz</em></span><img src="' + img + '"></a>'
+                content += '<a rel="gallery1" title="' + title + '" href="' + link + '" class="fancybox"><img src="' + img + '"></a>'
                 content += '</div>'
               end
             end

@@ -8,12 +8,8 @@ footer: true
 
 ## Zeek
 
-Twitter Marketing Automaton - Generate High Quality Leads For Your Buisness
+Twitter Marketing Automaton - Generate High Quality Leads For Your Buisness. Click below for more details.
 
-### Technologies Used
-- Node.js, Express
-- Mongo
-- Redis
-- JavaScript, Jquery
-- CSS, Bootstrap
+{% portfolio %}
+
 
