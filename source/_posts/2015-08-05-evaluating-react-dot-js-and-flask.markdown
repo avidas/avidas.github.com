@@ -7,17 +7,17 @@ published: true
 categories: Javascript, React, Python, Flask
 ---
 
-As a connoisseur of the web, front end frameworks have been been a fertile area of late. React.js from Facebook has taken much fanfare, and this post evaluates key ideas on react, and digs into why you could be interested in React. Staying true to single responsibility principle, React is a highly useful tool to have if you are doing web programming.
+As a connoisseur of the web, front-end frameworks have been been a fertile area of late. React.js from Facebook has taken much fanfare, and this post evaluates key ideas on react, and digs into why you could be interested in React. Staying true to single responsibility principle, React is a highly useful tool if you are doing web programming.
 
-In this post, we will dive into how you can use a Frontend built using React.js and Backend built using the Python framework Flask. Flask is a minimalistic framework, and excellent when your backend becomes more and more of an API. Moreover, this facilitates the microservices architecture, where the decoupling of your your app into small unit of services can make it more maintainable and scalable.
+In this post, we will dive into building a Frontend using React.js and Backend built using the Python framework Flask. Flask is a minimalistic framework, and excellent when your backend becomes more and more of an API. Moreover, this facilitates the microservices architecture, where the decoupling of your your app into small unit of services can make it more maintainable and scalable.
 
 We will cover some of the key ideas of React and Flask here, but it would be worth referring to the official documentation for [React](https://facebook.github.io/react/) and [Flask](http://flask.pocoo.org/) for getting started and understanding the philosophies of each framework.
 
 ###Key Ideas of React
-The core idea of React is the developers are better of leaving manipulating the DOM to battle tested framework code. Since the DOM has a tree structure, finding elements and manipulating them would need many traversals of a potentially very large tree.  Instead, what you modify is a virtual DOM, and React runs its intelligent diff algorithm to directly update the DOM. 
+The core idea of React is the developers are better of leaving manipulating the DOM to battle tested framework code. Since the DOM has a tree structure, finding elements and manipulating them would need many traversals of a potentially very large tree.  Instead, what you modify is a virtual DOM, and React runs its intelligent diffing algorithm to directly update the DOM. 
 
 #####React 
-React itself is the UI library that will manage all the DOM updates as data changes. It's takes the V of MVC frameworks, hence it can be used with other MVC frameworks such as Angular or Backbone.js. It is quite easy to use React to manage specific areas of your application's UI, rather than the entire app.
+React itself is the UI library that will manage all the DOM updates as data changes. It's takes the V of MVC frameworks, hence it can be used with other MVC frameworks such as Angular, Backbone or Meteor. It is quite easy to use React to manage specific areas of your application's UI, rather than the entire app.
 
 #####Virtual Dom
 The virtual Dom is an abstraction layer between nodes in the real DOM and the view of the code you are modifying. When React selectively renders subtrees of the nodes in DOM based upon state changes, it achieves the following
