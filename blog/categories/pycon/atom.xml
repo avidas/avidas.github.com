@@ -4,7 +4,7 @@
   <title><![CDATA[Category: PyCon | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/pycon/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2015-11-21T17:12:55-06:00</updated>
+  <updated>2015-11-24T21:11:30-06:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Pycon Canada 2015 II: Python for Reliably Delivering Cross Platform Products]]></title>
+    <link href="http://avidas.github.com/blog/2015/11/24/pycon-canada-2015-ii-python-for-reliably-delivering-cross-platform-products/"/>
+    <updated>2015-11-24T20:41:00-06:00</updated>
+    <id>http://avidas.github.com/blog/2015/11/24/pycon-canada-2015-ii-python-for-reliably-delivering-cross-platform-products</id>
+    <content type="html"><![CDATA[<p>This is the second part of the two series blog post about my talk at PyCon Canada. Here is the <a href="http://aviadas.com/blog/2015/11/21/pycon-canada-2015-speaking-at-my-first-conference/">first part</a>.</p>
+
+<h3>Proposal:</h3>
+
+<p>Are you part of a team responsible for delivering cross platform products? End to end automated testing and communicating effectively are important when your project depends on multiple teams spread across functional domains. At Braintree/PayPal, we worked on a framework to reliably ship developer facing products. We will go over using BDD with Behave to describe test scenarios that speaks to both product and engineering, using Appium for mobile automation, and ElasicSearch and Kibana for storage and visualization of test results. You will see how the breadth of packages available on PyPI, the flexibility and ease of Python helped a team of developers whose core competencies were not in Python to collaborate on a common ground.</p>
+
+<h3>Slides:</h3>
+
+<p><iframe src="http://www.slideshare.net/slideshow/embed_code/55489167 " width="595" height="446" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen></iframe> </p>
+
+<h3>Video:</h3>
+
+<p>Coming Soon!</p>
+
+<h3>Github Repo</h3>
+
+<p><a href="https://github.com/avidas/reliability-demo">Reliability Demo</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Speaking at PyCon Canada 2015: I]]></title>

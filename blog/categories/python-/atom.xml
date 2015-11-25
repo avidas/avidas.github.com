@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Python, | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/python-/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2015-11-21T17:12:55-06:00</updated>
+  <updated>2015-11-24T21:11:30-06:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Pycon Canada 2015 II: Python for Reliably Delivering Cross Platform Products]]></title>
+    <link href="http://avidas.github.com/blog/2015/11/24/pycon-canada-2015-ii-python-for-reliably-delivering-cross-platform-products/"/>
+    <updated>2015-11-24T20:41:00-06:00</updated>
+    <id>http://avidas.github.com/blog/2015/11/24/pycon-canada-2015-ii-python-for-reliably-delivering-cross-platform-products</id>
+    <content type="html"><![CDATA[<p>This is the second part of the two series blog post about my talk at PyCon Canada. Here is the <a href="http://aviadas.com/blog/2015/11/21/pycon-canada-2015-speaking-at-my-first-conference/">first part</a>.</p>
+
+<h3>Proposal:</h3>
+
+<p>Are you part of a team responsible for delivering cross platform products? End to end automated testing and communicating effectively are important when your project depends on multiple teams spread across functional domains. At Braintree/PayPal, we worked on a framework to reliably ship developer facing products. We will go over using BDD with Behave to describe test scenarios that speaks to both product and engineering, using Appium for mobile automation, and ElasicSearch and Kibana for storage and visualization of test results. You will see how the breadth of packages available on PyPI, the flexibility and ease of Python helped a team of developers whose core competencies were not in Python to collaborate on a common ground.</p>
+
+<h3>Slides:</h3>
+
+<p><iframe src="http://www.slideshare.net/slideshow/embed_code/55489167 " width="595" height="446" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen></iframe> </p>
+
+<h3>Video:</h3>
+
+<p>Coming Soon!</p>
+
+<h3>Github Repo</h3>
+
+<p><a href="https://github.com/avidas/reliability-demo">Reliability Demo</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Speaking at PyCon Canada 2015: I]]></title>
@@ -427,67 +452,6 @@ SciPy sprints were very different environment from hackathons. With the removal 
 <p>To finish, the keynote on the third day by Greg Wilson was quite fantastic and you should check it out if you haven't already:</p>
 
 <p><div class="embed-video-container"><iframe src="http://www.youtube.com/embed/1e26rp6qPbA" allowfullscreen></iframe></div></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Prioritized date interval merge]]></title>
-    <link href="http://avidas.github.com/blog/2013/08/30/prioritized-date-interval-merge/"/>
-    <updated>2013-08-30T23:57:00-05:00</updated>
-    <id>http://avidas.github.com/blog/2013/08/30/prioritized-date-interval-merge</id>
-    <content type="html"><![CDATA[<p>Ran into this interesting problem lately and wanted to code up a recursive solution in Python. Essentially an extension of merge from merge sort but for intervals. There is definitely something very satisfying about coding up a recursive solution, as they tend to produce clean solutions despite the ugly formatting in this case to make list concatenation work.</p>
-
-<p>``` python Merge date intervals by priority https://github.com/avidas/Code_snippets/blob/master/merge_interval.py Source
-def merge_interval(low_priority_lst,high_priority_lst):</p>
-
-<pre><code>'''
-Given two lists with sorted date ranges, return merged list with high_priority_lst 
-ranges preferred over low_priority_lst ranges in case of intersection.
-Partial intervals are allowed.
-'''
-if low_priority_lst == [] or low_priority_lst == None: return high_priority_lst
-if high_priority_lst == [] or high_priority_lst == None: return low_priority_lst
-
-# case :               |-------|
-#        |-------|            
-if low_priority_lst[0][0] &gt; high_priority_lst[0][1]:
- return [high_priority_lst[0]] + 
-        merge_interval(low_priority_lst,high_priority_lst[1:])
-# case :   |-------|
-#                     |-------|      
-elif low_priority_lst[0][1] &lt; high_priority_lst[0][0]:
-    return [low_priority_lst[0]] + 
-        merge_interval(low_priority_lst[1:],high_priority_lst)
-# case :|-------|
-#            |-------|  
-elif low_priority_lst[0][0] &lt; high_priority_lst[0][0]:
-    return [[low_priority_lst[0][0],high_priority_lst[0][0]]] + 
-        merge_interval( [[high_priority_lst[0][0],low_priority_lst[0][1]]] +
-                             low_priority_lst[1:], high_priority_lst)
-# case :      |-------|
-#        |-------|  
-elif low_priority_lst[0][1] &gt; high_priority_lst[0][1]:
-    return [high_priority_lst[0]] + 
-        merge_interval( [[high_priority_lst[0][1],low_priority_lst[0][1]]] +
-                            low_priority_lst[1:] , high_priority_lst[1:])
-# case :  |-------| |---| |----|
-#        |-----------------| 
-else:
-    return merge_interval(low_priority_lst[1:],high_priority_lst)
-</code></pre>
-
-<p>```</p>
-
-<p>Complexity :</p>
-
-<!--more-->
-
-
-<p>Analyzing time complexity for this gets interesting. Consider low_priority_lst to be of length l and high_priority_lst to be of length h. In the worst case each h interval is a sub interval of each l interval. That would give us a result set with 2*l + h elements and the thus the complexity of the algorithm is O(l+h) in the worst case.</p>
-
-<p>Clearly this is not tail recursive, but as far as I know Python does not optimize for tail recursion. Something to think of is to extend it to lists 1...n, with priority p1 &lt; p2 &lt; .... pn, and which would give us a complexity of sum(si), 0&lt; i &lt; n-1 where si is the size of the ith interval.</p>
-
-<p>If the lists are unsorted, adapting this method as is would require the caller method to sort the lists beforehand. Sorting being nlogn, it would dominate the linear compexity for and the complexity would be sum(si*log(si)), 0&lt; i &lt; n-1 for the case with n intervals.</p>
 ]]></content>
   </entry>
   
