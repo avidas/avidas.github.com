@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Flask | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/flask/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2015-11-24T21:11:30-06:00</updated>
+  <updated>2015-11-24T21:14:59-06:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -171,6 +171,9 @@ React.render(&lt;FirstComponent /&gt;, document.getElementById('mount-point') );
 <p></html>
 ```</p>
 
+<!-- more -->
+
+
 <p>Let's go over the code. We first include the react and jsx libraries via the script tags and remove the earlier p tags. We set up a jsx script by specifying type="text/jsx". Then we call createClass method of React which creates a React component. React components are reusable units that you can use to compose your UI. The component must have at least the render method, which returns the virtual representation of a native DOM element or another component.
 Next we call React.render with the first element and pass it the id of the div element on which we want the result of the render function to be. Run the app again to navigate to the same path to see the app again.</p>
 
@@ -241,9 +244,6 @@ componentWillMount is called directly before a react component is initially rend
 <li><p>Reusable components make the code more reusable and testable, and the short terminology keeps the learning curve managable.</p></li>
 <li><p>Since React can be rendered Server Side, you might completely get rid of your server side templating, further reducing the number of tools necessary to run your app.</p></li>
 </ol>
-
-
-<!-- more -->
 
 
 <h5>React and Flask</h5>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Python, | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/python-/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2015-11-24T21:11:30-06:00</updated>
+  <updated>2015-11-24T21:14:59-06:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -65,7 +65,6 @@
 <li>Toronto had different modes of public transportation getting from downtown to airport: buses, streetcars, subway. Makes a city more interesting, although makes day to day travelling more complicated. Although, it does not take a whole lot to put public transportation in Austin to shame.</li>
 <li>Asked a lady on the Subway for directions. It soon turned into a great conversation with her and her husband about life in Toronto and their experiences in US. For a big city, Toronto scores major points for having friendly people. Canadians have a reputation of being polite and helpful, and I would come to recognize it throughout my trip there.</li>
 <li>My AirBnB was in Kensington Market, close to UoT where PyCon was taking place. It was a vibrant neighborhood, bars, restaurants, transportation nearby. My room was no hotel room, but a bed was all I needed.</li>
-<li>Found my airBnB hosts, and got some late night pizza. Questionable life choice.</li>
 </ul>
 
 
@@ -78,6 +77,13 @@
 <li>Talked to Dusty, a Facebook engineer working on the Facebook infrastructure in Portland. Having lived in Canada, he had a lot to share about his experience there.</li>
 <li>Morning keynote explored the history of Python interpreters and went into benchmarks. Benchmark related conversations can get subjective, but the speaker did a good job avoiding that.</li>
 <li>Talks on application security, Emmy nominated CGI(!) and Docker deployment followed. The CGI talk was offered a very different viewpoint in software problems. Being highly computation intensive and long life cycles means the tradeoffs are very different from the usual SASS app/consumer product.</li>
+</ul>
+
+
+<!-- more -->
+
+
+<ul>
 <li>Fully vegetarian lunch would have made some of my friends in Austin very happy.</li>
 <li>Talks on code quality and scaling followed in the afternoon. The scaling talk did not cover scaling a python service, but rather maintaining OpenStack, in the order of 4-5 million lines of code written in Python.</li>
 <li>SaltStack for deployment and fraud detection were next on the agenda. Fraud is very relevant for those in the payments industry, so I was very interested in the talk. Most of the talk focused on Apache Spark, and the fraud aspects covered some of the usual signals such as checking location of IP against location of the credit card.</li>
@@ -270,6 +276,9 @@ React.render(&lt;FirstComponent /&gt;, document.getElementById('mount-point') );
 <p></html>
 ```</p>
 
+<!-- more -->
+
+
 <p>Let's go over the code. We first include the react and jsx libraries via the script tags and remove the earlier p tags. We set up a jsx script by specifying type="text/jsx". Then we call createClass method of React which creates a React component. React components are reusable units that you can use to compose your UI. The component must have at least the render method, which returns the virtual representation of a native DOM element or another component.
 Next we call React.render with the first element and pass it the id of the div element on which we want the result of the render function to be. Run the app again to navigate to the same path to see the app again.</p>
 
@@ -340,9 +349,6 @@ componentWillMount is called directly before a react component is initially rend
 <li><p>Reusable components make the code more reusable and testable, and the short terminology keeps the learning curve managable.</p></li>
 <li><p>Since React can be rendered Server Side, you might completely get rid of your server side templating, further reducing the number of tools necessary to run your app.</p></li>
 </ol>
-
-
-<!-- more -->
 
 
 <h5>React and Flask</h5>
