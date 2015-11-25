@@ -18,7 +18,7 @@ Are you part of a team responsible for delivering cross platform products? End t
 
 ### Video:
 
-Coming Soon!
+[Youtube link](https://www.youtube.com/watch?v=YnCtm3ZDynY)
 
 ### Github Repo
 
