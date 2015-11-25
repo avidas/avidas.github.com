@@ -130,6 +130,8 @@ Easiest way to include React would be to just include them from a cdn. Let's upd
 </html>
 ```
 
+<!-- more -->
+
 Let's go over the code. We first include the react and jsx libraries via the script tags and remove the earlier p tags. We set up a jsx script by specifying type="text/jsx". Then we call createClass method of React which creates a React component. React components are reusable units that you can use to compose your UI. The component must have at least the render method, which returns the virtual representation of a native DOM element or another component.
 Next we call React.render with the first element and pass it the id of the div element on which we want the result of the render function to be. Run the app again to navigate to the same path to see the app again.
 
@@ -197,7 +199,6 @@ As it turns out, the selling points of React are not super hard to get and clear
 
 4. Since React can be rendered Server Side, you might completely get rid of your server side templating, further reducing the number of tools necessary to run your app.
 
-<!-- more -->
 
 #####React and Flask
 With their focus on SRP, React and Flask could be dependable and efficient parts of your stack. This is specially handy if you want to leverage the Numpy/Scipy stack for doing data analysis in near realtime and serve up a frontend with heavy user interaction. In a later post, we will look at exploring interactive applications and introduce Socket.io.
