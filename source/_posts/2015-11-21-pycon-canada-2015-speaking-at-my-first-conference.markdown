@@ -10,6 +10,7 @@ categories: Python, PyCon
 * If you are giving a talk, too much content on slides means the audience is reading the slides instead of listening to you.
 * Design your talk expecting failure, and assume things like wifi will not work. An analogy would be the non functional escalator still being a staircase.
 * Show your talk to as many people as time allows. Every time I showed my talk to someone, I would find a new way to make the talk better.
+* It was amazing to hear from a 10 year old about his experience in coding. The barrier to entry to tech will keep falling in a noticeable way.
 * Teaching remains the best way to learn alongside with building things.
 * Coding for expectability is often as important as any considerations in a software project.
 * Science, data, web, systems and infrastructure were dominant themes at PyCon.
