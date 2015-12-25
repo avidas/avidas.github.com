@@ -7,6 +7,8 @@ published: true
 categories: Javascript, React, Node.js, Socket.io
 ---
 
+> Update: Udemy has generously granted a free coupon for the readers of this blog for their [React JS and Flux](https://www.udemy.com/learn-and-understand-reactjs/learn/) course. Use the code `avidasreactjs` and the first 50 readers will get free access to the course!
+
 The importance of delivering realtime feedback to users is more than ever. Gone are the days when chats or games were the only applications of realtime software. Starting from finance, advertising or education, having a realtime component to your web application will elevate the user experience.
 
 ###Socket.io

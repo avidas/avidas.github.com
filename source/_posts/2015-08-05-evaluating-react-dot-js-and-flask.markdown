@@ -7,6 +7,8 @@ published: true
 categories: Javascript, React, Python, Flask
 ---
 
+> Update: Udemy has generously granted a free coupon for the readers of this blog for their [React JS and Flux](https://www.udemy.com/learn-and-understand-reactjs/learn/) course. Use the code `avidasreactjs` and the first 50 readers will get free access to the course!
+
 As a connoisseur of the web, front-end frameworks have been been a fertile area of late. React.js from Facebook has taken much fanfare, and this post evaluates key ideas on react, and digs into why you could be interested in React. Staying true to single responsibility principle, React is a highly useful tool if you are doing web programming.
 
 In this post, we will dive into building a Frontend using React.js and Backend built using the Python framework Flask. Flask is a minimalistic framework, and excellent when your backend becomes more and more of an API. Moreover, this facilitates the microservices architecture, where the decoupling of your your app into small unit of services can make it more maintainable and scalable.
