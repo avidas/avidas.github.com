@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Python, | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/python-/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2015-11-26T14:16:44-06:00</updated>
+  <updated>2015-12-24T22:35:24-06:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -124,7 +124,9 @@
     <link href="http://avidas.github.com/blog/2015/08/05/evaluating-react-dot-js-and-flask/"/>
     <updated>2015-08-05T10:39:00-05:00</updated>
     <id>http://avidas.github.com/blog/2015/08/05/evaluating-react-dot-js-and-flask</id>
-    <content type="html"><![CDATA[<p>As a connoisseur of the web, front-end frameworks have been been a fertile area of late. React.js from Facebook has taken much fanfare, and this post evaluates key ideas on react, and digs into why you could be interested in React. Staying true to single responsibility principle, React is a highly useful tool if you are doing web programming.</p>
+    <content type="html"><![CDATA[<blockquote><p>Update: Udemy has generously granted a free coupon for the readers of this blog for their <a href="https://www.udemy.com/learn-and-understand-reactjs/learn/">React JS and Flux</a> course. Use the code <code>avidasreactjs</code> and the first 50 readers will get free access to the course!</p></blockquote>
+
+<p>As a connoisseur of the web, front-end frameworks have been been a fertile area of late. React.js from Facebook has taken much fanfare, and this post evaluates key ideas on react, and digs into why you could be interested in React. Staying true to single responsibility principle, React is a highly useful tool if you are doing web programming.</p>
 
 <p>In this post, we will dive into building a Frontend using React.js and Backend built using the Python framework Flask. Flask is a minimalistic framework, and excellent when your backend becomes more and more of an API. Moreover, this facilitates the microservices architecture, where the decoupling of your your app into small unit of services can make it more maintainable and scalable.</p>
 
