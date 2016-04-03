@@ -6,9 +6,7 @@ sharing: false
 footer: true
 ---
 
-## Zeek
-
-Twitter Marketing Automaton - Generate High Quality Leads For Your Buisness. Click below for more details.
+Here are my current and past projects. Click on each for details and technologies used.
 
 {% portfolio %}
 

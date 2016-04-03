@@ -53,17 +53,14 @@ module Jekyll
           if(screenshot != "." && screenshot != "..")
 
             link = portfolio_root + "/" + @project_folder
-            img = link + "/" + screenshot   #changed.
+            img = link.downcase + "/" + screenshot   #changed.
             title = File.basename(screenshot, File.extname(screenshot))
 
-            real_title = title.sub("small-", "")
-            big_img = img.sub("small-", "")
-
             if(title.index "small-")
-              content += '<a title="' + real_title + '" href="' + big_img + '" class="fancybox"><img src="' + img + '"></a>'
+              content += '<a title="' + title + '" href="' + img + '" class="fancybox"><img src="' + img + '"></a>'
             end
             if(title.index "main-")
-              content += '<a title="' + real_title + '" href="' + big_img + '" class="fancybox"><img src="' + img + '"></a>' # remove if you don't need main-* image on the portfolio page.
+              content += '<a title="' + title + '" href="' + img + '" class="fancybox"><img src="' + img + '"></a>' # remove if you don't need main-* image on the portfolio page.
             end
           end
         end

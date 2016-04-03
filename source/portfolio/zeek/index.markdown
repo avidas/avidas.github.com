@@ -1,10 +1,10 @@
 ---
 layout: page
-title: "Zeek.ai"
+title: "zeek"
 author: "Avi Das"
 date: 2015-09-07 07:21
 comments: false
-sharing: false
+sharing: true
 footer: true
 ---
 
@@ -13,10 +13,8 @@ footer: true
 Twitter Marketing Automaton - Generate High Quality Leads For Your Buisness
 
 ### Tech stack
-- Node.js, Express, Loopback
+- Node.js, Express, Gulp
+- React, Bootstrap
 - Mongo
-- Redis
-- JavaScript, Jquery
-- CSS, Bootstrap
 
 {% portfolio Zeek %}
