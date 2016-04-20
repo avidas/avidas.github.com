@@ -4,7 +4,7 @@
   <title><![CDATA[Avi Das]]></title>
   <link href="http://avidas.github.com/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2016-04-03T13:20:53-05:00</updated>
+  <updated>2016-04-19T20:37:26-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[What makes a great programming tutorial?]]></title>
+    <link href="http://avidas.github.com/blog/2016/04/18/what-makes-a-great-online-tutorial/"/>
+    <updated>2016-04-18T05:36:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2016/04/18/what-makes-a-great-online-tutorial</id>
+    <content type="html"><![CDATA[<p>The Internet started as a publishing medium. It excels at enabling people to share their unique gifts. An amazing amount of content gets put out on the web everyday, far beyond someone can read in a lifetime. Massive amount of information also means information overload.</p>
+
+<p>In software, it is common to use web tutorials to supplement someone&#8217;s learning of a particular material. Following guidelines of someone who has already done it can really fast track development. Tutorials appear in various forms in the web. Some of the common formats are long form blogposts, videos and series of email newsletters. Some enjoy the personal touch that videos can offer; others enjoy being able to quickly skim a blogpost.</p>
+
+<p>When you want to put your hard earned knowledge and valuable time into writing a tutorial, there are questions worth thinking about. Does the tutorial cater to its intended audience and will it reach them? Can someone quickly skim the content and still get value? Is there a way to measure the effectiveness of online tutorials?</p>
+
+<p>To look for answers, I asked a carefully selected group of 150 people about their preference of tutorials. The focus was on software engineers/designers/entrepreneurs due to my familiarity and experience with the field. What emerged from their responses gives a blueprint for creating great online resources.</p>
+
+<ol>
+<li><p><strong>Real time feedback</strong>: If exercises or examples accompany a tutorial, multiple survey responders emphasized the need to check the user&#8217;s responses and provide interactive feedback to the user to guide them to the solution. Good examples are checkpoint multiple choice questions during Coursera/Udacity courses that you must complete to move forward with the course.</p></li>
+<li><p><strong>Follow up</strong>: Several responders emphasized the need to provide contact information or other means to reach out to the author once they went through a tutorial. Providing a comments section or your email/twitter handle are great mediums for a reader to follow up.</p></li>
+<li><p><strong>Address a concrete problem</strong>: Staying focused of a specific problem gives a tutorial depth. A differentiator can be to classify for the user whether the focus is academic and structured vs. a blogpost focused on solving a particular problem right now.</p></li>
+<li><p><strong>Working examples</strong>: Interactive, working examples close to the content that builds on top of each other makes following along simpler. Michael Hartl&#8217;s Ruby on Rails tutorials came up as an example of detailed, comprehensive tutorials.</p></li>
+<li><p><strong>Advanced user tutorials</strong>: Several user&#8217;s pointed out the need for tutorials that addresses advanced content. Making expectations clear about experience levels of intended audiences can be a huge positive for tutorials. Ray Wenderlich&#8217;s iOS tutorials are good examples of the detail and level of research and understanding that can happen before putting out content on the web.</p></li>
+<li><p><strong>Copyright</strong>: Sometimes an afterthought, it may be worth pointing out what license the content is released under. This can give the reader’s clarity on how to attribute the source when they use that content in production. Github makes this really easy with license options provided  during repository creation.</p></li>
+<li><p><strong>Offer tangible short-term benefits</strong>: While this certainly applies more to blogposts rather than courses, focusing on offering user&#8217;s value short, medium and long term can improve the message of a tutorial. Moreover, an user may be more inclined to follow through the entire content of a tutorial if they are get that value at different stages of the tutorial.</p></li>
+<li><p><strong>Timeliness</strong>: This could be hard to measure, but popularity of tutorials can be attributed to how current and relevant they are. As of the time of writing this blogpost, April 2016, there are lot of people looking to get into VR/AR, chatbots, AI and so on. Accounting for recency can certainly increase the reader counts of your posts.</p></li>
+<li><p><strong>Continuity</strong>: It became clear through the responses that while people looked for tutorials to solve a particular problem, they return because they are looking for a subject matter expert. Producing a series of tutorials taking on different aspects of a topic can help with retention.</p></li>
+<li><p><strong>Discoverability</strong>: This can go in the realms of SEO, but lot of responders responded to their favorite source of online tutorials with well-known sources. Coursera/Udemy/Khan Academy/YouTube and Google were all common ways people went around in finding online tutorials. If you do not want to solve distribution for the content you create, writing for more known blogs/sites can be a way to reach larger audiences.</p></li>
+<li><p><strong>Formatting</strong>: A big part of the user experience, proofreading cannot be left for the last. In the tech space, prominent writers such as Paul Graham always attribute at the end of the blogpost all those who have helped proofread the content. Just passing it around to a few people before publication and basic spell checking/grammar checking can improve the user experience for tutorials.</p></li>
+</ol>
+
+
+<p>There are definitely caveats to this survey. As the person compiling this survey, it is at least slightly influenced by my biases. My target group is highly technically literate, so there is a bias towards modern tools. Perhaps it is worth taking into account the intent of writing tutorials, be it teaching, lead generation or growing a business.</p>
+
+<p>Like most studies, this too should be taken with a grain of salt and in no way is sure way to produce great tutorials. Someone&#8217;s genuine passion, interest and the willingness to learn and teach find their ways to shine through content. However, just as the Joel Test for Software Development companies is often a good checklist for expected standards of software companies, being aware of the reader’s needs and voice can lead to sharper, more helpful tutorials.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[10 things I learnt going from 10k to a Marathon in 2015]]></title>
@@ -1508,32 +1542,6 @@ Ok, this one is controversial. Adblock will stop advertisements on websites, kee
 <p>With more and more realtime data being available for the public, identifying knowledge clusters at the right point in time becomes really valuable. DevsNearMe is an Android app that attempts to combine data from popular realtime sharing websites such as FourSquare, Twitter, Facebook, Instagram and MeetUp. It will attempts to predict users at a particular location by taking into account absolute numbers, and weighed prediction based on local context based information and learnt knowledge from past user behavior.</p>
 
 <p>This could be highly useful for knowledge sharing, recruiting and demographic analysis. Prototype code is at https://github.com/DevsNearMe .</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Angelhacking at Dumbo]]></title>
-    <link href="http://avidas.github.com/blog/2013/06/08/angelhacking-at-dumbo/"/>
-    <updated>2013-06-08T16:42:00-05:00</updated>
-    <id>http://avidas.github.com/blog/2013/06/08/angelhacking-at-dumbo</id>
-    <content type="html"><![CDATA[<p>&#8220;This is not your ordinary hackathon. This is the big leagues&#8221;. Such was the claim of Angelhack this past weekend, and two weeks after participating in my first ever serious hackathon, I found myself at another one. There really is something about the mix of meeting cool people, hacking unfamiliar platforms and testing your coding chops in a small amount of time that can be quite addicting.</p>
-
-<p>Shakere, the product I worked on, is an iPhone app for finding people based on skills or interests in social gatherings. Yes, your umpteenth social product, guilty as charged. The space for social discovery really is a heavily contested one, which made me hesitant at first since variants of the idea has been tried by many. I joined however, after realizing that the team would work well together (we actually had a UX designer in the team. Yay!) and this was my chance to experience iOS development, even though I would be developing the backend.</p>
-
-<p>I worked on rolling a RESTful API (https://github.com/shakere/backend), working on the LAMP stack. Though I have not worked too much on LAMP backends before, I must admit that the stack is well suited for rapid prototyping. PHP in particular was a pleasant surprise to work with, in parts because of working with Perl for most of last year. I have had a little stint with Rails, and while Rails seems far more powerful, PHP is more explicit with less magic going on behind the scenes which makes it easier for starters to tinker. However, I did find myself handling quite a few inc files soon and was grepping to find which function was defined where. If I am working on a larger scale PHP project, it would definitely be worth looking into frameworks/best practices for PHP code organization.</p>
-
-<!--more-->
-
-
-<p><img class="left" src="http://avidas.github.com/images/Shakere_Profile.jpg" width="300" height="800" title="Shakere Profile" alt="Shakere Profile"></p>
-
-<p>We got a neat version working well in time for the demo. The app being frontend heavy, I was done with a bit of time in hand, making it a more pleasant hackathon than the last one. Yet during presentation, we did run into the pitfall of not having tested our demo machines to the projector, and this is really a must if you want to avoid delays during your demos.</p>
-
-<p>The ideas were definitely interesting to look at since the hackathon was not restricted to any particular domain. Some were targeting specifically Microsoft, Paypal or Amazon platforms, who were present at the event and provided prizes for the best app using their APIs. It was specifically interesting when domain experts (such as a scientist in a Columbia lab) came to the hackathon trying to device a service for their community. Field experts can have a certain deep understanding of a space and their demos were a good reflection of that.</p>
-
-<p>We did not win unfortunately but judging did seem fair. The ideas winning were generally the apps which were the most mature or demonstrated a clear need base for their ideas. I particularly enjoyed prepared.ly and their combining the job skill-set with learning tools such as Udacity or CodeAcademy. With some personal analytics and initiatives to pick up the skills fast enough, this service can be very useful for coding job seekers.</p>
-
-<p>For the next such event, I would definitely focus more on rolling out more features faster. We were perhaps guilty of actually going around and getting real user data to populate our databases. I would imagine for pre-shipping products you would want this, and MVPs these days certainly value user early user feedback. Hackathons have different needs from production apps though, and rapid feature deployment wins over iterating and getting existing features perfect. You live and you learn.</p>
 ]]></content>
   </entry>
   

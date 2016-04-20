@@ -13,10 +13,6 @@
         <lastmod>2015-07-18T12:14:55-05:00</lastmod>
     </url>
     <url>
-        <loc>http://avidas.github.com/blog/2013/07/04/hacking-health-third-times-the-charm/</loc>
-        <lastmod>2015-07-26T18:28:09-05:00</lastmod>
-    </url>
-    <url>
         <loc>
             http://avidas.github.com/blog/2013/07/28/devsnearme-july-26-27-big-data-hackathon/
         </loc>
@@ -71,14 +67,6 @@
         <lastmod>2015-06-21T14:26:11-05:00</lastmod>
     </url>
     <url>
-        <loc>http://avidas.github.com/blog/2015/07/14/thoughts-for-a-post-resume/</loc>
-        <lastmod>2015-08-31T08:53:35-05:00</lastmod>
-    </url>
-    <url>
-        <loc>http://avidas.github.com/blog/2015/07/14/thoughts-for-a-post-resume-draft/</loc>
-        <lastmod>2015-08-31T08:18:00-05:00</lastmod>
-    </url>
-    <url>
         <loc>
             http://avidas.github.com/blog/2015/07/16/how-browserify-improves-client-side-development/
         </loc>
@@ -92,7 +80,7 @@
         <loc>
             http://avidas.github.com/blog/2015/08/21/guide-to-finding-a-technical-cofounder/
         </loc>
-        <lastmod>2015-11-24T21:13:32-06:00</lastmod>
+        <lastmod>2016-04-18T09:40:26-05:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/blog/2015/09/06/building-realtime-apps-with-react/</loc>
@@ -121,16 +109,20 @@
         <lastmod>2016-02-14T13:46:55-06:00</lastmod>
     </url>
     <url>
+        <loc>http://avidas.github.com/blog/2016/04/18/what-makes-a-great-online-tutorial/</loc>
+        <lastmod>2016-04-19T20:35:25-05:00</lastmod>
+    </url>
+    <url>
         <loc>http://avidas.github.com/about/</loc>
         <lastmod>2016-01-08T15:10:35-06:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/blog/archives/</loc>
-        <lastmod>2016-02-14T13:46:55-06:00</lastmod>
+        <lastmod>2016-04-19T20:35:25-05:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/</loc>
-        <lastmod>2016-02-14T13:46:55-06:00</lastmod>
+        <lastmod>2016-04-19T20:35:25-05:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/portfolio/dripper/</loc>
@@ -138,7 +130,7 @@
     </url>
     <url>
         <loc>http://avidas.github.com/portfolio/</loc>
-        <lastmod>2016-04-03T12:50:55-05:00</lastmod>
+        <lastmod>2016-04-03T13:25:11-05:00</lastmod>
     </url>
     <url>
         <loc>http://avidas.github.com/portfolio/zeek/</loc>

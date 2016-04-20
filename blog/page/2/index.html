@@ -9,7 +9,7 @@
   <meta name="author" content="Avi (Ananya Das)">
 
   
-  <meta name="description" content="Executing network spoofing and man in the middle attacks have become easier than ever. This is more of an issue if a client has an open server for &hellip;">
+  <meta name="description" content="For a more modular, maintainable Frontend As Single Page Applications gain in popularity, the size of front end codebases keeps growing rapidly. For &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,63 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/07/16/how-browserify-improves-client-side-development/">How Browserify Improves Client-side Development</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-07-16T14:41:00-05:00" pubdate data-updated="true">Jul 16<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4>For a more modular, maintainable Frontend</h4>
+
+<p>As Single Page Applications gain in popularity, the size of front end codebases keeps growing rapidly. For keeping these codebases maintainable, modularity becomes a priority. The easier it is to modularize code, the more incentives developers will have for doing so. With the ease of modularity with CommonJS, npm has seen explosive growth of packages published which has helped the Node ecosystem greatly. Browserify brings that ease to client side development leveraging the CommonJS module system. When used with build tools such as Grunt or Gulp, you can write modular client side code just like you would write your server side Node code, and Browserify takes care of the bundling for you. There is much less excuse these days to make everything global and attach to the window object!</p>
+
+<h4>Leveraging npm modules</h4>
+
+<p><img class="left" src="/images/Modulecounts.jpg" width="800" height="670" title="Package Manager Traction" alt="Package Manager Traction"></p>
+
+<p>Looking at the graph above is a big selling point when trying to evaluate the value Browserify can bring to your client side workflow. The graph is a comparison of the rate at which packages are getting published in different package managers Bower, PyPI, RubyGems. npm leads the pack easily. Recently, jQuery registry stopped accepting new plugins, with <a href="http://blog.npmjs.org/post/111475741445/publishing-your-jquery-plugin-to-npm-the-quick">new packages being published on npm</a>. Cordova recently announced the same change, moving plugins to npm. npm is now hosting much broader range of modules than only server-side Node.js modules and Browserify can help you leverage these modules on the front-end. The flipside of this as a module publisher is that publishing modules on npm now gives you access to a much broader audience since people might use the module on the browser, custom hardware etc.</p>
+
+<h4>How it works</h4>
+
+<p>In the CommonJS syntax, the &#8220;exports&#8221; object is the public API of a module and &#8220;require&#8221; can be used to include a module in your javascript file. Since browsers do not have require available, Browserify traverses the <a href="https://github.com/substack/browserify-handbook#how-browserify-works">dependency trees</a> of all the required modules, and bundles the dependencies into one self contained file that you can just include with a script tag on the browser. Browserify is aware of package.json and the order in which node_modules are resolved. Moreover, it supports built in Node modules e.g. path and gloabls e.g. Buffer so you have access of those in the client side as well.</p>
+
+<h4>Transforms</h4>
+
+<p>Core Browserify only bundles modules written in the CommonJS syntax, adhering to the single responsibility principle. However, there are other ways of modularizing client side code, AMD and Global Variables being the two usual ones. Instead of handling every possibly of modules, Browserify exposes a Transforms API so that a plugin can be built which can preprocess a file into Javascript in CommonJS syntax which Browserify can then consume. This means that you can write modular code just like your node codebases regardless of what module system your dependencies may adhere to. There are also lot of people writing in languages that compile into Javascript, such as CoffeeScript or TypeScript. To handle this, there are transforms available for AMD (deamdify), Bower modules (debowerify), globals (deglobalify), coffeescript(coffeeify), harmony (es6ify) etc. A simple search of Browserify on Github or npm brings up thousands of modules and attests to the <a href="https://github.com/substack/node-browserify/wiki/list-of-transforms">ecosystem around Browserify</a>. Delegating to transforms helps to keep the footprint of Browserify smaller, while makes it more extensible.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/07/16/how-browserify-improves-client-side-development/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -712,54 +769,6 @@ Ok, this one is controversial. Adblock will stop advertisements on websites, kee
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/12/25/hack-the-trackers-november/">Hack the Trackers</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-25T15:49:00-06:00" pubdate data-updated="true">Dec 25<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Online tracking has been a peak topic of debate this year and by the look of things will continue to be. NSA programs, Snowden and the reactions from top tech companies brought in more attention to tracking than ever before. It was hence very timely for Evidon/Ghostery to organize hack the trackers in early November.</p>
-
-<p><a href="https://www.ghostery.com/">Ghostery</a> is a chrome extension that displays trackers on a particular webpage. Not only that, they allow features to block particular trackers and include detailed information about the trackers. The emphasis seems to make web users aware of tracking and let them make the choice.</p>
-
-<p>We built Falcon, which we thought would complement Ghostery&#8217;s offering quite well. Falcon is a chrome extension where we displayed the overall lost time due to the trackers and which trackers were the most resource intensive. Our hypothesis was that to increase awareness of online tracking, we needed to provide tangible ways in which tracking affects online browsing experience. Ghostery provided us with a data set with a lot of interesting information, among which average load time for trackers was a key indicator. Even with caching, users could lose time which would take to load the trackers, if trackers are loaded synchronously. This could particularly matter for mobile and locations with poor wi-fi as poorly created trackers would slow down the browsing experience.</p>
-
-<p><img class="right" src="/images/falcon.png" width="500" height="900" title="Falcon Demo" alt="Falcon Demo"></p>
-
-<p>Building a chrome extension for a first time was not too complicated as it is very similar to building a web page and chrome is as reliable as platforms get. We ended up being one of the two semi finalists, the other being a cool way to link the trackers with their public figures as a fun way to raise attention to tracking.</p>
-
-<p>This hackathon was particularly a great learning experience. Companies are taking highly innovative routes to glean more information about the users. Cookies have always existed, but two other forms of tracking I learnt was autocomplete fields tracking and <a href="http://en.wikipedia.org/wiki/Device_fingerprint">browser fingerprinting</a>. Browser fingerprinting tries to get information from user-agent, the OS, extensions installed and other configurations to bind a particular browser to an user and this can happen completely on the server side. I have only learnt fairly recently about the bidding platforms for display advertisement and it was pretty interesting to see dictionary.com revealing on their console the bids as they happened in real time.</p>
-
-<p>Computer security is a dynamic and fast changing field and this hackathon was an interesting mix of people in different niches of the industry. Tracking will continue to be an issue and it was good to see Ghostery taking the initiative to search for innovations in this space.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -783,6 +792,10 @@ Ok, this one is controversial. Adblock will stop advertisements on websites, kee
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2016/04/18/what-makes-a-great-online-tutorial/">What makes a great programming tutorial?</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2016/02/09/10-things-i-learnt-going-from-10k-to-a-marathon-in-2015/">10 things I learnt going from 10k to a Marathon in 2015</a>
       </li>
     
@@ -792,10 +805,6 @@ Ok, this one is controversial. Adblock will stop advertisements on websites, kee
     
       <li class="post">
         <a href="/blog/2015/11/24/pycon-canada-2015-ii-python-for-reliably-delivering-cross-platform-products/">Pycon Canada 2015 II: Python for Reliably Delivering Cross Platform Products</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/11/21/pycon-canada-2015-speaking-at-my-first-conference/">Speaking at PyCon Canada 2015: I</a>
       </li>
     
   </ul>

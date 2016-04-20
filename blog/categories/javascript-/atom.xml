@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: JavaScript, | Avi Das]]></title>
+  <title><![CDATA[Category: Javascript, | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/javascript-/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2016-04-03T13:20:58-05:00</updated>
+  <updated>2016-04-19T20:37:26-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -14,23 +14,519 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Connected car: Meticulous.io @Angelhack]]></title>
-    <link href="http://avidas.github.com/blog/2014/01/07/connected-car-at-angelhack/"/>
-    <updated>2014-01-07T23:00:00-06:00</updated>
-    <id>http://avidas.github.com/blog/2014/01/07/connected-car-at-angelhack</id>
-    <content type="html"><![CDATA[<p>Angelhack looks for startups to come out of hackathons rather than just weekend hacks. As a result, it tends to get very product driven as teams compete for the Angelpad recognition. The theme this year was Apphack, and mobile apps were the key focus. Not really a surprise, as more and more startups build mobile first.</p>
+    <title type="html"><![CDATA[Building Realtime Apps with React, Socket.io and Node.js]]></title>
+    <link href="http://avidas.github.com/blog/2015/09/06/building-realtime-apps-with-react/"/>
+    <updated>2015-09-06T11:16:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2015/09/06/building-realtime-apps-with-react</id>
+    <content type="html"><![CDATA[<blockquote><p>Update: Udemy has generously granted a free coupon for the readers of this blog for their <a href="https://www.udemy.com/learn-and-understand-reactjs/learn/">React JS and Flux</a> course. Use the code <code>avidasreactjs</code> and the first 50 readers will get free access to the course!</p></blockquote>
 
-<p>We worked on the verizon telematics data. <a href="http://www.verizontelematics.com/">Verizon telematics</a> is something I did not know about before. Car companies have been working with Verizon to install a device in the cars that could send data about speed, location, rpm, condition of the car in terms of last time since gas, particular model of car, wear and tear to the cloud. I expect Verizon is able to collect a lot more than the columns we saw. Needless to say, this would be a very powerful dataset and it is surprising that there aren't more going on in this space.</p>
+<p>The importance of delivering realtime feedback to users is more than ever. Gone are the days when chats or games were the only applications of realtime software. Starting from finance, advertising or education, having a realtime component to your web application will elevate the user experience.</p>
 
-<p><a href="http://ipython.org/">iPython</a> and <a href="http://pandas.pydata.org/">Pandas</a> are built for analyzing and visualizing tabular data like this. Questions such as which brand of car gave the best milage per gallon, which brand was driven more on the highway vs which was more popular on the city roads were fairly easy to answer. It was not clear if the data given to us was indeed an uniform sample, but results were interesting. However, they are hardly hackathon worthy ideas.</p>
+<h3>Socket.io</h3>
 
-<p>Needed an idea. One set of data had trip ids tied to driver ids, the other set had per trip latitudes and longitudes. Aggregating them somehow would be interesting. Geographical history of most visited places can be found since trips could be tied to drivers. Historical driving records could be obtained from individual trips and the overall history of the driver measured. Global driving records could be obtained so that the best driver's can be found.</p>
+<p>From <a href="http://socket.io/">socket.io's homepage</a>, it is a library that enables real-time bidirectional event-based communication. It has two parts, a client side library that runs in the browser and a server side library for node.js. In recent times, this has become the de facto way of doing realtime web applications in the node.js world. Key reasons behind this has been the way it abstracts away the overhead of maintaining multiple protocols, while carrying on similar primitives from <a href="https://nodejs.org/api/stream.html">Node streams</a> and <a href="https://nodejs.org/api/events.html">eventEmitter</a>. Some of its other powerful features include being able to stream Binary data, broadcast to multiple sockets and being able to manage connected client data from the server.</p>
 
-<p>Once noting those features, the next step was to think how this would make sense as a product. Context sensitive software is hugely in demand and this is a great dataset for revealing patterns of drivers. Buisnesses aware of customers frequenting particular location can push deals and coupons to those individuals to drive buisness. Timeliness of visit can be used to fine tune the deals even more, e.g. lunch deals would make sense around the Grand Central area in NYC to a busy professional. The brand of car can be used to push vehicle specific ads. This would also be a treasure trove of information for car insurance companies figuring out insurance rates. Finally, it is quite possible that driving patterns can be used to trigger alert that may detect an accident ahead of time.</p>
+<h3>Architecture</h3>
 
-<p>Its hard to argue that driving patterns are valuable data. However, as with any user specific information used for personalization experiences curated by businesses, privacy would be a big concern. It was not entirely clear who would own the data, the driver, the provider, or else. It should be made very clear to the driver of the nature of the tracking going on and how the data may be used. Since data like this could easily be used by a malicious third party to monitor you in real time when you are driving, there is inherent danger in it being available without the driver being informed. Tracking is an issue users of any clowd aware system needs to be aware of.</p>
+<p>The WebSocket protocol is a W3C standard that enables interactive communication between browser and server. It functions as an Upgrade request over HTTP 1.1. However, since all legacy browsers and devices do not have support for WebSockets, it's cross-platform abilities get limited.</p>
 
-<p>We did win the Verizon prize for the hackathon, and it was nice having our idea at the eleventh hour being well accepted. Angelhack put on a good show, and I must mention the apps "Make it Rain" (literally, on the phone screen) and "Kanye"(alerts if you are nearby Kanye West) for the hilarity during the presentation!</p>
+<p>Socket.io itself is a library to build realtime applications. It will try to upgrade to and use the Websocket protocol if available. Socket.io depends on another libray called Engine.io which exposes a Websocket like API but provides fallbacks to other transport mechanisms such as XHR and JSONP polling. This enables application developers to write realtime codebases that are browser, device and transport implementation independent.</p>
+
+<h3>Getting started with Socket.io</h3>
+
+<p>This tutorial assumes that you have Node.js, npm and Express on your system.</p>
+
+<p>In a directory create two files called index.html and app.js. In your app.js file, add the following</p>
+
+<p>```javascript
+var app = require('express')();
+var server = require('http').Server(app);
+var swig = require('swig');
+var path = require('path');</p>
+
+<p>// view engine setup
+app.engine('html', swig.renderFile);
+app.set('view engine', 'html');</p>
+
+<p>// server and routing
+server.listen(8080);
+app.get('/', function (req, res) {
+  res.render('index');
+});
+```</p>
+
+<p>We set up the view engine and serve up a basic index page. If this part looks unfamiliar, please check out <a href="http://expressjs.com/guide/routing.html">Express docs</a>. Now add the following in app.js.</p>
+
+<p>```javascript
+var io = require('socket.io')(server);
+// socket.io demo
+io.on('connection', function (socket) {
+  socket.emit('server event', { foo: 'bar' });
+  socket.on('client event', function (data) {</p>
+
+<pre><code>console.log(data);
+</code></pre>
+
+<p>  });
+});
+```
+ We create a new instance of socket.io and pass in the created express server as a parameter. As the server listens, whenever a new client starts a connection, we emit an event called server event and send the payload { foo : 'bar' }. It also listens for 'client event' and logs the payload once it gets the event.</p>
+
+<p>In your index.html file add the following
+```html</p>
+
+<script src="http://avidas.github.com/socket.io/socket.io.js"></script>
+
+
+<script>
+  var socket = io();
+  socket.on('server event', function (data) {
+    console.log(data);
+    socket.emit('client event', { socket: 'io' });
+  });
+</script>
+
+
+<p>```
+It includes the client side socket io library. After instantiating a new connection, it listens for the 'server event' and when that event happens it logs the data and emits 'client event' and sends the payload { socket: 'io'}.</p>
+
+<p>Run node app.js and fire up localhost:8080 in your browser. On the terminal you should see { socket: 'io' } and on the console you should see { foo : 'bar' } printed out. Congrats, you just did your first Socket.io app!</p>
+
+<h3>Useful Socket.io Concepts</h3>
+
+<h5>Message sending/receiving</h5>
+
+<p>Socket.IO allows you to emit and receive custom events. Besides connect, message and disconnect, you can emit custom events and send with associated payload. Emit and Broadcast are ways to send events and on is the event listener.</p>
+
+<h5>Server vs Client API</h5>
+
+<p>There are some common functions between server and client side, but it is worth looking into the docs and understanding what is possible on the server vs client. Generally, the server side has much more features and capabilites and is capable of creating rooms and namespaces but both sides and send and respond to events.</p>
+
+<h5>Rooms and Namespaces</h5>
+
+<p>Socket.io provides built in abstractions to demultiplex the connected clients. Namespaces, identified by a path, can be connected via the following</p>
+
+<p><code>javascript
+var socket = io(); //connects to default namespace "/"
+var admin = io("/admin"); //connects to the namespace specified by the path "/path"
+</code></p>
+
+<p>After a client connects with <code>var socket = io('/admin')</code> , we can send message only to the admin namespace.</p>
+
+<p><code>javascript
+admin.emit("admin alert", "website traffic is up!"); //the event will only be sent to the clients who connected to the admin namespace
+</code></p>
+
+<p>This enables more role or other criteria based distribution of socket.io events/messages within your application.</p>
+
+<p>Rooms provide a way to further divide up clients within individual namespaces. Clients within a namespace can join and leave a room. By default, a client always is connected to a room idenfied by the sockets id. Hence it is possible to send targeted messages to a connected client via <code>socket.broadcast.to(&lt;SOCKET.ID&gt;).emit('test', 'message')</code>. Rooms could make more sense for particular themes whereas namespaces seem to fit well for user type/responsibilities.</p>
+
+<h3>React and Socket.io</h3>
+
+<p>Now for the exciting part, integrating React.js and Socket.io into an application. React.js is Javascript UI framework from facebook. You can follow some of the <a href="https://facebook.github.io/react/">initial docs</a> to get started with React. This tutorial will not go into great detail into the terminologies of React.js but refer to the official documentation if any of the React syntax looks confusing.</p>
+
+<p>The basic idea of the app is to have an html input and a label. When someone types in something into the input box, it will update the label for anyone else who have an window open except for the person typing.</p>
+
+<h5>Client side code</h5>
+
+<p>Let's start by changing your index.html to the following</p>
+
+<p>```html
+&lt;!DOCTYPE html>
+<html>
+  <head></p>
+
+<pre><code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/react.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/JSXTransformer.js"&gt;&lt;/script&gt;
+&lt;script src="http://avidas.github.com/socket.io/socket.io.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>  </head>
+  <body></p>
+
+<pre><code>&lt;div id="mount-point"&gt;&lt;/div&gt;
+&lt;div id="label-mount-point"&gt;&lt;/div&gt;
+&lt;script type="text/jsx"&gt;
+ /** @jsx React.DOM */
+var socket = io();
+
+var Input = React.createClass({
+  _notifyServer: function(event){
+    socket.emit('client event', { value: event.target.value });
+  },
+  render: function(){
+    return (
+      &lt;div className="update-label"&gt;
+        &lt;input type="text" placeholder="Enter text" onChange={this._notifyServer}/&gt;
+      &lt;/div&gt;
+    );
+  }
+});
+var Label = React.createClass({
+  _onUpdateLabel: function(data) {
+    this.setState(serverValue: data.value);
+  },
+  getInitialState: function(){
+    return { serverValue: '' };
+  },
+  render: function(){
+    return (
+      &lt;div class="my-label"&gt;
+        &lt;h2&gt;{this.state.serverValue}&lt;/h2&gt;
+      &lt;/div&gt;
+    )
+  }
+});
+var input = React.render(&lt;Input/&gt;, document.getElementById('mount-point'));
+var label = React.render(&lt;Label/&gt;, document.getElementById('label-mount-point'));
+socket.on('update label', function (data) {
+  label._onUpdateLabel(data);
+});
+&lt;/script&gt;
+</code></pre>
+
+<p>  </body>
+</html>
+```</p>
+
+<h5>Server side</h5>
+
+<p>The server side of the codebase can mostly stay the same, except we broadcast 'update label' when 'client event' is received.</p>
+
+<p>```javascript
+io.on('connection', function (socket) {
+  socket.emit('server event', { foo: 'bar' });
+  socket.on('client event', function (data) {</p>
+
+<pre><code>socket.broadcast.emit('update label', data);
+</code></pre>
+
+<p>  });
+});
+```</p>
+
+<h5>Explanation</h5>
+
+<p>On the client side, two React components called Input and Label are created and mounted by calling React.render. Input renders an html input box which calls the <em>notifyServer method whenever the someone types into the input field. The </em>notifyServer method then emits socket.io event called 'client event' with the value of the input box.</p>
+
+<p>On the server side, when 'client event' is received with the data, the server calls socket.broadcast.emit and passes the data payload along. This means that all the connected clients except for the socket that generated 'client event' will receive the 'update label' event and the payload. This sends the message to everyone except for the person typing.</p>
+
+<p>Back to the client side, the Label component consists on a div with a h2 element with is set to the serverValue state of the component. <a href="https://facebook.github.io/react/docs/component-specs.html#getinitialstate">getInitialState</a> sets the initial value to be '' so initially the Label is empty. When 'update label' is received, we call the _onUpdateLabel on label, which is an instance of Label. It sets the serverValue state of the Label component to data.value. This invokes the render method of the label component, and it generates a h2 header with the updated value of the serverValue.</p>
+
+<!-- more -->
+
+
+<h3>Advantages of Socket.io</h3>
+
+<p>Many advantages of socket.io are</p>
+
+<ol>
+<li>The simplicity of the integration. Rolling your own realtime library is considerably more difficult due to multi-protocol, browser and device requirements.</li>
+<li>Large community of users and support in multiple platforms. It is used from large companies to small startups, meaning developer support is in abundance. Socket.io released native clients on iOS and Android this year, expanding its reach.</li>
+<li>It is stable as 1.0.0 has been released in 2014</li>
+<li>It is completely free</li>
+</ol>
+
+
+<h3>Disadvantages of Socket.io</h3>
+
+<ol>
+<li>Socket.io has its own protocol, and it would not work with any custom Websocket implementation by default. The team has worked on this and support for this is getting better http://socket.io/docs/#using-it-just-as-a-cross-browser-websocket</li>
+<li>Scaling across multiple servers when you have too many open connections for a single server is not something that you will get out of the box with socket.io</li>
+<li>As with Realtime software, debugging can be complicated and you may need to include Redis or other layers of persistance if you want to gurantee message delivery</li>
+</ol>
+
+
+<p>Realtime on web and mobile is a secret sauce for many websites and apps these days and Socket.io is a dominant technology in that field. There are entire startups which would not be possible without Socket.io and definitely deserves a place in any web/mobile developers skills of expertise.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Evaluating React.js and Flask]]></title>
+    <link href="http://avidas.github.com/blog/2015/08/05/evaluating-react-dot-js-and-flask/"/>
+    <updated>2015-08-05T10:39:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2015/08/05/evaluating-react-dot-js-and-flask</id>
+    <content type="html"><![CDATA[<blockquote><p>Update: Udemy has generously granted a free coupon for the readers of this blog for their <a href="https://www.udemy.com/learn-and-understand-reactjs/learn/">React JS and Flux</a> course. Use the code <code>avidasreactjs</code> and the first 50 readers will get free access to the course!</p></blockquote>
+
+<p>As a connoisseur of the web, front-end frameworks have been been a fertile area of late. React.js from Facebook has taken much fanfare, and this post evaluates key ideas on react, and digs into why you could be interested in React. Staying true to single responsibility principle, React is a highly useful tool if you are doing web programming.</p>
+
+<p>In this post, we will dive into building a Frontend using React.js and Backend built using the Python framework Flask. Flask is a minimalistic framework, and excellent when your backend becomes more and more of an API. Moreover, this facilitates the microservices architecture, where the decoupling of your your app into small unit of services can make it more maintainable and scalable.</p>
+
+<p>We will cover some of the key ideas of React and Flask here, but it would be worth referring to the official documentation for <a href="https://facebook.github.io/react/">React</a> and <a href="http://flask.pocoo.org/">Flask</a> for getting started and understanding the philosophies of each framework.</p>
+
+<h3>Key Ideas of React</h3>
+
+<p>The core idea of React is the developers are better of leaving manipulating the DOM to battle tested framework code. Since the DOM has a tree structure, finding elements and manipulating them would need many traversals of a potentially very large tree.  Instead, what you modify is a virtual DOM, and React runs its intelligent diffing algorithm to directly update the DOM.</p>
+
+<h5>React</h5>
+
+<p>React itself is the UI library that will manage all the DOM updates as data changes. It's takes the V of MVC frameworks, hence it can be used with other MVC frameworks such as Angular, Backbone or Meteor. It is quite easy to use React to manage specific areas of your application's UI, rather than the entire app.</p>
+
+<h5>Virtual Dom</h5>
+
+<p>The virtual Dom is an abstraction layer between nodes in the real DOM and the view of the code you are modifying. When React selectively renders subtrees of the nodes in DOM based upon state changes, it achieves the following</p>
+
+<pre><code> 1. Ensures that your DOM is always up to date with current state
+ 2. Reduces the need to re-render the DOM every time there is change in state
+ 3. Updating only the individual components on state change ensures high performance
+</code></pre>
+
+<h5>JSX</h5>
+
+<p>JSX is a JavaScript syntax extension and it brings in a HTML/XML like familiar syntax for defining a tree structure with attributes. This is the syntax you can use to declare the changes in layout code and React will update the UI. It's a bold approach, since developers are conditioned to keep layout code separate from Javascript. We will explain more React terminology later as we dive into some code.</p>
+
+<h3>Key Ideas of Flask</h3>
+
+<p>Flask is a microframework, which means that it trades a short learning curve for fewer out of the box functionalities, compared to heavier frameworks such as Django or Rails. It gives developers more freedom to use their preferable tools and libraries. However, it does have a list of officially supported <a href="http://flask.pocoo.org/extensions/">extensions</a> which when plugged in provide a wide breath of functionalities for a standard web app. Extensions behave as if they are native flask code.</p>
+
+<p>We strongly recommend that you set up a <a href="http://www.virtualenv.org/">virtualenv</a> for this project, and you may also want to check out <a href="http://virtualenvwrapper.readthedocs.org/">virtualenvwrapper</a> for convenience. This is to provide your app with a sandboxed environment.</p>
+
+<h5>Getting up and running with Flask</h5>
+
+<p>Lets first install Flask</p>
+
+<p>```bash
+pip install Flask</p>
+
+<h1>For viewing and reusing app dependencies</h1>
+
+<p>pip freeze > requirements.txt
+```
+Set up the following directory structure in your app.</p>
+
+<p>```bash</p>
+
+<p>├── README.md
+├── app.py
+├── requirements.txt
+└── templates</p>
+
+<pre><code>└── index.html
+</code></pre>
+
+<p>```</p>
+
+<p>Modify your app.py code to include the following</p>
+
+<p>```python
+from flask import Flask, render_template</p>
+
+<p>app = Flask(<strong>name</strong>)</p>
+
+<p>@app.route("/")</p>
+
+<p>def index():</p>
+
+<pre><code>return render_template('index.html')
+</code></pre>
+
+<p>if <strong>name</strong> == "<strong>main</strong>":</p>
+
+<pre><code>app.run()
+</code></pre>
+
+<p>```</p>
+
+<p>We start by importing Flask and creating a new instance of a flask application. In flask, app.route is used to describe the behavior when users hit particular endpoints in the application. Here when user hits the index route, we render a template called hello world. By default Flask uses the Jinja2 templating language, but you can use any other templating language. In fact, we will not be covering Jinja2 in this blog post. Finally we tell python to call the run method of the app when invoked as a main function.</p>
+
+<p>Let's populate index.html with the following basic HTML boilerplate</p>
+
+<p>```html</p>
+
+<p>&lt;!DOCTYPE html>
+<html lang="en">
+<head></p>
+
+<pre><code>&lt;meta charset="UTF-8"&gt;
+&lt;title&gt;Flask React Tutorial&lt;/title&gt;
+</code></pre>
+
+<p></head>
+<body></p>
+
+<pre><code> &lt;div id="mount-point"&gt;
+     &lt;p1&gt;Hello world.&lt;/p1&gt;
+ &lt;/div&gt;
+</code></pre>
+
+<p></body>
+</html>
+```</p>
+
+<p>Now run the app with</p>
+
+<p><code>bash
+python app.py
+// * Running on http://127.0.0.0:5000/
+// * Restarting with reloader
+</code>
+By default it runs on port 5000. Navigate to the endpoint and you should see the html page you just created. You are now up and running with Flask!</p>
+
+<h5>Integrate React</h5>
+
+<p>Easiest way to include React would be to just include them from a cdn. Let's update the index.html to include React and and port our existing html to React. index.html will now look like</p>
+
+<p>```html</p>
+
+<p>&lt;!DOCTYPE html>
+<html lang="en">
+<head></p>
+
+<pre><code>&lt;meta charset="UTF-8"&gt;
+&lt;title&gt;Flask React Tutorial&lt;/title&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/react.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/JSXTransformer.js"&gt;
+</code></pre>
+
+<p></head>
+<body></p>
+
+<pre><code> &lt;div id="mount-point"&gt;&lt;/div&gt;
+</code></pre>
+
+<p></body></p>
+
+<p>  <script type="text/jsx"></p>
+
+<pre><code> /*** @jsx React.DOM */
+var FirstComponent = React.createClass({
+    render: function() {
+        return (&lt;p1&gt;Hello world.&lt;/p1&gt;);
+    }
+});
+React.render(&lt;FirstComponent /&gt;, document.getElementById('mount-point') );
+ &lt;/script&gt;
+</code></pre>
+
+<p></html>
+```</p>
+
+<!-- more -->
+
+
+<p>Let's go over the code. We first include the react and jsx libraries via the script tags and remove the earlier p tags. We set up a jsx script by specifying type="text/jsx". Then we call createClass method of React which creates a React component. React components are reusable units that you can use to compose your UI. The component must have at least the render method, which returns the virtual representation of a native DOM element or another component.
+Next we call React.render with the first element and pass it the id of the div element on which we want the result of the render function to be. Run the app again to navigate to the same path to see the app again.</p>
+
+<h5>Data binding with React</h5>
+
+<p>For a more practical example, as well to demonstrate multiple components, let's produce a type along data binding example. You can replace your script tag with the following</p>
+
+<p>```html</p>
+
+<script type="text/jsx">
+    /** @jsx React.DOM */
+    var Input = React.createClass({
+        updateLabel: function(event){
+            this.setState({value: event.target.value});
+        },
+        getInitialState: function(){
+            return {
+                value: ''
+            }
+        },
+        componentWillMount: function(){
+            this.setState({value: this.state.value})
+        },
+        render: function(){
+            return (
+                <div className="update-label">
+                      <input type="text" placeholder="Enter text" onChange={this.updateLabel}/>
+                    <Label value={this.state.value}/>
+                </div>
+        )
+    }
+});
+
+var Label = React.createClass({
+    render: function(){
+        return (
+        <div class="my-label">
+        <h2>{this.props.value}</h2>
+        </div>
+        )
+    }
+});
+
+React.render(<Input/>, document.getElementById('mount-point'));
+</script>
+
+
+<p>```</p>
+
+<p>As before, React.render is called at the very end on a component called Input and it is bound to the element with id mount-point. Inside the Input component a few other lifecycle functions are introduced.</p>
+
+<p>The method getInitialState is called once before the component mounts and  responsible for setting for the initial state of a component.
+componentWillMount is called directly before a react component is initially rendered. Inside componentWillMount, we invoke setState.</p>
+
+<p>setState can trigger UI updates from event handlers and server request callbacks. It will always cause a re-render to happen. Once render is called, it returns a div with a input box and a React component called label. We attach the method updateLabel which gets invoked when the text inside the input box changes. It updates this.state.value.</p>
+
+<p>State attributes are mutable within a component and are used to represent the interaction changes changes within a component. On the other hand, props are immutable and used to pass data from a parent component to a child. In this case Label is a child component of Input, and this.state.value for Input is passed to Label, which can access it by this.props.value. Thus Input passes the data entered into the input box to Label and causes it to re-render and display the text.</p>
+
+<p>Fire up the server again and type something into the input box and the content gets updated in the h2 element underneath.</p>
+
+<h5>Why React</h5>
+
+<p>As it turns out, the selling points of React are not super hard to get and clear use cases became obvious.</p>
+
+<ol>
+<li><p>React is very efficient in the way it handles DOM updates. It is important however, to isolate that heavy rendering or interactions are the bottlenecks so that you are not optimizing prematurely and likely already have optimized database interactions and network calls.</p></li>
+<li><p>SEO management overhead can be less with React compared to Angular/Ember since it can be rendered server side. The benefit comes from not having the overhead of rendering your page server side with something like PhantomJS and serving the HTML.</p></li>
+<li><p>Reusable components make the code more reusable and testable, and the short terminology keeps the learning curve managable.</p></li>
+<li><p>Since React can be rendered Server Side, you might completely get rid of your server side templating, further reducing the number of tools necessary to run your app.</p></li>
+</ol>
+
+
+<h5>React and Flask</h5>
+
+<p>With their focus on SRP, React and Flask could be dependable and efficient parts of your stack. This is specially handy if you want to leverage the Numpy/Scipy stack for doing data analysis in near realtime and serve up a frontend with heavy user interaction. In a later post, we will look at exploring interactive applications and introduce Socket.io.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How Browserify improves Client-side Development]]></title>
+    <link href="http://avidas.github.com/blog/2015/07/16/how-browserify-improves-client-side-development/"/>
+    <updated>2015-07-16T14:41:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2015/07/16/how-browserify-improves-client-side-development</id>
+    <content type="html"><![CDATA[<h4>For a more modular, maintainable Frontend</h4>
+
+<p>As Single Page Applications gain in popularity, the size of front end codebases keeps growing rapidly. For keeping these codebases maintainable, modularity becomes a priority. The easier it is to modularize code, the more incentives developers will have for doing so. With the ease of modularity with CommonJS, npm has seen explosive growth of packages published which has helped the Node ecosystem greatly. Browserify brings that ease to client side development leveraging the CommonJS module system. When used with build tools such as Grunt or Gulp, you can write modular client side code just like you would write your server side Node code, and Browserify takes care of the bundling for you. There is much less excuse these days to make everything global and attach to the window object!</p>
+
+<h4>Leveraging npm modules</h4>
+
+<p><img class="left" src="/images/Modulecounts.jpg" width="800" height="670" title="Package Manager Traction" alt="Package Manager Traction"></p>
+
+<p>Looking at the graph above is a big selling point when trying to evaluate the value Browserify can bring to your client side workflow. The graph is a comparison of the rate at which packages are getting published in different package managers Bower, PyPI, RubyGems. npm leads the pack easily. Recently, jQuery registry stopped accepting new plugins, with <a href="http://blog.npmjs.org/post/111475741445/publishing-your-jquery-plugin-to-npm-the-quick">new packages being published on npm</a>. Cordova recently announced the same change, moving plugins to npm. npm is now hosting much broader range of modules than only server-side Node.js modules and Browserify can help you leverage these modules on the front-end. The flipside of this as a module publisher is that publishing modules on npm now gives you access to a much broader audience since people might use the module on the browser, custom hardware etc.</p>
+
+<h4>How it works</h4>
+
+<p>In the CommonJS syntax, the "exports" object is the public API of a module and "require" can be used to include a module in your javascript file. Since browsers do not have require available, Browserify traverses the <a href="https://github.com/substack/browserify-handbook#how-browserify-works">dependency trees</a> of all the required modules, and bundles the dependencies into one self contained file that you can just include with a script tag on the browser. Browserify is aware of package.json and the order in which node_modules are resolved. Moreover, it supports built in Node modules e.g. path and gloabls e.g. Buffer so you have access of those in the client side as well.</p>
+
+<h4>Transforms</h4>
+
+<p>Core Browserify only bundles modules written in the CommonJS syntax, adhering to the single responsibility principle. However, there are other ways of modularizing client side code, AMD and Global Variables being the two usual ones. Instead of handling every possibly of modules, Browserify exposes a Transforms API so that a plugin can be built which can preprocess a file into Javascript in CommonJS syntax which Browserify can then consume. This means that you can write modular code just like your node codebases regardless of what module system your dependencies may adhere to. There are also lot of people writing in languages that compile into Javascript, such as CoffeeScript or TypeScript. To handle this, there are transforms available for AMD (deamdify), Bower modules (debowerify), globals (deglobalify), coffeescript(coffeeify), harmony (es6ify) etc. A simple search of Browserify on Github or npm brings up thousands of modules and attests to the <a href="https://github.com/substack/node-browserify/wiki/list-of-transforms">ecosystem around Browserify</a>. Delegating to transforms helps to keep the footprint of Browserify smaller, while makes it more extensible.</p>
+
+<!-- more -->
+
+
+<h4>Using with Build Tools</h4>
+
+<p>Software is great when it just works and you do not have tinker with it all the time. Grunt/Gulp are great for this kind of configure once, build whenever workflow. Browserify is available as a command line tool primarily, but has Grunt and Gulp plugins which can be used to easily integrate Browserify into your build. There is also watchify, which can reduce build time by monitoring source files and incrementally rebuilding the front end bundle on the fly. For large projects, this is really useful to keep the build times small.</p>
+
+<h4>Alternatives</h4>
+
+<p>There are always alternatives available in the JavaScript world, and Webpack, RequireJS and Component being some of the major ones. RequireJS has been around for longer and primarily supports the AMD specification, but has support for CommonJS too. Webpack tends to do better with static assets that your client side requires and tries to cover a broader issue of bundling all static assets. With picking any tool, it's good to be aware of the alternatives, the problem they were designed to solve, and benefits and drawbacks of each. It makes for <a href="https://gist.github.com/substack/68f8d502be42d5cd4942">quite interesting debate</a> at times as well.</p>
+
+<h4>Resources</h4>
+
+<p>Browserify has really good documentation and the <a href="https://github.com/substack/browserify-handbook">browserify handbook</a> is a great resource for an extensive runthrough. For getting started, the nodeschool module called <a href="https://github.com/substack/browserify-adventure">browserify-adventure</a> is very handy.</p>
+
+<h4>Conclusion</h4>
+
+<p>The browser community is unlikely to adopt a module system anytime soon. Harmony/ES6 includes a module definition but it will take time before it gets adopted by all the browsers. Moreover, there have been <a href="https://esdiscuss.org/topic/es6-modules-sorry">resistance from some notable developers</a>.</p>
+
+<p>Browserify offers a great way to abstract away that issue. With access to a vast amount of modules, there is much less of a need for reinventing the wheel on the client side, and fewer script tags thrown around everywhere. Client side software development is evolving fast, and Browserify has made significant progress to minimize some of that complexity.</p>
+
+<p>If you are using browserify/webpack in production, I would love to know the tradeoffs/issues you have ran into. Comments/feedback here or <a href="mailto:avi@aviadas.com">contact</a>.</p>
 ]]></content>
   </entry>
   
