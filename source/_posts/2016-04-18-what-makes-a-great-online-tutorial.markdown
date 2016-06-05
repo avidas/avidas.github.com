@@ -9,9 +9,11 @@ categories: Software Development, Blogging, Teaching
 
 The Internet started as a publishing medium. It excels at enabling people to share their unique gifts. An amazing amount of content gets put out on the web everyday, far beyond someone can read in a lifetime. Massive amount of information also means information overload.
 
-In software, it is common to use web tutorials to supplement someone's learning of a particular material. Following guidelines of someone who has already done it can really fast track development. Tutorials appear in various forms in the web. Some of the common formats are long form blogposts, videos and series of email newsletters. Some enjoy the personal touch that videos can offer; others enjoy being able to quickly skim a blogpost.
+In software, it is common to use web tutorials to supplement one's learning of a particular material. Following guidelines of someone who has already done it can really fast track development. Tutorials appear in various forms in the web. Some of the common formats are long form blogposts, videos and series of email newsletters. Some enjoy the personal touch that videos can offer; others enjoy being able to quickly skim a blogpost.
 
-When you want to put your hard earned knowledge and valuable time into writing a tutorial, there are questions worth thinking about. Does the tutorial cater to its intended audience and will it reach them? Can someone quickly skim the content and still get value? Is there a way to measure the effectiveness of online tutorials?
+When you want to put your hard earned knowledge and valuable time into writing a tutorial, there are questions worth thinking about. Does the tutorial cater to its intended audience? Will it reach them? Can someone quickly skim the content and still get value? Is there a way to measure the effectiveness of online tutorials?
+
+{% img left https://files.slack.com/files-pri/T025F19MZ-F1ASWBLV8/pasted_image_at_2016_05_22_04_58_pm.png 800 800 'Survey Questions' 'Survey Questions' %}
 
 To look for answers, I asked a carefully selected group of 150 people about their preference of tutorials. The focus was on software engineers/designers/entrepreneurs due to my familiarity and experience with the field. What emerged from their responses gives a blueprint for creating great online resources. 
 
@@ -40,3 +42,5 @@ To look for answers, I asked a carefully selected group of 150 people about thei
 There are definitely caveats to this survey. As the person compiling this survey, it is at least slightly influenced by my biases. My target group is highly technically literate, so there is a bias towards modern tools. Perhaps it is worth taking into account the intent of writing tutorials, be it teaching, lead generation or growing a business. 
 
 Like most studies, this too should be taken with a grain of salt and in no way is sure way to produce great tutorials. Someone's genuine passion, interest and the willingness to learn and teach find their ways to shine through content. However, just as the [Joel Test for Software Development](http://www.joelonsoftware.com/articles/fog0000000043.html) companies is often a good checklist for expected standards of software companies, being aware of the reader’s needs and voice can lead to sharper, more helpful tutorials.
+
+Research for this post was done by using Dripper, a twitter direct message automation tool that I helped build. Feel free to [reach out](mailto:avi@aviadas.com) if you want to know more about the software!
