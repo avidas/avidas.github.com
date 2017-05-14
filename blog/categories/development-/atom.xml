@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Development, | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/development-/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2016-04-20T05:52:37-05:00</updated>
+  <updated>2017-05-14T18:56:19-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -14,15 +14,75 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Common Pitfalls to Avoid With Payments APIs]]></title>
+    <link href="http://avidas.github.com/blog/2017/05/09/common-pitfalls-to-avoid-with-payments-apis/"/>
+    <updated>2017-05-09T17:35:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2017/05/09/common-pitfalls-to-avoid-with-payments-apis</id>
+    <content type="html"><![CDATA[<p>Payments APIs: Pitfalls to Avoid</p>
+
+<p>In the recent years, payment API providers have made integrating payments much easier than it used to be. Gone are the days of dealing with banks and exchanges directly, you can integrate with gateways that will allow you to accept any form of credit cards, and most payment methods such as Apple Pay and PayPal. Large pdfs with instructions manuals are replaced by intelligent doc engines with walkthroughs and tutorials. Despite that, it is not uncommon to hear developers referring to payments as their least favorite part of the development process. Payments integrations are often seen as a necessary evil, to be done once, and hopefully be forgotten hereafter. Perhaps the reasoning is that investing in better payments integration is rarely a profit center for companies.</p>
+
+<p>I have worked the last few years in the online payments industry, building tools, improving experience of developers and building payments APIs themselves. While payments integration has gotten easier, developers still do make mistakes which are easily avoidable. Here are some of the best practices I would recommend for integrating payments.</p>
+
+<p>Problems: Accounts getting blocked, fraud, rate limiting, integrations breaking, security updates, PCI violations (hosted fields), Avoiding chargebacks</p>
+
+<ol>
+<li>Use the sandbox: You should have an environment that integrates with the sandbox environment your payment provider gives you. Ideally this should be an integration running in Continuous Integration.</li>
+<li>Monitor your sandbox integration: Monitor the sandbox integration, what does the 200s vs 400s look like? Are you getting unexpected 400s? How about 500s? What does the response times look like?</li>
+<li>Negative testing against sandbox: Special card numbers provided</li>
+<li>Have at least some testing against live environment: Live testing is often tricky, if you are in a position to be doing live testing against production more power to you. Test accounts, refunds, best to work with the payments provider and let them know.</li>
+<li>Establish a relationship with your payments provider: Regardless of the size, it is to your advantage over</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Takeaways from MicroConf Starter 2017]]></title>
+    <link href="http://avidas.github.com/blog/2017/04/21/takeaways-from-microconf-starter-2017/"/>
+    <updated>2017-04-21T17:55:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2017/04/21/takeaways-from-microconf-starter-2017</id>
+    <content type="html"><![CDATA[<p>With the rise in VC funded startups, there was not a big community for individuals and small teams launching and supporting digital product businesses with their own profits. <a href="https://medium.com/@robwalling">Rob Walling</a> and <a href="https://medium.com/@SingleFounder">Mike Taber</a> noticed that need and created <a href="http://www.microconf.com/">MicroConf</a>, a conference for self-funded software startups.</p>
+
+<p>I was at MicroConf Starter last week. In its 12th year, MicroConf split into Starter and Growth Tiers, the starter edition for people who do not make a full time income from digital products. If you are the kind of person who enjoys taking an idea to a functional product that solves real world problems, MicroConf is a conference where everyone has that shared goal.</p>
+
+<p>Some at MicroConf have launched products and were doing quite well from a digital product business, let it be online courses, software plugins, SAAS etc. There were also number of people who wanted to learn more about find the right idea, product-market fit, sales and marketing.</p>
+
+<p>I really enjoyed the pragmatic voice of the conference, keeping focus on balance. The conference does not shy away from the fact that it is not a easy task to bootstrap software products.</p>
+
+<p><a href="https://shai.io/MicroConf/">MicroConf has great notes</a> for the whole conference. Instead of trying to go through the whole conference, here are some of my takeaways from MicroConf Starter 2017.</p>
+
+<ol>
+<li><p><strong>Consistency</strong>: Rob Walling emphasized start of the conference that the success of MicroConf will be what these two days can do for the remaining 363 days of the year. Often consistency made the difference in the eventual endurance and success of the product. <a href="https://fearlesssalarynegotiation.com/?ref=navlink">Josh Doody's blog</a> was fairly dormant for the first 12-14 months but peaking exponentially near its current runtime of 18 months. Mastermind groups were mentioned as a great way for a group of people who help each other stay on track.</p></li>
+<li><p><strong>Finding an idea worth building</strong>: Multiple speakers mentioned the need to take a hard look at your stocks and assets. What questions do people keep asking you? What are you passionate about that other people find boring? What would you from 6 months ago find valuable? All these were from <a href="http://www.benorenstein.com/">Ben Orenstein's</a> talk, one of my favorite at the conference. <a href="http://www.kalzumeus.com/">Patrick Mckenzie</a> also touched on the same topic, to double down on what you do very well already and what the market already buys from you. <a href="https://justinjackson.ca/">Justin Jackson</a> mentioned the need to find the groups you are best equipped to serve, and to research the audience and find ideas rather than thinking in your own head what the problem could be. Mike Taber also emphasized focusing if you are in fact the right person to be building that product.</p></li>
+<li><p><strong>When to launch</strong>: An MVP should solve a well defined problem, not solve a portion of it or solve every possible iteration of the problem. However, the lack of polish is intentional to see how much inconvenience the customers would endure to solve their problem. Justin Jackson had a great point that an MVP should be the smallest product you could build to disprove a hypothesis. It was interesting to see multiple speakers mentioning the importance of putting your face right by your product, to encourage trust and take responsibility of what you are delivering.</p></li>
+<li><p><strong>On user acquisition</strong>: Probably the biggest concern of fledgling products, user acquisition/outreach had dedicated talks. Some of the key points where to focus on conversations with users and doubling down on a few approaches e.g. SEO, Content, Ads rather than throwing in the kitchen sink. Looking for integrations with other products by forming partnerships was a common theme. Key questions to ask users were to ask how they were solving the problem today, what they have tried or ask for introductions to someone with that problem. In the beginning, unscalable strategies such as concierge onboarding are useful, specially for SAAS products.</p></li>
+<li><p><strong>Getting results</strong>: Users are the best signals here, and if you have to chase people down to use your products, it may not be solving a real problem. Google analytics charts showing growth and conversion rates were part of almost every presentation. At the same time, reading those charts can be a hard story, often showing charts recovering from a flatline or decline to eventual success because the founders believed enough to carry on. Its hard to think convictions to be infallible in the face of data however, and sometimes it is time to give up.</p></li>
+<li><p><strong>Pricing and revenue</strong>: Patrick Mckenzie mentioned that the objective to be a predictable sales process to make profit every month. The question of how much to charge for the product is tricky for founders. Both him, Ben and <a href="http://jordangal.com/">Jordan Gal</a> emphasized the need for running experiments on your pricing page. Surprisingly enough, an increase in prices may often result in better customers in the long run even though in the short term your trials may fall.</p></li>
+<li><p><strong>Motivation</strong>: People are motivated differently, but momentum is a key driver. Ben mentioned the need to reverse the relationship, not to wait for inspiration but to get started, feel the success and then get inspired. <a href="http://www.sherrywalling.com/">Sherry Walling</a> mentioned using positive stress to fuel motivation. Lot of the folks in the conference started when they already had a lot of responsibilities, but often it is not time that is lacking, but the prioritization. Making more time is a function of reorganizing your priorities. Delegation is another important tool to master, especially for adjacent responsibilities to the key goals.</p></li>
+<li><p><strong>Success and Failure</strong>: Jordan Gal had a great point that success is the ability to go from one failure to another without loss of enthusiasm. But success is quite subjective, and often reinforced by societies expectations. Perhaps it is worth asking if you are helping people solve problems. Failure is often more interesting part of the conference, to see what these speakers have tried but stopped when they did not deliver the results.</p></li>
+<li><p><strong>Maintaining balance</strong>: Almost every speaker mentioned the need to for maintaining the balance in your life, relationships and family. Sherry Walling's talk was dedicated to this, pointing out the need for self reflection and care. Taking retreats to step away from the grind is valuable, giving time to ask the important questions. Questions such as what pieces of day to day life is infusing you with energy? How can I readjust priorities so that I can live in those sweet spots more and do less of what is causing stress? The other really important point was about feedback loops, getting advice, forming mastermind groups and making sure that there are others weighing on important decisions.</p></li>
+</ol>
+
+
+<p>Overall, I loved the theme and people at Micronconf. It was a blend of driven, helpful people interested in solving problems and owning software products. I would highly recommend the conference for anyone looking to launch products and interested in bootstrapping.</p>
+
+<p>If you have feedback on this blog post or MicroConf, please <a href="mailto:avi@aviadas.com">feel free to reach out!</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[What makes a great programming tutorial?]]></title>
     <link href="http://avidas.github.com/blog/2016/04/18/what-makes-a-great-online-tutorial/"/>
     <updated>2016-04-18T05:36:00-05:00</updated>
     <id>http://avidas.github.com/blog/2016/04/18/what-makes-a-great-online-tutorial</id>
     <content type="html"><![CDATA[<p>The Internet started as a publishing medium. It excels at enabling people to share their unique gifts. An amazing amount of content gets put out on the web everyday, far beyond someone can read in a lifetime. Massive amount of information also means information overload.</p>
 
-<p>In software, it is common to use web tutorials to supplement someone's learning of a particular material. Following guidelines of someone who has already done it can really fast track development. Tutorials appear in various forms in the web. Some of the common formats are long form blogposts, videos and series of email newsletters. Some enjoy the personal touch that videos can offer; others enjoy being able to quickly skim a blogpost.</p>
+<p>In software, it is common to use web tutorials to supplement one's learning of a particular material. Following guidelines of someone who has already done it can really fast track development. Tutorials appear in various forms in the web. Some of the common formats are long form blogposts, videos and series of email newsletters. Some enjoy the personal touch that videos can offer; others enjoy being able to quickly skim a blogpost.</p>
 
-<p>When you want to put your hard earned knowledge and valuable time into writing a tutorial, there are questions worth thinking about. Does the tutorial cater to its intended audience and will it reach them? Can someone quickly skim the content and still get value? Is there a way to measure the effectiveness of online tutorials?</p>
+<p>When you want to put your hard earned knowledge and valuable time into writing a tutorial, there are questions worth thinking about. Does the tutorial cater to its intended audience? Will it reach them? Can someone quickly skim the content and still get value? Is there a way to measure the effectiveness of online tutorials?</p>
+
+<p><img class="left" src="https://files.slack.com/files-pri/T025F19MZ-F1ASWBLV8/pasted_image_at_2016_05_22_04_58_pm.png" width="800" height="800" title="Survey Questions" alt="Survey Questions"></p>
 
 <p>To look for answers, I asked a carefully selected group of 150 people about their preference of tutorials. The focus was on software engineers/designers/entrepreneurs due to my familiarity and experience with the field. What emerged from their responses gives a blueprint for creating great online resources.</p>
 
@@ -44,6 +104,8 @@
 <p>There are definitely caveats to this survey. As the person compiling this survey, it is at least slightly influenced by my biases. My target group is highly technically literate, so there is a bias towards modern tools. Perhaps it is worth taking into account the intent of writing tutorials, be it teaching, lead generation or growing a business.</p>
 
 <p>Like most studies, this too should be taken with a grain of salt and in no way is sure way to produce great tutorials. Someone's genuine passion, interest and the willingness to learn and teach find their ways to shine through content. However, just as the <a href="http://www.joelonsoftware.com/articles/fog0000000043.html">Joel Test for Software Development</a> companies is often a good checklist for expected standards of software companies, being aware of the reader’s needs and voice can lead to sharper, more helpful tutorials.</p>
+
+<p>Research for this post was done by using Dripper, a twitter direct message automation tool that I helped build. Feel free to <a href="mailto:avi@aviadas.com">reach out</a> if you want to know more about the software!</p>
 ]]></content>
   </entry>
   

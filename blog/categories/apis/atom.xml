@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: APIs | Avi Das]]></title>
+  <link href="http://avidas.github.com/blog/categories/apis/atom.xml" rel="self"/>
+  <link href="http://avidas.github.com/"/>
+  <updated>2017-05-14T18:56:19-05:00</updated>
+  <id>http://avidas.github.com/</id>
+  <author>
+    <name><![CDATA[Avi (Ananya Das)]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Common Pitfalls to Avoid With Payments APIs]]></title>
+    <link href="http://avidas.github.com/blog/2017/05/09/common-pitfalls-to-avoid-with-payments-apis/"/>
+    <updated>2017-05-09T17:35:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2017/05/09/common-pitfalls-to-avoid-with-payments-apis</id>
+    <content type="html"><![CDATA[<p>Payments APIs: Pitfalls to Avoid</p>
+
+<p>In the recent years, payment API providers have made integrating payments much easier than it used to be. Gone are the days of dealing with banks and exchanges directly, you can integrate with gateways that will allow you to accept any form of credit cards, and most payment methods such as Apple Pay and PayPal. Large pdfs with instructions manuals are replaced by intelligent doc engines with walkthroughs and tutorials. Despite that, it is not uncommon to hear developers referring to payments as their least favorite part of the development process. Payments integrations are often seen as a necessary evil, to be done once, and hopefully be forgotten hereafter. Perhaps the reasoning is that investing in better payments integration is rarely a profit center for companies.</p>
+
+<p>I have worked the last few years in the online payments industry, building tools, improving experience of developers and building payments APIs themselves. While payments integration has gotten easier, developers still do make mistakes which are easily avoidable. Here are some of the best practices I would recommend for integrating payments.</p>
+
+<p>Problems: Accounts getting blocked, fraud, rate limiting, integrations breaking, security updates, PCI violations (hosted fields), Avoiding chargebacks</p>
+
+<ol>
+<li>Use the sandbox: You should have an environment that integrates with the sandbox environment your payment provider gives you. Ideally this should be an integration running in Continuous Integration.</li>
+<li>Monitor your sandbox integration: Monitor the sandbox integration, what does the 200s vs 400s look like? Are you getting unexpected 400s? How about 500s? What does the response times look like?</li>
+<li>Negative testing against sandbox: Special card numbers provided</li>
+<li>Have at least some testing against live environment: Live testing is often tricky, if you are in a position to be doing live testing against production more power to you. Test accounts, refunds, best to work with the payments provider and let them know.</li>
+<li>Establish a relationship with your payments provider: Regardless of the size, it is to your advantage over</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>
