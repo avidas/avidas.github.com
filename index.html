@@ -9,7 +9,7 @@
   <meta name="author" content="Avi (Ananya Das)">
 
   
-  <meta name="description" content="Payments APIs: Pitfalls to Avoid In the recent years, payment API providers have made integrating payments much easier than it used to be. Gone are &hellip;">
+  <meta name="description" content="With the rise in VC funded startups, there was not a big community for individuals and small teams launching and supporting digital product &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,57 +80,6 @@
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2017/05/09/common-pitfalls-to-avoid-with-payments-apis/">Common Pitfalls to Avoid With Payments APIs</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-05-09T17:35:00-05:00" pubdate data-updated="true">May 9<span>th</span>, 2017</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Payments APIs: Pitfalls to Avoid</p>
-
-<p>In the recent years, payment API providers have made integrating payments much easier than it used to be. Gone are the days of dealing with banks and exchanges directly, you can integrate with gateways that will allow you to accept any form of credit cards, and most payment methods such as Apple Pay and PayPal. Large pdfs with instructions manuals are replaced by intelligent doc engines with walkthroughs and tutorials. Despite that, it is not uncommon to hear developers referring to payments as their least favorite part of the development process. Payments integrations are often seen as a necessary evil, to be done once, and hopefully be forgotten hereafter. Perhaps the reasoning is that investing in better payments integration is rarely a profit center for companies.</p>
-
-<p>I have worked the last few years in the online payments industry, building tools, improving experience of developers and building payments APIs themselves. While payments integration has gotten easier, developers still do make mistakes which are easily avoidable. Here are some of the best practices I would recommend for integrating payments.</p>
-
-<p>Problems: Accounts getting blocked, fraud, rate limiting, integrations breaking, security updates, PCI violations (hosted fields), Avoiding chargebacks</p>
-
-<ol>
-<li>Use the sandbox: You should have an environment that integrates with the sandbox environment your payment provider gives you. Ideally this should be an integration running in Continuous Integration.</li>
-<li>Monitor your sandbox integration: Monitor the sandbox integration, what does the 200s vs 400s look like? Are you getting unexpected 400s? How about 500s? What does the response times look like?</li>
-<li>Negative testing against sandbox: Special card numbers provided</li>
-<li>Have at least some testing against live environment: Live testing is often tricky, if you are in a position to be doing live testing against production more power to you. Test accounts, refunds, best to work with the payments provider and let them know.</li>
-<li>Establish a relationship with your payments provider: Regardless of the size, it is to your advantage over</li>
-</ol>
-
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -818,6 +767,57 @@ There are lot of things in life that can drag on, get pushed on and not have a c
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/08/21/guide-to-finding-a-technical-cofounder/">Guide to Finding a Technical Cofounder</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-08-21T23:04:00-05:00" pubdate data-updated="true">Aug 21<span>st</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This has been happening at various meetups/hackathons/startup events sufficiently enough to warrant a blogpost. The situation is generally a variant of this, someone has an idea they are really convinced is the next big thing, the only thing stopping that from happening is making an app/website which requires a technical cofounder. The person with the idea is not at a position to afford the costs of hiring a full time/part time developer, so an equity sharing situation makes sense. Hackathons and tech meetups are where developers hang out, so approaching them there seem to be a good idea to find that cofounder.</p>
+
+<p>There are a few problems to approaches like this. Software people who go to events like this gets pitched a fair amount, sometimes repeatedly on the same ideas. Also, we can be a rather cynical bunch, often as result of the kind of work that we do. This can result you not finding that engineer/hacker to build your app during a hackathon. Or they might do so during the hackathon, but simply drop off after.</p>
+
+<p>It can get discouraging, specially if you are convinced about the idea and new to such events. Personally, I like idea people, specially because they bring in ideas from domains and problem spaces I would have no exposure to otherwise. Moreover, I also believe that cross-pollination of people from different groups is healthy and more products coming into the world is a good thing. Therefore, I would rather like to jot down some helpful tips which can maximize your chances of finding a technical cofounder next time you are looking for one.</p>
+
+<ol>
+<li><p><strong>Understand what motivates engineers</strong>: It&#8217;s important to understand what motivates engineers beyond just financial opportunity. If such an opportunity exists, you may be in pretty decent shape already and should really drill down on your exact plans on how the app would make money in the future. If you are less sure, there are still options. Can you prove that the app would have a broad user base? A great way to do this would be to prove that you have tried unscalable ways doing this already, be it door-to-door, personal know how, competitors etc. Most ideas can be validated using non-technical approaches. Knowing your problem space well will not only help you to build a business but also lend credibility when you are looking for a cofounder. Another thing that attracts is interesting technical problems or cutting-edge tech, so if your app involves either, it would be a positive. Good technical co founders can be extremely self-motivated once they realize that they have a problem is really worth spending time on.</p></li>
+<li><p><strong>Manage expectations</strong>: It is best to present the idea and the opportunity and not expect immediate commitment. Generally people are busy, but if you have done your homework and can present the problem well, there is always a good chance. Not all engineers want the same thing, and lot are perfectly happy working where they are. If you do not have a proven user base or revenue plan yet, it does involve a certain risk-taking to get on that journey. As someone who wants to be a founder, you should seek technical co-founders with the same risk appetite as you.</p></li>
+</ol>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/08/21/guide-to-finding-a-technical-cofounder/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -839,10 +839,6 @@ There are lot of things in life that can drag on, get pushed on and not have a c
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2017/05/09/common-pitfalls-to-avoid-with-payments-apis/">Common Pitfalls to Avoid With Payments APIs</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2017/04/21/takeaways-from-microconf-starter-2017/">Takeaways from MicroConf Starter 2017</a>
       </li>
     
@@ -852,6 +848,10 @@ There are lot of things in life that can drag on, get pushed on and not have a c
     
       <li class="post">
         <a href="/blog/2016/02/09/10-things-i-learnt-going-from-10k-to-a-marathon-in-2015/">10 things I learnt going from 10k to a Marathon in 2015</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/12/31/coffeehouse-coworkers/">Coffeehouse Coworkers</a>
       </li>
     
   </ul>
