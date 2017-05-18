@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Software | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/software/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2017-05-14T18:58:10-05:00</updated>
+  <updated>2017-05-18T18:17:22-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Common Pitfalls to Avoid With Payments APIs]]></title>
+    <link href="http://avidas.github.com/blog/2017/05/09/common-pitfalls-to-avoid-with-payments-apis/"/>
+    <updated>2017-05-09T17:35:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2017/05/09/common-pitfalls-to-avoid-with-payments-apis</id>
+    <content type="html"><![CDATA[<p>Web Payments by First Principles: Testing</p>
+
+<p>In the recent years, payment API providers have made integrating payments much easier than it used to be. Instead of dealing with banks and exchanges, you can integrate with payment gateways that will allow you to accept any form of credit cards, and most payment methods such as Apple Pay and PayPal. Large pdfs with instructions manuals are replaced by intelligent doc engines with walkthroughs and tutorials. Despite that, it is not uncommon to hear developers referring to payments as their least favorite part of the development process. Payments integrations are often seen as a necessary evil, to be done once, and hopefully be forgotten hereafter. Often the reasoning is that investing in better payments integration is rarely a profit center for companies.</p>
+
+<p>I have worked the last few years in the online payments industry, building APIS, sdks and system reliability tools. While payments integration has gotten easier, developers still do make mistakes which are easily avoidable. Here are some of the best practices I would recommend for testing payments in your applications.</p>
+
+<ol>
+<li><p><strong>Use the sandbox</strong>: Most payment API/gateways expose a sandbox environments where you can test out a real integration with the API without moving any money. Ideally your integration tests running continously in Jenkins/Travis/Circle CI should be hitting those endpoints.</p></li>
+<li><p><strong>Monitoring</strong>: You should monitor your sandbox integration as well as your live system. What does the graph of 200s vs 400s look like? Are you getting unexpected 400s? How about 500s? What does the response times look like?</p></li>
+<li><p><strong>Negative Testing</strong>: Special card numbers provided by payments providers can help you recreate payment declines due to potential denial from processors for reasons such as not enough funds in account. You may also be able to test for rejections due to fraud and compliance.</p></li>
+<li><p><strong>Have some live testing</strong>: Live testing against payment providers is often tricky, and can led to accounts getting shut down if there is undue load on the API. Despite that, some testing in live is absolutely necessary before you can be confident that on release day, your integration is working as expected.</p></li>
+<li><p><strong>Test for absence of sentive information</strong>: Storing user information such as credit card number or passwords is a very common way of violation of PCI. Regex patterns can be used to make sure that neither your logs nor your database is storing sensitive information.</p></li>
+</ol>
+
+
+<p>I intend to write more posts in this series, covering topics such as considerations before and after going live with payments, when scaling up and so on. If you liked this post, please share or comment.</p>
+
+<p>If you have feedback on this blog post or integrating payments, please <a href="mailto:avi@aviadas.com">feel free to reach out!</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Takeaways from MicroConf Starter 2017]]></title>
