@@ -4,7 +4,7 @@
   <title><![CDATA[Category: APIs | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/apis/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2017-05-18T18:17:22-05:00</updated>
+  <updated>2017-05-19T16:23:16-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -14,13 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Common Pitfalls to Avoid With Payments APIs]]></title>
-    <link href="http://avidas.github.com/blog/2017/05/09/common-pitfalls-to-avoid-with-payments-apis/"/>
-    <updated>2017-05-09T17:35:00-05:00</updated>
-    <id>http://avidas.github.com/blog/2017/05/09/common-pitfalls-to-avoid-with-payments-apis</id>
-    <content type="html"><![CDATA[<p>Web Payments by First Principles: Testing</p>
-
-<p>In the recent years, payment API providers have made integrating payments much easier than it used to be. Instead of dealing with banks and exchanges, you can integrate with payment gateways that will allow you to accept any form of credit cards, and most payment methods such as Apple Pay and PayPal. Large pdfs with instructions manuals are replaced by intelligent doc engines with walkthroughs and tutorials. Despite that, it is not uncommon to hear developers referring to payments as their least favorite part of the development process. Payments integrations are often seen as a necessary evil, to be done once, and hopefully be forgotten hereafter. Often the reasoning is that investing in better payments integration is rarely a profit center for companies.</p>
+    <title type="html"><![CDATA[Web Payments by First Principles: Testing]]></title>
+    <link href="http://avidas.github.com/blog/2017/05/19/web-payments-by-first-principles-testing/"/>
+    <updated>2017-05-19T16:21:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2017/05/19/web-payments-by-first-principles-testing</id>
+    <content type="html"><![CDATA[<p>In the recent years, payment API providers have made integrating payments much easier than it used to be. Instead of dealing with banks and exchanges, you can integrate with payment gateways that will allow you to accept any form of credit cards, and most payment methods such as Apple Pay and PayPal. Large pdfs with instructions manuals are replaced by intelligent doc engines with walkthroughs and tutorials. Despite that, it is not uncommon to hear developers referring to payments as their least favorite part of the development process. Payments integrations are often seen as a necessary evil, to be done once, and hopefully be forgotten hereafter. Often the reasoning is that investing in better payments integration is rarely a profit center for companies.</p>
 
 <p>I have worked the last few years in the online payments industry, building APIS, sdks and system reliability tools. While payments integration has gotten easier, developers still do make mistakes which are easily avoidable. Here are some of the best practices I would recommend for testing payments in your applications.</p>
 
