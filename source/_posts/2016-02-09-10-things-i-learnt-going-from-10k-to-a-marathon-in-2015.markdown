@@ -26,6 +26,8 @@ In Charles Duhigg's [Power of Habit](http://www.amazon.com/The-Power-Habit-What-
 5. **Once running is a habit, a chore becomes a craving**:
 When you start out running, it can be something you dread on your calendar. There is really no way to get past this without sustained practice, lowering the cognitive load with group associations and reward mechanisms. If you continue though, you realize at one point that you start craving the runs. Don't get me wrong, it still requires a lot of mental effort to get up at 5:30am for that 20 mile run you need to do for Marathon training. But something about the combination of endorphins, habits built during running and seeing your friends out there on the trail can change running into something that you look forward to.
 
+<!-- more -->
+
 6. **You only compete against your past self**:
 This can vary a lot based on personality, but being slower than a lot of other runners has never really bothered me that much. As long as I beat my previous PR by two seconds, I would be happy. Running as an activity has been such a positive change for my life that the gratification from being faster than others has not been necessary at all. Lot of people starting out running also worry about their pace. However, beginner runners should actually run slower than the pace they think they can run at to avoid injury and build up distance and time.
 

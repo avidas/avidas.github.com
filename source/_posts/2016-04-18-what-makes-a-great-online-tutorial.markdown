@@ -27,6 +27,8 @@ To look for answers, I asked a carefully selected group of 150 people about thei
 
 5. **Advanced user tutorials**: Several user's pointed out the need for tutorials that addresses advanced content. Making expectations clear about experience levels of intended audiences can be a huge positive for tutorials. [Ray Wenderlich's iOS tutorials](https://www.raywenderlich.com/video-tutorials) are good examples of the detail and level of research and understanding that can happen before putting out content on the web.
 
+<!-- more -->
+
 6. **Copyright**: Sometimes an afterthought, it may be worth pointing out what license the content is released under. This can give the reader’s clarity on how to attribute the source when they use that content in production. Github makes this really easy with license options provided  during repository creation.
 
 7. **Offer tangible short-term benefits**: While this certainly applies more to blogposts rather than courses, focusing on offering user's value short, medium and long term can improve the message of a tutorial. Moreover, an user may be more inclined to follow through the entire content of a tutorial if they are get that value at different stages of the tutorial.

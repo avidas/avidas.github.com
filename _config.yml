@@ -106,8 +106,8 @@ coderwall_user: avidas
 
 # Portfolio
 portfolio_root: /portfolio
-portfolio_path: /Users/anadas/Dropbox/Code/octopress/source/portfolio
+portfolio_path: /Users/avi/Dropbox/Code/octopress/source/portfolio
 
 # Other
 other_root: /other
-other_path: /Users/anadas/Dropbox/Code/octopress/source/other
+other_path: /Users/avi/Dropbox/Code/octopress/source/other
