@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Conferences | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/conferences/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2017-05-21T15:05:48-05:00</updated>
+  <updated>2017-06-24T12:53:29-04:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Takeaways from MicroConf Starter 2017]]></title>
     <link href="http://avidas.github.com/blog/2017/04/21/takeaways-from-microconf-starter-2017/"/>
-    <updated>2017-04-21T17:55:00-05:00</updated>
+    <updated>2017-04-21T17:55:00-04:00</updated>
     <id>http://avidas.github.com/blog/2017/04/21/takeaways-from-microconf-starter-2017</id>
     <content type="html"><![CDATA[<p>With the rise in VC funded startups, there was not a big community for individuals and small teams launching and supporting digital product businesses with their own profits. Rob Walling and Mike Taber noticed that need and created MicroConf, a conference for self-funded software startups.</p>
 
@@ -34,6 +34,13 @@
 <li><p><strong>When to launch</strong>: An MVP should solve a well defined problem, not solve a portion of it or solve every possible iteration of the problem. However, the lack of polish is intentional to see how much inconvenience the customers would endure to solve their problem. Justin Jackson had a great point that an MVP should be the smallest product you could build to disprove a hypothesis. It was interesting to see multiple speakers mentioning the importance of putting your face right by your product, to encourage trust and take responsibility of what you are delivering.</p></li>
 <li><p><strong>On user acquisition</strong>: Probably the biggest concern of fledgling products, user acquisition/outreach had dedicated talks. Some of the key points where to focus on conversations with users and doubling down on a few approaches e.g. SEO, Content, Ads rather than throwing in the kitchen sink. Looking for integrations with other products by forming partnerships was a common theme. Key questions to ask users were to ask how they were solving the problem today, what they have tried or ask for introductions to someone with that problem. In the beginning, unscalable strategies such as concierge onboarding are useful, specially for SAAS products.</p></li>
 <li><p><strong>Getting results</strong>: Users are the best signals here, and if you have to chase people down to use your products, it may not be solving a real problem. Google analytics charts showing growth and conversion rates were part of almost every presentation. At the same time, reading those charts can be a hard story, often showing charts recovering from a flatline or decline to eventual success because the founders believed enough to carry on. Its hard to think convictions to be infallible in the face of data however, and sometimes it is time to give up.</p></li>
+</ol>
+
+
+<!-- more -->
+
+
+<ol>
 <li><p><strong>Pricing and revenue</strong>: Patrick Mckenzie mentioned that the objective to be a predictable sales process to make profit every month. The question of how much to charge for the product is tricky for founders. Both him, Ben and Jordan Gal emphasized the need for running experiments on your pricing page. Surprisingly enough, an increase in prices may often result in better customers in the long run even though in the short term your trials may fall.</p></li>
 <li><p><strong>Motivation</strong>: People are motivated differently, but momentum is a key driver. Ben mentioned the need to reverse the relationship, not to wait for inspiration but to get started, feel the success and then get inspired. Sherry Walling mentioned using positive stress to fuel motivation. Lot of the folks in the conference started when they already had a lot of responsibilities, but often it is not time that is lacking, but the prioritization. Making more time is a function of reorganizing your priorities. Delegation is another important tool to master, especially for adjacent responsibilities to the key goals.</p></li>
 <li><p><strong>Success and Failure</strong>: Jordan Gal had a great point that success is the ability to go from one failure to another without loss of enthusiasm. But success is quite subjective, and often reinforced by societies expectations. Perhaps it is worth asking if you are helping people solve problems. Failure is often more interesting part of the conference, to see what these speakers have tried but stopped when they did not deliver the results.</p></li>

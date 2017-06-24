@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Realtime, | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/realtime-/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2017-05-21T15:05:48-05:00</updated>
+  <updated>2017-06-24T12:53:29-04:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Building Realtime user monitoring and targeting platform with Node, Express and Socket.io]]></title>
     <link href="http://avidas.github.com/blog/2015/06/06/building-realtime-user-monitoring-and-targeting-platform-with-node/"/>
-    <updated>2015-06-06T15:31:00-05:00</updated>
+    <updated>2015-06-06T15:31:00-04:00</updated>
     <id>http://avidas.github.com/blog/2015/06/06/building-realtime-user-monitoring-and-targeting-platform-with-node</id>
     <content type="html"><![CDATA[<p>Being able to target users and send targeted notifications can be key to turn visitors into conversions and tighten your funnel. Offerings such as mailchimp and mixpanel offer ways to reach out to users but in most of those cases you only get to do them in post processing. However, there are situations when it would be really powerful is to be able to track users as they are navigating your website and send targeted notifications to them.</p>
 

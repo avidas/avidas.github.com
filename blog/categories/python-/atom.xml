@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Python, | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/python-/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2017-05-21T15:05:48-05:00</updated>
+  <updated>2017-06-24T12:53:29-04:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Pycon Canada 2015 II: Python for Reliably Delivering Cross Platform Products]]></title>
     <link href="http://avidas.github.com/blog/2015/11/24/pycon-canada-2015-ii-python-for-reliably-delivering-cross-platform-products/"/>
-    <updated>2015-11-24T20:41:00-06:00</updated>
+    <updated>2015-11-24T20:41:00-05:00</updated>
     <id>http://avidas.github.com/blog/2015/11/24/pycon-canada-2015-ii-python-for-reliably-delivering-cross-platform-products</id>
     <content type="html"><![CDATA[<p>This is the second part of the two series blog post about my talk at PyCon Canada. Here is the <a href="http://aviadas.com/blog/2015/11/21/pycon-canada-2015-speaking-at-my-first-conference/">first part</a>.</p>
 
@@ -41,7 +41,7 @@
   <entry>
     <title type="html"><![CDATA[Speaking at PyCon Canada 2015: I]]></title>
     <link href="http://avidas.github.com/blog/2015/11/21/pycon-canada-2015-speaking-at-my-first-conference/"/>
-    <updated>2015-11-21T12:38:00-06:00</updated>
+    <updated>2015-11-21T12:38:00-05:00</updated>
     <id>http://avidas.github.com/blog/2015/11/21/pycon-canada-2015-speaking-at-my-first-conference</id>
     <content type="html"><![CDATA[<h3>High Level Takeaways</h3>
 
@@ -122,7 +122,7 @@
   <entry>
     <title type="html"><![CDATA[Evaluating React.js and Flask]]></title>
     <link href="http://avidas.github.com/blog/2015/08/05/evaluating-react-dot-js-and-flask/"/>
-    <updated>2015-08-05T10:39:00-05:00</updated>
+    <updated>2015-08-05T10:39:00-04:00</updated>
     <id>http://avidas.github.com/blog/2015/08/05/evaluating-react-dot-js-and-flask</id>
     <content type="html"><![CDATA[<blockquote><p>Update: Udemy has generously granted a free coupon for the readers of this blog for their <a href="https://www.udemy.com/learn-and-understand-reactjs/learn/">React JS and Flux</a> course. Use the code <code>avidasreactjs</code> and the first 50 readers will get free access to the course!</p></blockquote>
 
@@ -363,7 +363,7 @@ componentWillMount is called directly before a react component is initially rend
   <entry>
     <title type="html"><![CDATA[Verifying X509 Certificate Chain of Trust in Python]]></title>
     <link href="http://avidas.github.com/blog/2015/06/18/verifying-x509-certificate-chain-of-trust-in-python/"/>
-    <updated>2015-06-18T17:07:00-05:00</updated>
+    <updated>2015-06-18T17:07:00-04:00</updated>
     <id>http://avidas.github.com/blog/2015/06/18/verifying-x509-certificate-chain-of-trust-in-python</id>
     <content type="html"><![CDATA[<p>Executing network spoofing and man in the middle attacks have become easier than ever. This is more of an issue if a client has an open server for you to send push notifications, since the open port can be detected by methods such as port scanning. As such, it is important to sign data, and ship the signature and metadata about verifying the data against the signature along with the data itself. This provides a way for the client to verify that the data received is unaltered, from the correct sender and indented for the correct recipient. Python's pyopenssl has a handy method called <a href="http://pyopenssl.readthedocs.org/en/latest/api/crypto.html?highlight=verify#OpenSSL.crypto.verify">verify</a> for checking the authenticity of data.</p>
 
@@ -425,7 +425,7 @@ except Exception as e:
   <entry>
     <title type="html"><![CDATA[Scipy 2014: Python as expression to push boundaries in science]]></title>
     <link href="http://avidas.github.com/blog/2014/07/13/scipy-2014-python-as-expression-to-push-boundaries-in-science/"/>
-    <updated>2014-07-13T20:22:00-05:00</updated>
+    <updated>2014-07-13T20:22:00-04:00</updated>
     <id>http://avidas.github.com/blog/2014/07/13/scipy-2014-python-as-expression-to-push-boundaries-in-science</id>
     <content type="html"><![CDATA[<p>It's not everyday that the person sitting next to you interacts with Mars Rovers everyday or is trying to build a data pipeline to handle petabyte-scale genomics data. But that was perhaps the key takeway from my first <a href="https://conference.scipy.org/scipy2014/">Python conference</a>: a large number of people pushing the boundaries in scientific disciplines and using Python as their means of expression.</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Development, | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/development-/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2017-05-21T15:05:48-05:00</updated>
+  <updated>2017-06-24T12:53:29-04:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Web Payments by First Principles: Testing]]></title>
     <link href="http://avidas.github.com/blog/2017/05/19/web-payments-by-first-principles-testing/"/>
-    <updated>2017-05-19T16:21:00-05:00</updated>
+    <updated>2017-05-19T16:21:00-04:00</updated>
     <id>http://avidas.github.com/blog/2017/05/19/web-payments-by-first-principles-testing</id>
     <content type="html"><![CDATA[<p>In recent years, payment API providers have made integrating payments much easier than it used to be. Instead of dealing with banks and exchanges, ecommerce apps can integrate with payment gateways that will allow accepting any form of credit cards, and most payment methods such as Apple Pay and PayPal. Large pdfs with instructions manuals are replaced by intelligent documentation sites with walkthroughs and tutorials. Despite that, it is not uncommon to hear developers referring payments as their least favorite part of the development process. Payments integrations are often seen as a necessary evil, to be done once, and hopefully be forgotten thereafter. Often the reasoning is that investing in better payments integration is often not a profit center for companies.</p>
 
@@ -42,7 +42,7 @@
   <entry>
     <title type="html"><![CDATA[Takeaways from MicroConf Starter 2017]]></title>
     <link href="http://avidas.github.com/blog/2017/04/21/takeaways-from-microconf-starter-2017/"/>
-    <updated>2017-04-21T17:55:00-05:00</updated>
+    <updated>2017-04-21T17:55:00-04:00</updated>
     <id>http://avidas.github.com/blog/2017/04/21/takeaways-from-microconf-starter-2017</id>
     <content type="html"><![CDATA[<p>With the rise in VC funded startups, there was not a big community for individuals and small teams launching and supporting digital product businesses with their own profits. Rob Walling and Mike Taber noticed that need and created MicroConf, a conference for self-funded software startups.</p>
 
@@ -60,6 +60,13 @@
 <li><p><strong>When to launch</strong>: An MVP should solve a well defined problem, not solve a portion of it or solve every possible iteration of the problem. However, the lack of polish is intentional to see how much inconvenience the customers would endure to solve their problem. Justin Jackson had a great point that an MVP should be the smallest product you could build to disprove a hypothesis. It was interesting to see multiple speakers mentioning the importance of putting your face right by your product, to encourage trust and take responsibility of what you are delivering.</p></li>
 <li><p><strong>On user acquisition</strong>: Probably the biggest concern of fledgling products, user acquisition/outreach had dedicated talks. Some of the key points where to focus on conversations with users and doubling down on a few approaches e.g. SEO, Content, Ads rather than throwing in the kitchen sink. Looking for integrations with other products by forming partnerships was a common theme. Key questions to ask users were to ask how they were solving the problem today, what they have tried or ask for introductions to someone with that problem. In the beginning, unscalable strategies such as concierge onboarding are useful, specially for SAAS products.</p></li>
 <li><p><strong>Getting results</strong>: Users are the best signals here, and if you have to chase people down to use your products, it may not be solving a real problem. Google analytics charts showing growth and conversion rates were part of almost every presentation. At the same time, reading those charts can be a hard story, often showing charts recovering from a flatline or decline to eventual success because the founders believed enough to carry on. Its hard to think convictions to be infallible in the face of data however, and sometimes it is time to give up.</p></li>
+</ol>
+
+
+<!-- more -->
+
+
+<ol>
 <li><p><strong>Pricing and revenue</strong>: Patrick Mckenzie mentioned that the objective to be a predictable sales process to make profit every month. The question of how much to charge for the product is tricky for founders. Both him, Ben and Jordan Gal emphasized the need for running experiments on your pricing page. Surprisingly enough, an increase in prices may often result in better customers in the long run even though in the short term your trials may fall.</p></li>
 <li><p><strong>Motivation</strong>: People are motivated differently, but momentum is a key driver. Ben mentioned the need to reverse the relationship, not to wait for inspiration but to get started, feel the success and then get inspired. Sherry Walling mentioned using positive stress to fuel motivation. Lot of the folks in the conference started when they already had a lot of responsibilities, but often it is not time that is lacking, but the prioritization. Making more time is a function of reorganizing your priorities. Delegation is another important tool to master, especially for adjacent responsibilities to the key goals.</p></li>
 <li><p><strong>Success and Failure</strong>: Jordan Gal had a great point that success is the ability to go from one failure to another without loss of enthusiasm. But success is quite subjective, and often reinforced by societies expectations. Perhaps it is worth asking if you are helping people solve problems. Failure is often more interesting part of the conference, to see what these speakers have tried but stopped when they did not deliver the results.</p></li>
@@ -76,7 +83,7 @@
   <entry>
     <title type="html"><![CDATA[What makes a great programming tutorial?]]></title>
     <link href="http://avidas.github.com/blog/2016/04/18/what-makes-a-great-online-tutorial/"/>
-    <updated>2016-04-18T05:36:00-05:00</updated>
+    <updated>2016-04-18T05:36:00-04:00</updated>
     <id>http://avidas.github.com/blog/2016/04/18/what-makes-a-great-online-tutorial</id>
     <content type="html"><![CDATA[<p>The Internet started as a publishing medium. It excels at enabling people to share their unique gifts. An amazing amount of content gets put out on the web everyday, far beyond someone can read in a lifetime. Massive amount of information also means information overload.</p>
 
@@ -94,6 +101,13 @@
 <li><p><strong>Address a concrete problem</strong>: Staying focused of a specific problem gives a tutorial depth. A differentiator can be to classify for the user whether the focus is academic and structured vs. a blogpost focused on solving a particular problem right now.</p></li>
 <li><p><strong>Working examples</strong>: Interactive, working examples close to the content that builds on top of each other makes following along simpler. <a href="https://www.railstutorial.org/">Michael Hartl's Ruby on Rails tutorials</a> came up as an example of detailed, comprehensive tutorials.</p></li>
 <li><p><strong>Advanced user tutorials</strong>: Several user's pointed out the need for tutorials that addresses advanced content. Making expectations clear about experience levels of intended audiences can be a huge positive for tutorials. <a href="https://www.raywenderlich.com/video-tutorials">Ray Wenderlich's iOS tutorials</a> are good examples of the detail and level of research and understanding that can happen before putting out content on the web.</p></li>
+</ol>
+
+
+<!-- more -->
+
+
+<ol>
 <li><p><strong>Copyright</strong>: Sometimes an afterthought, it may be worth pointing out what license the content is released under. This can give the reader’s clarity on how to attribute the source when they use that content in production. Github makes this really easy with license options provided  during repository creation.</p></li>
 <li><p><strong>Offer tangible short-term benefits</strong>: While this certainly applies more to blogposts rather than courses, focusing on offering user's value short, medium and long term can improve the message of a tutorial. Moreover, an user may be more inclined to follow through the entire content of a tutorial if they are get that value at different stages of the tutorial.</p></li>
 <li><p><strong>Timeliness</strong>: This could be hard to measure, but popularity of tutorials can be attributed to how current and relevant they are. As of the time of writing this blogpost, April 2016, there are lot of people looking to get into VR/AR, chatbots, AI and so on. Accounting for recency can certainly increase the reader counts of your posts.</p></li>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Algorithm | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/algorithm/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2017-05-21T15:05:48-05:00</updated>
+  <updated>2017-06-24T12:53:29-04:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Prioritized date interval merge]]></title>
     <link href="http://avidas.github.com/blog/2013/08/30/prioritized-date-interval-merge/"/>
-    <updated>2013-08-30T23:57:00-05:00</updated>
+    <updated>2013-08-30T23:57:00-04:00</updated>
     <id>http://avidas.github.com/blog/2013/08/30/prioritized-date-interval-merge</id>
     <content type="html"><![CDATA[<p>Ran into this interesting problem lately and wanted to code up a recursive solution in Python. Essentially an extension of merge from merge sort but for intervals. There is definitely something very satisfying about coding up a recursive solution, as they tend to produce clean solutions despite the ugly formatting in this case to make list concatenation work.</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Shell | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/shell/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2017-05-21T15:05:48-05:00</updated>
+  <updated>2017-06-24T12:53:29-04:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Bug hunting with git bisect]]></title>
     <link href="http://avidas.github.com/blog/2014/08/30/bug-hunting-with-git-bisect/"/>
-    <updated>2014-08-30T12:55:00-05:00</updated>
+    <updated>2014-08-30T12:55:00-04:00</updated>
     <id>http://avidas.github.com/blog/2014/08/30/bug-hunting-with-git-bisect</id>
     <content type="html"><![CDATA[<p>With large projects with Git, feature development tends to happen often in separate branches before they are ready for merge. However, once the merge happens and tests break, it's often challenging to figure out the commit at which the bug got introduced. Git bisect is an excellent tool to triage that commit. It does so in a binary search like fashion, marking good and bad commits and reducing problem space of commits by half every time.</p>
 

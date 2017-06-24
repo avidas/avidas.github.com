@@ -4,7 +4,7 @@
   <title><![CDATA[Category: X509, | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/x509-/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2017-05-21T15:05:48-05:00</updated>
+  <updated>2017-06-24T12:53:29-04:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Verifying X509 Certificate Chain of Trust in Python]]></title>
     <link href="http://avidas.github.com/blog/2015/06/18/verifying-x509-certificate-chain-of-trust-in-python/"/>
-    <updated>2015-06-18T17:07:00-05:00</updated>
+    <updated>2015-06-18T17:07:00-04:00</updated>
     <id>http://avidas.github.com/blog/2015/06/18/verifying-x509-certificate-chain-of-trust-in-python</id>
     <content type="html"><![CDATA[<p>Executing network spoofing and man in the middle attacks have become easier than ever. This is more of an issue if a client has an open server for you to send push notifications, since the open port can be detected by methods such as port scanning. As such, it is important to sign data, and ship the signature and metadata about verifying the data against the signature along with the data itself. This provides a way for the client to verify that the data received is unaltered, from the correct sender and indented for the correct recipient. Python's pyopenssl has a handy method called <a href="http://pyopenssl.readthedocs.org/en/latest/api/crypto.html?highlight=verify#OpenSSL.crypto.verify">verify</a> for checking the authenticity of data.</p>
 
