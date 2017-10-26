@@ -1,0 +1,415 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Web Payments by First Principles: Data Architecture - Avi Das</title>
+  <meta name="author" content="Avi (Ananya Das)">
+
+  
+  <meta name="description" content="Once you start receiving payments on your site, congratulations! You are likely building something people want. But now you are at the point of &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://avidas.github.com/blog/2017/10/25/web-payments-by-first-principles-data-architecture/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Avi Das" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-42293414-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Avi Das</a></h1>
+  
+    <h2>Home for my code, thoughts and else.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:avidas.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="https://dl.dropboxusercontent.com/u/41948073/Resume-Avi_(Ananya)_Das.pdf">Resume</a></li>
+  <li><a href="/portfolio">Projects</a></li>
+  <li><a href="/other">Others</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Web Payments by First Principles: Data Architecture</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-10-25T20:22:00-04:00" pubdate data-updated="true">Oct 25<span>th</span>, 2017</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Once you start receiving payments on your site, congratulations! You are likely building something people want. But now you are at the point of having to manage payments data. Developers are generally aware that handling payments data should be done with care, but it is not immediately obvious what the different considerations are. In this blog post, we will go over strategies that you can follow to future proof your payments stack from the point of a fledgeling startup to a mature, stable business.</p>
+
+<p>With storing payments data, there are quite a few considerations. What you should store and shouldn’t. In the event of a security breach on your site, you want your users financial information to be protected. Moreover, you want to architect your data storage for any current and future stakeholder requests. When it comes to payments, there are generally many stakeholders, let’s talk about a handful of them.</p>
+
+<p>You are going to have technical stakeholders: your managers and other product teams who have questions about payments. Business entities that have to report their earnings for filing taxes and reporting earnings to shareholders who will need their data from you. As someone buying/selling online, your data needs to be stored in a way to make sure you don’t break compliance (PCI/SOX etc). Support/operations will be your stakeholders when customers have problems paying and come to you for help. Let’s get into how we can address these asks.</p>
+
+<ol>
+<li><p><strong>Avoid storing sensitive personal information</strong>: Any application sending payments information such as credit card numbers, cvv to their server will have to become PCI compliant. This a financial and logistics burden which you can avoid for the most part by using a gateway provider such as Braintree/Stripe/Adyen. Usually your browser/mobile app will authenticate with the gateway and get back a token, which you can relay back to your server. This removes the danger of accidentally logging payments data, since the only data your server will see is a payments token. Even if you do get data breached, these tokens would not be useful to the attacker. This also removes the need for you to be PCI compliant which is tens of thousands of dollars in yearly expenses.  More data you should avoid storing include any plaintext passwords and secret keys, common web best practices.</p></li>
+<li><p><strong>Freeze request/response from external providers</strong>: You need to store every single request/response that you are making to your external providers, ideally in an append-only data storage. One of the common requests that we get in payments is to recreate the transaction as it happened. This is hard to do without storing the data at point in time of the transaction. Moreover, the business logic related to transaction such as taxes, fees calculations also need to be versioned and stored so that you can recreate the transaction at a certain point in time.</p></li>
+<li><p><strong>Encourage immutability and lower side effects</strong>: Similar to the point above, you should never destroy payments or charging data. There are easy ways to archive and hide the data from users. This is very useful for historical financial reporting, triaging potential inefficiencies in your charging/billing process, and dealing with any disputes with your payments provider.</p></li>
+<li><p><strong>Denormalize and index for searchability</strong>: Payments data is generally more write heavy but needs to be stored in a way for ease of triaging. Most payments providers provide unique request ids with their calls, and you should supply your own if that is possible. That way, you can set up bidirectional tracking, so that each individual call to payments is trackable from both sides. Setting indices on those unique ids is helpful for search. If the table is growing too large, it is useful to only keep upto a certain limit in your app and store the rest in a data warehouse such as AWS Redshift or Google Bigquery. The data warehouse strategy also enables you to normalize the data if you want easier access to data in one place and avoid expensive joins.</p></li>
+<li><p><strong>Prefer cents as units instead of dollars</strong>: You can avoid a whole class of floating point bugs by storing in cents and using integers as opposed to float for all your arithmetic. Since floats in computing are really a representation of an infinite number, the can only be approximation and lead to hideous rounding errors. This is a good read on that topic https://stackoverflow.com/questions/3730019/why-not-use-double-or-float-to-represent-currency. Using established tools such as the money gem for currency in ruby is also very useful.</p></li>
+</ol>
+
+
+<p>The above strategies will be useful for both internal and external users of your payments stack and help to protect your money and time when it comes to payments data. Please reach out via comments or <a href="mailto:avi@aviadas.com">email with feedback!</a>.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Avi (Ananya Das)</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-10-25T20:22:00-04:00" pubdate data-updated="true">Oct 25<span>th</span>, 2017</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/apis-/'>APIs,</a>, <a class='category' href='/blog/categories/database/'>Database</a>, <a class='category' href='/blog/categories/development-/'>Development,</a>, <a class='category' href='/blog/categories/payments-/'>Payments,</a>, <a class='category' href='/blog/categories/software/'>Software</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avidas.github.com/blog/2017/10/25/web-payments-by-first-principles-data-architecture/" data-via="avidas" data-counturl="http://avidas.github.com/blog/2017/10/25/web-payments-by-first-principles-data-architecture/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2017/05/19/web-payments-by-first-principles-testing/" title="Previous Post: Web Payments by First Principles: Testing">&laquo; Web Payments by First Principles: Testing</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+<section>
+  <span>
+    <img src="http://www.gravatar.com/avatar/971bf27d07f3f46450cc2ebb27399fb1?s=200" alt="Gravatar of Avi (Ananya Das) " title="Gravatar of Avi (Ananya Das)" />
+  </span>
+</section>
+<section>
+    <a name="signup"><h1>Subscribe</h1></a>
+    <div id="mc_embed_signup">
+      <form action="http://eepurl.com/cPGWsz" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div class="mc-field-group">
+          <label for="mce-EMAIL"><b>Mastering Online Payments Newsletter!</b></label> <br>
+          <input type="email" 
+                 value="" 
+                 name="EMAIL" 
+                 class="required email" 
+                 id="mce-EMAIL" 
+                 placeholder="you@email.com"
+                 style="width:100%;margin: 5px 0px 5px 0px; padding: 3px 3px 3px 3px; border: 3px solid #cdcdcd; border-radius: 5px;"
+            />
+        </div>
+        <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>
+      <div class="clear" style="text-align:right"><input type="submit"
+                                value="Subscribe"
+                                name="subscribe"
+                                id="mc-embedded-subscribe" 
+                                class="button"
+                        >
+      </div>
+    </form>
+    <br />
+  </div>
+</section><section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2017/10/25/web-payments-by-first-principles-data-architecture/">Web Payments by First Principles: Data Architecture</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/05/19/web-payments-by-first-principles-testing/">Web Payments by First Principles: Testing</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/04/21/takeaways-from-microconf-starter-2017/">Takeaways from MicroConf Starter 2017</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/04/18/what-makes-a-great-online-tutorial/">What makes a great programming tutorial?</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/avidas">@avidas</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'avidas',
+            count: 4,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+ <section>
+     <h1>Twitter</h1>
+     <a class="twitter-timeline" href="https://twitter.com/avidas" data-widget-id="422189346314137600">Tweets by @avidas</a>
+	 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+ </section>
+
+
+
+<section>
+  <h1>Coderwall</h1>
+  <ul id="cw_badges">
+    <li class="loading">Status updating...</li>
+  </ul>
+
+  <script type="text/javascript">
+    var coderwall = (function(){
+      function render(options, badges){
+        var fragment = '',
+            t = $(options.target)[0],
+            height = 65,
+            width = 65,
+            index;
+
+        for (index in badges) {
+          fragment += '<a class="cw_badge"title="' + badges[index].description + '" href="http://coderwall.com/' + options.user + '">';
+          fragment +=   '<img alt="' + badges[index].description + '" height="' + width + '" width="' + height + '" src="' + badges[index].badge + '"/>';
+          fragment += '</a>';
+        }
+
+        t.innerHTML = fragment;
+      }
+      return {
+        showBadges: function(options){
+          $.ajax({
+              url: 'http://coderwall.com/' + options.user + '.json?callback=?'
+            , type: 'jsonp'
+            , error: function (err) { $(options.target + ' li.loading').addClass('error').text("Error loading feed"); }
+            , success: function(res) {
+                render(options, res.data.badges);
+            }
+          });
+        }
+      };
+    })();
+
+    $.domReady(function(){
+      if (!window.jXHR){
+        var jxhr = document.createElement('script');
+        jxhr.type = 'text/javascript';
+        jxhr.src = '/javascripts/libs/jXHR.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(jxhr, s);
+      }
+      if (!window.$){
+        var b = document.createElement('script');
+        b.type = 'text/javascript';
+        b.src = '/javascripts/ender.js';
+        var sc = document.getElementsByTagName('script')[0];
+        sc.parentNode.insertBefore(jxhr, s);
+      }
+      coderwall.showBadges({
+        user: 'avidas',
+        target: '#cw_badges'
+      });
+    });
+  </script>
+  <style type="text/css">
+    .cw_badge img {
+      padding: 5px;
+      border: 0 none !important;
+      -moz-box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+      -o-box-shadow: none !important;
+      box-shadow: none !important;
+    }
+  </style>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Avi (Ananya Das) -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'avidas';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://avidas.github.com/blog/2017/10/25/web-payments-by-first-principles-data-architecture/';
+        var disqus_url = 'http://avidas.github.com/blog/2017/10/25/web-payments-by-first-principles-data-architecture/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

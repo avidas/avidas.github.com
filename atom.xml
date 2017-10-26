@@ -4,7 +4,7 @@
   <title><![CDATA[Avi Das]]></title>
   <link href="http://avidas.github.com/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2017-06-24T12:53:29-04:00</updated>
+  <updated>2017-10-26T09:05:49-04:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Web Payments by First Principles: Data Architecture]]></title>
+    <link href="http://avidas.github.com/blog/2017/10/25/web-payments-by-first-principles-data-architecture/"/>
+    <updated>2017-10-25T20:22:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2017/10/25/web-payments-by-first-principles-data-architecture</id>
+    <content type="html"><![CDATA[<p>Once you start receiving payments on your site, congratulations! You are likely building something people want. But now you are at the point of having to manage payments data. Developers are generally aware that handling payments data should be done with care, but it is not immediately obvious what the different considerations are. In this blog post, we will go over strategies that you can follow to future proof your payments stack from the point of a fledgeling startup to a mature, stable business.</p>
+
+<p>With storing payments data, there are quite a few considerations. What you should store and shouldn’t. In the event of a security breach on your site, you want your users financial information to be protected. Moreover, you want to architect your data storage for any current and future stakeholder requests. When it comes to payments, there are generally many stakeholders, let’s talk about a handful of them.</p>
+
+<p>You are going to have technical stakeholders: your managers and other product teams who have questions about payments. Business entities that have to report their earnings for filing taxes and reporting earnings to shareholders who will need their data from you. As someone buying/selling online, your data needs to be stored in a way to make sure you don’t break compliance (PCI/SOX etc). Support/operations will be your stakeholders when customers have problems paying and come to you for help. Let’s get into how we can address these asks.</p>
+
+<ol>
+<li><p><strong>Avoid storing sensitive personal information</strong>: Any application sending payments information such as credit card numbers, cvv to their server will have to become PCI compliant. This a financial and logistics burden which you can avoid for the most part by using a gateway provider such as Braintree/Stripe/Adyen. Usually your browser/mobile app will authenticate with the gateway and get back a token, which you can relay back to your server. This removes the danger of accidentally logging payments data, since the only data your server will see is a payments token. Even if you do get data breached, these tokens would not be useful to the attacker. This also removes the need for you to be PCI compliant which is tens of thousands of dollars in yearly expenses.  More data you should avoid storing include any plaintext passwords and secret keys, common web best practices.</p></li>
+<li><p><strong>Freeze request/response from external providers</strong>: You need to store every single request/response that you are making to your external providers, ideally in an append-only data storage. One of the common requests that we get in payments is to recreate the transaction as it happened. This is hard to do without storing the data at point in time of the transaction. Moreover, the business logic related to transaction such as taxes, fees calculations also need to be versioned and stored so that you can recreate the transaction at a certain point in time.</p></li>
+<li><p><strong>Encourage immutability and lower side effects</strong>: Similar to the point above, you should never destroy payments or charging data. There are easy ways to archive and hide the data from users. This is very useful for historical financial reporting, triaging potential inefficiencies in your charging/billing process, and dealing with any disputes with your payments provider.</p></li>
+<li><p><strong>Denormalize and index for searchability</strong>: Payments data is generally more write heavy but needs to be stored in a way for ease of triaging. Most payments providers provide unique request ids with their calls, and you should supply your own if that is possible. That way, you can set up bidirectional tracking, so that each individual call to payments is trackable from both sides. Setting indices on those unique ids is helpful for search. If the table is growing too large, it is useful to only keep upto a certain limit in your app and store the rest in a data warehouse such as AWS Redshift or Google Bigquery. The data warehouse strategy also enables you to normalize the data if you want easier access to data in one place and avoid expensive joins.</p></li>
+<li><p><strong>Prefer cents as units instead of dollars</strong>: You can avoid a whole class of floating point bugs by storing in cents and using integers as opposed to float for all your arithmetic. Since floats in computing are really a representation of an infinite number, the can only be approximation and lead to hideous rounding errors. This is a good read on that topic https://stackoverflow.com/questions/3730019/why-not-use-double-or-float-to-represent-currency. Using established tools such as the money gem for currency in ruby is also very useful.</p></li>
+</ol>
+
+
+<p>The above strategies will be useful for both internal and external users of your payments stack and help to protect your money and time when it comes to payments data. Please reach out via comments or <a href="mailto:avi@aviadas.com">email with feedback!</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Web Payments by First Principles: Testing]]></title>
@@ -1485,99 +1509,6 @@ Ok, this one is controversial. Adblock will stop advertisements on websites, kee
 <p>This hackathon was particularly a great learning experience. Companies are taking highly innovative routes to glean more information about the users. Cookies have always existed, but two other forms of tracking I learnt was autocomplete fields tracking and <a href="http://en.wikipedia.org/wiki/Device_fingerprint">browser fingerprinting</a>. Browser fingerprinting tries to get information from user-agent, the OS, extensions installed and other configurations to bind a particular browser to an user and this can happen completely on the server side. I have only learnt fairly recently about the bidding platforms for display advertisement and it was pretty interesting to see dictionary.com revealing on their console the bids as they happened in real time.</p>
 
 <p>Computer security is a dynamic and fast changing field and this hackathon was an interesting mix of people in different niches of the industry. Tracking will continue to be an issue and it was good to see Ghostery taking the initiative to search for innovations in this space.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Prioritized date interval merge]]></title>
-    <link href="http://avidas.github.com/blog/2013/08/30/prioritized-date-interval-merge/"/>
-    <updated>2013-08-30T23:57:00-04:00</updated>
-    <id>http://avidas.github.com/blog/2013/08/30/prioritized-date-interval-merge</id>
-    <content type="html"><![CDATA[<p>Ran into this interesting problem lately and wanted to code up a recursive solution in Python. Essentially an extension of merge from merge sort but for intervals. There is definitely something very satisfying about coding up a recursive solution, as they tend to produce clean solutions despite the ugly formatting in this case to make list concatenation work.</p>
-
-<figure class='code'><figcaption><span>Merge date intervals by priority</span><a href='https://github.com/avidas/Code_snippets/blob/master/merge_interval.py'>Source</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">merge_interval</span><span class="p">(</span><span class="n">low_priority_lst</span><span class="p">,</span><span class="n">high_priority_lst</span><span class="p">):</span>
-</span><span class='line'>  <span class="sd">&#39;&#39;&#39;</span>
-</span><span class='line'><span class="sd"> Given two lists with sorted date ranges, return merged list with high_priority_lst </span>
-</span><span class='line'><span class="sd"> ranges preferred over low_priority_lst ranges in case of intersection.</span>
-</span><span class='line'><span class="sd"> Partial intervals are allowed.</span>
-</span><span class='line'><span class="sd"> &#39;&#39;&#39;</span>
-</span><span class='line'>  <span class="k">if</span> <span class="n">low_priority_lst</span> <span class="o">==</span> <span class="p">[]</span> <span class="ow">or</span> <span class="n">low_priority_lst</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span> <span class="k">return</span> <span class="n">high_priority_lst</span>
-</span><span class='line'>  <span class="k">if</span> <span class="n">high_priority_lst</span> <span class="o">==</span> <span class="p">[]</span> <span class="ow">or</span> <span class="n">high_priority_lst</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span> <span class="k">return</span> <span class="n">low_priority_lst</span>
-</span><span class='line'>  
-</span><span class='line'>  <span class="c"># case :               |-------|</span>
-</span><span class='line'>  <span class="c">#        |-------|            </span>
-</span><span class='line'>  <span class="k">if</span> <span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]:</span>
-</span><span class='line'>   <span class="k">return</span> <span class="p">[</span><span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span>
-</span><span class='line'>          <span class="n">merge_interval</span><span class="p">(</span><span class="n">low_priority_lst</span><span class="p">,</span><span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
-</span><span class='line'>  <span class="c"># case :   |-------|</span>
-</span><span class='line'>  <span class="c">#                     |-------|      </span>
-</span><span class='line'>  <span class="k">elif</span> <span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span>
-</span><span class='line'>      <span class="k">return</span> <span class="p">[</span><span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span>
-</span><span class='line'>          <span class="n">merge_interval</span><span class="p">(</span><span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span><span class="n">high_priority_lst</span><span class="p">)</span>
-</span><span class='line'>  <span class="c"># case :|-------|</span>
-</span><span class='line'>  <span class="c">#            |-------|  </span>
-</span><span class='line'>  <span class="k">elif</span> <span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span>
-</span><span class='line'>      <span class="k">return</span> <span class="p">[[</span><span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]]]</span> <span class="o">+</span>
-</span><span class='line'>          <span class="n">merge_interval</span><span class="p">(</span> <span class="p">[[</span><span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]]]</span> <span class="o">+</span>
-</span><span class='line'>                               <span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">high_priority_lst</span><span class="p">)</span>
-</span><span class='line'>  <span class="c"># case :      |-------|</span>
-</span><span class='line'>  <span class="c">#        |-------|  </span>
-</span><span class='line'>  <span class="k">elif</span> <span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]:</span>
-</span><span class='line'>      <span class="k">return</span> <span class="p">[</span><span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span>
-</span><span class='line'>          <span class="n">merge_interval</span><span class="p">(</span> <span class="p">[[</span><span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]]]</span> <span class="o">+</span>
-</span><span class='line'>                              <span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="p">,</span> <span class="n">high_priority_lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
-</span><span class='line'>  <span class="c"># case :  |-------| |---| |----|</span>
-</span><span class='line'>  <span class="c">#        |-----------------| </span>
-</span><span class='line'>  <span class="k">else</span><span class="p">:</span>
-</span><span class='line'>      <span class="k">return</span> <span class="n">merge_interval</span><span class="p">(</span><span class="n">low_priority_lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span><span class="n">high_priority_lst</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Complexity :</p>
-
-<!--more-->
-
-
-<p>Analyzing time complexity for this gets interesting. Consider low_priority_lst to be of length l and high_priority_lst to be of length h. In the worst case each h interval is a sub interval of each l interval. That would give us a result set with 2*l + h elements and the thus the complexity of the algorithm is O(l+h) in the worst case.</p>
-
-<p>Clearly this is not tail recursive, but as far as I know Python does not optimize for tail recursion. Something to think of is to extend it to lists 1&#8230;n, with priority p1 &lt; p2 &lt; &#8230;. pn, and which would give us a complexity of sum(si), 0&lt; i &lt; n-1 where si is the size of the ith interval.</p>
-
-<p>If the lists are unsorted, adapting this method as is would require the caller method to sort the lists beforehand. Sorting being nlogn, it would dominate the linear compexity for and the complexity would be sum(si*log(si)), 0&lt; i &lt; n-1 for the case with n intervals.</p>
 ]]></content>
   </entry>
   
