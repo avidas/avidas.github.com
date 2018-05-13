@@ -4,7 +4,7 @@
   <title><![CDATA[Avi Das]]></title>
   <link href="http://avidas.github.com/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2018-05-13T19:35:57-04:00</updated>
+  <updated>2018-05-13T19:42:07-04:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -28,9 +28,9 @@
 
 <p>As I realized my mess up during the Jersey half, I realized I needed a baseline pace or I would fade. My inner voice said don’t fade, every second counts. So I found couple runners putting down 7:15 miles and making it look like cakewalk. Later I learnt that they were running the marathon. Talking to them helped me get some boost. After that, I found another pace group, and hung with them all the way to the end.</p>
 
-<p>The value of this race as an developing runner is that it answers some lingering questions. How fast am I? Am I capable of taking my progress in training and convert it on race day? Am I training with the right group of people or just tagging along with gaster runners for dear life. That’s what this half will mean for me, that I have improved this training cycle and while my strategy and mental game nedded work and I can enjoy the following week knowing I made progress. Progress where I used to think there is no way I can hold a 7:09 opace for 13 miles but there is now data to prove otherwise.</p>
+<p>The value of this race as an developing runner is that it answers some lingering questions. How fast am I? Am I capable of taking my progress in training and convert it on race day? Am I training with the right group of people or just tagging along with faster runners for dear life. That’s what this half will mean for me, that I have improved this training cycle and while my strategy and mental game needs work, I can enjoy the following week knowing I made progress. Progress where I used to think there is no way I can hold a 7:09 pace for 13 miles but there is now data to prove otherwise.</p>
 
-<p>So that was the Jersey Half. I am very happy with the result having covnverted a 10 minute PR. However, I would like to get there next time more gracefully and not get totally wrecked at the end.</p>
+<p>So that was the Jersey Half. I am very happy with the result having covnverted a 10 minute PR. However, I would like to get there next time more gracefully and not feel totally wrecked at the end.</p>
 ]]></content>
   </entry>
   
@@ -41,13 +41,15 @@
     <id>http://avidas.github.com/blog/2018/05/09/degrees-of-separation-with-end-users</id>
     <content type="html"><![CDATA[<p>When working in software, one way to look at our profession is to say that we take architecture docs or designs and make code out of it. After years in the industry, we are trusted to come up with the architecture docs and work with a team to deliver the software. This absolves ourselves of responsibility in a way since even if the product fails, at least our code and systems were great. Companies today, however, are starting to see the limitations of software engineers being removed from the product decision making process.</p>
 
-<p>I think we should reframe the problem: it is rather our responsibility as software engineers to ask, how many degrees of separation does it exist between us and the end user? Ideally, the end user would be the person paying for your service, although this gets more compkicated certainly by ad funded or venture funded software. This could involve us asking, what would it take to reach 10 users of our software? Would you have to go through your product manager, who then talks to the account manager or product support? These are likely the folks currently dealing with customer calls when our software bresks and waiting for the Zendesk tickets to be picked from the queue.</p>
+<p>I think we should reframe the problem: it is rather our responsibility as software engineers to ask, how many degrees of separation does it exist between us and the end user? Ideally, the end user would be the person paying for our service, although this gets more complicated certainly by ad funded or venture funded software. The exercise could involve us asking, what would it take to reach 10 users of our software? Would we have to go through our product manager, who then talks to the account manager or product support? These are likely the folks currently dealing with customer calls when our software bresks and waiting for the Zendesk tickets to be picked from the queue.</p>
 
 <p>Who we are &#8220;engineering&#8221; for is a question we need to frequently ask ourselves. We should strive to be in environments where we are aware of our degree of separation and look for ways to cut down that separation. Without that frame, we can only have vague ideas of what the code we write is leading to, and end of the day limits the impact we can have.</p>
 
 <p>It should also not always be the product manager&#8217;s job to always acting as the liason to translate user needs to us. When we are aware of user needs, it enables us to be proactive: to avoid that shortcut when building, or deal with that performance bottleneck early before it becomes a problem. We can also free the up the product manager to pursue broader goals such as product vision, market and competitive landscape analysis, etc.</p>
 
 <p>Tomorrow, when you get to work, ask yourself that question. Do you know who your users are and how they use your product? How many degrees of separation would you have to navigate to find that answer? If you are not comfortable with the answer, maybe you can think of a way to change that.</p>
+
+<p>Disclaimer: Thoughts expressed in the article are mine only, and does not represent the positions of current or past employers.</p>
 ]]></content>
   </entry>
   
