@@ -66,7 +66,7 @@ This was a key part of the race for me. For the second half of the course, I wan
 
 **Manhattan to Bronx**
 
-As we ran down Queensboro, a low hum grew louder and finally erupted into cheers as we descended down Queensboro to reach Manhattan. The crowd here is boisterous and makes for a landmark momemt of running this race.
+As we ran down Queensboro, a low hum grew louder and finally erupted into cheers as we descended down Queensboro to reach Manhattan. The crowd here is boisterous and makes for a landmark moment of running this race.
 
 In Manhattan, going up 1st avenue, my priority was to still run at a fairly conservative pace as there was still 10+ miles left. Getting rid of my waistbelt at mile 16 was helpful as I got rid of some weight. The latter part of 1st avenue is surprisingly hard psycologically, as crowd support fell further into the course. This was also the part of the race where goals and training for the race starts to become important.
 
