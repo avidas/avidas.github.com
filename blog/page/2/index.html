@@ -9,7 +9,7 @@
   <meta name="author" content="Avi (Ananya Das)">
 
   
-  <meta name="description" content="I had a problem. It is fun to start side projects, but not always the easiest to stay committed and finish. Coffee has powered more projects than one &hellip;">
+  <meta name="description" content="If I were to think about running a 26.2 mile race at the start of 2015, the overwhelming feeling would be one of fear. I have only ever ran a 10k &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,65 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2016/02/09/10-things-i-learnt-going-from-10k-to-a-marathon-in-2015/">10 Things I Learnt Going From 10k to a Marathon in 2015</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-02-09T23:28:00-05:00" pubdate data-updated="true">Feb 9<span>th</span>, 2016</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If I were to think about running a 26.2 mile race at the start of 2015, the overwhelming feeling would be one of fear. I have only ever ran a 10k before and just signed up for the Austin 2015 half Marathon, my first ever half. The prospect of running twice the distance still seemed far away though. Flash forward to October 18th 2015, I finished my first Marathon with a 3:49:00 time. As I look back on this year, I wanted to put together some of my realizations during the whole process. </p>
+
+<ol>
+<li><p><strong>Running is a privilege</strong>:
+Living somewhere where I can run safely, have trails to run on, be in good health to run are all privileges to be thankful for. Growing up in the developing world meant that it was hard pressed to find opportunities to be involved in outdoor activites. Having the time and space to exercise is a luxury that needed to be earned. I never ran in high school, and by the time I graduated college I could not run longer than 5k. Having the time to run, being in US where running is very much part of the culture has been a huge contributor to my running progress.</p></li>
+<li><p><strong>Joining a running group is one of the best decisions you can make as a beginning runner</strong>:
+Training with people better than you to improve is not unique to running. Start of 2015, I had no plans of running a marathon. In April, I joined the Austin Runners Meetup (ARM). In training long runs with ARM, I was able to build up the endurance for longer runs which made the progression to a Marathon much easier mentally. Training with other runners can definitely help you maintain the habit of running as well as improve your form and performance. Moreover, I found a new community of great people which has been very rewarding.</p></li>
+<li><p><strong>Tying running with other activities you enjoy can make running much more consistent</strong>:
+In Charles Duhigg&#8217;s <a href="http://www.amazon.com/The-Power-Habit-What-Business/dp/081298160X">Power of Habit</a>, he talks about the cue-action-reward pattern that most habits follow. Being aware of that pattern can help in building running as a habit. When run&#8217;s are followed by a delicious breakfast, you have something to look forward to. Trance music and podcasts help me maintain the flow during running. Travel is one of my favorite things and going to a new city for a race is something I eagerly look forward to.</p></li>
+<li><p><strong>Running is a blissful release from life&#8217;s distractions</strong>:</p>
+
+<blockquote><p>“All I do is keep on running in my own cozy, homemade void, my own nostalgic silence. And this is a pretty wonderful thing.” 
+― Haruki Murakami, What I Talk About When I Talk About Running&#8220;`</p></blockquote>
+
+<p> Distractions are part and parcel of our lives as more form factors emerge competing for our limited attention span. Often, this results in us not being aware of the passage of time. Running has been a great antidote to that problem for me. When running is effortful, you have to concentrate on the activity at hand and your entire focus is on the present moment. Long runs offer the prospect of seeing places and neighborhoods that you would not frequent otherwise. A slight breeze on a scorching summer&#8217;s day has never been more enjoyable.</p></li>
+<li><p><strong>Once running is a habit, a chore becomes a craving</strong>:
+When you start out running, it can be something you dread on your calendar. There is really no way to get past this without sustained practice, lowering the cognitive load with group associations and reward mechanisms. If you continue though, you realize at one point that you start craving the runs. Don&#8217;t get me wrong, it still requires a lot of mental effort to get up at 5:30am for that 20 mile run you need to do for Marathon training. But something about the combination of endorphins, habits built during running and seeing your friends out there on the trail can change running into something that you look forward to.</p></li>
+</ol>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2016/02/09/10-things-i-learnt-going-from-10k-to-a-marathon-in-2015/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -913,122 +972,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/06/18/verifying-x509-certificate-chain-of-trust-in-python/">Verifying X509 Certificate Chain of Trust in Python</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-06-18T17:07:00-04:00" pubdate data-updated="true">Jun 18<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Executing network spoofing and man in the middle attacks have become easier than ever. This is more of an issue if a client has an open server for you to send push notifications, since the open port can be detected by methods such as port scanning. As such, it is important to sign data, and ship the signature and metadata about verifying the data against the signature along with the data itself. This provides a way for the client to verify that the data received is unaltered, from the correct sender and indented for the correct recipient. Python&#8217;s pyopenssl has a handy method called <a href="http://pyopenssl.readthedocs.org/en/latest/api/crypto.html?highlight=verify#OpenSSL.crypto.verify">verify</a> for checking the authenticity of data.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">OpenSSL</span><span class="o">.</span><span class="n">crypto</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="n">certificate</span><span class="p">,</span> <span class="n">signature</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">digest</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The problem then becomes how to provide the certificate while retaining the flexibility necessary to update the certificate without clients needing to modify their certificate stores every time. Providing a url that can be used to download the cert provides that but leaves the door open for the same kind of attacks.</p>
-
-<p>Therefore, clients will need to ensure that the downloaded certificate is trustworthy before using it to verify the authenticity of a message. The openssl module on the terminal has a <a href="https://www.openssl.org/docs/apps/verify.html">verify method</a> that can be used to verify the certificate against a chain of trusted certificates, going all the way back to the root CA. The builtin ssl module has create_default_context(), which can build a certificate chain while creating a new SSLContext. However, it does not expose that functionality for adhoc post processing when you are not opening new connections.</p>
-
-<p>pyopenssl provides some very handy abstractions for exactly this purpose:</p>
-
-<ul>
-<li><p><a href="http://pyopenssl.readthedocs.org/en/latest/api/crypto.html#x509store-objects">X509Store</a>: The chain of certificates you have chosen to trust going back to root Certificate Authority</p></li>
-<li><p><a href="http://pyopenssl.readthedocs.org/en/latest/api/crypto.html#x509storecontext-objects">X509StoreContext</a> - Takes in a X509Store and a new certificate which you can now validate against your store by calling verify_certificate. It raises exceptions if the intermediate or root CA is missing in the chain or the certificate is invalid.</p></li>
-</ul>
-
-
-<p> The full example of verifying a downloaded certificate against a trust chain is given below</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">requests</span>
-</span><span class='line'><span class="kn">from</span> <span class="nn">OpenSSL</span> <span class="kn">import</span> <span class="n">crypto</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">def</span> <span class="nf">_verify_certificate_chain</span><span class="p">(</span><span class="n">cert_url</span><span class="p">,</span> <span class="n">trusted_certs</span><span class="p">):</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="c"># Download the certificate from the url and load the certificate</span>
-</span><span class='line'>    <span class="n">cert_str</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cert_url</span><span class="p">)</span>
-</span><span class='line'>    <span class="n">certificate</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">load_certificate</span><span class="p">(</span><span class="n">crypto</span><span class="o">.</span><span class="n">FILETYPE_PEM</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">cert_str</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="c">#Create a certificate store and add your trusted certs</span>
-</span><span class='line'>    <span class="k">try</span><span class="p">:</span>
-</span><span class='line'>        <span class="n">store</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">X509Store</span><span class="p">()</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="c"># Assuming the certificates are in PEM format in a trusted_certs list</span>
-</span><span class='line'>        <span class="k">for</span> <span class="n">_cert</span> <span class="ow">in</span> <span class="n">trusted_certs</span><span class="p">:</span>
-</span><span class='line'>            <span class="n">store</span><span class="o">.</span><span class="n">add_cert</span><span class="p">(</span><span class="n">_cert</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="c"># Create a certificate context using the store and the downloaded certificate</span>
-</span><span class='line'>        <span class="n">store_ctx</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">X509StoreContext</span><span class="p">(</span><span class="n">store</span><span class="p">,</span> <span class="n">certificate</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="c"># Verify the certificate, returns None if it can validate the certificate</span>
-</span><span class='line'>        <span class="n">store_ctx</span><span class="o">.</span><span class="n">verify_certificate</span><span class="p">()</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="k">return</span> <span class="bp">True</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-</span><span class='line'>        <span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-</span><span class='line'>        <span class="k">return</span> <span class="bp">False</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Using this can be really useful for client libaries where you cannot rely on the system to provide the certificates, so you can ship your trust chain along with the library. There are also other useful abstractions in the pyopenssl library for some useful checks against the certificate. get_subject() provides information about the certificate such as common name, has_expired() which checks if the certificate is within valid time range and other features such as blacklisting potentially compromised certificates are possible. Thus pyopenssl is really handy when you need ssl abstractions beyond the standard library while not needing to execute the openssl shell calls via a subprocess.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -1081,6 +1024,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2018/11/03/core-tenants-of-effective-software-teams/">Core tenants of hightly effective software teams</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2018/05/09/jersey-half-marathon-2018-race-report/">Jersey Half Marathon 2018: Race Report</a>
       </li>
     
@@ -1090,10 +1037,6 @@
     
       <li class="post">
         <a href="/blog/2017/11/07/nyc-marathon-2017-race-report/">NYC Marathon 2017: Training and Race Report</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2017/10/25/web-payments-by-first-principles-data-architecture/">Web Payments by First Principles: Data Architecture</a>
       </li>
     
   </ul>

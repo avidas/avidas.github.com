@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Software | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/software/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2018-11-03T17:00:43-04:00</updated>
+  <updated>2018-11-03T17:03:43-04:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Core tenants of hightly effective software teams]]></title>
+    <link href="http://avidas.github.com/blog/2018/11/03/core-tenants-of-effective-software-teams/"/>
+    <updated>2018-11-03T11:47:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2018/11/03/core-tenants-of-effective-software-teams</id>
+    <content type="html"><![CDATA[<p><em>This blogpost is my thoughts only and does not necessarily represent the positions of current or past employers.</em></p>
+
+<p>We don't build software in a vacuum. Software involves people. Beyond organizations of a handful of people, hierarchy is beneficial. We get teams, commonly with engineering manager/lead, product manager, designers and engineers. What becomes crucial for the software and the product delivered then is the effectiveness of the team. Throughout my career= in the industry and being part of many teams in different circumstances, I have started noticing some key patterns that really drives standout results in teams.</p>
+
+<ol>
+<li><p><strong>Believing in a common cause</strong>: The single biggest observation is that when a team of people believe in a common mission, they produce outsized returns. The most effective teams I have worked in all had a strong belief that they was a reason for the work they were doing. This also aids inter team collaboration over inter team competition, with teams often investing in tooling that makes the whole team better.</p></li>
+<li><p>Engineering leaders can play a key role here to frame a compelling mission for the team. Hiring for the right role also becomes super important as a highly motivated individual in a role can be 2-10x more effective than someone unmotivated with similar ability. Having a competitor or a common enemy is great since we are predisposed to bond over defending ourselves from common enemies.</p></li>
+<li><p><strong>Psychological Safety</strong>: Google's <a href="https://www.nytimes.com/2016/02/28/magazine/what-google-learned-from-its-quest-to-build-the-perfect-team.html?_r=0">Project Aristotle</a> studied 180 teams over two years and came to the conclusion that psycological safety was the best signal for how effective a team is. How comfortable do people in the team feel to share vulnerability without fear of retribution? How comfortable do people feel asking questions without fear of asking something silly or share ideas without fear of being shut down without listening? Team's with high levels of psychological safety can have conflicts, but can deal with them in a mature way, being able to separate disagreement about ideas from disagreement with people.</p></li>
+<li><p>For more senior engineers/technical leaders, this is crucially important since they are in a position to determine this culture for the team. Forming strong personal relationships with the team can be really valuable for fostering safety within the team. People like their leaders to be human, and admitting your own fallibility is a great way to form trust with team members.</p></li>
+<li><p><strong>Diversity of Thought</strong>: Diversity is a word that is commonly heard in the tech industry, and for good reason. Having diversity of people is a proven way to achieving diversity of thought, which is just one of the reasons why we must invest in software communities of women and minorities. Inclusiveness is one of the key pillars of psychological safety in a team, building on from the last section. Moreover, when software is aimed at global audience, but the team is homogeneous, it is easy to be fooled that a wide audience will get their needs met.</p></li>
+</ol>
+
+
+<p>Even teams of experienced contributors can fall prey to atrophy and decay, without fresh ideas so common in upstarts. A team of really excited newer developers may not realize that in balance lies the key to long term personal, team and product success. Diversity of experience in a team helps to avoid these common traps.</p>
+
+<p>Finally, cross functional teams can be more effective than teams exclusively focusing on frontend/backend/mobile. Recognizing the individual contributor's interest in user experience/security/governance etc and enabling space for that one of the most enabling things an engineer leader can do.</p>
+
+<ol>
+<li><p><strong>Growth and Ownership</strong>: It is immensely gratifying for people to feel that they are growing, and knowing that they are playing a role in the growth of others. When team members feel confident about the path in front of them can still have challenges, they are far less likely to be unmotivated and plateau. This is big for retention, since job changes frequently are a result of people feeling stuck and needing to make a change. It is costly to replace engineers, especially ones already trained and performing well in their role.</p></li>
+<li><p>A key intrinsic motivator for many is the feeling of ownership. Being able to really sink their teeth into a hard problem and come up with something they are proud of. Teams where people really believed that they have strong ownership of the product also care more about the end users experience, resulting in a better product.</p></li>
+<li><p>As engineering leadership, one of the best signals of good management is to have clarity in career ladders and promote the right people. A bias for people who make others around them better can be healthy. It is my experience that promotions should rarely come as a surprise to the individual or the team. Demonstrated investment in people as future leaders is also a major indication of a company's belief in their people, sending them to conferences, training and giving license for creativity.</p></li>
+<li><p><strong>Work Environment</strong>: This is a controversial one, but I do believe that companies today have bought way too much into the open office movement. While a return to cubicles does not feel desirable, dedicated interruption free zones (both space and time) are essential for good software. A chaotic office environment can also mean chaos in your codebase.</p></li>
+<li><p>Debates range whether standing desk or sitting is better, however many monitors are necessary. My belief here is that the team should be colocated but individuals should be empowered to find the best working situation for the track of work they are in. I have personally found that standing keeps me on my toes, making it great for lots of small tasks, whereas sitting is best for tasks that need deep thought.</p></li>
+</ol>
+
+
+<p><strong>When things fall apart</strong></p>
+
+<p>We do not live in a perfect world. Recessions, unexpected downsizing, market competition and many other forces can impact access to resources which could result in ways in a group of people come in to work together and stop working together. Lot of us have all worked in a team where that magic of a great team existed, and the team achieved things together what could not be achieved by individuals. It is important for us to be thinking with intention and purpose and help each other build and find teams to discover that magic.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Web Payments by First Principles: Data Architecture]]></title>
@@ -146,40 +183,6 @@
 <p>Like most studies, this too should be taken with a grain of salt and in no way is sure way to produce great tutorials. Someone's genuine passion, interest and the willingness to learn and teach find their ways to shine through content. However, just as the <a href="http://www.joelonsoftware.com/articles/fog0000000043.html">Joel Test for Software Development</a> companies is often a good checklist for expected standards of software companies, being aware of the reader’s needs and voice can lead to sharper, more helpful tutorials.</p>
 
 <p>Research for this post was done by using Dripper, a twitter direct message automation tool that I helped build. Feel free to <a href="mailto:avi@aviadas.com">reach out</a> if you want to know more about the software!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Best Chrome Productivity Extensions]]></title>
-    <link href="http://avidas.github.com/blog/2014/06/01/best-chrome-productivity-extensions/"/>
-    <updated>2014-06-01T16:40:00-04:00</updated>
-    <id>http://avidas.github.com/blog/2014/06/01/best-chrome-productivity-extensions</id>
-    <content type="html"><![CDATA[<p>How much time during the day do you spend on an internet browser? As a software engineer, my answer is a scary amount of time. Something I have personally struggled with is avoiding distracting sites on the internet. There is too much good content on the internet that dries up my rather finite amount of attention.</p>
-
-<p>Chrome has been my weapon of choice for browsing the web for a while now. Intuitive, clean and fast, Chrome's ascent has been amazing to see over the past few years. Extensions on chrome allow addition of new features on Chrome made by third party developers. Lately, and there are a few extensions I simply cannot do without. When you need to buckle up and get something done, these extensions will help you get there.</p>
-
-<ol>
-<li><p><a href="http://getpocket.com">Pocket</a>:
-There are enough interesting things to read on the internet for many lifetimes. Just like youtube's watch it later does for videos, Pocket lets me save articles for future reading. With clients available for iOS and Android, articles saved can be accessed anywhere. At any time on social websites, be it facebook, quora or hacker news, there is a lot I would like to read. Pocket gives me the convenience to customize articles from the internet into my customized feed or magazine via Flipboard integration.</p></li>
-<li><p><a href="https://chrome.google.com/webstore/detail/session-buddy/edacconmaakjimmfgnblocblbcdcpbko?hl=en">Session Buddy</a> :
-If you are like me, you context switch a lot between projects during a day. Chrome deals with tabs beautifully, and yet I find myself often with 20 or more tabs, usually researching a particular topic. Usually tabs follow a train of thought but fit within a particular context. Session buddy solves this exact problem, allowing me to save a set of tabs and windows which can be resumed later. For example, at the end of the day at work, I save a bunch of tabs, saved as the name of the project I was working on. This allows me to pick up from the chain of thought from when I left off. Switching between contexts is expensive, and session buddy is the best solution I have found.</p></li>
-<li><p><a href="https://www.rescuetime.com/">RescueTime</a>:
-Holding myself accountable for how I spend time on the web has been eye-opening for me. RescueTime not only tracks how much time during a day you spend on distracting sites, but the desktop application also tracks your non browser time. Over time, it subtly moves you to try and improve your productivity score by avoiding distraction, thus getting more productive (Bravo on the gamification aspect, ResueTime team!) I have discovered patterns of my work through the tool as well, such as the benefits of taking regular breaks and how much standing desk really helps productivity. It however, cannot track that even on productive sites, you can find ways to procrastinate. (I am looking at you, StackOverflow).</p></li>
-<li><p><a href="https://chrome.google.com/webstore/detail/block-site/eiimnmioipafcokbfikbljfdeojpcgbh?hl=en">Block site</a>:
-As much as tracking my time spent on the web helps, sometimes I need to simply block distracting sites. Block site makes for a great complement to RescueTime, allowing me to either visit whitelisted sites only or block off blacklisted sites. I have found my productivity levels on RescueTime spike when using block sites. Often its a reflex action for me to go to facebook or twitter without much thinking. Block sites counts such attempts, and shames you with clever 404 comments. I love that with the latest update, with one switch, you can turn off the distracting websites and focus on the task at hand.</p></li>
-<li><p><a href="https://lastpass.com/">LastPass</a>:
-Despite the rise of alternative logins, passwords are still integral parts of the web. With a million sites, having passwords lying around can be rather dangerous. Remembering passwords is time consuming and difficult, adding frustration to the day. LastPass securely stores your passwords for various sites, syncing them across devices. This saves the need to browse through memory trying to dig up a password or worse, store them in flat files. It can also do auto login's for your chosen sites. One of my favorite features is that it warns if you are using duplicate passwords for sites, making your web experience more secure.</p></li>
-<li><p><a href="https://adblockplus.org/en/chrome">Adblock Plus</a>:
-Ok, this one is controversial. Adblock will stop advertisements on websites, keeping you focused and saving time particularly for video ads. Now, ads power the web, and any website with ads as primary revenue stream should be aware of adblock. I particularly enjoy the cat and mouse chase between youtube and adblock: youtube refusing to play videos as long as adblock is enabled, adblock gets smarter, youtube catches up. However, it can make certain sites load faster, thus saving time.</p></li>
-</ol>
-
-
-<!-- more -->
-
-
-<p>Considering how valuable time is, it is important that we get done online what we meant to do. Hopefully, you have discovered an extension or two among this list that you were not aware of before and would help you save some extra time. The better Internet ADD is combated, the more time we spend doing what we love doing or be with family and friends and everybody wins.</p>
-
-<p>This was a post about extensions, but there are certainly tools such as dropbox and evernote which are more than extensions and does boost productivity. If you think there was an extension or tool that I missed, please leave a comment and I would be sure to check it out!</p>
 ]]></content>
   </entry>
   
