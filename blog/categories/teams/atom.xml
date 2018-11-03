@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Teams | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/teams/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2018-11-03T17:05:20-04:00</updated>
+  <updated>2018-11-03T17:07:20-04:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -20,14 +20,14 @@
     <id>http://avidas.github.com/blog/2018/11/03/core-tenants-of-effective-software-teams</id>
     <content type="html"><![CDATA[<p><em>This blogpost is my thoughts only and does not necessarily represent the positions of current or past employers.</em></p>
 
-<p>We don't build software in a vacuum. Software involves people. Beyond organizations of a handful of people, hierarchy is beneficial. We get teams, commonly with engineering manager/lead, product manager, designers and engineers. What becomes crucial for the software and the product delivered then is the effectiveness of the team. Throughout my career= in the industry and being part of many teams in different circumstances, I have started noticing some key patterns that really drives standout results in teams.</p>
+<p>We don't build software in a vacuum. Software involves people. Beyond organizations of a handful of people, hierarchy is beneficial. We get teams, commonly with engineering manager/lead, product manager, designers and engineers. What becomes crucial for the software and the product delivered then is the effectiveness of the team. Throughout my career in the industry and being part of many teams in different circumstances, I have started noticing some key patterns that really drives standout results in teams.</p>
 
 <ol>
 <li><strong>Believing in a common cause</strong>: The single biggest observation is that when a team of people believe in a common mission, they produce outsized returns. The most effective teams I have worked in all had a strong belief that they was a reason for the work they were doing. This also aids inter team collaboration over inter team competition, with teams often investing in tooling that makes the whole team better.</li>
 </ol>
 
 
-<p>Engineering leaders can play a key role here to frame a compelling mission for the team. Hiring for the right role also becomes super important as a highly motivated individual in a role can be 2-10x more effective than someone unmotivated with similar ability. Having a competitor or a common enemy is great since we are predisposed to bond over defending ourselves from common enemies.</p>
+<p>  Engineering leaders can play a key role here to frame a compelling mission for the team. Hiring for the right role also becomes super important as a highly motivated individual in a role can be 2-10x more effective than someone unmotivated with similar ability. Having a competitor or a common enemy is great since we are predisposed to bond over defending ourselves from common enemies.</p>
 
 <ol>
 <li><strong>Psychological Safety</strong>: Google's <a href="https://www.nytimes.com/2016/02/28/magazine/what-google-learned-from-its-quest-to-build-the-perfect-team.html?_r=0">Project Aristotle</a> studied 180 teams over two years and came to the conclusion that psycological safety was the best signal for how effective a team is. How comfortable do people in the team feel to share vulnerability without fear of retribution? How comfortable do people feel asking questions without fear of asking something silly or share ideas without fear of being shut down without listening? Team's with high levels of psychological safety can have conflicts, but can deal with them in a mature way, being able to separate disagreement about ideas from disagreement with people.</li>
