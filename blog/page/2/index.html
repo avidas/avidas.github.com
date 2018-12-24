@@ -9,7 +9,7 @@
   <meta name="author" content="Avi (Ananya Das)">
 
   
-  <meta name="description" content="If I were to think about running a 26.2 mile race at the start of 2015, the overwhelming feeling would be one of fear. I have only ever ran a 10k &hellip;">
+  <meta name="description" content="The Internet started as a publishing medium. It excels at enabling people to share their unique gifts. An amazing amount of content gets put out on &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,64 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2016/04/18/what-makes-a-great-online-tutorial/">What Makes a Great Programming Tutorial?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-04-18T05:36:00-04:00" pubdate data-updated="true">Apr 18<span>th</span>, 2016</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The Internet started as a publishing medium. It excels at enabling people to share their unique gifts. An amazing amount of content gets put out on the web everyday, far beyond someone can read in a lifetime. Massive amount of information also means information overload.</p>
+
+<p>In software, it is common to use web tutorials to supplement one&#8217;s learning of a particular material. Following guidelines of someone who has already done it can really fast track development. Tutorials appear in various forms in the web. Some of the common formats are long form blogposts, videos and series of email newsletters. Some enjoy the personal touch that videos can offer; others enjoy being able to quickly skim a blogpost.</p>
+
+<p>When you want to put your hard earned knowledge and valuable time into writing a tutorial, there are questions worth thinking about. Does the tutorial cater to its intended audience? Will it reach them? Can someone quickly skim the content and still get value? Is there a way to measure the effectiveness of online tutorials?</p>
+
+<p><img class="left" src="https://files.slack.com/files-pri/T025F19MZ-F1ASWBLV8/pasted_image_at_2016_05_22_04_58_pm.png" width="800" height="800" title="Survey Questions" alt="Survey Questions"></p>
+
+<p>To look for answers, I asked a carefully selected group of 150 people about their preference of tutorials. The focus was on software engineers/designers/entrepreneurs due to my familiarity and experience with the field. What emerged from their responses gives a blueprint for creating great online resources.</p>
+
+<ol>
+<li><p><strong>Real time feedback</strong>: If exercises or examples accompany a tutorial, multiple survey responders emphasized the need to check the user&#8217;s responses and provide interactive feedback to the user to guide them to the solution. Good examples are checkpoint multiple choice questions during Coursera/Udacity courses that you must complete to move forward with the course.</p></li>
+<li><p><strong>Follow up</strong>: Several responders emphasized the need to provide contact information or other means to reach out to the author once they went through a tutorial. Providing a comments section or your email/twitter handle are great mediums for a reader to follow up.</p></li>
+<li><p><strong>Address a concrete problem</strong>: Staying focused of a specific problem gives a tutorial depth. A differentiator can be to classify for the user whether the focus is academic and structured vs. a blogpost focused on solving a particular problem right now.</p></li>
+<li><p><strong>Working examples</strong>: Interactive, working examples close to the content that builds on top of each other makes following along simpler. <a href="https://www.railstutorial.org/">Michael Hartl&#8217;s Ruby on Rails tutorials</a> came up as an example of detailed, comprehensive tutorials.</p></li>
+<li><p><strong>Advanced user tutorials</strong>: Several user&#8217;s pointed out the need for tutorials that addresses advanced content. Making expectations clear about experience levels of intended audiences can be a huge positive for tutorials. <a href="https://www.raywenderlich.com/video-tutorials">Ray Wenderlich&#8217;s iOS tutorials</a> are good examples of the detail and level of research and understanding that can happen before putting out content on the web.</p></li>
+</ol>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2016/04/18/what-makes-a-great-online-tutorial/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -915,63 +973,6 @@ When you start out running, it can be something you dread on your calendar. Ther
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/07/16/how-browserify-improves-client-side-development/">How Browserify Improves Client-side Development</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-07-16T14:41:00-04:00" pubdate data-updated="true">Jul 16<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h4>For a more modular, maintainable Frontend</h4>
-
-<p>As Single Page Applications gain in popularity, the size of front end codebases keeps growing rapidly. For keeping these codebases maintainable, modularity becomes a priority. The easier it is to modularize code, the more incentives developers will have for doing so. With the ease of modularity with CommonJS, npm has seen explosive growth of packages published which has helped the Node ecosystem greatly. Browserify brings that ease to client side development leveraging the CommonJS module system. When used with build tools such as Grunt or Gulp, you can write modular client side code just like you would write your server side Node code, and Browserify takes care of the bundling for you. There is much less excuse these days to make everything global and attach to the window object!</p>
-
-<h4>Leveraging npm modules</h4>
-
-<p><img class="left" src="/images/Modulecounts.jpg" width="800" height="670" title="Package Manager Traction" alt="Package Manager Traction"></p>
-
-<p>Looking at the graph above is a big selling point when trying to evaluate the value Browserify can bring to your client side workflow. The graph is a comparison of the rate at which packages are getting published in different package managers Bower, PyPI, RubyGems. npm leads the pack easily. Recently, jQuery registry stopped accepting new plugins, with <a href="http://blog.npmjs.org/post/111475741445/publishing-your-jquery-plugin-to-npm-the-quick">new packages being published on npm</a>. Cordova recently announced the same change, moving plugins to npm. npm is now hosting much broader range of modules than only server-side Node.js modules and Browserify can help you leverage these modules on the front-end. The flipside of this as a module publisher is that publishing modules on npm now gives you access to a much broader audience since people might use the module on the browser, custom hardware etc.</p>
-
-<h4>How it works</h4>
-
-<p>In the CommonJS syntax, the &#8220;exports&#8221; object is the public API of a module and &#8220;require&#8221; can be used to include a module in your javascript file. Since browsers do not have require available, Browserify traverses the <a href="https://github.com/substack/browserify-handbook#how-browserify-works">dependency trees</a> of all the required modules, and bundles the dependencies into one self contained file that you can just include with a script tag on the browser. Browserify is aware of package.json and the order in which node_modules are resolved. Moreover, it supports built in Node modules e.g. path and gloabls e.g. Buffer so you have access of those in the client side as well.</p>
-
-<h4>Transforms</h4>
-
-<p>Core Browserify only bundles modules written in the CommonJS syntax, adhering to the single responsibility principle. However, there are other ways of modularizing client side code, AMD and Global Variables being the two usual ones. Instead of handling every possibly of modules, Browserify exposes a Transforms API so that a plugin can be built which can preprocess a file into Javascript in CommonJS syntax which Browserify can then consume. This means that you can write modular code just like your node codebases regardless of what module system your dependencies may adhere to. There are also lot of people writing in languages that compile into Javascript, such as CoffeeScript or TypeScript. To handle this, there are transforms available for AMD (deamdify), Bower modules (debowerify), globals (deglobalify), coffeescript(coffeeify), harmony (es6ify) etc. A simple search of Browserify on Github or npm brings up thousands of modules and attests to the <a href="https://github.com/substack/node-browserify/wiki/list-of-transforms">ecosystem around Browserify</a>. Delegating to transforms helps to keep the footprint of Browserify smaller, while makes it more extensible.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2015/07/16/how-browserify-improves-client-side-development/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -1024,6 +1025,10 @@ When you start out running, it can be something you dread on your calendar. Ther
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2018/12/24/books-i-read-in-2018/">Books I read in 2018</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2018/11/03/core-tenants-of-effective-software-teams/">Core tenants of highly effective software teams</a>
       </li>
     
@@ -1033,10 +1038,6 @@ When you start out running, it can be something you dread on your calendar. Ther
     
       <li class="post">
         <a href="/blog/2018/05/09/degrees-of-separation-with-end-users/">Lower Degrees of Separation with End Users</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2017/11/07/nyc-marathon-2017-race-report/">NYC Marathon 2017: Training and Race Report</a>
       </li>
     
   </ul>

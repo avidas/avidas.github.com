@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Reading, | Avi Das]]></title>
+  <link href="http://avidas.github.com/blog/categories/reading-/atom.xml" rel="self"/>
+  <link href="http://avidas.github.com/"/>
+  <updated>2018-12-24T15:00:36-05:00</updated>
+  <id>http://avidas.github.com/</id>
+  <author>
+    <name><![CDATA[Avi (Ananya Das)]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Books I read in 2018]]></title>
+    <link href="http://avidas.github.com/blog/2018/12/24/books-i-read-in-2018/"/>
+    <updated>2018-12-24T14:07:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2018/12/24/books-i-read-in-2018</id>
+    <content type="html"><![CDATA[<h3>General/Personal Development</h3>
+
+<ol>
+<li>The art of living (Thich nhat hanh): This is the best Thich nhat hanh I've read, composing his philosophy into day to day practices.</li>
+<li>Thinking in systems, a primer (Donella Meadows)</li>
+<li>Ain’t I a Woman: Black Women and Feminism (Bell Hooks)</li>
+<li>When: The Scientific Secrets of Perfect Timing (Daniel Pink)</li>
+<li>Sex at dawn (Christopher Ryan‎, Cacilda Jethá)</li>
+<li>Deep work (Cal Newport)</li>
+<li>The life changing Manga of Tidying Up (Marie Kondo)</li>
+<li>Flow: The Psychology of Optimal Experience (Mihaly Csikszentmihalyi)</li>
+<li>Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead (Brene Brown)</li>
+<li>So good they can’t ignore you (Cal Newport)</li>
+<li>How to change your mind (Michael Pollan): Eye-opening, challenging look at the resurgence of Psychedelics in mental health research.</li>
+<li>A life in parts (Bryan Cranston)</li>
+</ol>
+
+
+<!-- more -->
+
+
+<h3>Tech</h3>
+
+<ol>
+<li>Radical Candor (Kim Scott)</li>
+<li>The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win (Gene Kim)</li>
+<li>Designing data intensive applications (Martin Kleppmann)</li>
+<li>The master algorithm (Pedro Domingos)</li>
+<li>The manager’s path (Camille Fournier)</li>
+<li>The Passionate Programmer: Creating a Remarkable Career in Software Development (Chad Fowler)</li>
+</ol>
+
+
+<h3>Running</h3>
+
+<ol>
+<li>Running Rewired: Reinvent Your Run for Stability, Strength, and Speed (Jay Dicharry)</li>
+<li>Endure: Mind, Body, and the Curiously Elastic Limits of Human Performance (Alex Hutchinson)</li>
+<li>North (Scott Jurek)</li>
+<li>Again to Carthage (John L Parker)</li>
+<li>Running with the mind of meditation (Sakyong Mipham)</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>
