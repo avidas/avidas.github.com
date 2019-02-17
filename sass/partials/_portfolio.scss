@@ -1,0 +1,27 @@
+.portfolio-item-link {
+    a {
+        all: unset;
+    }
+}
+
+.portfolio-item {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    margin-bottom: 1.5em;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 2px 16px 0 #ccc;
+    img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.portfolio-info {
+    flex-shrink: 100;
+    a {
+        all: unset;
+        cursor: pointer;
+    }
+}
