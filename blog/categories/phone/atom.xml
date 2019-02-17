@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Phone | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/phone/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2019-02-17T12:59:51-05:00</updated>
+  <updated>2019-02-17T14:46:47-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -18,7 +18,7 @@
     <link href="http://avidas.github.com/blog/2013/08/04/viphackathon-know-your-reps/"/>
     <updated>2013-08-04T09:58:00-04:00</updated>
     <id>http://avidas.github.com/blog/2013/08/04/viphackathon-know-your-reps</id>
-    <content type="html"><![CDATA[<p>{% img left /images/Obama_eagle.jpg 350 350 Eagle says hack 'Obama eagle' 'Obama eagle' %}</p>
+    <content type="html"><![CDATA[<p><img class="left" src="/images/Obama_eagle.jpg" width="350" height="350" title="Obama eagle" alt="Obama eagle"></p>
 
 <p>How many people know their representatives for council/state/congress? How many local issues gets routed to the most relevant elected official? How do you know the status of the most relevant issues raised?</p>
 
@@ -36,7 +36,7 @@
 
 <p> The app was built with Windows Azure as Backend, Twilio is used for sms notification when officials respond to issues. Azavea is used to bring the elected officals information using the Geo Location.</p>
 
-<p>{% img right /images/VIPhack.jpg 350 350 'VIP awards' 'VIP awards' %}</p>
+<p><img class="right" src="/images/VIPhack.jpg" width="350" height="350" title="VIP awards" alt="VIP awards"></p>
 
 <p> We ended up winning Microsoft's award for the hackathon! Sadly they only had two phones for the three developers.</p>
 
