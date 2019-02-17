@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Software, | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/software-/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2019-02-17T14:58:52-05:00</updated>
+  <updated>2019-02-17T17:34:38-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Core tenants of highly effective software teams]]></title>
+    <link href="http://avidas.github.com/blog/2018/11/03/core-tenants-of-effective-software-teams/"/>
+    <updated>2018-11-03T11:47:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2018/11/03/core-tenants-of-effective-software-teams</id>
+    <content type="html"><![CDATA[<p><em>This blogpost is my thoughts only and does not necessarily represent the positions of current or past employers.</em></p>
+
+<p>We don't build software in a vacuum. Software involves people. Beyond organizations of a handful of people, hierarchy is beneficial. We get teams, commonly with engineering manager/lead, product manager, designers and engineers. What becomes crucial for the software and the product delivered then is the effectiveness of the team. Throughout my career in the industry and being part of many teams in different circumstances, I have started noticing some key patterns that really drives standout results in teams.</p>
+
+<ol>
+<li><p><strong>Believing in a common cause</strong>: The single biggest observation is that when a team of people believe in a common mission, they produce outsized returns. The most effective teams I have worked in all had a strong belief that they was a reason for the work they were doing. This also aids inter team collaboration over inter team competition, with teams often investing in tooling that makes the whole team better.<br/><br/>Engineering leaders can play a key role here to frame a compelling mission for the team. Hiring for the right role also becomes super important as a highly motivated individual in a role can be 2-10x more effective than someone unmotivated with similar ability. Having a competitor or a common enemy is great since we are predisposed to bond over defending ourselves from common enemies.</p></li>
+<li><p><strong>Psychological Safety</strong>: Google's <a href="https://www.nytimes.com/2016/02/28/magazine/what-google-learned-from-its-quest-to-build-the-perfect-team.html?_r=0">Project Aristotle</a> studied 180 teams over two years and came to the conclusion that psycological safety was the best signal for how effective a team is. How comfortable do people in the team feel to share vulnerability without fear of retribution? How comfortable do people feel asking questions without fear of asking something silly or share ideas without fear of being shut down without listening? Team's with high levels of psychological safety can have conflicts, but can deal with them in a mature way, being able to separate disagreement about ideas from disagreement with people.<br/><br/>For more senior engineers/technical leaders, this is crucially important since they are in a position to determine this culture for the team. Forming strong personal relationships with the team can be really valuable for fostering safety within the team. People like their leaders to be human, and admitting your own fallibility is a great way to form trust with team members.</p></li>
+<li><p><strong>Diversity of Thought</strong>: Diversity is a word that is commonly heard in the tech industry, and for good reason. Having diversity of people is a proven way to achieving diversity of thought, which is just one of the reasons why we must invest in software communities of women and minorities. Inclusiveness is one of the key pillars of psychological safety in a team, building on from the last section. Moreover, when software is aimed at global audience, but the team is homogeneous, it is easy to be fooled that a wide audience will get their needs met.<br/><br/>Even teams of experienced contributors can fall prey to atrophy and decay, without fresh ideas so common in upstarts. A team of really excited newer developers may not realize that in balance lies the key to long term personal, team and product success. Diversity of experience in a team helps to avoid these common traps.<br/><br/>Finally, cross functional teams can be more effective than teams exclusively focusing on frontend/backend/mobile. Recognizing the individual contributor's interest in user experience/security/governance etc and enabling space for that one of the most enabling things an engineer leader can do.</p></li>
+<li><p><strong>Growth and Ownership</strong>: It is immensely gratifying for people to feel that they are growing, and knowing that they are playing a role in the growth of others. When team members feel confident about the path in front of them can still have challenges, they are far less likely to be unmotivated and plateau. This is big for retention, since job changes frequently are a result of people feeling stuck and needing to make a change. It is costly to replace engineers, especially ones already trained and performing well in their role.<br/><br/>A key intrinsic motivator for many is the feeling of ownership. Being able to really sink their teeth into a hard problem and come up with something they are proud of. Teams where people really believed that they have strong ownership of the product also care more about the end users experience, resulting in a better product.<br/><br/>As engineering leadership, one of the best signals of good management is to have clarity in career ladders and promote the right people. A bias for people who make others around them better can be healthy. It is my experience that promotions should rarely come as a surprise to the individual or the team. Demonstrated investment in people as future leaders is also a major indication of a company's belief in their people, sending them to conferences, training and giving license for creativity.</p></li>
+<li><p><strong>Work Environment</strong>: This is a controversial one, but I do believe that companies today have bought way too much into the open office movement. While a return to cubicles does not feel desirable, dedicated interruption free zones (both space and time) are essential for good software. A chaotic office environment can also mean chaos in your codebase.<br/><br/>Debates range whether standing desk or sitting is better, however many monitors are necessary. My belief here is that the team should be colocated but individuals should be empowered to find the best working situation for the track of work they are in. I have personally found that standing keeps me on my toes, making it great for lots of small tasks, whereas sitting is best for tasks that need deep thought.</p></li>
+</ol>
+
+
+<p><strong>When things fall apart</strong></p>
+
+<p>We do not live in a perfect world. Recessions, unexpected downsizing, market competition and many other forces can impact access to resources which could result in ways in a group of people come in to work together and stop working together. Lot of us have all worked in a team where that magic of a great team existed, and the team achieved things together what could not be achieved by individuals. It is important for us to be thinking with intention and purpose and help each other build and find teams to discover that magic.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Lower Degrees of Separation with End Users]]></title>
@@ -29,6 +53,97 @@
 <p>Tomorrow, when you get to work, ask yourself that question. Do you know who your users are and how they use your product? How many degrees of separation would you have to navigate to find that answer? If you are not comfortable with the answer, maybe you can think of a way to change that.</p>
 
 <p>Disclaimer: Thoughts expressed in the article are mine only, and does not represent the positions of current or past employers.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Web Payments by First Principles: Data Architecture]]></title>
+    <link href="http://avidas.github.com/blog/2017/10/25/web-payments-by-first-principles-data-architecture/"/>
+    <updated>2017-10-25T20:22:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2017/10/25/web-payments-by-first-principles-data-architecture</id>
+    <content type="html"><![CDATA[<p>Once you start receiving payments on your site, congratulations! You are likely building something people want. But now you are at the point of having to manage payments data. Developers are generally aware that handling payments data should be done with care, but it is not immediately obvious what the different considerations are. In this blog post, we will go over strategies that you can follow to future proof your payments stack from the point of a fledgeling startup to a mature, stable business.</p>
+
+<p>With storing payments data, there are quite a few considerations. What you should store and shouldn’t. In the event of a security breach on your site, you want your users financial information to be protected. Moreover, you want to architect your data storage for any current and future stakeholder requests. When it comes to payments, there are generally many stakeholders, let’s talk about a handful of them.</p>
+
+<p>You are going to have technical stakeholders: your managers and other product teams who have questions about payments. Business entities that have to report their earnings for filing taxes and reporting earnings to shareholders who will need their data from you. As someone buying/selling online, your data needs to be stored in a way to make sure you don’t break compliance (PCI/SOX etc). Support/operations will be your stakeholders when customers have problems paying and come to you for help. Let’s get into how we can address these asks.</p>
+
+<ol>
+<li><p><strong>Avoid storing sensitive personal information</strong>: Any application sending payments information such as credit card numbers, cvv to their server will have to become PCI compliant. This a financial and logistics burden which you can avoid for the most part by using a gateway provider such as Braintree/Stripe/Adyen. Usually your browser/mobile app will authenticate with the gateway and get back a token, which you can relay back to your server. This removes the danger of accidentally logging payments data, since the only data your server will see is a payments token. Even if you do get data breached, these tokens would not be useful to the attacker. This also removes the need for you to be PCI compliant which is tens of thousands of dollars in yearly expenses.  More data you should avoid storing include any plaintext passwords and secret keys, common web best practices.</p></li>
+<li><p><strong>Freeze request/response from external providers</strong>: You need to store every single request/response that you are making to your external providers, ideally in an append-only data storage. One of the common requests that we get in payments is to recreate the transaction as it happened. This is hard to do without storing the data at point in time of the transaction. Moreover, the business logic related to transaction such as taxes, fees calculations also need to be versioned and stored so that you can recreate the transaction at a certain point in time.</p></li>
+<li><p><strong>Encourage immutability and lower side effects</strong>: Similar to the point above, you should never destroy payments or charging data. There are easy ways to archive and hide the data from users. This is very useful for historical financial reporting, triaging potential inefficiencies in your charging/billing process, and dealing with any disputes with your payments provider.</p></li>
+<li><p><strong>Denormalize and index for searchability</strong>: Payments data is generally more write heavy but needs to be stored in a way for ease of triaging. Most payments providers provide unique request ids with their calls, and you should supply your own if that is possible. That way, you can set up bidirectional tracking, so that each individual call to payments is trackable from both sides. Setting indices on those unique ids is helpful for search. If the table is growing too large, it is useful to only keep upto a certain limit in your app and store the rest in a data warehouse such as AWS Redshift or Google Bigquery. The data warehouse strategy also enables you to normalize the data if you want easier access to data in one place and avoid expensive joins.</p></li>
+<li><p><strong>Prefer cents as units instead of dollars</strong>: You can avoid a whole class of floating point bugs by storing in cents and using integers as opposed to float for all your arithmetic. Since floats in computing are really a representation of an infinite number, the can only be approximation and lead to hideous rounding errors. This is a good read on that topic https://stackoverflow.com/questions/3730019/why-not-use-double-or-float-to-represent-currency. Using established tools such as the money gem for currency in ruby is also very useful.</p></li>
+</ol>
+
+
+<p>The above strategies will be useful for both internal and external users of your payments stack and help to protect your money and time when it comes to payments data. Please reach out via comments or <a href="mailto:avi@aviadas.com">email with feedback!</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Web Payments by First Principles: Testing]]></title>
+    <link href="http://avidas.github.com/blog/2017/05/19/web-payments-by-first-principles-testing/"/>
+    <updated>2017-05-19T16:21:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2017/05/19/web-payments-by-first-principles-testing</id>
+    <content type="html"><![CDATA[<p>In recent years, payment API providers have made integrating payments much easier than it used to be. Instead of dealing with banks and exchanges, ecommerce apps can integrate with payment gateways that will allow accepting any form of credit cards, and most payment methods such as Apple Pay and PayPal. Large pdfs with instructions manuals are replaced by intelligent documentation sites with walkthroughs and tutorials. Despite that, it is not uncommon to hear developers referring payments as their least favorite part of the development process. Payments integrations are often seen as a necessary evil, to be done once, and hopefully be forgotten thereafter. Often the reasoning is that investing in better payments integration is often not a profit center for companies.</p>
+
+<p>I have worked the last few years in the online payments industry, building APIS, sdks and reliability tools. While payments integration has gotten easier, developers still do make mistakes which are easily avoidable. Here are some of the best practices I would recommend for testing payments in your applications.</p>
+
+<ol>
+<li><p><strong>Isolate interation between application code and payment gateway in a package</strong>: Once an app grows to a certain size, it may have different ways of interacting with payments gateways. You may be accepting recurring payments and accepting webhooks from the payments provider, just in time checkout or interact with point of sales systems. Having your own package that abstracts out interaction with the payments APIs can help centralize all outgoing requests back and forth with the payments API. You can add your own logging and monitoring, stub out the interaction with payments API to have faster unit tests and centralize knowledge about how you serialize and deserialize messages from and to your payments provider.</p></li>
+<li><p><strong>Sandbox Testing</strong>: Most payment API/gateways expose a sandbox environments where you can test out a real integration with the API without moving any money. Ideally your integration tests running continously in Jenkins/Travis/Circle CI should be hitting those endpoints.</p></li>
+<li><p><strong>Monitoring</strong>: You should monitor your sandbox integration as well as your live system. What does the graph of 200s vs 400s HTTP response codes from the payments API look like? Are you getting unexpected 400s? How about 500s? What does the response times look like?</p></li>
+<li><p><strong>Automated QA</strong>: To avoid putting undue stress on your computation and database resources, background tasks are common strategies to do break down calculations for common payments needs such as reporting and analytics. When calculations are done in partial chunks, automated jobs that test whether those calculations have been done properly can reduce a lot of load for your support and developers when something goes wrong midway between a job, or failure.</p></li>
+<li><p><strong>Negative/Failure Testing</strong>: Special card numbers provided by payments providers can help you recreate payment declines due to potential denial from processors for reasons such as not enough funds in account. You may also be able to test for rejections due to fraud and compliance. This helps lower the range of potential unknown errors your site may run into, especially when expanding to new markets or accepting more payment methods.</p></li>
+<li><p><strong>Live testing</strong>: Live testing against payment providers is often tricky, and can led to accounts getting shut down if there is undue load on the API. Despite that, some testing in live is absolutely necessary before you can be confident that on release day, your integration is working as expected.</p></li>
+<li><p><strong>Test for absence of sentive information</strong>: Storing user information such as credit card number or passwords is a very common way of violation of PCI compliance. Regex patterns can be used to make sure that neither your logs nor your database is storing sensitive information.</p></li>
+</ol>
+
+
+<p>I intend to write more posts in this series, covering topics such as considerations before and after going live with payments, when scaling up and so on. If you liked this post, please share or comment.</p>
+
+<p>If you have feedback on this blog post or integrating payments, please <a href="mailto:avi@aviadas.com">feel free to reach out!</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Takeaways from MicroConf Starter 2017]]></title>
+    <link href="http://avidas.github.com/blog/2017/04/21/takeaways-from-microconf-starter-2017/"/>
+    <updated>2017-04-21T17:55:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2017/04/21/takeaways-from-microconf-starter-2017</id>
+    <content type="html"><![CDATA[<p>With the rise in VC funded startups, there was not a big community for individuals and small teams launching and supporting digital product businesses with their own profits. Rob Walling and Mike Taber noticed that need and created MicroConf, a conference for self-funded software startups.</p>
+
+<p>I was at MicroConf Starter last week. In its 12th year, MicroConf split into Starter and Growth Tiers, the starter edition for people who do not make a full time income from digital products. If you are the kind of person who enjoys taking an idea to a functional product that solves real world problems, MicroConf is a conference where everyone has that shared goal.</p>
+
+<p>Some at MicroConf have launched products and were doing quite well from a digital product business, let it be online courses, software plugins, SAAS etc. There were also number of people who wanted to learn more about find the right idea, product-market fit, sales and marketing.</p>
+
+<p>I really enjoyed the pragmatic voice of the conference, keeping focus on balance. The conference does not shy away from the fact that it is not a easy task to bootstrap software products.</p>
+
+<p><a href="https://shai.io/MicroConf/">MicroConf has great notes</a> for the whole conference. Instead of trying to go through the whole conference, here are some of my takeaways from MicroConf Starter 2017.</p>
+
+<ol>
+<li><p><strong>Consistency</strong>: Rob Walling emphasized start of the conference that the success of MicroConf will be what these two days can do for the remaining 363 days of the year. Often consistency made the difference in the eventual endurance and success of the product. Josh Doddy's blog was fairly dormant for the first 12-14 months but peaking exponentially near its current runtime of 18 months. Mastermind groups were mentioned as a great way for a group of people who help each other stay on track.</p></li>
+<li><p><strong>Finding an idea worth building</strong>: Multiple speakers mentioned the need to take a hard look at your stocks and assets. What questions do people keep asking you? What are you passionate about that other people find boring? What would you from 6 months ago find valuable? All these were from Ben Orenstein's talk, one of my favorite at the conference. Patrick Mckenzie also touched on the same topic, to double down on what you do very well already and what the market already buys from you. Justin Jackson mentioned the need to find the groups you are best equipped to serve, and to research the audience and find ideas rather than thinking in your own head what the problem could be. Mike Taber also emphasized focusing if you are in fact the right person to be building that product.</p></li>
+<li><p><strong>When to launch</strong>: An MVP should solve a well defined problem, not solve a portion of it or solve every possible iteration of the problem. However, the lack of polish is intentional to see how much inconvenience the customers would endure to solve their problem. Justin Jackson had a great point that an MVP should be the smallest product you could build to disprove a hypothesis. It was interesting to see multiple speakers mentioning the importance of putting your face right by your product, to encourage trust and take responsibility of what you are delivering.</p></li>
+<li><p><strong>On user acquisition</strong>: Probably the biggest concern of fledgling products, user acquisition/outreach had dedicated talks. Some of the key points where to focus on conversations with users and doubling down on a few approaches e.g. SEO, Content, Ads rather than throwing in the kitchen sink. Looking for integrations with other products by forming partnerships was a common theme. Key questions to ask users were to ask how they were solving the problem today, what they have tried or ask for introductions to someone with that problem. In the beginning, unscalable strategies such as concierge onboarding are useful, specially for SAAS products.</p></li>
+<li><p><strong>Getting results</strong>: Users are the best signals here, and if you have to chase people down to use your products, it may not be solving a real problem. Google analytics charts showing growth and conversion rates were part of almost every presentation. At the same time, reading those charts can be a hard story, often showing charts recovering from a flatline or decline to eventual success because the founders believed enough to carry on. Its hard to think convictions to be infallible in the face of data however, and sometimes it is time to give up.</p></li>
+</ol>
+
+
+<!-- more -->
+
+
+<ol>
+<li><p><strong>Pricing and revenue</strong>: Patrick Mckenzie mentioned that the objective to be a predictable sales process to make profit every month. The question of how much to charge for the product is tricky for founders. Both him, Ben and Jordan Gal emphasized the need for running experiments on your pricing page. Surprisingly enough, an increase in prices may often result in better customers in the long run even though in the short term your trials may fall.</p></li>
+<li><p><strong>Motivation</strong>: People are motivated differently, but momentum is a key driver. Ben mentioned the need to reverse the relationship, not to wait for inspiration but to get started, feel the success and then get inspired. Sherry Walling mentioned using positive stress to fuel motivation. Lot of the folks in the conference started when they already had a lot of responsibilities, but often it is not time that is lacking, but the prioritization. Making more time is a function of reorganizing your priorities. Delegation is another important tool to master, especially for adjacent responsibilities to the key goals.</p></li>
+<li><p><strong>Success and Failure</strong>: Jordan Gal had a great point that success is the ability to go from one failure to another without loss of enthusiasm. But success is quite subjective, and often reinforced by societies expectations. Perhaps it is worth asking if you are helping people solve problems. Failure is often more interesting part of the conference, to see what these speakers have tried but stopped when they did not deliver the results.</p></li>
+<li><p><strong>Maintaining balance</strong>: Almost every speaker mentioned the need to for maintaining the balance in your life, relationships and family. Sherry Walling's talk was dedicated to this, pointing out the need for self reflection and care. Taking retreats to step away from the grind is valuable, giving time to ask the important questions. Questions such as what pieces of day to day life is infusing you with energy? How can I readjust priorities so that I can live in those sweet spots more and do less of what is causing stress? The other really important point was about feedback loops, getting advice, forming mastermind groups and making sure that there are others weighing on important decisions</p></li>
+</ol>
+
+
+<p>Overall, I loved the theme and people at Micronconf. It was a blend of driven, helpful people interested in solving problems and owning software products. I would highly recommend the conference for anyone looking to launch products and interested in bootstrapping.</p>
+
+<p>If you have feedback on this blog post or MicroConf, please <a href="mailto:avi@aviadas.com">feel free to reach out!</a>.</p>
 ]]></content>
   </entry>
   

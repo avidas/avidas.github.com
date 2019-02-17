@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Software | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/software/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2019-02-17T14:58:52-05:00</updated>
+  <updated>2019-02-17T17:34:38-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -14,100 +14,25 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Core tenants of highly effective software teams]]></title>
-    <link href="http://avidas.github.com/blog/2018/11/03/core-tenants-of-effective-software-teams/"/>
-    <updated>2018-11-03T11:47:00-04:00</updated>
-    <id>http://avidas.github.com/blog/2018/11/03/core-tenants-of-effective-software-teams</id>
-    <content type="html"><![CDATA[<p><em>This blogpost is my thoughts only and does not necessarily represent the positions of current or past employers.</em></p>
+    <title type="html"><![CDATA[Scipy 2014: Python as expression to push boundaries in science]]></title>
+    <link href="http://avidas.github.com/blog/2014/07/13/scipy-2014-python-as-expression-to-push-boundaries-in-science/"/>
+    <updated>2014-07-13T20:22:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2014/07/13/scipy-2014-python-as-expression-to-push-boundaries-in-science</id>
+    <content type="html"><![CDATA[<p>It's not everyday that the person sitting next to you interacts with Mars Rovers everyday or is trying to build a data pipeline to handle petabyte-scale genomics data. But that was perhaps the key takeway from my first <a href="https://conference.scipy.org/scipy2014/">Python conference</a>: a large number of people pushing the boundaries in scientific disciplines and using Python as their means of expression.</p>
 
-<p>We don't build software in a vacuum. Software involves people. Beyond organizations of a handful of people, hierarchy is beneficial. We get teams, commonly with engineering manager/lead, product manager, designers and engineers. What becomes crucial for the software and the product delivered then is the effectiveness of the team. Throughout my career in the industry and being part of many teams in different circumstances, I have started noticing some key patterns that really drives standout results in teams.</p>
+<p>I have been using Python for a while now, both at work and for hobby projects but until of late have mostly been in the peripheries in contributions to open source projects. When I learned about Scientific Python conference right near to me in Austin, I was immediately interested. If you buy that there is such a thing as language wars, scientific computing has been one of Python's key wins. With libraries such as NumPy, Matplotlib and Pandas (and of course IPython), Python have dominated the Scientific Python landscape alongside R and Julia.</p>
 
-<ol>
-<li><p><strong>Believing in a common cause</strong>: The single biggest observation is that when a team of people believe in a common mission, they produce outsized returns. The most effective teams I have worked in all had a strong belief that they was a reason for the work they were doing. This also aids inter team collaboration over inter team competition, with teams often investing in tooling that makes the whole team better.<br/><br/>Engineering leaders can play a key role here to frame a compelling mission for the team. Hiring for the right role also becomes super important as a highly motivated individual in a role can be 2-10x more effective than someone unmotivated with similar ability. Having a competitor or a common enemy is great since we are predisposed to bond over defending ourselves from common enemies.</p></li>
-<li><p><strong>Psychological Safety</strong>: Google's <a href="https://www.nytimes.com/2016/02/28/magazine/what-google-learned-from-its-quest-to-build-the-perfect-team.html?_r=0">Project Aristotle</a> studied 180 teams over two years and came to the conclusion that psycological safety was the best signal for how effective a team is. How comfortable do people in the team feel to share vulnerability without fear of retribution? How comfortable do people feel asking questions without fear of asking something silly or share ideas without fear of being shut down without listening? Team's with high levels of psychological safety can have conflicts, but can deal with them in a mature way, being able to separate disagreement about ideas from disagreement with people.<br/><br/>For more senior engineers/technical leaders, this is crucially important since they are in a position to determine this culture for the team. Forming strong personal relationships with the team can be really valuable for fostering safety within the team. People like their leaders to be human, and admitting your own fallibility is a great way to form trust with team members.</p></li>
-<li><p><strong>Diversity of Thought</strong>: Diversity is a word that is commonly heard in the tech industry, and for good reason. Having diversity of people is a proven way to achieving diversity of thought, which is just one of the reasons why we must invest in software communities of women and minorities. Inclusiveness is one of the key pillars of psychological safety in a team, building on from the last section. Moreover, when software is aimed at global audience, but the team is homogeneous, it is easy to be fooled that a wide audience will get their needs met.<br/><br/>Even teams of experienced contributors can fall prey to atrophy and decay, without fresh ideas so common in upstarts. A team of really excited newer developers may not realize that in balance lies the key to long term personal, team and product success. Diversity of experience in a team helps to avoid these common traps.<br/><br/>Finally, cross functional teams can be more effective than teams exclusively focusing on frontend/backend/mobile. Recognizing the individual contributor's interest in user experience/security/governance etc and enabling space for that one of the most enabling things an engineer leader can do.</p></li>
-<li><p><strong>Growth and Ownership</strong>: It is immensely gratifying for people to feel that they are growing, and knowing that they are playing a role in the growth of others. When team members feel confident about the path in front of them can still have challenges, they are far less likely to be unmotivated and plateau. This is big for retention, since job changes frequently are a result of people feeling stuck and needing to make a change. It is costly to replace engineers, especially ones already trained and performing well in their role.<br/><br/>A key intrinsic motivator for many is the feeling of ownership. Being able to really sink their teeth into a hard problem and come up with something they are proud of. Teams where people really believed that they have strong ownership of the product also care more about the end users experience, resulting in a better product.<br/><br/>As engineering leadership, one of the best signals of good management is to have clarity in career ladders and promote the right people. A bias for people who make others around them better can be healthy. It is my experience that promotions should rarely come as a surprise to the individual or the team. Demonstrated investment in people as future leaders is also a major indication of a company's belief in their people, sending them to conferences, training and giving license for creativity.</p></li>
-<li><p><strong>Work Environment</strong>: This is a controversial one, but I do believe that companies today have bought way too much into the open office movement. While a return to cubicles does not feel desirable, dedicated interruption free zones (both space and time) are essential for good software. A chaotic office environment can also mean chaos in your codebase.<br/><br/>Debates range whether standing desk or sitting is better, however many monitors are necessary. My belief here is that the team should be colocated but individuals should be empowered to find the best working situation for the track of work they are in. I have personally found that standing keeps me on my toes, making it great for lots of small tasks, whereas sitting is best for tasks that need deep thought.</p></li>
-</ol>
+<p>When such a strong ecosystem is matched by a very welcoming community, there is a recipe for a conference worth being at. Well, If you can get past the imposter syndrome of being at a place with the highest density of phds of any place I have ever been at.</p>
 
-
-<p><strong>When things fall apart</strong></p>
-
-<p>We do not live in a perfect world. Recessions, unexpected downsizing, market competition and many other forces can impact access to resources which could result in ways in a group of people come in to work together and stop working together. Lot of us have all worked in a team where that magic of a great team existed, and the team achieved things together what could not be achieved by individuals. It is important for us to be thinking with intention and purpose and help each other build and find teams to discover that magic.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Web Payments by First Principles: Data Architecture]]></title>
-    <link href="http://avidas.github.com/blog/2017/10/25/web-payments-by-first-principles-data-architecture/"/>
-    <updated>2017-10-25T20:22:00-04:00</updated>
-    <id>http://avidas.github.com/blog/2017/10/25/web-payments-by-first-principles-data-architecture</id>
-    <content type="html"><![CDATA[<p>Once you start receiving payments on your site, congratulations! You are likely building something people want. But now you are at the point of having to manage payments data. Developers are generally aware that handling payments data should be done with care, but it is not immediately obvious what the different considerations are. In this blog post, we will go over strategies that you can follow to future proof your payments stack from the point of a fledgeling startup to a mature, stable business.</p>
-
-<p>With storing payments data, there are quite a few considerations. What you should store and shouldn’t. In the event of a security breach on your site, you want your users financial information to be protected. Moreover, you want to architect your data storage for any current and future stakeholder requests. When it comes to payments, there are generally many stakeholders, let’s talk about a handful of them.</p>
-
-<p>You are going to have technical stakeholders: your managers and other product teams who have questions about payments. Business entities that have to report their earnings for filing taxes and reporting earnings to shareholders who will need their data from you. As someone buying/selling online, your data needs to be stored in a way to make sure you don’t break compliance (PCI/SOX etc). Support/operations will be your stakeholders when customers have problems paying and come to you for help. Let’s get into how we can address these asks.</p>
+<h3>Takeaways</h3>
 
 <ol>
-<li><p><strong>Avoid storing sensitive personal information</strong>: Any application sending payments information such as credit card numbers, cvv to their server will have to become PCI compliant. This a financial and logistics burden which you can avoid for the most part by using a gateway provider such as Braintree/Stripe/Adyen. Usually your browser/mobile app will authenticate with the gateway and get back a token, which you can relay back to your server. This removes the danger of accidentally logging payments data, since the only data your server will see is a payments token. Even if you do get data breached, these tokens would not be useful to the attacker. This also removes the need for you to be PCI compliant which is tens of thousands of dollars in yearly expenses.  More data you should avoid storing include any plaintext passwords and secret keys, common web best practices.</p></li>
-<li><p><strong>Freeze request/response from external providers</strong>: You need to store every single request/response that you are making to your external providers, ideally in an append-only data storage. One of the common requests that we get in payments is to recreate the transaction as it happened. This is hard to do without storing the data at point in time of the transaction. Moreover, the business logic related to transaction such as taxes, fees calculations also need to be versioned and stored so that you can recreate the transaction at a certain point in time.</p></li>
-<li><p><strong>Encourage immutability and lower side effects</strong>: Similar to the point above, you should never destroy payments or charging data. There are easy ways to archive and hide the data from users. This is very useful for historical financial reporting, triaging potential inefficiencies in your charging/billing process, and dealing with any disputes with your payments provider.</p></li>
-<li><p><strong>Denormalize and index for searchability</strong>: Payments data is generally more write heavy but needs to be stored in a way for ease of triaging. Most payments providers provide unique request ids with their calls, and you should supply your own if that is possible. That way, you can set up bidirectional tracking, so that each individual call to payments is trackable from both sides. Setting indices on those unique ids is helpful for search. If the table is growing too large, it is useful to only keep upto a certain limit in your app and store the rest in a data warehouse such as AWS Redshift or Google Bigquery. The data warehouse strategy also enables you to normalize the data if you want easier access to data in one place and avoid expensive joins.</p></li>
-<li><p><strong>Prefer cents as units instead of dollars</strong>: You can avoid a whole class of floating point bugs by storing in cents and using integers as opposed to float for all your arithmetic. Since floats in computing are really a representation of an infinite number, the can only be approximation and lead to hideous rounding errors. This is a good read on that topic https://stackoverflow.com/questions/3730019/why-not-use-double-or-float-to-represent-currency. Using established tools such as the money gem for currency in ruby is also very useful.</p></li>
-</ol>
-
-
-<p>The above strategies will be useful for both internal and external users of your payments stack and help to protect your money and time when it comes to payments data. Please reach out via comments or <a href="mailto:avi@aviadas.com">email with feedback!</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Web Payments by First Principles: Testing]]></title>
-    <link href="http://avidas.github.com/blog/2017/05/19/web-payments-by-first-principles-testing/"/>
-    <updated>2017-05-19T16:21:00-04:00</updated>
-    <id>http://avidas.github.com/blog/2017/05/19/web-payments-by-first-principles-testing</id>
-    <content type="html"><![CDATA[<p>In recent years, payment API providers have made integrating payments much easier than it used to be. Instead of dealing with banks and exchanges, ecommerce apps can integrate with payment gateways that will allow accepting any form of credit cards, and most payment methods such as Apple Pay and PayPal. Large pdfs with instructions manuals are replaced by intelligent documentation sites with walkthroughs and tutorials. Despite that, it is not uncommon to hear developers referring payments as their least favorite part of the development process. Payments integrations are often seen as a necessary evil, to be done once, and hopefully be forgotten thereafter. Often the reasoning is that investing in better payments integration is often not a profit center for companies.</p>
-
-<p>I have worked the last few years in the online payments industry, building APIS, sdks and reliability tools. While payments integration has gotten easier, developers still do make mistakes which are easily avoidable. Here are some of the best practices I would recommend for testing payments in your applications.</p>
-
-<ol>
-<li><p><strong>Isolate interation between application code and payment gateway in a package</strong>: Once an app grows to a certain size, it may have different ways of interacting with payments gateways. You may be accepting recurring payments and accepting webhooks from the payments provider, just in time checkout or interact with point of sales systems. Having your own package that abstracts out interaction with the payments APIs can help centralize all outgoing requests back and forth with the payments API. You can add your own logging and monitoring, stub out the interaction with payments API to have faster unit tests and centralize knowledge about how you serialize and deserialize messages from and to your payments provider.</p></li>
-<li><p><strong>Sandbox Testing</strong>: Most payment API/gateways expose a sandbox environments where you can test out a real integration with the API without moving any money. Ideally your integration tests running continously in Jenkins/Travis/Circle CI should be hitting those endpoints.</p></li>
-<li><p><strong>Monitoring</strong>: You should monitor your sandbox integration as well as your live system. What does the graph of 200s vs 400s HTTP response codes from the payments API look like? Are you getting unexpected 400s? How about 500s? What does the response times look like?</p></li>
-<li><p><strong>Automated QA</strong>: To avoid putting undue stress on your computation and database resources, background tasks are common strategies to do break down calculations for common payments needs such as reporting and analytics. When calculations are done in partial chunks, automated jobs that test whether those calculations have been done properly can reduce a lot of load for your support and developers when something goes wrong midway between a job, or failure.</p></li>
-<li><p><strong>Negative/Failure Testing</strong>: Special card numbers provided by payments providers can help you recreate payment declines due to potential denial from processors for reasons such as not enough funds in account. You may also be able to test for rejections due to fraud and compliance. This helps lower the range of potential unknown errors your site may run into, especially when expanding to new markets or accepting more payment methods.</p></li>
-<li><p><strong>Live testing</strong>: Live testing against payment providers is often tricky, and can led to accounts getting shut down if there is undue load on the API. Despite that, some testing in live is absolutely necessary before you can be confident that on release day, your integration is working as expected.</p></li>
-<li><p><strong>Test for absence of sentive information</strong>: Storing user information such as credit card number or passwords is a very common way of violation of PCI compliance. Regex patterns can be used to make sure that neither your logs nor your database is storing sensitive information.</p></li>
-</ol>
-
-
-<p>I intend to write more posts in this series, covering topics such as considerations before and after going live with payments, when scaling up and so on. If you liked this post, please share or comment.</p>
-
-<p>If you have feedback on this blog post or integrating payments, please <a href="mailto:avi@aviadas.com">feel free to reach out!</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Takeaways from MicroConf Starter 2017]]></title>
-    <link href="http://avidas.github.com/blog/2017/04/21/takeaways-from-microconf-starter-2017/"/>
-    <updated>2017-04-21T17:55:00-04:00</updated>
-    <id>http://avidas.github.com/blog/2017/04/21/takeaways-from-microconf-starter-2017</id>
-    <content type="html"><![CDATA[<p>With the rise in VC funded startups, there was not a big community for individuals and small teams launching and supporting digital product businesses with their own profits. Rob Walling and Mike Taber noticed that need and created MicroConf, a conference for self-funded software startups.</p>
-
-<p>I was at MicroConf Starter last week. In its 12th year, MicroConf split into Starter and Growth Tiers, the starter edition for people who do not make a full time income from digital products. If you are the kind of person who enjoys taking an idea to a functional product that solves real world problems, MicroConf is a conference where everyone has that shared goal.</p>
-
-<p>Some at MicroConf have launched products and were doing quite well from a digital product business, let it be online courses, software plugins, SAAS etc. There were also number of people who wanted to learn more about find the right idea, product-market fit, sales and marketing.</p>
-
-<p>I really enjoyed the pragmatic voice of the conference, keeping focus on balance. The conference does not shy away from the fact that it is not a easy task to bootstrap software products.</p>
-
-<p><a href="https://shai.io/MicroConf/">MicroConf has great notes</a> for the whole conference. Instead of trying to go through the whole conference, here are some of my takeaways from MicroConf Starter 2017.</p>
-
-<ol>
-<li><p><strong>Consistency</strong>: Rob Walling emphasized start of the conference that the success of MicroConf will be what these two days can do for the remaining 363 days of the year. Often consistency made the difference in the eventual endurance and success of the product. Josh Doddy's blog was fairly dormant for the first 12-14 months but peaking exponentially near its current runtime of 18 months. Mastermind groups were mentioned as a great way for a group of people who help each other stay on track.</p></li>
-<li><p><strong>Finding an idea worth building</strong>: Multiple speakers mentioned the need to take a hard look at your stocks and assets. What questions do people keep asking you? What are you passionate about that other people find boring? What would you from 6 months ago find valuable? All these were from Ben Orenstein's talk, one of my favorite at the conference. Patrick Mckenzie also touched on the same topic, to double down on what you do very well already and what the market already buys from you. Justin Jackson mentioned the need to find the groups you are best equipped to serve, and to research the audience and find ideas rather than thinking in your own head what the problem could be. Mike Taber also emphasized focusing if you are in fact the right person to be building that product.</p></li>
-<li><p><strong>When to launch</strong>: An MVP should solve a well defined problem, not solve a portion of it or solve every possible iteration of the problem. However, the lack of polish is intentional to see how much inconvenience the customers would endure to solve their problem. Justin Jackson had a great point that an MVP should be the smallest product you could build to disprove a hypothesis. It was interesting to see multiple speakers mentioning the importance of putting your face right by your product, to encourage trust and take responsibility of what you are delivering.</p></li>
-<li><p><strong>On user acquisition</strong>: Probably the biggest concern of fledgling products, user acquisition/outreach had dedicated talks. Some of the key points where to focus on conversations with users and doubling down on a few approaches e.g. SEO, Content, Ads rather than throwing in the kitchen sink. Looking for integrations with other products by forming partnerships was a common theme. Key questions to ask users were to ask how they were solving the problem today, what they have tried or ask for introductions to someone with that problem. In the beginning, unscalable strategies such as concierge onboarding are useful, specially for SAAS products.</p></li>
-<li><p><strong>Getting results</strong>: Users are the best signals here, and if you have to chase people down to use your products, it may not be solving a real problem. Google analytics charts showing growth and conversion rates were part of almost every presentation. At the same time, reading those charts can be a hard story, often showing charts recovering from a flatline or decline to eventual success because the founders believed enough to carry on. Its hard to think convictions to be infallible in the face of data however, and sometimes it is time to give up.</p></li>
+<li><p><strong>Python catching up in areas where it lacked</strong>:
+Performance, distribution, scalibility and reproducability were some of main themes at the conference. This addresses some of the historic lackings of the language. Sometimes this is via adoption of new tools such as docker for containerizing work enviroments for remote co-working researchers. Dependency on other languages has been one of the major pain points in working with the scientific Python libraries, so it is great to see Conda and HashDist (which I just discovered) to take that head on. Interoperability and scalability are two of the main problems Blaze is solving, and Bokeh and Plotly takes on the problems of publishing and sharing interactive visualizations in Python.</p></li>
+<li><p><strong> New tools for my workflow</strong>:
+There are many tools which deserve a space here, but I was primarily exited to discover pyspark, yt, plotly, sumatra/vistrails, hashdist and airspeed velocity. Version control and workflow control are familiar terratories for software engineers, but the idea of event control was new to me, something explored in a Birds of a feather discussion.</p></li>
+<li><p><strong>Birds of a Feather talks are revealing</strong>:
+Birds of a feather discussions were sometimes my favorite, where there was candid sharing of painpoints and their solutions from the community members. It was also good to know what were the open problems in various areas are as they often indicate valuable areas to focus on.</p></li>
 </ol>
 
 
@@ -115,61 +40,132 @@
 
 
 <ol>
-<li><p><strong>Pricing and revenue</strong>: Patrick Mckenzie mentioned that the objective to be a predictable sales process to make profit every month. The question of how much to charge for the product is tricky for founders. Both him, Ben and Jordan Gal emphasized the need for running experiments on your pricing page. Surprisingly enough, an increase in prices may often result in better customers in the long run even though in the short term your trials may fall.</p></li>
-<li><p><strong>Motivation</strong>: People are motivated differently, but momentum is a key driver. Ben mentioned the need to reverse the relationship, not to wait for inspiration but to get started, feel the success and then get inspired. Sherry Walling mentioned using positive stress to fuel motivation. Lot of the folks in the conference started when they already had a lot of responsibilities, but often it is not time that is lacking, but the prioritization. Making more time is a function of reorganizing your priorities. Delegation is another important tool to master, especially for adjacent responsibilities to the key goals.</p></li>
-<li><p><strong>Success and Failure</strong>: Jordan Gal had a great point that success is the ability to go from one failure to another without loss of enthusiasm. But success is quite subjective, and often reinforced by societies expectations. Perhaps it is worth asking if you are helping people solve problems. Failure is often more interesting part of the conference, to see what these speakers have tried but stopped when they did not deliver the results.</p></li>
-<li><p><strong>Maintaining balance</strong>: Almost every speaker mentioned the need to for maintaining the balance in your life, relationships and family. Sherry Walling's talk was dedicated to this, pointing out the need for self reflection and care. Taking retreats to step away from the grind is valuable, giving time to ask the important questions. Questions such as what pieces of day to day life is infusing you with energy? How can I readjust priorities so that I can live in those sweet spots more and do less of what is causing stress? The other really important point was about feedback loops, getting advice, forming mastermind groups and making sure that there are others weighing on important decisions</p></li>
+<li><p><strong>Contributions are needed</strong>:
+It was great to see a lot of egoless collaboration during the conference. Maintainers of projects were willing to deprecate their hard work in favor of a better accepted tool in the community. At the same time, lot of the development of very instrumental tools seem to be done by a small group of people, highlighting the need for more collaborators in this space.</p></li>
+<li><p><strong>Sprints are like speed dating for open source projects</strong>:
+SciPy sprints were very different environment from hackathons. With the removal of prize as a factor, what remains is people who enjoy their work and often are highly productive. With the large number of projects available and the acceptance by the core developers, I had the opportunity to work on the charting library Bokeh, serialization library Dill, hack on datasets with yt developers (because random access over a 32 TB file served by apache to generate a graph on Ipython fully client side is seriously impressive) and dig into dockerizing web apps and databases with the reproducable workflow group. All in two days work.</p></li>
 </ol>
 
 
-<p>Overall, I loved the theme and people at Micronconf. It was a blend of driven, helpful people interested in solving problems and owning software products. I would highly recommend the conference for anyone looking to launch products and interested in bootstrapping.</p>
+<p>As someone who is primarily an app developer, this conference was challenging as I have diverged from the path of scientific research a while back. Despite that, I have came away with a strong appreciation for the scientific python community and ecosystem and must thank PayPal for letting me attend the confrence.</p>
 
-<p>If you have feedback on this blog post or MicroConf, please <a href="mailto:avi@aviadas.com">feel free to reach out!</a>.</p>
+<p>To finish, the keynote on the third day by Greg Wilson was quite fantastic and you should check it out if you haven't already:</p>
+
+<p><div class="embed-video-container"><iframe src="http://www.youtube.com/embed/1e26rp6qPbA" allowfullscreen></iframe></div></p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[What makes a great programming tutorial?]]></title>
-    <link href="http://avidas.github.com/blog/2016/04/18/what-makes-a-great-online-tutorial/"/>
-    <updated>2016-04-18T05:36:00-04:00</updated>
-    <id>http://avidas.github.com/blog/2016/04/18/what-makes-a-great-online-tutorial</id>
-    <content type="html"><![CDATA[<p>The Internet started as a publishing medium. It excels at enabling people to share their unique gifts. An amazing amount of content gets put out on the web everyday, far beyond someone can read in a lifetime. Massive amount of information also means information overload.</p>
+    <title type="html"><![CDATA[Best Chrome Productivity Extensions]]></title>
+    <link href="http://avidas.github.com/blog/2014/06/01/best-chrome-productivity-extensions/"/>
+    <updated>2014-06-01T16:40:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2014/06/01/best-chrome-productivity-extensions</id>
+    <content type="html"><![CDATA[<p>How much time during the day do you spend on an internet browser? As a software engineer, my answer is a scary amount of time. Something I have personally struggled with is avoiding distracting sites on the internet. There is too much good content on the internet that dries up my rather finite amount of attention.</p>
 
-<p>In software, it is common to use web tutorials to supplement one's learning of a particular material. Following guidelines of someone who has already done it can really fast track development. Tutorials appear in various forms in the web. Some of the common formats are long form blogposts, videos and series of email newsletters. Some enjoy the personal touch that videos can offer; others enjoy being able to quickly skim a blogpost.</p>
-
-<p>When you want to put your hard earned knowledge and valuable time into writing a tutorial, there are questions worth thinking about. Does the tutorial cater to its intended audience? Will it reach them? Can someone quickly skim the content and still get value? Is there a way to measure the effectiveness of online tutorials?</p>
-
-<p><img class="left" src="https://files.slack.com/files-pri/T025F19MZ-F1ASWBLV8/pasted_image_at_2016_05_22_04_58_pm.png" width="800" height="800" title="Survey Questions" alt="Survey Questions"></p>
-
-<p>To look for answers, I asked a carefully selected group of 150 people about their preference of tutorials. The focus was on software engineers/designers/entrepreneurs due to my familiarity and experience with the field. What emerged from their responses gives a blueprint for creating great online resources.</p>
+<p>Chrome has been my weapon of choice for browsing the web for a while now. Intuitive, clean and fast, Chrome's ascent has been amazing to see over the past few years. Extensions on chrome allow addition of new features on Chrome made by third party developers. Lately, and there are a few extensions I simply cannot do without. When you need to buckle up and get something done, these extensions will help you get there.</p>
 
 <ol>
-<li><p><strong>Real time feedback</strong>: If exercises or examples accompany a tutorial, multiple survey responders emphasized the need to check the user's responses and provide interactive feedback to the user to guide them to the solution. Good examples are checkpoint multiple choice questions during Coursera/Udacity courses that you must complete to move forward with the course.</p></li>
-<li><p><strong>Follow up</strong>: Several responders emphasized the need to provide contact information or other means to reach out to the author once they went through a tutorial. Providing a comments section or your email/twitter handle are great mediums for a reader to follow up.</p></li>
-<li><p><strong>Address a concrete problem</strong>: Staying focused of a specific problem gives a tutorial depth. A differentiator can be to classify for the user whether the focus is academic and structured vs. a blogpost focused on solving a particular problem right now.</p></li>
-<li><p><strong>Working examples</strong>: Interactive, working examples close to the content that builds on top of each other makes following along simpler. <a href="https://www.railstutorial.org/">Michael Hartl's Ruby on Rails tutorials</a> came up as an example of detailed, comprehensive tutorials.</p></li>
-<li><p><strong>Advanced user tutorials</strong>: Several user's pointed out the need for tutorials that addresses advanced content. Making expectations clear about experience levels of intended audiences can be a huge positive for tutorials. <a href="https://www.raywenderlich.com/video-tutorials">Ray Wenderlich's iOS tutorials</a> are good examples of the detail and level of research and understanding that can happen before putting out content on the web.</p></li>
+<li><p><a href="http://getpocket.com">Pocket</a>:
+There are enough interesting things to read on the internet for many lifetimes. Just like youtube's watch it later does for videos, Pocket lets me save articles for future reading. With clients available for iOS and Android, articles saved can be accessed anywhere. At any time on social websites, be it facebook, quora or hacker news, there is a lot I would like to read. Pocket gives me the convenience to customize articles from the internet into my customized feed or magazine via Flipboard integration.</p></li>
+<li><p><a href="https://chrome.google.com/webstore/detail/session-buddy/edacconmaakjimmfgnblocblbcdcpbko?hl=en">Session Buddy</a> :
+If you are like me, you context switch a lot between projects during a day. Chrome deals with tabs beautifully, and yet I find myself often with 20 or more tabs, usually researching a particular topic. Usually tabs follow a train of thought but fit within a particular context. Session buddy solves this exact problem, allowing me to save a set of tabs and windows which can be resumed later. For example, at the end of the day at work, I save a bunch of tabs, saved as the name of the project I was working on. This allows me to pick up from the chain of thought from when I left off. Switching between contexts is expensive, and session buddy is the best solution I have found.</p></li>
+<li><p><a href="https://www.rescuetime.com/">RescueTime</a>:
+Holding myself accountable for how I spend time on the web has been eye-opening for me. RescueTime not only tracks how much time during a day you spend on distracting sites, but the desktop application also tracks your non browser time. Over time, it subtly moves you to try and improve your productivity score by avoiding distraction, thus getting more productive (Bravo on the gamification aspect, ResueTime team!) I have discovered patterns of my work through the tool as well, such as the benefits of taking regular breaks and how much standing desk really helps productivity. It however, cannot track that even on productive sites, you can find ways to procrastinate. (I am looking at you, StackOverflow).</p></li>
+<li><p><a href="https://chrome.google.com/webstore/detail/block-site/eiimnmioipafcokbfikbljfdeojpcgbh?hl=en">Block site</a>:
+As much as tracking my time spent on the web helps, sometimes I need to simply block distracting sites. Block site makes for a great complement to RescueTime, allowing me to either visit whitelisted sites only or block off blacklisted sites. I have found my productivity levels on RescueTime spike when using block sites. Often its a reflex action for me to go to facebook or twitter without much thinking. Block sites counts such attempts, and shames you with clever 404 comments. I love that with the latest update, with one switch, you can turn off the distracting websites and focus on the task at hand.</p></li>
+<li><p><a href="https://lastpass.com/">LastPass</a>:
+Despite the rise of alternative logins, passwords are still integral parts of the web. With a million sites, having passwords lying around can be rather dangerous. Remembering passwords is time consuming and difficult, adding frustration to the day. LastPass securely stores your passwords for various sites, syncing them across devices. This saves the need to browse through memory trying to dig up a password or worse, store them in flat files. It can also do auto login's for your chosen sites. One of my favorite features is that it warns if you are using duplicate passwords for sites, making your web experience more secure.</p></li>
+<li><p><a href="https://adblockplus.org/en/chrome">Adblock Plus</a>:
+Ok, this one is controversial. Adblock will stop advertisements on websites, keeping you focused and saving time particularly for video ads. Now, ads power the web, and any website with ads as primary revenue stream should be aware of adblock. I particularly enjoy the cat and mouse chase between youtube and adblock: youtube refusing to play videos as long as adblock is enabled, adblock gets smarter, youtube catches up. However, it can make certain sites load faster, thus saving time.</p></li>
 </ol>
 
 
 <!-- more -->
 
 
+<p>Considering how valuable time is, it is important that we get done online what we meant to do. Hopefully, you have discovered an extension or two among this list that you were not aware of before and would help you save some extra time. The better Internet ADD is combated, the more time we spend doing what we love doing or be with family and friends and everybody wins.</p>
+
+<p>This was a post about extensions, but there are certainly tools such as dropbox and evernote which are more than extensions and does boost productivity. If you think there was an extension or tool that I missed, please leave a comment and I would be sure to check it out!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[DevsNearMe : July 26-27 Big Data Hackathon]]></title>
+    <link href="http://avidas.github.com/blog/2013/07/28/devsnearme-july-26-27-big-data-hackathon/"/>
+    <updated>2013-07-28T12:54:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2013/07/28/devsnearme-july-26-27-big-data-hackathon</id>
+    <content type="html"><![CDATA[<p><iframe src="http://www.slideshare.net/slideshow/embed_code/24686054 " width="595" height="446" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen></iframe> </p>
+
+<p>Built and won the first prize at the big data hackathon at Alley NYC on July 26-27. The goal is to discover how many people are at a venue at a particular point in time and this app will try to do that for hackers, categorized by skills.</p>
+
+<p>With more and more realtime data being available for the public, identifying knowledge clusters at the right point in time becomes really valuable. DevsNearMe is an Android app that attempts to combine data from popular realtime sharing websites such as FourSquare, Twitter, Facebook, Instagram and MeetUp. It will attempts to predict users at a particular location by taking into account absolute numbers, and weighed prediction based on local context based information and learnt knowledge from past user behavior.</p>
+
+<p>This could be highly useful for knowledge sharing, recruiting and demographic analysis. Prototype code is at https://github.com/DevsNearMe .</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Angelhacking at Dumbo]]></title>
+    <link href="http://avidas.github.com/blog/2013/06/08/angelhacking-at-dumbo/"/>
+    <updated>2013-06-08T16:42:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2013/06/08/angelhacking-at-dumbo</id>
+    <content type="html"><![CDATA[<p>"This is not your ordinary hackathon. This is the big leagues". Such was the claim of Angelhack this past weekend, and two weeks after participating in my first ever serious hackathon, I found myself at another one. There really is something about the mix of meeting cool people, hacking unfamiliar platforms and testing your coding chops in a small amount of time that can be quite addicting.</p>
+
+<p>Shakere, the product I worked on, is an iPhone app for finding people based on skills or interests in social gatherings. Yes, your umpteenth social product, guilty as charged. The space for social discovery really is a heavily contested one, which made me hesitant at first since variants of the idea has been tried by many. I joined however, after realizing that the team would work well together (we actually had a UX designer in the team. Yay!) and this was my chance to experience iOS development, even though I would be developing the backend.</p>
+
+<p>I worked on rolling a RESTful API (https://github.com/shakere/backend), working on the LAMP stack. Though I have not worked too much on LAMP backends before, I must admit that the stack is well suited for rapid prototyping. PHP in particular was a pleasant surprise to work with, in parts because of working with Perl for most of last year. I have had a little stint with Rails, and while Rails seems far more powerful, PHP is more explicit with less magic going on behind the scenes which makes it easier for starters to tinker. However, I did find myself handling quite a few inc files soon and was grepping to find which function was defined where. If I am working on a larger scale PHP project, it would definitely be worth looking into frameworks/best practices for PHP code organization.</p>
+
+<!--more-->
+
+
+<p><img class="left" src="/images/Shakere_Profile.jpg" width="300" height="800" title="Shakere Profile" alt="Shakere Profile"></p>
+
+<p>We got a neat version working well in time for the demo. The app being frontend heavy, I was done with a bit of time in hand, making it a more pleasant hackathon than the last one. Yet during presentation, we did run into the pitfall of not having tested our demo machines to the projector, and this is really a must if you want to avoid delays during your demos.</p>
+
+<p>The ideas were definitely interesting to look at since the hackathon was not restricted to any particular domain. Some were targeting specifically Microsoft, Paypal or Amazon platforms, who were present at the event and provided prizes for the best app using their APIs. It was specifically interesting when domain experts (such as a scientist in a Columbia lab) came to the hackathon trying to device a service for their community. Field experts can have a certain deep understanding of a space and their demos were a good reflection of that.</p>
+
+<p>We did not win unfortunately but judging did seem fair. The ideas winning were generally the apps which were the most mature or demonstrated a clear need base for their ideas. I particularly enjoyed prepared.ly and their combining the job skill-set with learning tools such as Udacity or CodeAcademy. With some personal analytics and initiatives to pick up the skills fast enough, this service can be very useful for coding job seekers.</p>
+
+<p>For the next such event, I would definitely focus more on rolling out more features faster. We were perhaps guilty of actually going around and getting real user data to populate our databases. I would imagine for pre-shipping products you would want this, and MVPs these days certainly value user early user feedback. Hackathons have different needs from production apps though, and rapid feature deployment wins over iterating and getting existing features perfect. You live and you learn.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Publishing Hackathon]]></title>
+    <link href="http://avidas.github.com/blog/2013/05/30/publishing-hackathon/"/>
+    <updated>2013-05-30T07:08:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2013/05/30/publishing-hackathon</id>
+    <content type="html"><![CDATA[<p><img class="left" src="/images/Quiply_home.png" width="350" height="350" title="Quiply home" alt="Quiply home"></p>
+
+<p>Alley NYC is a very exciting location that I recently discovered. Its a collaborative workspace for startups, and on weekends they even open their doors for people trying to learn or fine tune their coding skills. On my second visit, I found out about the publishing hackathon, an attempt by the book publishing industry to generate new ideas in a field where profits are seemingly declining. I love books, and it seemed like a good opportunity to see what I could contribute and I signed up.</p>
+
+<p>This past weekend on the day of the hackathon, I arrived early not entirely sure what to expect. There were quite a few volunteers (from the publishing industry sponsors) and mentors (usually the startup founders who work at Alley NYC) and they seemed rather vibrant and chatty, as people in the startup universe tend to be. I immediately found myself talking to several founders about their projects. The breath of industries startups target always fascinate me, but I needed a project.</p>
+
+<p>At the meetup of participants, it seemed like a lot of people came in teamed with ideas they were going to work on or have already been working on. I soon ran into John, who was in the same boat as me in terms of not having a project. John was an UI/UX person, so we thought it would be a good idea to team up and work on something.</p>
+
+<p>The coding part started at noon, and continued for 24 hours. However, it was interesting being developers, we were sought out frequently as the people with ideas outweighed the developers. After discussing a few ideas, we decided on a project. At that moment, we did not expand the team since there was no clear benefit in doing so.</p>
+
+<p>We decided to make Quiply, a book recommendation service aimed at teens based on their online video watching habits. We thought the playlists, favorites and viewing habits of kids gives a good idea of what they are interested in, and giving them small summaries of books they could potentially read to expand on their interests. We decided on making it as a Node js web application to start with, integrating youtube watch history to give results from Amazon.
+The rest of the 24 hours, skipping amusing acts by participants which deserve their separate blog post, was a whirlwind of code, coffee, running into hurdles and staggered progress. In the end we managed make the basic prototype work and submitted down to the last minute!</p>
+
+<!--more-->
+
+
+<p><img class="left" src="/images/Quiply_quip.png" width="500" height="350" title="Quiply quip" alt="Quiply quip"></p>
+
+<p>Here are a few things that I realized at the end of the hackathon, tips to help out a hackathon novice.</p>
+
 <ol>
-<li><p><strong>Copyright</strong>: Sometimes an afterthought, it may be worth pointing out what license the content is released under. This can give the reader’s clarity on how to attribute the source when they use that content in production. Github makes this really easy with license options provided  during repository creation.</p></li>
-<li><p><strong>Offer tangible short-term benefits</strong>: While this certainly applies more to blogposts rather than courses, focusing on offering user's value short, medium and long term can improve the message of a tutorial. Moreover, an user may be more inclined to follow through the entire content of a tutorial if they are get that value at different stages of the tutorial.</p></li>
-<li><p><strong>Timeliness</strong>: This could be hard to measure, but popularity of tutorials can be attributed to how current and relevant they are. As of the time of writing this blogpost, April 2016, there are lot of people looking to get into VR/AR, chatbots, AI and so on. Accounting for recency can certainly increase the reader counts of your posts.</p></li>
-<li><p><strong>Continuity</strong>: It became clear through the responses that while people looked for tutorials to solve a particular problem, they return because they are looking for a subject matter expert. Producing a series of tutorials taking on different aspects of a topic can help with retention.</p></li>
-<li><p><strong>Discoverability</strong>: This can go in the realms of SEO, but lot of responders responded to their favorite source of online tutorials with well-known sources. Coursera/Udemy/Khan Academy/YouTube and Google were all common ways people went around in finding online tutorials. If you do not want to solve distribution for the content you create, writing for more known blogs/sites can be a way to reach larger audiences.</p></li>
-<li><p><strong>Formatting</strong>: A big part of the user experience, proofreading cannot be left for the last. In the tech space, prominent writers such as Paul Graham always attribute at the end of the blogpost all those who have helped proofread the content. Just passing it around to a few people before publication and basic spell checking/grammar checking can improve the user experience for tutorials.</p></li>
+<li><p><strong>Have a solid idea of what you are going to do even if you do not have a team yet : </strong> A solid worked out plan helps you convince and recruit team members. Hackers by nature are very good readers of someones preparedness, knowledge and value addition to a project, so if you want the good people to team up with you, get in there ready. A very generic idea approaching a unclearly defined problem would likely not get you many co founders. Lot of hackathons do not allow any code being done before the event, but I am not sure how this is implemented since someone could write a library beforehand with quite a bit of logic that they can just import.</p></li>
+<li><p><strong>Know your apis if you are making an web app : </strong> If you are coding in a hackathon, you want to get to the point where your boilerplate is set up and you are spending the bulk of time building the logic or enhancing the UI. Hence, calling your APIs and knowing the limits and associated delays is critical. For this hackathon, this was not the case for us. After prototyping with youtube, we realized that their APIs no longer allow getting tags from videos and scraping was certainly not an option. We had to switch to Vimeo to get the same functionality. The other problem we ran into was Amazon throttling us for API usage. They had a limit of 2000 requests which we reached fast, and had to create stub accounts to continue testing. Thankfully this was not a problem during our demo, and we were able to show the working app.</p></li>
+<li><p><strong>Find a good spot quickly with least distractions : </strong> When the participants are not a defined class of people, you get unexpected behaviors and situations that will come up. And once you start coding, these can really harm your productivity. Try to get a nice and quiet place early, and if you find a room with a white board, its a home run for your team.</p></li>
+<li><p><strong>Keep focused and realistic : </strong> When we started working, I was particularly excited about writing the recommendation engine and wrote out an algorithm to weigh in several factors and generate tiered results based on the particular website queries. (For example, different custom playlists may give us different interests, how the age of the playlist would factor in, etc). However, with the discovery that youtube was not an option, we had to work with Vimeo API which was much limited in terms of features. That resulted in hours of wasted work. Following this setback, we did a better job of focusing hard on getting the one feature of our app working which was getting the recommended books, without much of the initial breadth or depth of the algorithms we were thinking of. Being realistic about what was achievable in 24 hours allowed us to get a working prototype, and this is very important in hackathons where wealth of APIs and possibilities can hinder your progress.</p></li>
 </ol>
 
 
-<p>There are definitely caveats to this survey. As the person compiling this survey, it is at least slightly influenced by my biases. My target group is highly technically literate, so there is a bias towards modern tools. Perhaps it is worth taking into account the intent of writing tutorials, be it teaching, lead generation or growing a business.</p>
+<p><img class="right" src="/images/Quiply_login.png" width="400" height="350" title="Quiply login" alt="Quiply login"></p>
 
-<p>Like most studies, this too should be taken with a grain of salt and in no way is sure way to produce great tutorials. Someone's genuine passion, interest and the willingness to learn and teach find their ways to shine through content. However, just as the <a href="http://www.joelonsoftware.com/articles/fog0000000043.html">Joel Test for Software Development</a> companies is often a good checklist for expected standards of software companies, being aware of the reader’s needs and voice can lead to sharper, more helpful tutorials.</p>
-
-<p>Research for this post was done by using Dripper, a twitter direct message automation tool that I helped build. Feel free to <a href="mailto:avi@aviadas.com">reach out</a> if you want to know more about the software!</p>
+<p>There were an interesting array of projects presented, some more matured than others by virtue of being worked on before. But they were mostly web apps or mobile apps, simply because that is what most developers are working on these days. We were not one of the finalists, but overall I was very glad to reach and idea, and generate a fully working app within the 24 hours and it was a whole lot of fun! I would absolutely do more hackathons from now on, just not every weekend.</p>
 ]]></content>
   </entry>
   
