@@ -6,10 +6,19 @@ sharing: true
 footer: true
 ---
 
-I like working on web/mobile products where I can make a significant impact to the user experience. I would rather do full stack, as it allows me to architect a product and exposes me to a wider variety of problems, which is what makes software exciting. Emerging web technologies are really interesting to me as well. Besides crafting an well designed app, I genuinely enjoy the other engineering aspects of my profession such as optimization and tradeoffs.
+Experienced software engineer with 5+ years of experience building platform/apis/data infrastructure. Worked on various industries shaping the cutting edge of payments, financial data analytics, network infrastructure software and real estate.
 
-More of my experience has been on the backend where I have worked with Node.js/Express, Python/Flask, Ruby/Rails web frameworks and used Mongo/PostgreSQL/ElasticSearch as databases. On the frontend, I have used JavaScript/JQuery/Bootstrap for various projects and currently excited about React/Redux. I have also worked on mobile iOS/Android projects. Industry experience has been related to building developer experiences at scale in the payments industry, financial data analysis and network infrastructure software.
+Some of my greatest strengths are attention to detail and being empathetic to the needs of the business and users. For that reason, I enjoy learning about the industry and problems the buisness is facing. I do tend to work best with with partners who share the belief that engineers can be empowered to think like product owners and there is mutual respect for engineering as a craft and creating the environment in which it can thrive.
 
-Things I like: running, reading, cooking, lifting, travelling, hackathons, meditation, festivals, a good conversation. 
+Backend: Proficient in Rails/Ruby, JavaScript/Node/React, Python, Bash, SQL.
+Frontend: React, Javascript, Jquery, Bootstrap
+Data Storage: Postgres, Redis, Elasticsearch
+Distributed Systems: RabbitMQ
+Hosting technologies: AWS, Heroku 
 
-Things that bug me: how little we know about the human mind and body.
+Personal interests: running, reading, cooking, lifting, travelling, hackathons, meditation, festivals, a good conversation. 
+
+
+Linkedin: https://www.linkedin.com/in/aviadas/
+Github: https://github.com/avidas
+
