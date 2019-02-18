@@ -4,7 +4,7 @@ title: "Web Payments by First Principles: Data Architecture"
 date: 2017-10-25 20:22
 comments: true
 published: true
-categories: Software, Payments, APIs, Database
+categories: Software Payments APIs Database
 ---
 
 Once you start receiving payments on your site, congratulations! You are likely building something people want. But now you are at the point of having to manage payments data. Developers are generally aware that handling payments data should be done with care, but it is not immediately obvious what the different considerations are. In this blog post, we will go over strategies that you can follow to future proof your payments stack from the point of a fledgeling startup to a mature, stable business.
