@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Software | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/software/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2019-02-18T09:29:11-05:00</updated>
+  <updated>2019-02-18T09:43:36-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -12,6 +12,49 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Core tenants of highly effective software teams]]></title>
+    <link href="http://avidas.github.com/blog/2018/11/03/core-tenants-of-effective-software-teams/"/>
+    <updated>2018-11-03T11:47:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2018/11/03/core-tenants-of-effective-software-teams</id>
+    <content type="html"><![CDATA[<p><em>This blogpost is my thoughts only and does not necessarily represent the positions of current or past employers.</em></p>
+
+<p>We don't build software in a vacuum. Software involves people. Beyond organizations of a handful of people, hierarchy is beneficial. We get teams, commonly with engineering manager/lead, product manager, designers and engineers. What becomes crucial for the software and the product delivered then is the effectiveness of the team. Throughout my career in the industry and being part of many teams in different circumstances, I have started noticing some key patterns that really drives standout results in teams.</p>
+
+<ol>
+<li><p><strong>Believing in a common cause</strong>: The single biggest observation is that when a team of people believe in a common mission, they produce outsized returns. The most effective teams I have worked in all had a strong belief that they was a reason for the work they were doing. This also aids inter team collaboration over inter team competition, with teams often investing in tooling that makes the whole team better.<br/><br/>Engineering leaders can play a key role here to frame a compelling mission for the team. Hiring for the right role also becomes super important as a highly motivated individual in a role can be 2-10x more effective than someone unmotivated with similar ability. Having a competitor or a common enemy is great since we are predisposed to bond over defending ourselves from common enemies.</p></li>
+<li><p><strong>Psychological Safety</strong>: Google's <a href="https://www.nytimes.com/2016/02/28/magazine/what-google-learned-from-its-quest-to-build-the-perfect-team.html?_r=0">Project Aristotle</a> studied 180 teams over two years and came to the conclusion that psycological safety was the best signal for how effective a team is. How comfortable do people in the team feel to share vulnerability without fear of retribution? How comfortable do people feel asking questions without fear of asking something silly or share ideas without fear of being shut down without listening? Team's with high levels of psychological safety can have conflicts, but can deal with them in a mature way, being able to separate disagreement about ideas from disagreement with people.<br/><br/>For more senior engineers/technical leaders, this is crucially important since they are in a position to determine this culture for the team. Forming strong personal relationships with the team can be really valuable for fostering safety within the team. People like their leaders to be human, and admitting your own fallibility is a great way to form trust with team members.</p></li>
+<li><p><strong>Diversity of Thought</strong>: Diversity is a word that is commonly heard in the tech industry, and for good reason. Having diversity of people is a proven way to achieving diversity of thought, which is just one of the reasons why we must invest in software communities of women and minorities. Inclusiveness is one of the key pillars of psychological safety in a team, building on from the last section. Moreover, when software is aimed at global audience, but the team is homogeneous, it is easy to be fooled that a wide audience will get their needs met.<br/><br/>Even teams of experienced contributors can fall prey to atrophy and decay, without fresh ideas so common in upstarts. A team of really excited newer developers may not realize that in balance lies the key to long term personal, team and product success. Diversity of experience in a team helps to avoid these common traps.<br/><br/>Finally, cross functional teams can be more effective than teams exclusively focusing on frontend/backend/mobile. Recognizing the individual contributor's interest in user experience/security/governance etc and enabling space for that one of the most enabling things an engineer leader can do.</p></li>
+<li><p><strong>Growth and Ownership</strong>: It is immensely gratifying for people to feel that they are growing, and knowing that they are playing a role in the growth of others. When team members feel confident about the path in front of them can still have challenges, they are far less likely to be unmotivated and plateau. This is big for retention, since job changes frequently are a result of people feeling stuck and needing to make a change. It is costly to replace engineers, especially ones already trained and performing well in their role.<br/><br/>A key intrinsic motivator for many is the feeling of ownership. Being able to really sink their teeth into a hard problem and come up with something they are proud of. Teams where people really believed that they have strong ownership of the product also care more about the end users experience, resulting in a better product.<br/><br/>As engineering leadership, one of the best signals of good management is to have clarity in career ladders and promote the right people. A bias for people who make others around them better can be healthy. It is my experience that promotions should rarely come as a surprise to the individual or the team. Demonstrated investment in people as future leaders is also a major indication of a company's belief in their people, sending them to conferences, training and giving license for creativity.</p></li>
+<li><p><strong>Work Environment</strong>: This is a controversial one, but I do believe that companies today have bought way too much into the open office movement. While a return to cubicles does not feel desirable, dedicated interruption free zones (both space and time) are essential for good software. A chaotic office environment can also mean chaos in your codebase.<br/><br/>Debates range whether standing desk or sitting is better, however many monitors are necessary. My belief here is that the team should be colocated but individuals should be empowered to find the best working situation for the track of work they are in. I have personally found that standing keeps me on my toes, making it great for lots of small tasks, whereas sitting is best for tasks that need deep thought.</p></li>
+</ol>
+
+
+<p><strong>When things fall apart</strong></p>
+
+<p>We do not live in a perfect world. Recessions, unexpected downsizing, market competition and many other forces can impact access to resources which could result in ways in a group of people come in to work together and stop working together. Lot of us have all worked in a team where that magic of a great team existed, and the team achieved things together what could not be achieved by individuals. It is important for us to be thinking with intention and purpose and help each other build and find teams to discover that magic.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Lower Degrees of Separation with End Users]]></title>
+    <link href="http://avidas.github.com/blog/2018/05/09/degrees-of-separation-with-end-users/"/>
+    <updated>2018-05-09T10:21:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2018/05/09/degrees-of-separation-with-end-users</id>
+    <content type="html"><![CDATA[<p>When working in software, one way to look at our profession is to say that we take architecture docs or designs and make code out of it. After years in the industry, we are trusted to come up with the architecture docs and work with a team to deliver the software. This absolves ourselves of responsibility in a way since even if the product fails, at least our code and systems were great. Companies today, however, are starting to see the limitations of software engineers being removed from the product decision making process.</p>
+
+<p>I think we should reframe the problem: it is rather our responsibility as software engineers to ask, how many degrees of separation does it exist between us and the end user? Ideally, the end user would be the person paying for our service, although this gets more complicated certainly by ad funded or venture funded software. The exercise could involve us asking, what would it take to reach 10 users of our software? Would we have to go through our product manager, who then talks to the account manager or product support? These are likely the folks currently dealing with customer calls when our software bresks and waiting for the Zendesk tickets to be picked from the queue.</p>
+
+<p>Who we are "engineering" for is a question we need to frequently ask ourselves. We should strive to be in environments where we are aware of our degree of separation and look for ways to cut down that separation. Without that frame, we can only have vague ideas of what the code we write is leading to, and end of the day limits the impact we can have.</p>
+
+<p>It should also not always be the product manager's job to always acting as the liason to translate user needs to us. When we are aware of user needs, it enables us to be proactive: to avoid that shortcut when building, or deal with that performance bottleneck early before it becomes a problem. We can also free the up the product manager to pursue broader goals such as product vision, market and competitive landscape analysis, etc.</p>
+
+<p>Tomorrow, when you get to work, ask yourself that question. Do you know who your users are and how they use your product? How many degrees of separation would you have to navigate to find that answer? If you are not comfortable with the answer, maybe you can think of a way to change that.</p>
+
+<p>Disclaimer: Thoughts expressed in the article are mine only, and does not represent the positions of current or past employers.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Web Payments by First Principles: Testing]]></title>
@@ -36,6 +79,47 @@
 <p>I intend to write more posts in this series, covering topics such as considerations before and after going live with payments, when scaling up and so on. If you liked this post, please share or comment.</p>
 
 <p>If you have feedback on this blog post or integrating payments, please <a href="mailto:avi@aviadas.com">feel free to reach out!</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Takeaways from MicroConf Starter 2017]]></title>
+    <link href="http://avidas.github.com/blog/2017/04/21/takeaways-from-microconf-starter-2017/"/>
+    <updated>2017-04-21T17:55:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2017/04/21/takeaways-from-microconf-starter-2017</id>
+    <content type="html"><![CDATA[<p>With the rise in VC funded startups, there was not a big community for individuals and small teams launching and supporting digital product businesses with their own profits. Rob Walling and Mike Taber noticed that need and created MicroConf, a conference for self-funded software startups.</p>
+
+<p>I was at MicroConf Starter last week. In its 12th year, MicroConf split into Starter and Growth Tiers, the starter edition for people who do not make a full time income from digital products. If you are the kind of person who enjoys taking an idea to a functional product that solves real world problems, MicroConf is a conference where everyone has that shared goal.</p>
+
+<p>Some at MicroConf have launched products and were doing quite well from a digital product business, let it be online courses, software plugins, SAAS etc. There were also number of people who wanted to learn more about find the right idea, product-market fit, sales and marketing.</p>
+
+<p>I really enjoyed the pragmatic voice of the conference, keeping focus on balance. The conference does not shy away from the fact that it is not a easy task to bootstrap software products.</p>
+
+<p><a href="https://shai.io/MicroConf/">MicroConf has great notes</a> for the whole conference. Instead of trying to go through the whole conference, here are some of my takeaways from MicroConf Starter 2017.</p>
+
+<ol>
+<li><p><strong>Consistency</strong>: Rob Walling emphasized start of the conference that the success of MicroConf will be what these two days can do for the remaining 363 days of the year. Often consistency made the difference in the eventual endurance and success of the product. Josh Doddy's blog was fairly dormant for the first 12-14 months but peaking exponentially near its current runtime of 18 months. Mastermind groups were mentioned as a great way for a group of people who help each other stay on track.</p></li>
+<li><p><strong>Finding an idea worth building</strong>: Multiple speakers mentioned the need to take a hard look at your stocks and assets. What questions do people keep asking you? What are you passionate about that other people find boring? What would you from 6 months ago find valuable? All these were from Ben Orenstein's talk, one of my favorite at the conference. Patrick Mckenzie also touched on the same topic, to double down on what you do very well already and what the market already buys from you. Justin Jackson mentioned the need to find the groups you are best equipped to serve, and to research the audience and find ideas rather than thinking in your own head what the problem could be. Mike Taber also emphasized focusing if you are in fact the right person to be building that product.</p></li>
+<li><p><strong>When to launch</strong>: An MVP should solve a well defined problem, not solve a portion of it or solve every possible iteration of the problem. However, the lack of polish is intentional to see how much inconvenience the customers would endure to solve their problem. Justin Jackson had a great point that an MVP should be the smallest product you could build to disprove a hypothesis. It was interesting to see multiple speakers mentioning the importance of putting your face right by your product, to encourage trust and take responsibility of what you are delivering.</p></li>
+<li><p><strong>On user acquisition</strong>: Probably the biggest concern of fledgling products, user acquisition/outreach had dedicated talks. Some of the key points where to focus on conversations with users and doubling down on a few approaches e.g. SEO, Content, Ads rather than throwing in the kitchen sink. Looking for integrations with other products by forming partnerships was a common theme. Key questions to ask users were to ask how they were solving the problem today, what they have tried or ask for introductions to someone with that problem. In the beginning, unscalable strategies such as concierge onboarding are useful, specially for SAAS products.</p></li>
+<li><p><strong>Getting results</strong>: Users are the best signals here, and if you have to chase people down to use your products, it may not be solving a real problem. Google analytics charts showing growth and conversion rates were part of almost every presentation. At the same time, reading those charts can be a hard story, often showing charts recovering from a flatline or decline to eventual success because the founders believed enough to carry on. Its hard to think convictions to be infallible in the face of data however, and sometimes it is time to give up.</p></li>
+</ol>
+
+
+<!-- more -->
+
+
+<ol>
+<li><p><strong>Pricing and revenue</strong>: Patrick Mckenzie mentioned that the objective to be a predictable sales process to make profit every month. The question of how much to charge for the product is tricky for founders. Both him, Ben and Jordan Gal emphasized the need for running experiments on your pricing page. Surprisingly enough, an increase in prices may often result in better customers in the long run even though in the short term your trials may fall.</p></li>
+<li><p><strong>Motivation</strong>: People are motivated differently, but momentum is a key driver. Ben mentioned the need to reverse the relationship, not to wait for inspiration but to get started, feel the success and then get inspired. Sherry Walling mentioned using positive stress to fuel motivation. Lot of the folks in the conference started when they already had a lot of responsibilities, but often it is not time that is lacking, but the prioritization. Making more time is a function of reorganizing your priorities. Delegation is another important tool to master, especially for adjacent responsibilities to the key goals.</p></li>
+<li><p><strong>Success and Failure</strong>: Jordan Gal had a great point that success is the ability to go from one failure to another without loss of enthusiasm. But success is quite subjective, and often reinforced by societies expectations. Perhaps it is worth asking if you are helping people solve problems. Failure is often more interesting part of the conference, to see what these speakers have tried but stopped when they did not deliver the results.</p></li>
+<li><p><strong>Maintaining balance</strong>: Almost every speaker mentioned the need to for maintaining the balance in your life, relationships and family. Sherry Walling's talk was dedicated to this, pointing out the need for self reflection and care. Taking retreats to step away from the grind is valuable, giving time to ask the important questions. Questions such as what pieces of day to day life is infusing you with energy? How can I readjust priorities so that I can live in those sweet spots more and do less of what is causing stress? The other really important point was about feedback loops, getting advice, forming mastermind groups and making sure that there are others weighing on important decisions</p></li>
+</ol>
+
+
+<p>Overall, I loved the theme and people at Micronconf. It was a blend of driven, helpful people interested in solving problems and owning software products. I would highly recommend the conference for anyone looking to launch products and interested in bootstrapping.</p>
+
+<p>If you have feedback on this blog post or MicroConf, please <a href="mailto:avi@aviadas.com">feel free to reach out!</a>.</p>
 ]]></content>
   </entry>
   
@@ -81,425 +165,6 @@
 <p>Like most studies, this too should be taken with a grain of salt and in no way is sure way to produce great tutorials. Someone's genuine passion, interest and the willingness to learn and teach find their ways to shine through content. However, just as the <a href="http://www.joelonsoftware.com/articles/fog0000000043.html">Joel Test for Software Development</a> companies is often a good checklist for expected standards of software companies, being aware of the reader’s needs and voice can lead to sharper, more helpful tutorials.</p>
 
 <p>Research for this post was done by using Dripper, a twitter direct message automation tool that I helped build. Feel free to <a href="mailto:avi@aviadas.com">reach out</a> if you want to know more about the software!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Evaluating React.js and Flask]]></title>
-    <link href="http://avidas.github.com/blog/2015/08/05/evaluating-react-dot-js-and-flask/"/>
-    <updated>2015-08-05T10:39:00-04:00</updated>
-    <id>http://avidas.github.com/blog/2015/08/05/evaluating-react-dot-js-and-flask</id>
-    <content type="html"><![CDATA[<blockquote><p>Update: Udemy has generously granted a free coupon for the readers of this blog for their <a href="https://www.udemy.com/learn-and-understand-reactjs/learn/">React JS and Flux</a> course. Use the code <code>avidasreactjs</code> and the first 50 readers will get free access to the course!</p></blockquote>
-
-<p>As a connoisseur of the web, front-end frameworks have been been a fertile area of late. React.js from Facebook has taken much fanfare, and this post evaluates key ideas on react, and digs into why you could be interested in React. Staying true to single responsibility principle, React is a highly useful tool if you are doing web programming.</p>
-
-<p>In this post, we will dive into building a Frontend using React.js and Backend built using the Python framework Flask. Flask is a minimalistic framework, and excellent when your backend becomes more and more of an API. Moreover, this facilitates the microservices architecture, where the decoupling of your your app into small unit of services can make it more maintainable and scalable.</p>
-
-<p>We will cover some of the key ideas of React and Flask here, but it would be worth referring to the official documentation for <a href="https://facebook.github.io/react/">React</a> and <a href="http://flask.pocoo.org/">Flask</a> for getting started and understanding the philosophies of each framework.</p>
-
-<h3>Key Ideas of React</h3>
-
-<p>The core idea of React is the developers are better of leaving manipulating the DOM to battle tested framework code. Since the DOM has a tree structure, finding elements and manipulating them would need many traversals of a potentially very large tree.  Instead, what you modify is a virtual DOM, and React runs its intelligent diffing algorithm to directly update the DOM.</p>
-
-<h5>React</h5>
-
-<p>React itself is the UI library that will manage all the DOM updates as data changes. It's takes the V of MVC frameworks, hence it can be used with other MVC frameworks such as Angular, Backbone or Meteor. It is quite easy to use React to manage specific areas of your application's UI, rather than the entire app.</p>
-
-<h5>Virtual Dom</h5>
-
-<p>The virtual Dom is an abstraction layer between nodes in the real DOM and the view of the code you are modifying. When React selectively renders subtrees of the nodes in DOM based upon state changes, it achieves the following</p>
-
-<pre><code> 1. Ensures that your DOM is always up to date with current state
- 2. Reduces the need to re-render the DOM every time there is change in state
- 3. Updating only the individual components on state change ensures high performance
-</code></pre>
-
-<h5>JSX</h5>
-
-<p>JSX is a JavaScript syntax extension and it brings in a HTML/XML like familiar syntax for defining a tree structure with attributes. This is the syntax you can use to declare the changes in layout code and React will update the UI. It's a bold approach, since developers are conditioned to keep layout code separate from Javascript. We will explain more React terminology later as we dive into some code.</p>
-
-<h3>Key Ideas of Flask</h3>
-
-<p>Flask is a microframework, which means that it trades a short learning curve for fewer out of the box functionalities, compared to heavier frameworks such as Django or Rails. It gives developers more freedom to use their preferable tools and libraries. However, it does have a list of officially supported <a href="http://flask.pocoo.org/extensions/">extensions</a> which when plugged in provide a wide breath of functionalities for a standard web app. Extensions behave as if they are native flask code.</p>
-
-<p>We strongly recommend that you set up a <a href="http://www.virtualenv.org/">virtualenv</a> for this project, and you may also want to check out <a href="http://virtualenvwrapper.readthedocs.org/">virtualenvwrapper</a> for convenience. This is to provide your app with a sandboxed environment.</p>
-
-<h5>Getting up and running with Flask</h5>
-
-<p>Lets first install Flask</p>
-
-<p>```bash
-pip install Flask</p>
-
-<h1>For viewing and reusing app dependencies</h1>
-
-<p>pip freeze > requirements.txt
-```
-Set up the following directory structure in your app.</p>
-
-<p>```bash</p>
-
-<p>├── README.md
-├── app.py
-├── requirements.txt
-└── templates</p>
-
-<pre><code>└── index.html
-</code></pre>
-
-<p>```</p>
-
-<p>Modify your app.py code to include the following</p>
-
-<p>```python
-from flask import Flask, render_template</p>
-
-<p>app = Flask(<strong>name</strong>)</p>
-
-<p>@app.route("/")</p>
-
-<p>def index():</p>
-
-<pre><code>return render_template('index.html')
-</code></pre>
-
-<p>if <strong>name</strong> == "<strong>main</strong>":</p>
-
-<pre><code>app.run()
-</code></pre>
-
-<p>```</p>
-
-<p>We start by importing Flask and creating a new instance of a flask application. In flask, app.route is used to describe the behavior when users hit particular endpoints in the application. Here when user hits the index route, we render a template called hello world. By default Flask uses the Jinja2 templating language, but you can use any other templating language. In fact, we will not be covering Jinja2 in this blog post. Finally we tell python to call the run method of the app when invoked as a main function.</p>
-
-<p>Let's populate index.html with the following basic HTML boilerplate</p>
-
-<p>```html</p>
-
-<p>&lt;!DOCTYPE html>
-<html lang="en">
-<head></p>
-
-<pre><code>&lt;meta charset="UTF-8"&gt;
-&lt;title&gt;Flask React Tutorial&lt;/title&gt;
-</code></pre>
-
-<p></head>
-<body></p>
-
-<pre><code> &lt;div id="mount-point"&gt;
-     &lt;p1&gt;Hello world.&lt;/p1&gt;
- &lt;/div&gt;
-</code></pre>
-
-<p></body>
-</html>
-```</p>
-
-<p>Now run the app with</p>
-
-<p><code>bash
-python app.py
-// * Running on http://127.0.0.0:5000/
-// * Restarting with reloader
-</code>
-By default it runs on port 5000. Navigate to the endpoint and you should see the html page you just created. You are now up and running with Flask!</p>
-
-<h5>Integrate React</h5>
-
-<p>Easiest way to include React would be to just include them from a cdn. Let's update the index.html to include React and and port our existing html to React. index.html will now look like</p>
-
-<p>```html</p>
-
-<p>&lt;!DOCTYPE html>
-<html lang="en">
-<head></p>
-
-<pre><code>&lt;meta charset="UTF-8"&gt;
-&lt;title&gt;Flask React Tutorial&lt;/title&gt;
-&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/react.min.js"&gt;&lt;/script&gt;
-&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/JSXTransformer.js"&gt;
-</code></pre>
-
-<p></head>
-<body></p>
-
-<pre><code> &lt;div id="mount-point"&gt;&lt;/div&gt;
-</code></pre>
-
-<p></body></p>
-
-<p>  <script type="text/jsx"></p>
-
-<pre><code> /*** @jsx React.DOM */
-var FirstComponent = React.createClass({
-    render: function() {
-        return (&lt;p1&gt;Hello world.&lt;/p1&gt;);
-    }
-});
-React.render(&lt;FirstComponent /&gt;, document.getElementById('mount-point') );
- &lt;/script&gt;
-</code></pre>
-
-<p></html>
-```</p>
-
-<!-- more -->
-
-
-<p>Let's go over the code. We first include the react and jsx libraries via the script tags and remove the earlier p tags. We set up a jsx script by specifying type="text/jsx". Then we call createClass method of React which creates a React component. React components are reusable units that you can use to compose your UI. The component must have at least the render method, which returns the virtual representation of a native DOM element or another component.
-Next we call React.render with the first element and pass it the id of the div element on which we want the result of the render function to be. Run the app again to navigate to the same path to see the app again.</p>
-
-<h5>Data binding with React</h5>
-
-<p>For a more practical example, as well to demonstrate multiple components, let's produce a type along data binding example. You can replace your script tag with the following</p>
-
-<p>```html</p>
-
-<script type="text/jsx">
-    /** @jsx React.DOM */
-    var Input = React.createClass({
-        updateLabel: function(event){
-            this.setState({value: event.target.value});
-        },
-        getInitialState: function(){
-            return {
-                value: ''
-            }
-        },
-        componentWillMount: function(){
-            this.setState({value: this.state.value})
-        },
-        render: function(){
-            return (
-                <div className="update-label">
-                      <input type="text" placeholder="Enter text" onChange={this.updateLabel}/>
-                    <Label value={this.state.value}/>
-                </div>
-        )
-    }
-});
-
-var Label = React.createClass({
-    render: function(){
-        return (
-        <div class="my-label">
-        <h2>{this.props.value}</h2>
-        </div>
-        )
-    }
-});
-
-React.render(<Input/>, document.getElementById('mount-point'));
-</script>
-
-
-<p>```</p>
-
-<p>As before, React.render is called at the very end on a component called Input and it is bound to the element with id mount-point. Inside the Input component a few other lifecycle functions are introduced.</p>
-
-<p>The method getInitialState is called once before the component mounts and  responsible for setting for the initial state of a component.
-componentWillMount is called directly before a react component is initially rendered. Inside componentWillMount, we invoke setState.</p>
-
-<p>setState can trigger UI updates from event handlers and server request callbacks. It will always cause a re-render to happen. Once render is called, it returns a div with a input box and a React component called label. We attach the method updateLabel which gets invoked when the text inside the input box changes. It updates this.state.value.</p>
-
-<p>State attributes are mutable within a component and are used to represent the interaction changes changes within a component. On the other hand, props are immutable and used to pass data from a parent component to a child. In this case Label is a child component of Input, and this.state.value for Input is passed to Label, which can access it by this.props.value. Thus Input passes the data entered into the input box to Label and causes it to re-render and display the text.</p>
-
-<p>Fire up the server again and type something into the input box and the content gets updated in the h2 element underneath.</p>
-
-<h5>Why React</h5>
-
-<p>As it turns out, the selling points of React are not super hard to get and clear use cases became obvious.</p>
-
-<ol>
-<li><p>React is very efficient in the way it handles DOM updates. It is important however, to isolate that heavy rendering or interactions are the bottlenecks so that you are not optimizing prematurely and likely already have optimized database interactions and network calls.</p></li>
-<li><p>SEO management overhead can be less with React compared to Angular/Ember since it can be rendered server side. The benefit comes from not having the overhead of rendering your page server side with something like PhantomJS and serving the HTML.</p></li>
-<li><p>Reusable components make the code more reusable and testable, and the short terminology keeps the learning curve managable.</p></li>
-<li><p>Since React can be rendered Server Side, you might completely get rid of your server side templating, further reducing the number of tools necessary to run your app.</p></li>
-</ol>
-
-
-<h5>React and Flask</h5>
-
-<p>With their focus on SRP, React and Flask could be dependable and efficient parts of your stack. This is specially handy if you want to leverage the Numpy/Scipy stack for doing data analysis in near realtime and serve up a frontend with heavy user interaction. In a later post, we will look at exploring interactive applications and introduce Socket.io.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Nodeconf 2015: Unconf with the right intentions]]></title>
-    <link href="http://avidas.github.com/blog/2015/06/14/nodeconf-unconf-with-the-right-intentions/"/>
-    <updated>2015-06-14T16:28:00-04:00</updated>
-    <id>http://avidas.github.com/blog/2015/06/14/nodeconf-unconf-with-the-right-intentions</id>
-    <content type="html"><![CDATA[<p>Conferences can be a great way to get the creative juices flowing, meet people in the community and share stories and problems. They offer great opportunities to learn from core developers building the frameworks that your software depends on.</p>
-
-<p>Nodeconf managed to achieve all this, in the rather unusual form of an unconference. An unconference meant that the structure and events/presentations and talks at the conference were left to be decided by the community rather than a committee. That does make Nodeconf a conference not for everyone. Understanding the format and structure of Nodeconf is important before you make the hike to Walnut Creek Ranch next year.</p>
-
-<p>I thought to distill down the reasons why you might or might not be interested in attending Nodeconf as well as get the most out of it. You might be interested in Nodeconf if you</p>
-
-<ol>
-<li><p><strong>Build for the web</strong>: For a lot of attendees, Nodeconf would feel like living in the future as a lot of attendees are very involved in making the decisions and tradeoff that would shape the future of the web. Specially discussions around packaging and parceling front end assets in npm (Modular UI) was really interesting as was Isomorphic JS, which covered the challenges involved in writing identical client and server side code. The JavaScript landscape is a fast evolving one and Nodeconf offers fantastic perspective on how the decision making can work.</p></li>
-<li><p><strong>Publish on npm/github</strong>: As someone who maintains projects on npm and github, the discussions around distributing node modules were very insightful. Issues such as broadening adoption, getting contributors for github modules and standards for publishing on npm came up and maintainers of hugely popular modules shared their experiences. Picking a good module scope, having really good examples for beginners to start with and publishing with concise yet searchable package descriptions were all emphasized.</p></li>
-</ol>
-
-
-<!-- more -->
-
-
-<ol>
-<li><p><strong>Foster community growth</strong>: The node community is certainly dealing with the growing pains that comes with success. Having a well defined process for integrating new members is really important for large codebases. Broadening mentorship was considered as a possibility for guiding new members through the steep learning curve.</p></li>
-<li><p><strong>Want to get a deeper understanding of Node Core and APIs</strong>: There was unparalleled opportunity to discuss Node core/API and critical libraries such as libuv with the core developers. This was also true for external node libraries, and it can be certainly valuable to take a set of well defined problems that you have on your Node codebases as you are bound to make progress in such an environment.</p></li>
-</ol>
-
-
-<p>You might not be interested in Nodeconf if</p>
-
-<ol>
-<li><p><strong>You expect Nodeconf to be a 3 day training session on Node</strong>: While Nodeconf was full of illuminating discussions and presentations, it was certainly not a series of tutorials on Node.</p></li>
-<li><p><strong>You expect a traditional conference structure</strong>: It did not take place on a hotel, rather a ranch and certainly does not have some of the glamour associated with WWDC or Google I/O.</p></li>
-</ol>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Building Realtime user monitoring and targeting platform with Node, Express and Socket.io]]></title>
-    <link href="http://avidas.github.com/blog/2015/06/06/building-realtime-user-monitoring-and-targeting-platform-with-node/"/>
-    <updated>2015-06-06T15:31:00-04:00</updated>
-    <id>http://avidas.github.com/blog/2015/06/06/building-realtime-user-monitoring-and-targeting-platform-with-node</id>
-    <content type="html"><![CDATA[<p>Being able to target users and send targeted notifications can be key to turn visitors into conversions and tighten your funnel. Offerings such as mailchimp and mixpanel offer ways to reach out to users but in most of those cases you only get to do them in post processing. However, there are situations when it would be really powerful is to be able to track users as they are navigating your website and send targeted notifications to them.</p>
-
-<h3>Use Cases</h3>
-
-<p>Imagine that a buyer is looking for cars to buy and is interested in vehicles of a particular model and brand. It is very likely that he/she will visit several sites to compare prices. If there are a few results the buyer has looked at already, there may be an item which would fit the profile of this user. If you are able to prompt and reach out as the user is browsing through several results, it could make the difference between a sale and user buying from a different site. This is particularly useful for high price, high options scenerios e.g. Real Estate/Car/Electronics purchases. For use cases where the price is low or the options are fewer, e.g. a SAAS offering with a 3 tiers, this level of fine grained tracking may not be necessary. However, if you have a fledgling SAAS startup, you may want to do this in the spirit of <a href="http://paulgraham.com/ds.html">doing things that don't scale</a>.</p>
-
-<h3>Prerequisites</h3>
-
-<p>This article assumes that you have <a href="https://nodejs.org/">node and npm</a> installed on your system. It would be also be useful to get familiar with <a href="http://expressjs.com/">Express.js</a>, the de facto web framework on top of Node.js. <a href="http://socket.io/">Socket.io</a> is a Node.js module that abstracts WebSocket, JSON Polling and other protocols to enable simultaneous bi directional communication between connected parties. This article makes heavy use of Socket.io terminology, so it would be good to be familiar with sending and receiving events, broadcasts, namespaces and rooms.</p>
-
-<h3>Install and run</h3>
-
-<p>Start by git cloning the repo, install dependencies and run the app.</p>
-
-<p><code>bash
-git clone git@github.com:avidas/socketio-monitoring.git
-cd socketio-monitoring
-npm install
-npm start
-</code></p>
-
-<p>By default this will start the server at port 8080. navigate to localhost:8080/admin on a browser e.g Chrome. Now, on a different browser, e.g. Firefox, navigate to localhost:8080 and browse around. You will see that the admin page gets updated with the url endpoints as you navigate your way through the website in firefox. You can even send an alert to the user on Firefox by pressing the send offer button on Chrome!</p>
-
-<h3>Walkthrough</h3>
-
-<p>Let's get into how this works. When an admin visits localhost:8080/admin, she joins a Socket.io namespace called adminchannel.</p>
-
-<p><code>javascript
-var adminchannel = io.of('/adminchannel');
-</code></p>
-
-<p>When a new user visits a page, we get the <a href="https://github.com/expressjs/session#reqsession">express sessionID</a> of the user by calling req.sessionID and pass it to the templating engine for rendering. The session id ensures that we can identify a user across pages and browser tabs.</p>
-
-<p><code>javascript
-res.render('index', {a:req.sessionID});
-</code></p>
-
-<p>The template sets the value of sessionID as a hidden input field on the page, with the id "user_session_id".</p>
-
-<p>```html
-<body>
-<input type="hidden" id="user_session_id" value="<%= a %>" />
-  <div id="device" style="font-size: 45px;">2015 Tesla Cars</div></p>
-
-<pre><code>&lt;a href="http://avidas.github.com/about"&gt;About&lt;/a&gt;
-</code></pre>
-
-<p>  <br />
-  <a href="http://avidas.github.com/">Home</a>
-</body>
-```
-After the page has loaded, it will emit a pageChange socket.io event. Accompanying the event is the url endpoint for the current page and sessionID.</p>
-
-<p>```javascript
-  var userSID = document.getElementById('user_session_id').value;
-  var socket = io();</p>
-
-<p>  var userData = {</p>
-
-<pre><code>page: currentURL,
-sid: userSID
-</code></pre>
-
-<p>  }
-  socket.emit('pageChange', userData);
-```
-On server side, when pageChange is received, a Socket.io event called alertAdmin is sent to the adminchannel namespace. This ensures that only the admins are alerted that user with particular session id and particular socket id has navigated to a different page. Since anyone with access to /admin endpoint will join the adminchannel namespace, this can easily scale to multiple admins.</p>
-
-<p>```javascript
-  socket.on('pageChange', function(userData){</p>
-
-<pre><code>userData.socketID = socket.id;
-userData.clientIDs = clientIDs;
-console.log('user with sid ' + userData.sid + ' and session id ' + userData.socketID + ' changed page ' + userData.page);
-adminchannel.emit('alertAdmin', userData);
-</code></pre>
-
-<p>  });
-```</p>
-
-<p>When altertAdmin is received on the client side, the UI dashboard is updated so that the admins have a realtime dashboard of users navigating the site. This is done via Jquery which appends each new page change to a html list as users navigate through the site.</p>
-
-<p>```javascript
-  adminsocket.on('alertAdmin', function(userData){</p>
-
-<pre><code>var panel = document.getElementById('panel');
-var val = " User with session id " + userData.sid + " and with socket id " + userData.socketID + " has navigated to " + userData.page;
-userDataGlob = userData;
-var list = $('&lt;ul/&gt;').appendTo('#panel');
-//Dynamic display of users interacting on your website
-$("#panel ul").append('&lt;li&gt; ' + val + ' &lt;button type="button" class="offerClass" id="' + userData.socketID + '"&gt;Send Offer&lt;/button&gt;&lt;/li&gt;');
-</code></pre>
-
-<p>  });
-<code>
-Now, the admin may choose to send certain notifications to the particular user. When the admin clicks on the "Send Offer" button, a socket.io event called adminMessage is sent to the general namespace on the server with the user specific data.
-</code>javascript
-  //Allow admin to send adminMessage
-  $('body').on('click', '.offerClass', function () {</p>
-
-<pre><code>socket.emit('adminMessage', userDataGlob);
-</code></pre>
-
-<p>  });
-```
-When adminMessage is received on the server side, we broacast to the specific user the message. Since every user always joins into a room identified by their socketID, we can send a notification only to that user by using socket.broadcast.to(userData.socketID) and we send an event called adminBroadcast with the data.</p>
-
-<p>Here, you could have chosen to broadcast a message to all the users, or to a particular room, which subsets of users could have joined. Thus, you can fine tune how you want to reach out to users as well.</p>
-
-<p>```javascript
-  socket.on('adminMessage', function(userData) {</p>
-
-<pre><code>socket.broadcast.to(userData.socketID).emit('adminBroadcast', userData);
-</code></pre>
-
-<p>  });
-```</p>
-
-<p>Finally on the client side of the user when adminBroadcast is received, the user is alterted with a notification. However, you can easily use it for more complex use cases such as dynamically updating the page results, update ads section to show offers and so on by setting up event listeners.</p>
-
-<p>```javascript
-  socket.on('adminBroadcast', function(userData){</p>
-
-<pre><code>alert('Howdy there ' + userData.sid + ' ' + userData.socketID + ' ' + userData.page);
-</code></pre>
-
-<p>  })
-```</p>
-
-<p>There you have an end to end way in which a set of admins can track a set of users on a website and send notifications. This system can be particularly valuable when the user's primary reason for visit accompanies purchasing intent. E-commerce and SAAS platforms have recognized the importance to user segmentation and targeted outreach. This system enables you to minimize the latency of such outreach. On the plus side, you can get to rely on fully open source tools with broad user bases and support.</p>
-
-<p>This particular example used url endpoints as part of the data payload, but you can really strech it to any user events. For example, you can easily track where the user's cursor is and send that information back in real time. One can imagine High Frequency Trading firms using this technique in bots to track real time user behavior, e.g. user's cursor hovering on a buy button for a ticker, as information gathered for its trades. How much you want to track and react to can be an exercise in determining the bounderies of being responsive and creepiness for users.</p>
-
-<p>Props to my friend Shah for working with me on this. If you are doing some level of realtime tracking on your site, I would love to hear about it. Please feel free to send over any other <a href="mailto:avi@aviadas.com">feedback</a> as well.</p>
 ]]></content>
   </entry>
   

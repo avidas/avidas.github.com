@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Software, | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/software-/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2019-02-18T09:29:11-05:00</updated>
+  <updated>2019-02-18T09:43:36-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -12,49 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Core tenants of highly effective software teams]]></title>
-    <link href="http://avidas.github.com/blog/2018/11/03/core-tenants-of-effective-software-teams/"/>
-    <updated>2018-11-03T11:47:00-04:00</updated>
-    <id>http://avidas.github.com/blog/2018/11/03/core-tenants-of-effective-software-teams</id>
-    <content type="html"><![CDATA[<p><em>This blogpost is my thoughts only and does not necessarily represent the positions of current or past employers.</em></p>
-
-<p>We don't build software in a vacuum. Software involves people. Beyond organizations of a handful of people, hierarchy is beneficial. We get teams, commonly with engineering manager/lead, product manager, designers and engineers. What becomes crucial for the software and the product delivered then is the effectiveness of the team. Throughout my career in the industry and being part of many teams in different circumstances, I have started noticing some key patterns that really drives standout results in teams.</p>
-
-<ol>
-<li><p><strong>Believing in a common cause</strong>: The single biggest observation is that when a team of people believe in a common mission, they produce outsized returns. The most effective teams I have worked in all had a strong belief that they was a reason for the work they were doing. This also aids inter team collaboration over inter team competition, with teams often investing in tooling that makes the whole team better.<br/><br/>Engineering leaders can play a key role here to frame a compelling mission for the team. Hiring for the right role also becomes super important as a highly motivated individual in a role can be 2-10x more effective than someone unmotivated with similar ability. Having a competitor or a common enemy is great since we are predisposed to bond over defending ourselves from common enemies.</p></li>
-<li><p><strong>Psychological Safety</strong>: Google's <a href="https://www.nytimes.com/2016/02/28/magazine/what-google-learned-from-its-quest-to-build-the-perfect-team.html?_r=0">Project Aristotle</a> studied 180 teams over two years and came to the conclusion that psycological safety was the best signal for how effective a team is. How comfortable do people in the team feel to share vulnerability without fear of retribution? How comfortable do people feel asking questions without fear of asking something silly or share ideas without fear of being shut down without listening? Team's with high levels of psychological safety can have conflicts, but can deal with them in a mature way, being able to separate disagreement about ideas from disagreement with people.<br/><br/>For more senior engineers/technical leaders, this is crucially important since they are in a position to determine this culture for the team. Forming strong personal relationships with the team can be really valuable for fostering safety within the team. People like their leaders to be human, and admitting your own fallibility is a great way to form trust with team members.</p></li>
-<li><p><strong>Diversity of Thought</strong>: Diversity is a word that is commonly heard in the tech industry, and for good reason. Having diversity of people is a proven way to achieving diversity of thought, which is just one of the reasons why we must invest in software communities of women and minorities. Inclusiveness is one of the key pillars of psychological safety in a team, building on from the last section. Moreover, when software is aimed at global audience, but the team is homogeneous, it is easy to be fooled that a wide audience will get their needs met.<br/><br/>Even teams of experienced contributors can fall prey to atrophy and decay, without fresh ideas so common in upstarts. A team of really excited newer developers may not realize that in balance lies the key to long term personal, team and product success. Diversity of experience in a team helps to avoid these common traps.<br/><br/>Finally, cross functional teams can be more effective than teams exclusively focusing on frontend/backend/mobile. Recognizing the individual contributor's interest in user experience/security/governance etc and enabling space for that one of the most enabling things an engineer leader can do.</p></li>
-<li><p><strong>Growth and Ownership</strong>: It is immensely gratifying for people to feel that they are growing, and knowing that they are playing a role in the growth of others. When team members feel confident about the path in front of them can still have challenges, they are far less likely to be unmotivated and plateau. This is big for retention, since job changes frequently are a result of people feeling stuck and needing to make a change. It is costly to replace engineers, especially ones already trained and performing well in their role.<br/><br/>A key intrinsic motivator for many is the feeling of ownership. Being able to really sink their teeth into a hard problem and come up with something they are proud of. Teams where people really believed that they have strong ownership of the product also care more about the end users experience, resulting in a better product.<br/><br/>As engineering leadership, one of the best signals of good management is to have clarity in career ladders and promote the right people. A bias for people who make others around them better can be healthy. It is my experience that promotions should rarely come as a surprise to the individual or the team. Demonstrated investment in people as future leaders is also a major indication of a company's belief in their people, sending them to conferences, training and giving license for creativity.</p></li>
-<li><p><strong>Work Environment</strong>: This is a controversial one, but I do believe that companies today have bought way too much into the open office movement. While a return to cubicles does not feel desirable, dedicated interruption free zones (both space and time) are essential for good software. A chaotic office environment can also mean chaos in your codebase.<br/><br/>Debates range whether standing desk or sitting is better, however many monitors are necessary. My belief here is that the team should be colocated but individuals should be empowered to find the best working situation for the track of work they are in. I have personally found that standing keeps me on my toes, making it great for lots of small tasks, whereas sitting is best for tasks that need deep thought.</p></li>
-</ol>
-
-
-<p><strong>When things fall apart</strong></p>
-
-<p>We do not live in a perfect world. Recessions, unexpected downsizing, market competition and many other forces can impact access to resources which could result in ways in a group of people come in to work together and stop working together. Lot of us have all worked in a team where that magic of a great team existed, and the team achieved things together what could not be achieved by individuals. It is important for us to be thinking with intention and purpose and help each other build and find teams to discover that magic.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Lower Degrees of Separation with End Users]]></title>
-    <link href="http://avidas.github.com/blog/2018/05/09/degrees-of-separation-with-end-users/"/>
-    <updated>2018-05-09T10:21:00-04:00</updated>
-    <id>http://avidas.github.com/blog/2018/05/09/degrees-of-separation-with-end-users</id>
-    <content type="html"><![CDATA[<p>When working in software, one way to look at our profession is to say that we take architecture docs or designs and make code out of it. After years in the industry, we are trusted to come up with the architecture docs and work with a team to deliver the software. This absolves ourselves of responsibility in a way since even if the product fails, at least our code and systems were great. Companies today, however, are starting to see the limitations of software engineers being removed from the product decision making process.</p>
-
-<p>I think we should reframe the problem: it is rather our responsibility as software engineers to ask, how many degrees of separation does it exist between us and the end user? Ideally, the end user would be the person paying for our service, although this gets more complicated certainly by ad funded or venture funded software. The exercise could involve us asking, what would it take to reach 10 users of our software? Would we have to go through our product manager, who then talks to the account manager or product support? These are likely the folks currently dealing with customer calls when our software bresks and waiting for the Zendesk tickets to be picked from the queue.</p>
-
-<p>Who we are "engineering" for is a question we need to frequently ask ourselves. We should strive to be in environments where we are aware of our degree of separation and look for ways to cut down that separation. Without that frame, we can only have vague ideas of what the code we write is leading to, and end of the day limits the impact we can have.</p>
-
-<p>It should also not always be the product manager's job to always acting as the liason to translate user needs to us. When we are aware of user needs, it enables us to be proactive: to avoid that shortcut when building, or deal with that performance bottleneck early before it becomes a problem. We can also free the up the product manager to pursue broader goals such as product vision, market and competitive landscape analysis, etc.</p>
-
-<p>Tomorrow, when you get to work, ask yourself that question. Do you know who your users are and how they use your product? How many degrees of separation would you have to navigate to find that answer? If you are not comfortable with the answer, maybe you can think of a way to change that.</p>
-
-<p>Disclaimer: Thoughts expressed in the article are mine only, and does not represent the positions of current or past employers.</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Web Payments by First Principles: Data Architecture]]></title>
@@ -81,26 +38,19 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Takeaways from MicroConf Starter 2017]]></title>
-    <link href="http://avidas.github.com/blog/2017/04/21/takeaways-from-microconf-starter-2017/"/>
-    <updated>2017-04-21T17:55:00-04:00</updated>
-    <id>http://avidas.github.com/blog/2017/04/21/takeaways-from-microconf-starter-2017</id>
-    <content type="html"><![CDATA[<p>With the rise in VC funded startups, there was not a big community for individuals and small teams launching and supporting digital product businesses with their own profits. Rob Walling and Mike Taber noticed that need and created MicroConf, a conference for self-funded software startups.</p>
+    <title type="html"><![CDATA[Guide to finding a technical cofounder]]></title>
+    <link href="http://avidas.github.com/blog/2015/08/21/guide-to-finding-a-technical-cofounder/"/>
+    <updated>2015-08-21T23:04:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2015/08/21/guide-to-finding-a-technical-cofounder</id>
+    <content type="html"><![CDATA[<p>This has been happening at various meetups/hackathons/startup events sufficiently enough to warrant a blogpost. The situation is generally a variant of this, someone has an idea they are really convinced is the next big thing, the only thing stopping that from happening is making an app/website which requires a technical cofounder. The person with the idea is not at a position to afford the costs of hiring a full time/part time developer, so an equity sharing situation makes sense. Hackathons and tech meetups are where developers hang out, so approaching them there seem to be a good idea to find that cofounder.</p>
 
-<p>I was at MicroConf Starter last week. In its 12th year, MicroConf split into Starter and Growth Tiers, the starter edition for people who do not make a full time income from digital products. If you are the kind of person who enjoys taking an idea to a functional product that solves real world problems, MicroConf is a conference where everyone has that shared goal.</p>
+<p>There are a few problems to approaches like this. Software people who go to events like this gets pitched a fair amount, sometimes repeatedly on the same ideas. Also, we can be a rather cynical bunch, often as result of the kind of work that we do. This can result you not finding that engineer/hacker to build your app during a hackathon. Or they might do so during the hackathon, but simply drop off after.</p>
 
-<p>Some at MicroConf have launched products and were doing quite well from a digital product business, let it be online courses, software plugins, SAAS etc. There were also number of people who wanted to learn more about find the right idea, product-market fit, sales and marketing.</p>
-
-<p>I really enjoyed the pragmatic voice of the conference, keeping focus on balance. The conference does not shy away from the fact that it is not a easy task to bootstrap software products.</p>
-
-<p><a href="https://shai.io/MicroConf/">MicroConf has great notes</a> for the whole conference. Instead of trying to go through the whole conference, here are some of my takeaways from MicroConf Starter 2017.</p>
+<p>It can get discouraging, specially if you are convinced about the idea and new to such events. Personally, I like idea people, specially because they bring in ideas from domains and problem spaces I would have no exposure to otherwise. Moreover, I also believe that cross-pollination of people from different groups is healthy and more products coming into the world is a good thing. Therefore, I would rather like to jot down some helpful tips which can maximize your chances of finding a technical cofounder next time you are looking for one.</p>
 
 <ol>
-<li><p><strong>Consistency</strong>: Rob Walling emphasized start of the conference that the success of MicroConf will be what these two days can do for the remaining 363 days of the year. Often consistency made the difference in the eventual endurance and success of the product. Josh Doddy's blog was fairly dormant for the first 12-14 months but peaking exponentially near its current runtime of 18 months. Mastermind groups were mentioned as a great way for a group of people who help each other stay on track.</p></li>
-<li><p><strong>Finding an idea worth building</strong>: Multiple speakers mentioned the need to take a hard look at your stocks and assets. What questions do people keep asking you? What are you passionate about that other people find boring? What would you from 6 months ago find valuable? All these were from Ben Orenstein's talk, one of my favorite at the conference. Patrick Mckenzie also touched on the same topic, to double down on what you do very well already and what the market already buys from you. Justin Jackson mentioned the need to find the groups you are best equipped to serve, and to research the audience and find ideas rather than thinking in your own head what the problem could be. Mike Taber also emphasized focusing if you are in fact the right person to be building that product.</p></li>
-<li><p><strong>When to launch</strong>: An MVP should solve a well defined problem, not solve a portion of it or solve every possible iteration of the problem. However, the lack of polish is intentional to see how much inconvenience the customers would endure to solve their problem. Justin Jackson had a great point that an MVP should be the smallest product you could build to disprove a hypothesis. It was interesting to see multiple speakers mentioning the importance of putting your face right by your product, to encourage trust and take responsibility of what you are delivering.</p></li>
-<li><p><strong>On user acquisition</strong>: Probably the biggest concern of fledgling products, user acquisition/outreach had dedicated talks. Some of the key points where to focus on conversations with users and doubling down on a few approaches e.g. SEO, Content, Ads rather than throwing in the kitchen sink. Looking for integrations with other products by forming partnerships was a common theme. Key questions to ask users were to ask how they were solving the problem today, what they have tried or ask for introductions to someone with that problem. In the beginning, unscalable strategies such as concierge onboarding are useful, specially for SAAS products.</p></li>
-<li><p><strong>Getting results</strong>: Users are the best signals here, and if you have to chase people down to use your products, it may not be solving a real problem. Google analytics charts showing growth and conversion rates were part of almost every presentation. At the same time, reading those charts can be a hard story, often showing charts recovering from a flatline or decline to eventual success because the founders believed enough to carry on. Its hard to think convictions to be infallible in the face of data however, and sometimes it is time to give up.</p></li>
+<li><p><strong>Understand what motivates engineers</strong>: It's important to understand what motivates engineers beyond just financial opportunity. If such an opportunity exists, you may be in pretty decent shape already and should really drill down on your exact plans on how the app would make money in the future. If you are less sure, there are still options. Can you prove that the app would have a broad user base? A great way to do this would be to prove that you have tried unscalable ways doing this already, be it door-to-door, personal know how, competitors etc. Most ideas can be validated using non-technical approaches. Knowing your problem space well will not only help you to build a business but also lend credibility when you are looking for a cofounder. Another thing that attracts is interesting technical problems or cutting-edge tech, so if your app involves either, it would be a positive. Good technical co founders can be extremely self-motivated once they realize that they have a problem is really worth spending time on.</p></li>
+<li><p><strong>Manage expectations</strong>: It is best to present the idea and the opportunity and not expect immediate commitment. Generally people are busy, but if you have done your homework and can present the problem well, there is always a good chance. Not all engineers want the same thing, and lot are perfectly happy working where they are. If you do not have a proven user base or revenue plan yet, it does involve a certain risk-taking to get on that journey. As someone who wants to be a founder, you should seek technical co-founders with the same risk appetite as you.</p></li>
 </ol>
 
 
@@ -108,41 +58,123 @@
 
 
 <ol>
-<li><p><strong>Pricing and revenue</strong>: Patrick Mckenzie mentioned that the objective to be a predictable sales process to make profit every month. The question of how much to charge for the product is tricky for founders. Both him, Ben and Jordan Gal emphasized the need for running experiments on your pricing page. Surprisingly enough, an increase in prices may often result in better customers in the long run even though in the short term your trials may fall.</p></li>
-<li><p><strong>Motivation</strong>: People are motivated differently, but momentum is a key driver. Ben mentioned the need to reverse the relationship, not to wait for inspiration but to get started, feel the success and then get inspired. Sherry Walling mentioned using positive stress to fuel motivation. Lot of the folks in the conference started when they already had a lot of responsibilities, but often it is not time that is lacking, but the prioritization. Making more time is a function of reorganizing your priorities. Delegation is another important tool to master, especially for adjacent responsibilities to the key goals.</p></li>
-<li><p><strong>Success and Failure</strong>: Jordan Gal had a great point that success is the ability to go from one failure to another without loss of enthusiasm. But success is quite subjective, and often reinforced by societies expectations. Perhaps it is worth asking if you are helping people solve problems. Failure is often more interesting part of the conference, to see what these speakers have tried but stopped when they did not deliver the results.</p></li>
-<li><p><strong>Maintaining balance</strong>: Almost every speaker mentioned the need to for maintaining the balance in your life, relationships and family. Sherry Walling's talk was dedicated to this, pointing out the need for self reflection and care. Taking retreats to step away from the grind is valuable, giving time to ask the important questions. Questions such as what pieces of day to day life is infusing you with energy? How can I readjust priorities so that I can live in those sweet spots more and do less of what is causing stress? The other really important point was about feedback loops, getting advice, forming mastermind groups and making sure that there are others weighing on important decisions</p></li>
+<li><p><strong>Don't get discouraged</strong>: This may sound like packaged advice, but most likely, if someone says no, it is far more likely that they are rejecting the idea and not rejecting you. It suffices to be polite and ask for their reasoning. Most people are nice enough to talk about why they are not willing to work on that idea and you might get valuable feedback.</p></li>
+<li><p><strong>Understand the software development cycle</strong>: The more you understand technology and what goes into building software, the better suited you are to recruit engineers. Timelines/delivery/delays, features and priorities, tradeoffs and optimizations are broad concepts that are just as important as picking languages, tools and platforms. Unsexy things such as debugging a database inconsistency could take up a lot more time than building the next cool feature. Prototyping an app during a hackathon is fun, the real work is afterwards and your story and contribution needs to be compelling enough for people to continue working.</p></li>
+<li><p><strong>Use existing networks</strong>: Leverage existing networks such as college alumni and people you know might work better than approaching random hackers at events. If you have worked on other projects before, or are connected via friends to developers who are working on related projects, you would have a better chance of finding technical cofounders.</p></li>
 </ol>
 
 
-<p>Overall, I loved the theme and people at Micronconf. It was a blend of driven, helpful people interested in solving problems and owning software products. I would highly recommend the conference for anyone looking to launch products and interested in bootstrapping.</p>
-
-<p>If you have feedback on this blog post or MicroConf, please <a href="mailto:avi@aviadas.com">feel free to reach out!</a>.</p>
+<p>Boom times in the valley/economy means that building an startup/company is an attractive prospect, and gives software engineers options on the table. Despite that, armed with a compelling idea, good buisness acumen, and clear idea of your contribution to the project, you have very good chance of recruiting engineers to help found your dream company. Good luck on the journey.</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Pycon Canada 2015 II: Python for Reliably Delivering Cross Platform Products]]></title>
-    <link href="http://avidas.github.com/blog/2015/11/24/pycon-canada-2015-ii-python-for-reliably-delivering-cross-platform-products/"/>
-    <updated>2015-11-24T20:41:00-05:00</updated>
-    <id>http://avidas.github.com/blog/2015/11/24/pycon-canada-2015-ii-python-for-reliably-delivering-cross-platform-products</id>
-    <content type="html"><![CDATA[<p>This is the second part of the two series blog post about my talk at PyCon Canada. Here is the <a href="http://aviadas.com/blog/2015/11/21/pycon-canada-2015-speaking-at-my-first-conference/">first part</a>.</p>
+    <title type="html"><![CDATA[How Browserify improves Client-side Development]]></title>
+    <link href="http://avidas.github.com/blog/2015/07/16/how-browserify-improves-client-side-development/"/>
+    <updated>2015-07-16T14:41:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2015/07/16/how-browserify-improves-client-side-development</id>
+    <content type="html"><![CDATA[<h4>For a more modular, maintainable Frontend</h4>
 
-<h3>Proposal:</h3>
+<p>As Single Page Applications gain in popularity, the size of front end codebases keeps growing rapidly. For keeping these codebases maintainable, modularity becomes a priority. The easier it is to modularize code, the more incentives developers will have for doing so. With the ease of modularity with CommonJS, npm has seen explosive growth of packages published which has helped the Node ecosystem greatly. Browserify brings that ease to client side development leveraging the CommonJS module system. When used with build tools such as Grunt or Gulp, you can write modular client side code just like you would write your server side Node code, and Browserify takes care of the bundling for you. There is much less excuse these days to make everything global and attach to the window object!</p>
 
-<p>Are you part of a team responsible for delivering cross platform products? End to end automated testing and communicating effectively are important when your project depends on multiple teams spread across functional domains. At Braintree/PayPal, we worked on a framework to reliably ship developer facing products. We will go over using BDD with Behave to describe test scenarios that speaks to both product and engineering, using Appium for mobile automation, and ElasicSearch and Kibana for storage and visualization of test results. You will see how the breadth of packages available on PyPI, the flexibility and ease of Python helped a team of developers whose core competencies were not in Python to collaborate on a common ground.</p>
+<h4>Leveraging npm modules</h4>
 
-<h3>Slides:</h3>
+<p><img class="left" src="/images/Modulecounts.jpg" width="800" height="670" title="Package Manager Traction" alt="Package Manager Traction"></p>
 
-<p><iframe src="http://www.slideshare.net/slideshow/embed_code/55489167 " width="595" height="446" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen></iframe> </p>
+<p>Looking at the graph above is a big selling point when trying to evaluate the value Browserify can bring to your client side workflow. The graph is a comparison of the rate at which packages are getting published in different package managers Bower, PyPI, RubyGems. npm leads the pack easily. Recently, jQuery registry stopped accepting new plugins, with <a href="http://blog.npmjs.org/post/111475741445/publishing-your-jquery-plugin-to-npm-the-quick">new packages being published on npm</a>. Cordova recently announced the same change, moving plugins to npm. npm is now hosting much broader range of modules than only server-side Node.js modules and Browserify can help you leverage these modules on the front-end. The flipside of this as a module publisher is that publishing modules on npm now gives you access to a much broader audience since people might use the module on the browser, custom hardware etc.</p>
 
-<h3>Video:</h3>
+<h4>How it works</h4>
 
-<p><a href="https://www.youtube.com/watch?v=YnCtm3ZDynY">Youtube link</a></p>
+<p>In the CommonJS syntax, the "exports" object is the public API of a module and "require" can be used to include a module in your javascript file. Since browsers do not have require available, Browserify traverses the <a href="https://github.com/substack/browserify-handbook#how-browserify-works">dependency trees</a> of all the required modules, and bundles the dependencies into one self contained file that you can just include with a script tag on the browser. Browserify is aware of package.json and the order in which node_modules are resolved. Moreover, it supports built in Node modules e.g. path and gloabls e.g. Buffer so you have access of those in the client side as well.</p>
 
-<h3>Github Repo</h3>
+<h4>Transforms</h4>
 
-<p><a href="https://github.com/avidas/reliability-demo">Reliability Demo</a></p>
+<p>Core Browserify only bundles modules written in the CommonJS syntax, adhering to the single responsibility principle. However, there are other ways of modularizing client side code, AMD and Global Variables being the two usual ones. Instead of handling every possibly of modules, Browserify exposes a Transforms API so that a plugin can be built which can preprocess a file into Javascript in CommonJS syntax which Browserify can then consume. This means that you can write modular code just like your node codebases regardless of what module system your dependencies may adhere to. There are also lot of people writing in languages that compile into Javascript, such as CoffeeScript or TypeScript. To handle this, there are transforms available for AMD (deamdify), Bower modules (debowerify), globals (deglobalify), coffeescript(coffeeify), harmony (es6ify) etc. A simple search of Browserify on Github or npm brings up thousands of modules and attests to the <a href="https://github.com/substack/node-browserify/wiki/list-of-transforms">ecosystem around Browserify</a>. Delegating to transforms helps to keep the footprint of Browserify smaller, while makes it more extensible.</p>
+
+<!-- more -->
+
+
+<h4>Using with Build Tools</h4>
+
+<p>Software is great when it just works and you do not have tinker with it all the time. Grunt/Gulp are great for this kind of configure once, build whenever workflow. Browserify is available as a command line tool primarily, but has Grunt and Gulp plugins which can be used to easily integrate Browserify into your build. There is also watchify, which can reduce build time by monitoring source files and incrementally rebuilding the front end bundle on the fly. For large projects, this is really useful to keep the build times small.</p>
+
+<h4>Alternatives</h4>
+
+<p>There are always alternatives available in the JavaScript world, and Webpack, RequireJS and Component being some of the major ones. RequireJS has been around for longer and primarily supports the AMD specification, but has support for CommonJS too. Webpack tends to do better with static assets that your client side requires and tries to cover a broader issue of bundling all static assets. With picking any tool, it's good to be aware of the alternatives, the problem they were designed to solve, and benefits and drawbacks of each. It makes for <a href="https://gist.github.com/substack/68f8d502be42d5cd4942">quite interesting debate</a> at times as well.</p>
+
+<h4>Resources</h4>
+
+<p>Browserify has really good documentation and the <a href="https://github.com/substack/browserify-handbook">browserify handbook</a> is a great resource for an extensive runthrough. For getting started, the nodeschool module called <a href="https://github.com/substack/browserify-adventure">browserify-adventure</a> is very handy.</p>
+
+<h4>Conclusion</h4>
+
+<p>The browser community is unlikely to adopt a module system anytime soon. Harmony/ES6 includes a module definition but it will take time before it gets adopted by all the browsers. Moreover, there have been <a href="https://esdiscuss.org/topic/es6-modules-sorry">resistance from some notable developers</a>.</p>
+
+<p>Browserify offers a great way to abstract away that issue. With access to a vast amount of modules, there is much less of a need for reinventing the wheel on the client side, and fewer script tags thrown around everywhere. Client side software development is evolving fast, and Browserify has made significant progress to minimize some of that complexity.</p>
+
+<p>If you are using browserify/webpack in production, I would love to know the tradeoffs/issues you have ran into. Comments/feedback here or <a href="mailto:avi@aviadas.com">contact</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Verifying X509 Certificate Chain of Trust in Python]]></title>
+    <link href="http://avidas.github.com/blog/2015/06/18/verifying-x509-certificate-chain-of-trust-in-python/"/>
+    <updated>2015-06-18T17:07:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2015/06/18/verifying-x509-certificate-chain-of-trust-in-python</id>
+    <content type="html"><![CDATA[<p>Executing network spoofing and man in the middle attacks have become easier than ever. This is more of an issue if a client has an open server for you to send push notifications, since the open port can be detected by methods such as port scanning. As such, it is important to sign data, and ship the signature and metadata about verifying the data against the signature along with the data itself. This provides a way for the client to verify that the data received is unaltered, from the correct sender and indented for the correct recipient. Python's pyopenssl has a handy method called <a href="http://pyopenssl.readthedocs.org/en/latest/api/crypto.html?highlight=verify#OpenSSL.crypto.verify">verify</a> for checking the authenticity of data.</p>
+
+<p><code>python
+OpenSSL.crypto.verify(certificate, signature, data, digest)
+</code></p>
+
+<p>The problem then becomes how to provide the certificate while retaining the flexibility necessary to update the certificate without clients needing to modify their certificate stores every time. Providing a url that can be used to download the cert provides that but leaves the door open for the same kind of attacks.</p>
+
+<p>Therefore, clients will need to ensure that the downloaded certificate is trustworthy before using it to verify the authenticity of a message. The openssl module on the terminal has a <a href="https://www.openssl.org/docs/apps/verify.html">verify method</a> that can be used to verify the certificate against a chain of trusted certificates, going all the way back to the root CA. The builtin ssl module has create_default_context(), which can build a certificate chain while creating a new SSLContext. However, it does not expose that functionality for adhoc post processing when you are not opening new connections.</p>
+
+<p>pyopenssl provides some very handy abstractions for exactly this purpose:</p>
+
+<ul>
+<li><p><a href="http://pyopenssl.readthedocs.org/en/latest/api/crypto.html#x509store-objects">X509Store</a>: The chain of certificates you have chosen to trust going back to root Certificate Authority</p></li>
+<li><p><a href="http://pyopenssl.readthedocs.org/en/latest/api/crypto.html#x509storecontext-objects">X509StoreContext</a> - Takes in a X509Store and a new certificate which you can now validate against your store by calling verify_certificate. It raises exceptions if the intermediate or root CA is missing in the chain or the certificate is invalid.</p></li>
+</ul>
+
+
+<p> The full example of verifying a downloaded certificate against a trust chain is given below</p>
+
+<p>```python
+import requests
+from OpenSSL import crypto</p>
+
+<p>def _verify_certificate_chain(cert_url, trusted_certs):</p>
+
+<pre><code># Download the certificate from the url and load the certificate
+cert_str = requests.get(cert_url)
+certificate = crypto.load_certificate(crypto.FILETYPE_PEM, str(cert_str.text))
+
+#Create a certificate store and add your trusted certs
+try:
+    store = crypto.X509Store()
+
+    # Assuming the certificates are in PEM format in a trusted_certs list
+    for _cert in trusted_certs:
+        store.add_cert(_cert)
+
+    # Create a certificate context using the store and the downloaded certificate
+    store_ctx = crypto.X509StoreContext(store, certificate)
+
+    # Verify the certificate, returns None if it can validate the certificate
+    store_ctx.verify_certificate()
+
+    return True
+
+except Exception as e:
+    print(e)
+    return False
+</code></pre>
+
+<p>```</p>
+
+<p>Using this can be really useful for client libaries where you cannot rely on the system to provide the certificates, so you can ship your trust chain along with the library. There are also other useful abstractions in the pyopenssl library for some useful checks against the certificate. get_subject() provides information about the certificate such as common name, has_expired() which checks if the certificate is within valid time range and other features such as blacklisting potentially compromised certificates are possible. Thus pyopenssl is really handy when you need ssl abstractions beyond the standard library while not needing to execute the openssl shell calls via a subprocess.</p>
 ]]></content>
   </entry>
   
