@@ -4,7 +4,7 @@ title: "Jersey Half Marathon 2018: Race Report"
 date: 2018-05-09 10:21
 comments: true
 published: true
-categories: Running, Fitness
+categories: Running Fitness
 ---
 
 "Gatoradeee!! Water!" The sudden enthusiastic cheer after a period of silence was hard to miss. Looking up, I saw the 10k marker. I looked at my watch and I was about to PR a 10k. Except that I was not running a 10k. I was running a half Marathon and with more than half of the race still ahead of me, this was bad news.

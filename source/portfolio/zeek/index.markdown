@@ -3,7 +3,7 @@ layout: page
 title: "zeek"
 author: "Avi Das"
 date: 2015-09-07 07:21
-comments: false
+comments: true
 sharing: true
 footer: true
 brief: "SaaS for Twitter marketing automation, aquiring targeted prospects and converting them to leads."

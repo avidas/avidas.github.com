@@ -3,7 +3,7 @@ layout: post
 title: "10 things I learnt going from 10k to a Marathon in 2015"
 date: 2016-02-09 23:28
 comments: true
-categories: Running, Fitness
+categories: Running Fitness
 ---
 
 If I were to think about running a 26.2 mile race at the start of 2015, the overwhelming feeling would be one of fear. I have only ever ran a 10k before and just signed up for the Austin 2015 half Marathon, my first ever half. The prospect of running twice the distance still seemed far away though. Flash forward to October 18th 2015, I finished my first Marathon with a 3:49:00 time. As I look back on this year, I wanted to put together some of my realizations during the whole process. 
