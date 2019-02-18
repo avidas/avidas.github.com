@@ -3,7 +3,7 @@ layout: page
 title: "your infinite life"
 author: "Avi Das"
 date: 2019-02-17 12:22
-comments: false
+comments: true
 sharing: true
 footer: true
 brief: "Marketing website, CMS and course registration portal for life coaches."

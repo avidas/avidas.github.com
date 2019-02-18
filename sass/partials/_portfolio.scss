@@ -23,5 +23,11 @@
     a {
         all: unset;
         cursor: pointer;
+        color: darkslategray;
+        text-transform: uppercase;
+    }
+    a:hover {
+        color: black;
+        text-shadow: 0.5px 0.5px #555;
     }
 }

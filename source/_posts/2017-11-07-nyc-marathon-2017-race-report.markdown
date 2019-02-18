@@ -4,7 +4,7 @@ title: "NYC Marathon 2017: Training and Race Report"
 date: 2017-11-07 09:06
 comments: true
 published: true
-categories: Running, Fitness
+categories: Running Fitness
 ---
 
 I ran the NYC marathon this Sunday. On my fourth marathon, I was going for 3:45, came off with a 3:38, personal best by 4 minutes. More than the time, a vanity metric, I was happier about the race execution, doing negative splits, avoiding cramps and bonks/hitting the wall. NYC marathon is a technical and challenging course, but I found it could reward patience and training. It was also an emotional roller coaster for me, NYC being a focal point during majority of my time in the US.
