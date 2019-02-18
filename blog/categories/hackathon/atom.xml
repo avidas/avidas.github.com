@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Hackathon | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/hackathon/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2019-02-17T17:36:04-05:00</updated>
+  <updated>2019-02-18T09:29:11-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -31,6 +31,58 @@
 <p>Its hard to argue that driving patterns are valuable data. However, as with any user specific information used for personalization experiences curated by businesses, privacy would be a big concern. It was not entirely clear who would own the data, the driver, the provider, or else. It should be made very clear to the driver of the nature of the tracking going on and how the data may be used. Since data like this could easily be used by a malicious third party to monitor you in real time when you are driving, there is inherent danger in it being available without the driver being informed. Tracking is an issue users of any clowd aware system needs to be aware of.</p>
 
 <p>We did win the Verizon prize for the hackathon, and it was nice having our idea at the eleventh hour being well accepted. Angelhack put on a good show, and I must mention the apps "Make it Rain" (literally, on the phone screen) and "Kanye"(alerts if you are nearby Kanye West) for the hilarity during the presentation!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hack the Trackers]]></title>
+    <link href="http://avidas.github.com/blog/2013/12/25/hack-the-trackers-november/"/>
+    <updated>2013-12-25T15:49:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2013/12/25/hack-the-trackers-november</id>
+    <content type="html"><![CDATA[<p>Online tracking has been a peak topic of debate this year and by the look of things will continue to be. NSA programs, Snowden and the reactions from top tech companies brought in more attention to tracking than ever before. It was hence very timely for Evidon/Ghostery to organize hack the trackers in early November.</p>
+
+<p><a href="https://www.ghostery.com/">Ghostery</a> is a chrome extension that displays trackers on a particular webpage. Not only that, they allow features to block particular trackers and include detailed information about the trackers. The emphasis seems to make web users aware of tracking and let them make the choice.</p>
+
+<p>We built Falcon, which we thought would complement Ghostery's offering quite well. Falcon is a chrome extension where we displayed the overall lost time due to the trackers and which trackers were the most resource intensive. Our hypothesis was that to increase awareness of online tracking, we needed to provide tangible ways in which tracking affects online browsing experience. Ghostery provided us with a data set with a lot of interesting information, among which average load time for trackers was a key indicator. Even with caching, users could lose time which would take to load the trackers, if trackers are loaded synchronously. This could particularly matter for mobile and locations with poor wi-fi as poorly created trackers would slow down the browsing experience.</p>
+
+<p><img class="right" src="/images/falcon.png" width="500" height="900" title="Falcon Demo" alt="Falcon Demo"></p>
+
+<p>Building a chrome extension for a first time was not too complicated as it is very similar to building a web page and chrome is as reliable as platforms get. We ended up being one of the two semi finalists, the other being a cool way to link the trackers with their public figures as a fun way to raise attention to tracking.</p>
+
+<p>This hackathon was particularly a great learning experience. Companies are taking highly innovative routes to glean more information about the users. Cookies have always existed, but two other forms of tracking I learnt was autocomplete fields tracking and <a href="http://en.wikipedia.org/wiki/Device_fingerprint">browser fingerprinting</a>. Browser fingerprinting tries to get information from user-agent, the OS, extensions installed and other configurations to bind a particular browser to an user and this can happen completely on the server side. I have only learnt fairly recently about the bidding platforms for display advertisement and it was pretty interesting to see dictionary.com revealing on their console the bids as they happened in real time.</p>
+
+<p>Computer security is a dynamic and fast changing field and this hackathon was an interesting mix of people in different niches of the industry. Tracking will continue to be an issue and it was good to see Ghostery taking the initiative to search for innovations in this space.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[VIPHackathon: Know Your Reps]]></title>
+    <link href="http://avidas.github.com/blog/2013/08/04/viphackathon-know-your-reps/"/>
+    <updated>2013-08-04T09:58:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2013/08/04/viphackathon-know-your-reps</id>
+    <content type="html"><![CDATA[<p><img class="left" src="/images/Obama_eagle.jpg" width="350" height="350" title="Obama eagle" alt="Obama eagle"></p>
+
+<p>How many people know their representatives for council/state/congress? How many local issues gets routed to the most relevant elected official? How do you know the status of the most relevant issues raised?</p>
+
+<p>To solve some of these issues, we worked on the "Know your representatives" app during the Voting Information Project hackathon on 8/3/2013 to introduce elected officials to the public. It is a Windows phone app geared to increase accountability of elected officials which in turn will promote voter engagement.</p>
+
+<ol>
+<li><p>Users can view and contact their official and raise their issues to the respective elected official and raise the most significant issues.</p></li>
+<li><p>Official can respond to uses and resolve the issues and update the status on the app.</p></li>
+<li><p>Users can add their support to prioritize the high priority items by raising their support using the voting button.</p></li>
+</ol>
+
+
+<!-- more -->
+
+
+<p> The app was built with Windows Azure as Backend, Twilio is used for sms notification when officials respond to issues. Azavea is used to bring the elected officals information using the Geo Location.</p>
+
+<p><img class="right" src="/images/VIPhack.jpg" width="350" height="350" title="VIP awards" alt="VIP awards"></p>
+
+<p> We ended up winning Microsoft's award for the hackathon! Sadly they only had two phones for the three developers.</p>
+
+<p> Verdict: Twilio's API is super cool, and I definitely intend on building more with it. Never built anything on the Windows Phone platform, but I must say in terms of responsiveness, Visual Studio betters eclipse in many ways. Sync Fusion is a great library for app resources, and a similar product for android would be a godsend. VIP did did a good job showing that many voting problems exist despite US being such a prominent democracy.</p>
 ]]></content>
   </entry>
   
@@ -72,45 +124,6 @@
 <p>We did not win unfortunately but judging did seem fair. The ideas winning were generally the apps which were the most mature or demonstrated a clear need base for their ideas. I particularly enjoyed prepared.ly and their combining the job skill-set with learning tools such as Udacity or CodeAcademy. With some personal analytics and initiatives to pick up the skills fast enough, this service can be very useful for coding job seekers.</p>
 
 <p>For the next such event, I would definitely focus more on rolling out more features faster. We were perhaps guilty of actually going around and getting real user data to populate our databases. I would imagine for pre-shipping products you would want this, and MVPs these days certainly value user early user feedback. Hackathons have different needs from production apps though, and rapid feature deployment wins over iterating and getting existing features perfect. You live and you learn.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Publishing Hackathon]]></title>
-    <link href="http://avidas.github.com/blog/2013/05/30/publishing-hackathon/"/>
-    <updated>2013-05-30T07:08:00-04:00</updated>
-    <id>http://avidas.github.com/blog/2013/05/30/publishing-hackathon</id>
-    <content type="html"><![CDATA[<p><img class="left" src="/images/Quiply_home.png" width="350" height="350" title="Quiply home" alt="Quiply home"></p>
-
-<p>Alley NYC is a very exciting location that I recently discovered. Its a collaborative workspace for startups, and on weekends they even open their doors for people trying to learn or fine tune their coding skills. On my second visit, I found out about the publishing hackathon, an attempt by the book publishing industry to generate new ideas in a field where profits are seemingly declining. I love books, and it seemed like a good opportunity to see what I could contribute and I signed up.</p>
-
-<p>This past weekend on the day of the hackathon, I arrived early not entirely sure what to expect. There were quite a few volunteers (from the publishing industry sponsors) and mentors (usually the startup founders who work at Alley NYC) and they seemed rather vibrant and chatty, as people in the startup universe tend to be. I immediately found myself talking to several founders about their projects. The breath of industries startups target always fascinate me, but I needed a project.</p>
-
-<p>At the meetup of participants, it seemed like a lot of people came in teamed with ideas they were going to work on or have already been working on. I soon ran into John, who was in the same boat as me in terms of not having a project. John was an UI/UX person, so we thought it would be a good idea to team up and work on something.</p>
-
-<p>The coding part started at noon, and continued for 24 hours. However, it was interesting being developers, we were sought out frequently as the people with ideas outweighed the developers. After discussing a few ideas, we decided on a project. At that moment, we did not expand the team since there was no clear benefit in doing so.</p>
-
-<p>We decided to make Quiply, a book recommendation service aimed at teens based on their online video watching habits. We thought the playlists, favorites and viewing habits of kids gives a good idea of what they are interested in, and giving them small summaries of books they could potentially read to expand on their interests. We decided on making it as a Node js web application to start with, integrating youtube watch history to give results from Amazon.
-The rest of the 24 hours, skipping amusing acts by participants which deserve their separate blog post, was a whirlwind of code, coffee, running into hurdles and staggered progress. In the end we managed make the basic prototype work and submitted down to the last minute!</p>
-
-<!--more-->
-
-
-<p><img class="left" src="/images/Quiply_quip.png" width="500" height="350" title="Quiply quip" alt="Quiply quip"></p>
-
-<p>Here are a few things that I realized at the end of the hackathon, tips to help out a hackathon novice.</p>
-
-<ol>
-<li><p><strong>Have a solid idea of what you are going to do even if you do not have a team yet : </strong> A solid worked out plan helps you convince and recruit team members. Hackers by nature are very good readers of someones preparedness, knowledge and value addition to a project, so if you want the good people to team up with you, get in there ready. A very generic idea approaching a unclearly defined problem would likely not get you many co founders. Lot of hackathons do not allow any code being done before the event, but I am not sure how this is implemented since someone could write a library beforehand with quite a bit of logic that they can just import.</p></li>
-<li><p><strong>Know your apis if you are making an web app : </strong> If you are coding in a hackathon, you want to get to the point where your boilerplate is set up and you are spending the bulk of time building the logic or enhancing the UI. Hence, calling your APIs and knowing the limits and associated delays is critical. For this hackathon, this was not the case for us. After prototyping with youtube, we realized that their APIs no longer allow getting tags from videos and scraping was certainly not an option. We had to switch to Vimeo to get the same functionality. The other problem we ran into was Amazon throttling us for API usage. They had a limit of 2000 requests which we reached fast, and had to create stub accounts to continue testing. Thankfully this was not a problem during our demo, and we were able to show the working app.</p></li>
-<li><p><strong>Find a good spot quickly with least distractions : </strong> When the participants are not a defined class of people, you get unexpected behaviors and situations that will come up. And once you start coding, these can really harm your productivity. Try to get a nice and quiet place early, and if you find a room with a white board, its a home run for your team.</p></li>
-<li><p><strong>Keep focused and realistic : </strong> When we started working, I was particularly excited about writing the recommendation engine and wrote out an algorithm to weigh in several factors and generate tiered results based on the particular website queries. (For example, different custom playlists may give us different interests, how the age of the playlist would factor in, etc). However, with the discovery that youtube was not an option, we had to work with Vimeo API which was much limited in terms of features. That resulted in hours of wasted work. Following this setback, we did a better job of focusing hard on getting the one feature of our app working which was getting the recommended books, without much of the initial breadth or depth of the algorithms we were thinking of. Being realistic about what was achievable in 24 hours allowed us to get a working prototype, and this is very important in hackathons where wealth of APIs and possibilities can hinder your progress.</p></li>
-</ol>
-
-
-<p><img class="right" src="/images/Quiply_login.png" width="400" height="350" title="Quiply login" alt="Quiply login"></p>
-
-<p>There were an interesting array of projects presented, some more matured than others by virtue of being worked on before. But they were mostly web apps or mobile apps, simply because that is what most developers are working on these days. We were not one of the finalists, but overall I was very glad to reach and idea, and generate a fully working app within the 24 hours and it was a whole lot of fun! I would absolutely do more hackathons from now on, just not every weekend.</p>
 ]]></content>
   </entry>
   

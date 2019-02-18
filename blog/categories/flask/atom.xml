@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Flask | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/flask/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2019-02-17T17:36:04-05:00</updated>
+  <updated>2019-02-18T09:29:11-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -251,6 +251,27 @@ componentWillMount is called directly before a react component is initially rend
 <h5>React and Flask</h5>
 
 <p>With their focus on SRP, React and Flask could be dependable and efficient parts of your stack. This is specially handy if you want to leverage the Numpy/Scipy stack for doing data analysis in near realtime and serve up a frontend with heavy user interaction. In a later post, we will look at exploring interactive applications and introduce Socket.io.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Connected car: Meticulous.io @Angelhack]]></title>
+    <link href="http://avidas.github.com/blog/2014/01/07/connected-car-at-angelhack/"/>
+    <updated>2014-01-07T23:00:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2014/01/07/connected-car-at-angelhack</id>
+    <content type="html"><![CDATA[<p>Angelhack looks for startups to come out of hackathons rather than just weekend hacks. As a result, it tends to get very product driven as teams compete for the Angelpad recognition. The theme this year was Apphack, and mobile apps were the key focus. Not really a surprise, as more and more startups build mobile first.</p>
+
+<p>We worked on the verizon telematics data. <a href="http://www.verizontelematics.com/">Verizon telematics</a> is something I did not know about before. Car companies have been working with Verizon to install a device in the cars that could send data about speed, location, rpm, condition of the car in terms of last time since gas, particular model of car, wear and tear to the cloud. I expect Verizon is able to collect a lot more than the columns we saw. Needless to say, this would be a very powerful dataset and it is surprising that there aren't more going on in this space.</p>
+
+<p><a href="http://ipython.org/">iPython</a> and <a href="http://pandas.pydata.org/">Pandas</a> are built for analyzing and visualizing tabular data like this. Questions such as which brand of car gave the best milage per gallon, which brand was driven more on the highway vs which was more popular on the city roads were fairly easy to answer. It was not clear if the data given to us was indeed an uniform sample, but results were interesting. However, they are hardly hackathon worthy ideas.</p>
+
+<p>Needed an idea. One set of data had trip ids tied to driver ids, the other set had per trip latitudes and longitudes. Aggregating them somehow would be interesting. Geographical history of most visited places can be found since trips could be tied to drivers. Historical driving records could be obtained from individual trips and the overall history of the driver measured. Global driving records could be obtained so that the best driver's can be found.</p>
+
+<p>Once noting those features, the next step was to think how this would make sense as a product. Context sensitive software is hugely in demand and this is a great dataset for revealing patterns of drivers. Buisnesses aware of customers frequenting particular location can push deals and coupons to those individuals to drive buisness. Timeliness of visit can be used to fine tune the deals even more, e.g. lunch deals would make sense around the Grand Central area in NYC to a busy professional. The brand of car can be used to push vehicle specific ads. This would also be a treasure trove of information for car insurance companies figuring out insurance rates. Finally, it is quite possible that driving patterns can be used to trigger alert that may detect an accident ahead of time.</p>
+
+<p>Its hard to argue that driving patterns are valuable data. However, as with any user specific information used for personalization experiences curated by businesses, privacy would be a big concern. It was not entirely clear who would own the data, the driver, the provider, or else. It should be made very clear to the driver of the nature of the tracking going on and how the data may be used. Since data like this could easily be used by a malicious third party to monitor you in real time when you are driving, there is inherent danger in it being available without the driver being informed. Tracking is an issue users of any clowd aware system needs to be aware of.</p>
+
+<p>We did win the Verizon prize for the hackathon, and it was nice having our idea at the eleventh hour being well accepted. Angelhack put on a good show, and I must mention the apps "Make it Rain" (literally, on the phone screen) and "Kanye"(alerts if you are nearby Kanye West) for the hilarity during the presentation!</p>
 ]]></content>
   </entry>
   

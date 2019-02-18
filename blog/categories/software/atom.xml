@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Software | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/software/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2019-02-17T17:36:04-05:00</updated>
+  <updated>2019-02-18T09:29:11-05:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -14,25 +14,52 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Scipy 2014: Python as expression to push boundaries in science]]></title>
-    <link href="http://avidas.github.com/blog/2014/07/13/scipy-2014-python-as-expression-to-push-boundaries-in-science/"/>
-    <updated>2014-07-13T20:22:00-04:00</updated>
-    <id>http://avidas.github.com/blog/2014/07/13/scipy-2014-python-as-expression-to-push-boundaries-in-science</id>
-    <content type="html"><![CDATA[<p>It's not everyday that the person sitting next to you interacts with Mars Rovers everyday or is trying to build a data pipeline to handle petabyte-scale genomics data. But that was perhaps the key takeway from my first <a href="https://conference.scipy.org/scipy2014/">Python conference</a>: a large number of people pushing the boundaries in scientific disciplines and using Python as their means of expression.</p>
+    <title type="html"><![CDATA[Web Payments by First Principles: Testing]]></title>
+    <link href="http://avidas.github.com/blog/2017/05/19/web-payments-by-first-principles-testing/"/>
+    <updated>2017-05-19T16:21:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2017/05/19/web-payments-by-first-principles-testing</id>
+    <content type="html"><![CDATA[<p>In recent years, payment API providers have made integrating payments much easier than it used to be. Instead of dealing with banks and exchanges, ecommerce apps can integrate with payment gateways that will allow accepting any form of credit cards, and most payment methods such as Apple Pay and PayPal. Large pdfs with instructions manuals are replaced by intelligent documentation sites with walkthroughs and tutorials. Despite that, it is not uncommon to hear developers referring payments as their least favorite part of the development process. Payments integrations are often seen as a necessary evil, to be done once, and hopefully be forgotten thereafter. Often the reasoning is that investing in better payments integration is often not a profit center for companies.</p>
 
-<p>I have been using Python for a while now, both at work and for hobby projects but until of late have mostly been in the peripheries in contributions to open source projects. When I learned about Scientific Python conference right near to me in Austin, I was immediately interested. If you buy that there is such a thing as language wars, scientific computing has been one of Python's key wins. With libraries such as NumPy, Matplotlib and Pandas (and of course IPython), Python have dominated the Scientific Python landscape alongside R and Julia.</p>
-
-<p>When such a strong ecosystem is matched by a very welcoming community, there is a recipe for a conference worth being at. Well, If you can get past the imposter syndrome of being at a place with the highest density of phds of any place I have ever been at.</p>
-
-<h3>Takeaways</h3>
+<p>I have worked the last few years in the online payments industry, building APIS, sdks and reliability tools. While payments integration has gotten easier, developers still do make mistakes which are easily avoidable. Here are some of the best practices I would recommend for testing payments in your applications.</p>
 
 <ol>
-<li><p><strong>Python catching up in areas where it lacked</strong>:
-Performance, distribution, scalibility and reproducability were some of main themes at the conference. This addresses some of the historic lackings of the language. Sometimes this is via adoption of new tools such as docker for containerizing work enviroments for remote co-working researchers. Dependency on other languages has been one of the major pain points in working with the scientific Python libraries, so it is great to see Conda and HashDist (which I just discovered) to take that head on. Interoperability and scalability are two of the main problems Blaze is solving, and Bokeh and Plotly takes on the problems of publishing and sharing interactive visualizations in Python.</p></li>
-<li><p><strong> New tools for my workflow</strong>:
-There are many tools which deserve a space here, but I was primarily exited to discover pyspark, yt, plotly, sumatra/vistrails, hashdist and airspeed velocity. Version control and workflow control are familiar terratories for software engineers, but the idea of event control was new to me, something explored in a Birds of a feather discussion.</p></li>
-<li><p><strong>Birds of a Feather talks are revealing</strong>:
-Birds of a feather discussions were sometimes my favorite, where there was candid sharing of painpoints and their solutions from the community members. It was also good to know what were the open problems in various areas are as they often indicate valuable areas to focus on.</p></li>
+<li><p><strong>Isolate interation between application code and payment gateway in a package</strong>: Once an app grows to a certain size, it may have different ways of interacting with payments gateways. You may be accepting recurring payments and accepting webhooks from the payments provider, just in time checkout or interact with point of sales systems. Having your own package that abstracts out interaction with the payments APIs can help centralize all outgoing requests back and forth with the payments API. You can add your own logging and monitoring, stub out the interaction with payments API to have faster unit tests and centralize knowledge about how you serialize and deserialize messages from and to your payments provider.</p></li>
+<li><p><strong>Sandbox Testing</strong>: Most payment API/gateways expose a sandbox environments where you can test out a real integration with the API without moving any money. Ideally your integration tests running continously in Jenkins/Travis/Circle CI should be hitting those endpoints.</p></li>
+<li><p><strong>Monitoring</strong>: You should monitor your sandbox integration as well as your live system. What does the graph of 200s vs 400s HTTP response codes from the payments API look like? Are you getting unexpected 400s? How about 500s? What does the response times look like?</p></li>
+<li><p><strong>Automated QA</strong>: To avoid putting undue stress on your computation and database resources, background tasks are common strategies to do break down calculations for common payments needs such as reporting and analytics. When calculations are done in partial chunks, automated jobs that test whether those calculations have been done properly can reduce a lot of load for your support and developers when something goes wrong midway between a job, or failure.</p></li>
+<li><p><strong>Negative/Failure Testing</strong>: Special card numbers provided by payments providers can help you recreate payment declines due to potential denial from processors for reasons such as not enough funds in account. You may also be able to test for rejections due to fraud and compliance. This helps lower the range of potential unknown errors your site may run into, especially when expanding to new markets or accepting more payment methods.</p></li>
+<li><p><strong>Live testing</strong>: Live testing against payment providers is often tricky, and can led to accounts getting shut down if there is undue load on the API. Despite that, some testing in live is absolutely necessary before you can be confident that on release day, your integration is working as expected.</p></li>
+<li><p><strong>Test for absence of sentive information</strong>: Storing user information such as credit card number or passwords is a very common way of violation of PCI compliance. Regex patterns can be used to make sure that neither your logs nor your database is storing sensitive information.</p></li>
+</ol>
+
+
+<p>I intend to write more posts in this series, covering topics such as considerations before and after going live with payments, when scaling up and so on. If you liked this post, please share or comment.</p>
+
+<p>If you have feedback on this blog post or integrating payments, please <a href="mailto:avi@aviadas.com">feel free to reach out!</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[What makes a great programming tutorial?]]></title>
+    <link href="http://avidas.github.com/blog/2016/04/18/what-makes-a-great-online-tutorial/"/>
+    <updated>2016-04-18T05:36:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2016/04/18/what-makes-a-great-online-tutorial</id>
+    <content type="html"><![CDATA[<p>The Internet started as a publishing medium. It excels at enabling people to share their unique gifts. An amazing amount of content gets put out on the web everyday, far beyond someone can read in a lifetime. Massive amount of information also means information overload.</p>
+
+<p>In software, it is common to use web tutorials to supplement one's learning of a particular material. Following guidelines of someone who has already done it can really fast track development. Tutorials appear in various forms in the web. Some of the common formats are long form blogposts, videos and series of email newsletters. Some enjoy the personal touch that videos can offer; others enjoy being able to quickly skim a blogpost.</p>
+
+<p>When you want to put your hard earned knowledge and valuable time into writing a tutorial, there are questions worth thinking about. Does the tutorial cater to its intended audience? Will it reach them? Can someone quickly skim the content and still get value? Is there a way to measure the effectiveness of online tutorials?</p>
+
+<p><img class="left" src="https://files.slack.com/files-pri/T025F19MZ-F1ASWBLV8/pasted_image_at_2016_05_22_04_58_pm.png" width="800" height="800" title="Survey Questions" alt="Survey Questions"></p>
+
+<p>To look for answers, I asked a carefully selected group of 150 people about their preference of tutorials. The focus was on software engineers/designers/entrepreneurs due to my familiarity and experience with the field. What emerged from their responses gives a blueprint for creating great online resources.</p>
+
+<ol>
+<li><p><strong>Real time feedback</strong>: If exercises or examples accompany a tutorial, multiple survey responders emphasized the need to check the user's responses and provide interactive feedback to the user to guide them to the solution. Good examples are checkpoint multiple choice questions during Coursera/Udacity courses that you must complete to move forward with the course.</p></li>
+<li><p><strong>Follow up</strong>: Several responders emphasized the need to provide contact information or other means to reach out to the author once they went through a tutorial. Providing a comments section or your email/twitter handle are great mediums for a reader to follow up.</p></li>
+<li><p><strong>Address a concrete problem</strong>: Staying focused of a specific problem gives a tutorial depth. A differentiator can be to classify for the user whether the focus is academic and structured vs. a blogpost focused on solving a particular problem right now.</p></li>
+<li><p><strong>Working examples</strong>: Interactive, working examples close to the content that builds on top of each other makes following along simpler. <a href="https://www.railstutorial.org/">Michael Hartl's Ruby on Rails tutorials</a> came up as an example of detailed, comprehensive tutorials.</p></li>
+<li><p><strong>Advanced user tutorials</strong>: Several user's pointed out the need for tutorials that addresses advanced content. Making expectations clear about experience levels of intended audiences can be a huge positive for tutorials. <a href="https://www.raywenderlich.com/video-tutorials">Ray Wenderlich's iOS tutorials</a> are good examples of the detail and level of research and understanding that can happen before putting out content on the web.</p></li>
 </ol>
 
 
@@ -40,132 +67,439 @@ Birds of a feather discussions were sometimes my favorite, where there was candi
 
 
 <ol>
-<li><p><strong>Contributions are needed</strong>:
-It was great to see a lot of egoless collaboration during the conference. Maintainers of projects were willing to deprecate their hard work in favor of a better accepted tool in the community. At the same time, lot of the development of very instrumental tools seem to be done by a small group of people, highlighting the need for more collaborators in this space.</p></li>
-<li><p><strong>Sprints are like speed dating for open source projects</strong>:
-SciPy sprints were very different environment from hackathons. With the removal of prize as a factor, what remains is people who enjoy their work and often are highly productive. With the large number of projects available and the acceptance by the core developers, I had the opportunity to work on the charting library Bokeh, serialization library Dill, hack on datasets with yt developers (because random access over a 32 TB file served by apache to generate a graph on Ipython fully client side is seriously impressive) and dig into dockerizing web apps and databases with the reproducable workflow group. All in two days work.</p></li>
+<li><p><strong>Copyright</strong>: Sometimes an afterthought, it may be worth pointing out what license the content is released under. This can give the reader’s clarity on how to attribute the source when they use that content in production. Github makes this really easy with license options provided  during repository creation.</p></li>
+<li><p><strong>Offer tangible short-term benefits</strong>: While this certainly applies more to blogposts rather than courses, focusing on offering user's value short, medium and long term can improve the message of a tutorial. Moreover, an user may be more inclined to follow through the entire content of a tutorial if they are get that value at different stages of the tutorial.</p></li>
+<li><p><strong>Timeliness</strong>: This could be hard to measure, but popularity of tutorials can be attributed to how current and relevant they are. As of the time of writing this blogpost, April 2016, there are lot of people looking to get into VR/AR, chatbots, AI and so on. Accounting for recency can certainly increase the reader counts of your posts.</p></li>
+<li><p><strong>Continuity</strong>: It became clear through the responses that while people looked for tutorials to solve a particular problem, they return because they are looking for a subject matter expert. Producing a series of tutorials taking on different aspects of a topic can help with retention.</p></li>
+<li><p><strong>Discoverability</strong>: This can go in the realms of SEO, but lot of responders responded to their favorite source of online tutorials with well-known sources. Coursera/Udemy/Khan Academy/YouTube and Google were all common ways people went around in finding online tutorials. If you do not want to solve distribution for the content you create, writing for more known blogs/sites can be a way to reach larger audiences.</p></li>
+<li><p><strong>Formatting</strong>: A big part of the user experience, proofreading cannot be left for the last. In the tech space, prominent writers such as Paul Graham always attribute at the end of the blogpost all those who have helped proofread the content. Just passing it around to a few people before publication and basic spell checking/grammar checking can improve the user experience for tutorials.</p></li>
 </ol>
 
 
-<p>As someone who is primarily an app developer, this conference was challenging as I have diverged from the path of scientific research a while back. Despite that, I have came away with a strong appreciation for the scientific python community and ecosystem and must thank PayPal for letting me attend the confrence.</p>
+<p>There are definitely caveats to this survey. As the person compiling this survey, it is at least slightly influenced by my biases. My target group is highly technically literate, so there is a bias towards modern tools. Perhaps it is worth taking into account the intent of writing tutorials, be it teaching, lead generation or growing a business.</p>
 
-<p>To finish, the keynote on the third day by Greg Wilson was quite fantastic and you should check it out if you haven't already:</p>
+<p>Like most studies, this too should be taken with a grain of salt and in no way is sure way to produce great tutorials. Someone's genuine passion, interest and the willingness to learn and teach find their ways to shine through content. However, just as the <a href="http://www.joelonsoftware.com/articles/fog0000000043.html">Joel Test for Software Development</a> companies is often a good checklist for expected standards of software companies, being aware of the reader’s needs and voice can lead to sharper, more helpful tutorials.</p>
 
-<p><div class="embed-video-container"><iframe src="http://www.youtube.com/embed/1e26rp6qPbA" allowfullscreen></iframe></div></p>
+<p>Research for this post was done by using Dripper, a twitter direct message automation tool that I helped build. Feel free to <a href="mailto:avi@aviadas.com">reach out</a> if you want to know more about the software!</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Best Chrome Productivity Extensions]]></title>
-    <link href="http://avidas.github.com/blog/2014/06/01/best-chrome-productivity-extensions/"/>
-    <updated>2014-06-01T16:40:00-04:00</updated>
-    <id>http://avidas.github.com/blog/2014/06/01/best-chrome-productivity-extensions</id>
-    <content type="html"><![CDATA[<p>How much time during the day do you spend on an internet browser? As a software engineer, my answer is a scary amount of time. Something I have personally struggled with is avoiding distracting sites on the internet. There is too much good content on the internet that dries up my rather finite amount of attention.</p>
+    <title type="html"><![CDATA[Evaluating React.js and Flask]]></title>
+    <link href="http://avidas.github.com/blog/2015/08/05/evaluating-react-dot-js-and-flask/"/>
+    <updated>2015-08-05T10:39:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2015/08/05/evaluating-react-dot-js-and-flask</id>
+    <content type="html"><![CDATA[<blockquote><p>Update: Udemy has generously granted a free coupon for the readers of this blog for their <a href="https://www.udemy.com/learn-and-understand-reactjs/learn/">React JS and Flux</a> course. Use the code <code>avidasreactjs</code> and the first 50 readers will get free access to the course!</p></blockquote>
 
-<p>Chrome has been my weapon of choice for browsing the web for a while now. Intuitive, clean and fast, Chrome's ascent has been amazing to see over the past few years. Extensions on chrome allow addition of new features on Chrome made by third party developers. Lately, and there are a few extensions I simply cannot do without. When you need to buckle up and get something done, these extensions will help you get there.</p>
+<p>As a connoisseur of the web, front-end frameworks have been been a fertile area of late. React.js from Facebook has taken much fanfare, and this post evaluates key ideas on react, and digs into why you could be interested in React. Staying true to single responsibility principle, React is a highly useful tool if you are doing web programming.</p>
+
+<p>In this post, we will dive into building a Frontend using React.js and Backend built using the Python framework Flask. Flask is a minimalistic framework, and excellent when your backend becomes more and more of an API. Moreover, this facilitates the microservices architecture, where the decoupling of your your app into small unit of services can make it more maintainable and scalable.</p>
+
+<p>We will cover some of the key ideas of React and Flask here, but it would be worth referring to the official documentation for <a href="https://facebook.github.io/react/">React</a> and <a href="http://flask.pocoo.org/">Flask</a> for getting started and understanding the philosophies of each framework.</p>
+
+<h3>Key Ideas of React</h3>
+
+<p>The core idea of React is the developers are better of leaving manipulating the DOM to battle tested framework code. Since the DOM has a tree structure, finding elements and manipulating them would need many traversals of a potentially very large tree.  Instead, what you modify is a virtual DOM, and React runs its intelligent diffing algorithm to directly update the DOM.</p>
+
+<h5>React</h5>
+
+<p>React itself is the UI library that will manage all the DOM updates as data changes. It's takes the V of MVC frameworks, hence it can be used with other MVC frameworks such as Angular, Backbone or Meteor. It is quite easy to use React to manage specific areas of your application's UI, rather than the entire app.</p>
+
+<h5>Virtual Dom</h5>
+
+<p>The virtual Dom is an abstraction layer between nodes in the real DOM and the view of the code you are modifying. When React selectively renders subtrees of the nodes in DOM based upon state changes, it achieves the following</p>
+
+<pre><code> 1. Ensures that your DOM is always up to date with current state
+ 2. Reduces the need to re-render the DOM every time there is change in state
+ 3. Updating only the individual components on state change ensures high performance
+</code></pre>
+
+<h5>JSX</h5>
+
+<p>JSX is a JavaScript syntax extension and it brings in a HTML/XML like familiar syntax for defining a tree structure with attributes. This is the syntax you can use to declare the changes in layout code and React will update the UI. It's a bold approach, since developers are conditioned to keep layout code separate from Javascript. We will explain more React terminology later as we dive into some code.</p>
+
+<h3>Key Ideas of Flask</h3>
+
+<p>Flask is a microframework, which means that it trades a short learning curve for fewer out of the box functionalities, compared to heavier frameworks such as Django or Rails. It gives developers more freedom to use their preferable tools and libraries. However, it does have a list of officially supported <a href="http://flask.pocoo.org/extensions/">extensions</a> which when plugged in provide a wide breath of functionalities for a standard web app. Extensions behave as if they are native flask code.</p>
+
+<p>We strongly recommend that you set up a <a href="http://www.virtualenv.org/">virtualenv</a> for this project, and you may also want to check out <a href="http://virtualenvwrapper.readthedocs.org/">virtualenvwrapper</a> for convenience. This is to provide your app with a sandboxed environment.</p>
+
+<h5>Getting up and running with Flask</h5>
+
+<p>Lets first install Flask</p>
+
+<p>```bash
+pip install Flask</p>
+
+<h1>For viewing and reusing app dependencies</h1>
+
+<p>pip freeze > requirements.txt
+```
+Set up the following directory structure in your app.</p>
+
+<p>```bash</p>
+
+<p>├── README.md
+├── app.py
+├── requirements.txt
+└── templates</p>
+
+<pre><code>└── index.html
+</code></pre>
+
+<p>```</p>
+
+<p>Modify your app.py code to include the following</p>
+
+<p>```python
+from flask import Flask, render_template</p>
+
+<p>app = Flask(<strong>name</strong>)</p>
+
+<p>@app.route("/")</p>
+
+<p>def index():</p>
+
+<pre><code>return render_template('index.html')
+</code></pre>
+
+<p>if <strong>name</strong> == "<strong>main</strong>":</p>
+
+<pre><code>app.run()
+</code></pre>
+
+<p>```</p>
+
+<p>We start by importing Flask and creating a new instance of a flask application. In flask, app.route is used to describe the behavior when users hit particular endpoints in the application. Here when user hits the index route, we render a template called hello world. By default Flask uses the Jinja2 templating language, but you can use any other templating language. In fact, we will not be covering Jinja2 in this blog post. Finally we tell python to call the run method of the app when invoked as a main function.</p>
+
+<p>Let's populate index.html with the following basic HTML boilerplate</p>
+
+<p>```html</p>
+
+<p>&lt;!DOCTYPE html>
+<html lang="en">
+<head></p>
+
+<pre><code>&lt;meta charset="UTF-8"&gt;
+&lt;title&gt;Flask React Tutorial&lt;/title&gt;
+</code></pre>
+
+<p></head>
+<body></p>
+
+<pre><code> &lt;div id="mount-point"&gt;
+     &lt;p1&gt;Hello world.&lt;/p1&gt;
+ &lt;/div&gt;
+</code></pre>
+
+<p></body>
+</html>
+```</p>
+
+<p>Now run the app with</p>
+
+<p><code>bash
+python app.py
+// * Running on http://127.0.0.0:5000/
+// * Restarting with reloader
+</code>
+By default it runs on port 5000. Navigate to the endpoint and you should see the html page you just created. You are now up and running with Flask!</p>
+
+<h5>Integrate React</h5>
+
+<p>Easiest way to include React would be to just include them from a cdn. Let's update the index.html to include React and and port our existing html to React. index.html will now look like</p>
+
+<p>```html</p>
+
+<p>&lt;!DOCTYPE html>
+<html lang="en">
+<head></p>
+
+<pre><code>&lt;meta charset="UTF-8"&gt;
+&lt;title&gt;Flask React Tutorial&lt;/title&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/react.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/JSXTransformer.js"&gt;
+</code></pre>
+
+<p></head>
+<body></p>
+
+<pre><code> &lt;div id="mount-point"&gt;&lt;/div&gt;
+</code></pre>
+
+<p></body></p>
+
+<p>  <script type="text/jsx"></p>
+
+<pre><code> /*** @jsx React.DOM */
+var FirstComponent = React.createClass({
+    render: function() {
+        return (&lt;p1&gt;Hello world.&lt;/p1&gt;);
+    }
+});
+React.render(&lt;FirstComponent /&gt;, document.getElementById('mount-point') );
+ &lt;/script&gt;
+</code></pre>
+
+<p></html>
+```</p>
+
+<!-- more -->
+
+
+<p>Let's go over the code. We first include the react and jsx libraries via the script tags and remove the earlier p tags. We set up a jsx script by specifying type="text/jsx". Then we call createClass method of React which creates a React component. React components are reusable units that you can use to compose your UI. The component must have at least the render method, which returns the virtual representation of a native DOM element or another component.
+Next we call React.render with the first element and pass it the id of the div element on which we want the result of the render function to be. Run the app again to navigate to the same path to see the app again.</p>
+
+<h5>Data binding with React</h5>
+
+<p>For a more practical example, as well to demonstrate multiple components, let's produce a type along data binding example. You can replace your script tag with the following</p>
+
+<p>```html</p>
+
+<script type="text/jsx">
+    /** @jsx React.DOM */
+    var Input = React.createClass({
+        updateLabel: function(event){
+            this.setState({value: event.target.value});
+        },
+        getInitialState: function(){
+            return {
+                value: ''
+            }
+        },
+        componentWillMount: function(){
+            this.setState({value: this.state.value})
+        },
+        render: function(){
+            return (
+                <div className="update-label">
+                      <input type="text" placeholder="Enter text" onChange={this.updateLabel}/>
+                    <Label value={this.state.value}/>
+                </div>
+        )
+    }
+});
+
+var Label = React.createClass({
+    render: function(){
+        return (
+        <div class="my-label">
+        <h2>{this.props.value}</h2>
+        </div>
+        )
+    }
+});
+
+React.render(<Input/>, document.getElementById('mount-point'));
+</script>
+
+
+<p>```</p>
+
+<p>As before, React.render is called at the very end on a component called Input and it is bound to the element with id mount-point. Inside the Input component a few other lifecycle functions are introduced.</p>
+
+<p>The method getInitialState is called once before the component mounts and  responsible for setting for the initial state of a component.
+componentWillMount is called directly before a react component is initially rendered. Inside componentWillMount, we invoke setState.</p>
+
+<p>setState can trigger UI updates from event handlers and server request callbacks. It will always cause a re-render to happen. Once render is called, it returns a div with a input box and a React component called label. We attach the method updateLabel which gets invoked when the text inside the input box changes. It updates this.state.value.</p>
+
+<p>State attributes are mutable within a component and are used to represent the interaction changes changes within a component. On the other hand, props are immutable and used to pass data from a parent component to a child. In this case Label is a child component of Input, and this.state.value for Input is passed to Label, which can access it by this.props.value. Thus Input passes the data entered into the input box to Label and causes it to re-render and display the text.</p>
+
+<p>Fire up the server again and type something into the input box and the content gets updated in the h2 element underneath.</p>
+
+<h5>Why React</h5>
+
+<p>As it turns out, the selling points of React are not super hard to get and clear use cases became obvious.</p>
 
 <ol>
-<li><p><a href="http://getpocket.com">Pocket</a>:
-There are enough interesting things to read on the internet for many lifetimes. Just like youtube's watch it later does for videos, Pocket lets me save articles for future reading. With clients available for iOS and Android, articles saved can be accessed anywhere. At any time on social websites, be it facebook, quora or hacker news, there is a lot I would like to read. Pocket gives me the convenience to customize articles from the internet into my customized feed or magazine via Flipboard integration.</p></li>
-<li><p><a href="https://chrome.google.com/webstore/detail/session-buddy/edacconmaakjimmfgnblocblbcdcpbko?hl=en">Session Buddy</a> :
-If you are like me, you context switch a lot between projects during a day. Chrome deals with tabs beautifully, and yet I find myself often with 20 or more tabs, usually researching a particular topic. Usually tabs follow a train of thought but fit within a particular context. Session buddy solves this exact problem, allowing me to save a set of tabs and windows which can be resumed later. For example, at the end of the day at work, I save a bunch of tabs, saved as the name of the project I was working on. This allows me to pick up from the chain of thought from when I left off. Switching between contexts is expensive, and session buddy is the best solution I have found.</p></li>
-<li><p><a href="https://www.rescuetime.com/">RescueTime</a>:
-Holding myself accountable for how I spend time on the web has been eye-opening for me. RescueTime not only tracks how much time during a day you spend on distracting sites, but the desktop application also tracks your non browser time. Over time, it subtly moves you to try and improve your productivity score by avoiding distraction, thus getting more productive (Bravo on the gamification aspect, ResueTime team!) I have discovered patterns of my work through the tool as well, such as the benefits of taking regular breaks and how much standing desk really helps productivity. It however, cannot track that even on productive sites, you can find ways to procrastinate. (I am looking at you, StackOverflow).</p></li>
-<li><p><a href="https://chrome.google.com/webstore/detail/block-site/eiimnmioipafcokbfikbljfdeojpcgbh?hl=en">Block site</a>:
-As much as tracking my time spent on the web helps, sometimes I need to simply block distracting sites. Block site makes for a great complement to RescueTime, allowing me to either visit whitelisted sites only or block off blacklisted sites. I have found my productivity levels on RescueTime spike when using block sites. Often its a reflex action for me to go to facebook or twitter without much thinking. Block sites counts such attempts, and shames you with clever 404 comments. I love that with the latest update, with one switch, you can turn off the distracting websites and focus on the task at hand.</p></li>
-<li><p><a href="https://lastpass.com/">LastPass</a>:
-Despite the rise of alternative logins, passwords are still integral parts of the web. With a million sites, having passwords lying around can be rather dangerous. Remembering passwords is time consuming and difficult, adding frustration to the day. LastPass securely stores your passwords for various sites, syncing them across devices. This saves the need to browse through memory trying to dig up a password or worse, store them in flat files. It can also do auto login's for your chosen sites. One of my favorite features is that it warns if you are using duplicate passwords for sites, making your web experience more secure.</p></li>
-<li><p><a href="https://adblockplus.org/en/chrome">Adblock Plus</a>:
-Ok, this one is controversial. Adblock will stop advertisements on websites, keeping you focused and saving time particularly for video ads. Now, ads power the web, and any website with ads as primary revenue stream should be aware of adblock. I particularly enjoy the cat and mouse chase between youtube and adblock: youtube refusing to play videos as long as adblock is enabled, adblock gets smarter, youtube catches up. However, it can make certain sites load faster, thus saving time.</p></li>
+<li><p>React is very efficient in the way it handles DOM updates. It is important however, to isolate that heavy rendering or interactions are the bottlenecks so that you are not optimizing prematurely and likely already have optimized database interactions and network calls.</p></li>
+<li><p>SEO management overhead can be less with React compared to Angular/Ember since it can be rendered server side. The benefit comes from not having the overhead of rendering your page server side with something like PhantomJS and serving the HTML.</p></li>
+<li><p>Reusable components make the code more reusable and testable, and the short terminology keeps the learning curve managable.</p></li>
+<li><p>Since React can be rendered Server Side, you might completely get rid of your server side templating, further reducing the number of tools necessary to run your app.</p></li>
+</ol>
+
+
+<h5>React and Flask</h5>
+
+<p>With their focus on SRP, React and Flask could be dependable and efficient parts of your stack. This is specially handy if you want to leverage the Numpy/Scipy stack for doing data analysis in near realtime and serve up a frontend with heavy user interaction. In a later post, we will look at exploring interactive applications and introduce Socket.io.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Nodeconf 2015: Unconf with the right intentions]]></title>
+    <link href="http://avidas.github.com/blog/2015/06/14/nodeconf-unconf-with-the-right-intentions/"/>
+    <updated>2015-06-14T16:28:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2015/06/14/nodeconf-unconf-with-the-right-intentions</id>
+    <content type="html"><![CDATA[<p>Conferences can be a great way to get the creative juices flowing, meet people in the community and share stories and problems. They offer great opportunities to learn from core developers building the frameworks that your software depends on.</p>
+
+<p>Nodeconf managed to achieve all this, in the rather unusual form of an unconference. An unconference meant that the structure and events/presentations and talks at the conference were left to be decided by the community rather than a committee. That does make Nodeconf a conference not for everyone. Understanding the format and structure of Nodeconf is important before you make the hike to Walnut Creek Ranch next year.</p>
+
+<p>I thought to distill down the reasons why you might or might not be interested in attending Nodeconf as well as get the most out of it. You might be interested in Nodeconf if you</p>
+
+<ol>
+<li><p><strong>Build for the web</strong>: For a lot of attendees, Nodeconf would feel like living in the future as a lot of attendees are very involved in making the decisions and tradeoff that would shape the future of the web. Specially discussions around packaging and parceling front end assets in npm (Modular UI) was really interesting as was Isomorphic JS, which covered the challenges involved in writing identical client and server side code. The JavaScript landscape is a fast evolving one and Nodeconf offers fantastic perspective on how the decision making can work.</p></li>
+<li><p><strong>Publish on npm/github</strong>: As someone who maintains projects on npm and github, the discussions around distributing node modules were very insightful. Issues such as broadening adoption, getting contributors for github modules and standards for publishing on npm came up and maintainers of hugely popular modules shared their experiences. Picking a good module scope, having really good examples for beginners to start with and publishing with concise yet searchable package descriptions were all emphasized.</p></li>
 </ol>
 
 
 <!-- more -->
 
 
-<p>Considering how valuable time is, it is important that we get done online what we meant to do. Hopefully, you have discovered an extension or two among this list that you were not aware of before and would help you save some extra time. The better Internet ADD is combated, the more time we spend doing what we love doing or be with family and friends and everybody wins.</p>
-
-<p>This was a post about extensions, but there are certainly tools such as dropbox and evernote which are more than extensions and does boost productivity. If you think there was an extension or tool that I missed, please leave a comment and I would be sure to check it out!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[DevsNearMe : July 26-27 Big Data Hackathon]]></title>
-    <link href="http://avidas.github.com/blog/2013/07/28/devsnearme-july-26-27-big-data-hackathon/"/>
-    <updated>2013-07-28T12:54:00-04:00</updated>
-    <id>http://avidas.github.com/blog/2013/07/28/devsnearme-july-26-27-big-data-hackathon</id>
-    <content type="html"><![CDATA[<p><iframe src="http://www.slideshare.net/slideshow/embed_code/24686054 " width="595" height="446" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen></iframe> </p>
-
-<p>Built and won the first prize at the big data hackathon at Alley NYC on July 26-27. The goal is to discover how many people are at a venue at a particular point in time and this app will try to do that for hackers, categorized by skills.</p>
-
-<p>With more and more realtime data being available for the public, identifying knowledge clusters at the right point in time becomes really valuable. DevsNearMe is an Android app that attempts to combine data from popular realtime sharing websites such as FourSquare, Twitter, Facebook, Instagram and MeetUp. It will attempts to predict users at a particular location by taking into account absolute numbers, and weighed prediction based on local context based information and learnt knowledge from past user behavior.</p>
-
-<p>This could be highly useful for knowledge sharing, recruiting and demographic analysis. Prototype code is at https://github.com/DevsNearMe .</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Angelhacking at Dumbo]]></title>
-    <link href="http://avidas.github.com/blog/2013/06/08/angelhacking-at-dumbo/"/>
-    <updated>2013-06-08T16:42:00-04:00</updated>
-    <id>http://avidas.github.com/blog/2013/06/08/angelhacking-at-dumbo</id>
-    <content type="html"><![CDATA[<p>"This is not your ordinary hackathon. This is the big leagues". Such was the claim of Angelhack this past weekend, and two weeks after participating in my first ever serious hackathon, I found myself at another one. There really is something about the mix of meeting cool people, hacking unfamiliar platforms and testing your coding chops in a small amount of time that can be quite addicting.</p>
-
-<p>Shakere, the product I worked on, is an iPhone app for finding people based on skills or interests in social gatherings. Yes, your umpteenth social product, guilty as charged. The space for social discovery really is a heavily contested one, which made me hesitant at first since variants of the idea has been tried by many. I joined however, after realizing that the team would work well together (we actually had a UX designer in the team. Yay!) and this was my chance to experience iOS development, even though I would be developing the backend.</p>
-
-<p>I worked on rolling a RESTful API (https://github.com/shakere/backend), working on the LAMP stack. Though I have not worked too much on LAMP backends before, I must admit that the stack is well suited for rapid prototyping. PHP in particular was a pleasant surprise to work with, in parts because of working with Perl for most of last year. I have had a little stint with Rails, and while Rails seems far more powerful, PHP is more explicit with less magic going on behind the scenes which makes it easier for starters to tinker. However, I did find myself handling quite a few inc files soon and was grepping to find which function was defined where. If I am working on a larger scale PHP project, it would definitely be worth looking into frameworks/best practices for PHP code organization.</p>
-
-<!--more-->
-
-
-<p><img class="left" src="/images/Shakere_Profile.jpg" width="300" height="800" title="Shakere Profile" alt="Shakere Profile"></p>
-
-<p>We got a neat version working well in time for the demo. The app being frontend heavy, I was done with a bit of time in hand, making it a more pleasant hackathon than the last one. Yet during presentation, we did run into the pitfall of not having tested our demo machines to the projector, and this is really a must if you want to avoid delays during your demos.</p>
-
-<p>The ideas were definitely interesting to look at since the hackathon was not restricted to any particular domain. Some were targeting specifically Microsoft, Paypal or Amazon platforms, who were present at the event and provided prizes for the best app using their APIs. It was specifically interesting when domain experts (such as a scientist in a Columbia lab) came to the hackathon trying to device a service for their community. Field experts can have a certain deep understanding of a space and their demos were a good reflection of that.</p>
-
-<p>We did not win unfortunately but judging did seem fair. The ideas winning were generally the apps which were the most mature or demonstrated a clear need base for their ideas. I particularly enjoyed prepared.ly and their combining the job skill-set with learning tools such as Udacity or CodeAcademy. With some personal analytics and initiatives to pick up the skills fast enough, this service can be very useful for coding job seekers.</p>
-
-<p>For the next such event, I would definitely focus more on rolling out more features faster. We were perhaps guilty of actually going around and getting real user data to populate our databases. I would imagine for pre-shipping products you would want this, and MVPs these days certainly value user early user feedback. Hackathons have different needs from production apps though, and rapid feature deployment wins over iterating and getting existing features perfect. You live and you learn.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Publishing Hackathon]]></title>
-    <link href="http://avidas.github.com/blog/2013/05/30/publishing-hackathon/"/>
-    <updated>2013-05-30T07:08:00-04:00</updated>
-    <id>http://avidas.github.com/blog/2013/05/30/publishing-hackathon</id>
-    <content type="html"><![CDATA[<p><img class="left" src="/images/Quiply_home.png" width="350" height="350" title="Quiply home" alt="Quiply home"></p>
-
-<p>Alley NYC is a very exciting location that I recently discovered. Its a collaborative workspace for startups, and on weekends they even open their doors for people trying to learn or fine tune their coding skills. On my second visit, I found out about the publishing hackathon, an attempt by the book publishing industry to generate new ideas in a field where profits are seemingly declining. I love books, and it seemed like a good opportunity to see what I could contribute and I signed up.</p>
-
-<p>This past weekend on the day of the hackathon, I arrived early not entirely sure what to expect. There were quite a few volunteers (from the publishing industry sponsors) and mentors (usually the startup founders who work at Alley NYC) and they seemed rather vibrant and chatty, as people in the startup universe tend to be. I immediately found myself talking to several founders about their projects. The breath of industries startups target always fascinate me, but I needed a project.</p>
-
-<p>At the meetup of participants, it seemed like a lot of people came in teamed with ideas they were going to work on or have already been working on. I soon ran into John, who was in the same boat as me in terms of not having a project. John was an UI/UX person, so we thought it would be a good idea to team up and work on something.</p>
-
-<p>The coding part started at noon, and continued for 24 hours. However, it was interesting being developers, we were sought out frequently as the people with ideas outweighed the developers. After discussing a few ideas, we decided on a project. At that moment, we did not expand the team since there was no clear benefit in doing so.</p>
-
-<p>We decided to make Quiply, a book recommendation service aimed at teens based on their online video watching habits. We thought the playlists, favorites and viewing habits of kids gives a good idea of what they are interested in, and giving them small summaries of books they could potentially read to expand on their interests. We decided on making it as a Node js web application to start with, integrating youtube watch history to give results from Amazon.
-The rest of the 24 hours, skipping amusing acts by participants which deserve their separate blog post, was a whirlwind of code, coffee, running into hurdles and staggered progress. In the end we managed make the basic prototype work and submitted down to the last minute!</p>
-
-<!--more-->
-
-
-<p><img class="left" src="/images/Quiply_quip.png" width="500" height="350" title="Quiply quip" alt="Quiply quip"></p>
-
-<p>Here are a few things that I realized at the end of the hackathon, tips to help out a hackathon novice.</p>
-
 <ol>
-<li><p><strong>Have a solid idea of what you are going to do even if you do not have a team yet : </strong> A solid worked out plan helps you convince and recruit team members. Hackers by nature are very good readers of someones preparedness, knowledge and value addition to a project, so if you want the good people to team up with you, get in there ready. A very generic idea approaching a unclearly defined problem would likely not get you many co founders. Lot of hackathons do not allow any code being done before the event, but I am not sure how this is implemented since someone could write a library beforehand with quite a bit of logic that they can just import.</p></li>
-<li><p><strong>Know your apis if you are making an web app : </strong> If you are coding in a hackathon, you want to get to the point where your boilerplate is set up and you are spending the bulk of time building the logic or enhancing the UI. Hence, calling your APIs and knowing the limits and associated delays is critical. For this hackathon, this was not the case for us. After prototyping with youtube, we realized that their APIs no longer allow getting tags from videos and scraping was certainly not an option. We had to switch to Vimeo to get the same functionality. The other problem we ran into was Amazon throttling us for API usage. They had a limit of 2000 requests which we reached fast, and had to create stub accounts to continue testing. Thankfully this was not a problem during our demo, and we were able to show the working app.</p></li>
-<li><p><strong>Find a good spot quickly with least distractions : </strong> When the participants are not a defined class of people, you get unexpected behaviors and situations that will come up. And once you start coding, these can really harm your productivity. Try to get a nice and quiet place early, and if you find a room with a white board, its a home run for your team.</p></li>
-<li><p><strong>Keep focused and realistic : </strong> When we started working, I was particularly excited about writing the recommendation engine and wrote out an algorithm to weigh in several factors and generate tiered results based on the particular website queries. (For example, different custom playlists may give us different interests, how the age of the playlist would factor in, etc). However, with the discovery that youtube was not an option, we had to work with Vimeo API which was much limited in terms of features. That resulted in hours of wasted work. Following this setback, we did a better job of focusing hard on getting the one feature of our app working which was getting the recommended books, without much of the initial breadth or depth of the algorithms we were thinking of. Being realistic about what was achievable in 24 hours allowed us to get a working prototype, and this is very important in hackathons where wealth of APIs and possibilities can hinder your progress.</p></li>
+<li><p><strong>Foster community growth</strong>: The node community is certainly dealing with the growing pains that comes with success. Having a well defined process for integrating new members is really important for large codebases. Broadening mentorship was considered as a possibility for guiding new members through the steep learning curve.</p></li>
+<li><p><strong>Want to get a deeper understanding of Node Core and APIs</strong>: There was unparalleled opportunity to discuss Node core/API and critical libraries such as libuv with the core developers. This was also true for external node libraries, and it can be certainly valuable to take a set of well defined problems that you have on your Node codebases as you are bound to make progress in such an environment.</p></li>
 </ol>
 
 
-<p><img class="right" src="/images/Quiply_login.png" width="400" height="350" title="Quiply login" alt="Quiply login"></p>
+<p>You might not be interested in Nodeconf if</p>
 
-<p>There were an interesting array of projects presented, some more matured than others by virtue of being worked on before. But they were mostly web apps or mobile apps, simply because that is what most developers are working on these days. We were not one of the finalists, but overall I was very glad to reach and idea, and generate a fully working app within the 24 hours and it was a whole lot of fun! I would absolutely do more hackathons from now on, just not every weekend.</p>
+<ol>
+<li><p><strong>You expect Nodeconf to be a 3 day training session on Node</strong>: While Nodeconf was full of illuminating discussions and presentations, it was certainly not a series of tutorials on Node.</p></li>
+<li><p><strong>You expect a traditional conference structure</strong>: It did not take place on a hotel, rather a ranch and certainly does not have some of the glamour associated with WWDC or Google I/O.</p></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Building Realtime user monitoring and targeting platform with Node, Express and Socket.io]]></title>
+    <link href="http://avidas.github.com/blog/2015/06/06/building-realtime-user-monitoring-and-targeting-platform-with-node/"/>
+    <updated>2015-06-06T15:31:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2015/06/06/building-realtime-user-monitoring-and-targeting-platform-with-node</id>
+    <content type="html"><![CDATA[<p>Being able to target users and send targeted notifications can be key to turn visitors into conversions and tighten your funnel. Offerings such as mailchimp and mixpanel offer ways to reach out to users but in most of those cases you only get to do them in post processing. However, there are situations when it would be really powerful is to be able to track users as they are navigating your website and send targeted notifications to them.</p>
+
+<h3>Use Cases</h3>
+
+<p>Imagine that a buyer is looking for cars to buy and is interested in vehicles of a particular model and brand. It is very likely that he/she will visit several sites to compare prices. If there are a few results the buyer has looked at already, there may be an item which would fit the profile of this user. If you are able to prompt and reach out as the user is browsing through several results, it could make the difference between a sale and user buying from a different site. This is particularly useful for high price, high options scenerios e.g. Real Estate/Car/Electronics purchases. For use cases where the price is low or the options are fewer, e.g. a SAAS offering with a 3 tiers, this level of fine grained tracking may not be necessary. However, if you have a fledgling SAAS startup, you may want to do this in the spirit of <a href="http://paulgraham.com/ds.html">doing things that don't scale</a>.</p>
+
+<h3>Prerequisites</h3>
+
+<p>This article assumes that you have <a href="https://nodejs.org/">node and npm</a> installed on your system. It would be also be useful to get familiar with <a href="http://expressjs.com/">Express.js</a>, the de facto web framework on top of Node.js. <a href="http://socket.io/">Socket.io</a> is a Node.js module that abstracts WebSocket, JSON Polling and other protocols to enable simultaneous bi directional communication between connected parties. This article makes heavy use of Socket.io terminology, so it would be good to be familiar with sending and receiving events, broadcasts, namespaces and rooms.</p>
+
+<h3>Install and run</h3>
+
+<p>Start by git cloning the repo, install dependencies and run the app.</p>
+
+<p><code>bash
+git clone git@github.com:avidas/socketio-monitoring.git
+cd socketio-monitoring
+npm install
+npm start
+</code></p>
+
+<p>By default this will start the server at port 8080. navigate to localhost:8080/admin on a browser e.g Chrome. Now, on a different browser, e.g. Firefox, navigate to localhost:8080 and browse around. You will see that the admin page gets updated with the url endpoints as you navigate your way through the website in firefox. You can even send an alert to the user on Firefox by pressing the send offer button on Chrome!</p>
+
+<h3>Walkthrough</h3>
+
+<p>Let's get into how this works. When an admin visits localhost:8080/admin, she joins a Socket.io namespace called adminchannel.</p>
+
+<p><code>javascript
+var adminchannel = io.of('/adminchannel');
+</code></p>
+
+<p>When a new user visits a page, we get the <a href="https://github.com/expressjs/session#reqsession">express sessionID</a> of the user by calling req.sessionID and pass it to the templating engine for rendering. The session id ensures that we can identify a user across pages and browser tabs.</p>
+
+<p><code>javascript
+res.render('index', {a:req.sessionID});
+</code></p>
+
+<p>The template sets the value of sessionID as a hidden input field on the page, with the id "user_session_id".</p>
+
+<p>```html
+<body>
+<input type="hidden" id="user_session_id" value="<%= a %>" />
+  <div id="device" style="font-size: 45px;">2015 Tesla Cars</div></p>
+
+<pre><code>&lt;a href="http://avidas.github.com/about"&gt;About&lt;/a&gt;
+</code></pre>
+
+<p>  <br />
+  <a href="http://avidas.github.com/">Home</a>
+</body>
+```
+After the page has loaded, it will emit a pageChange socket.io event. Accompanying the event is the url endpoint for the current page and sessionID.</p>
+
+<p>```javascript
+  var userSID = document.getElementById('user_session_id').value;
+  var socket = io();</p>
+
+<p>  var userData = {</p>
+
+<pre><code>page: currentURL,
+sid: userSID
+</code></pre>
+
+<p>  }
+  socket.emit('pageChange', userData);
+```
+On server side, when pageChange is received, a Socket.io event called alertAdmin is sent to the adminchannel namespace. This ensures that only the admins are alerted that user with particular session id and particular socket id has navigated to a different page. Since anyone with access to /admin endpoint will join the adminchannel namespace, this can easily scale to multiple admins.</p>
+
+<p>```javascript
+  socket.on('pageChange', function(userData){</p>
+
+<pre><code>userData.socketID = socket.id;
+userData.clientIDs = clientIDs;
+console.log('user with sid ' + userData.sid + ' and session id ' + userData.socketID + ' changed page ' + userData.page);
+adminchannel.emit('alertAdmin', userData);
+</code></pre>
+
+<p>  });
+```</p>
+
+<p>When altertAdmin is received on the client side, the UI dashboard is updated so that the admins have a realtime dashboard of users navigating the site. This is done via Jquery which appends each new page change to a html list as users navigate through the site.</p>
+
+<p>```javascript
+  adminsocket.on('alertAdmin', function(userData){</p>
+
+<pre><code>var panel = document.getElementById('panel');
+var val = " User with session id " + userData.sid + " and with socket id " + userData.socketID + " has navigated to " + userData.page;
+userDataGlob = userData;
+var list = $('&lt;ul/&gt;').appendTo('#panel');
+//Dynamic display of users interacting on your website
+$("#panel ul").append('&lt;li&gt; ' + val + ' &lt;button type="button" class="offerClass" id="' + userData.socketID + '"&gt;Send Offer&lt;/button&gt;&lt;/li&gt;');
+</code></pre>
+
+<p>  });
+<code>
+Now, the admin may choose to send certain notifications to the particular user. When the admin clicks on the "Send Offer" button, a socket.io event called adminMessage is sent to the general namespace on the server with the user specific data.
+</code>javascript
+  //Allow admin to send adminMessage
+  $('body').on('click', '.offerClass', function () {</p>
+
+<pre><code>socket.emit('adminMessage', userDataGlob);
+</code></pre>
+
+<p>  });
+```
+When adminMessage is received on the server side, we broacast to the specific user the message. Since every user always joins into a room identified by their socketID, we can send a notification only to that user by using socket.broadcast.to(userData.socketID) and we send an event called adminBroadcast with the data.</p>
+
+<p>Here, you could have chosen to broadcast a message to all the users, or to a particular room, which subsets of users could have joined. Thus, you can fine tune how you want to reach out to users as well.</p>
+
+<p>```javascript
+  socket.on('adminMessage', function(userData) {</p>
+
+<pre><code>socket.broadcast.to(userData.socketID).emit('adminBroadcast', userData);
+</code></pre>
+
+<p>  });
+```</p>
+
+<p>Finally on the client side of the user when adminBroadcast is received, the user is alterted with a notification. However, you can easily use it for more complex use cases such as dynamically updating the page results, update ads section to show offers and so on by setting up event listeners.</p>
+
+<p>```javascript
+  socket.on('adminBroadcast', function(userData){</p>
+
+<pre><code>alert('Howdy there ' + userData.sid + ' ' + userData.socketID + ' ' + userData.page);
+</code></pre>
+
+<p>  })
+```</p>
+
+<p>There you have an end to end way in which a set of admins can track a set of users on a website and send notifications. This system can be particularly valuable when the user's primary reason for visit accompanies purchasing intent. E-commerce and SAAS platforms have recognized the importance to user segmentation and targeted outreach. This system enables you to minimize the latency of such outreach. On the plus side, you can get to rely on fully open source tools with broad user bases and support.</p>
+
+<p>This particular example used url endpoints as part of the data payload, but you can really strech it to any user events. For example, you can easily track where the user's cursor is and send that information back in real time. One can imagine High Frequency Trading firms using this technique in bots to track real time user behavior, e.g. user's cursor hovering on a buy button for a ticker, as information gathered for its trades. How much you want to track and react to can be an exercise in determining the bounderies of being responsive and creepiness for users.</p>
+
+<p>Props to my friend Shah for working with me on this. If you are doing some level of realtime tracking on your site, I would love to hear about it. Please feel free to send over any other <a href="mailto:avi@aviadas.com">feedback</a> as well.</p>
 ]]></content>
   </entry>
   
