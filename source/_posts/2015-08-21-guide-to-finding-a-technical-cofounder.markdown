@@ -4,7 +4,7 @@ title: "Guide to finding a technical cofounder"
 date: 2015-08-21 23:04
 comments: true
 published: true
-categories: Software, Hackathons, Startups
+categories: Software Hackathons, Startups
 ---
 
 This has been happening at various meetups/hackathons/startup events sufficiently enough to warrant a blogpost. The situation is generally a variant of this, someone has an idea they are really convinced is the next big thing, the only thing stopping that from happening is making an app/website which requires a technical cofounder. The person with the idea is not at a position to afford the costs of hiring a full time/part time developer, so an equity sharing situation makes sense. Hackathons and tech meetups are where developers hang out, so approaching them there seem to be a good idea to find that cofounder.

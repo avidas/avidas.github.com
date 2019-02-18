@@ -4,7 +4,7 @@ title: "How Browserify improves Client-side Development"
 date: 2015-07-16 14:41
 comments: true
 published: true
-categories: Software, Javascript, Browserify, Node.js
+categories: Software Javascript, Browserify, Node.js
 ---
 
 #### For a more modular, maintainable Frontend
