@@ -6,6 +6,7 @@ date: 2015-09-07 07:21
 comments: false
 sharing: true
 footer: true
+brief: "SaaS for Twitter marketing automation, aquiring targeted prospects and converting them to leads."
 ---
 
 ## [Zeek](http://www.zeek.ai/)
@@ -23,5 +24,6 @@ As the lead on the project, I wanted to keep the tech stack narrow and use tools
 - Mongo - Database for the user facing software.
 - Python - Background jobs and utility scipts
 - Redis - Used [Rq](http://python-rq.org/) as a simple task queue to process background jobs.
+- Heroku
 
 {% portfolio Zeek %}

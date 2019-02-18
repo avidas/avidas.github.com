@@ -3,7 +3,7 @@ layout: post
 title: "Best Chrome Productivity Extensions"
 date: 2014-06-01 16:40
 comments: true
-categories: Chrome, Productivity, Software Development
+categories: Software Chrome Productivity Software Development
 ---
 
 How much time during the day do you spend on an internet browser? As a software engineer, my answer is a scary amount of time. Something I have personally struggled with is avoiding distracting sites on the internet. There is too much good content on the internet that dries up my rather finite amount of attention. 

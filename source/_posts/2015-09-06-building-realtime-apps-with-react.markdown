@@ -4,7 +4,7 @@ title: "Building Realtime Apps with React, Socket.io and Node.js"
 date: 2015-09-06 11:16
 comments: true
 published: true
-categories: Javascript, React, Node.js, Socket.io
+categories: Javascript React Node.js Socket.io
 ---
 
 > Update: Udemy has generously granted a free coupon for the readers of this blog for their [React JS and Flux](https://www.udemy.com/learn-and-understand-reactjs/learn/) course. Use the code `avidasreactjs` and the first 50 readers will get free access to the course!

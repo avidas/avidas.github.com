@@ -4,7 +4,7 @@ title: "Evaluating React.js and Flask"
 date: 2015-08-05 10:39
 comments: true
 published: true
-categories: Javascript, React, Python, Flask
+categories: Software Javascript React Python Flask
 ---
 
 > Update: Udemy has generously granted a free coupon for the readers of this blog for their [React JS and Flux](https://www.udemy.com/learn-and-understand-reactjs/learn/) course. Use the code `avidasreactjs` and the first 50 readers will get free access to the course!

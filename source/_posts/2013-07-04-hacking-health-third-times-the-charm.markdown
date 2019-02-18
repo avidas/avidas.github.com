@@ -4,7 +4,7 @@ title: "Hacking health - Third times the charm"
 date: 2013-07-04 23:37
 comments: true
 published: false
-categories: Hackathon, Flask, Python
+categories: Software Hackathon Flask Python
 ---
 
 {% img left /images/PocketHealth_home.jpg 275 670 'PocketHealth home' 'PocketHealth home' %}

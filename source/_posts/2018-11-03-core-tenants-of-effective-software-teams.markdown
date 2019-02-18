@@ -4,7 +4,7 @@ title: "Core tenants of highly effective software teams"
 date: 2018-11-03 11:47
 comments: true
 published: true
-categories: Software Development, Management, Teams
+categories: Software Management Teams
 ---
 
 *This blogpost is my thoughts only and does not necessarily represent the positions of current or past employers.*

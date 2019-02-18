@@ -4,7 +4,7 @@ title: "Angelhacking at Dumbo"
 date: 2013-06-08 16:42
 comments: true
 sharing: true
-categories: Hackathon, REST, Coding, Angelhack
+categories: Software Hackathon REST Coding Angelhack
 ---
 
 "This is not your ordinary hackathon. This is the big leagues". Such was the claim of Angelhack this past weekend, and two weeks after participating in my first ever serious hackathon, I found myself at another one. There really is something about the mix of meeting cool people, hacking unfamiliar platforms and testing your coding chops in a small amount of time that can be quite addicting.

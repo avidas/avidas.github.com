@@ -4,7 +4,7 @@ title: "Hack the Trackers"
 date: 2013-12-25 15:49
 comments: true
 sharing: true
-categories: Hackathon, Security, Tracking, Python
+categories: Software Hackathon Security Tracking Python
 ---
 
 Online tracking has been a peak topic of debate this year and by the look of things will continue to be. NSA programs, Snowden and the reactions from top tech companies brought in more attention to tracking than ever before. It was hence very timely for Evidon/Ghostery to organize hack the trackers in early November.

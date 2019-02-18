@@ -4,7 +4,7 @@ title: "Publishing Hackathon"
 date: 2013-05-30 07:08
 comments: true
 sharing: true
-categories: Hackathon, Coding
+categories: Software Hackathon Coding
 ---   
 
 {% img left /images/Quiply_home.png 350 350 'Quiply home' 'Quiply home' %}

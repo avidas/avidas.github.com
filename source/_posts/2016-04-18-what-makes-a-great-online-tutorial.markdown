@@ -4,7 +4,7 @@ title: "What makes a great programming tutorial?"
 date: 2016-04-18 05:36
 comments: true
 published: true
-categories: Software Development, Blogging, Teaching
+categories: Software Blogging Teaching
 ---
 
 The Internet started as a publishing medium. It excels at enabling people to share their unique gifts. An amazing amount of content gets put out on the web everyday, far beyond someone can read in a lifetime. Massive amount of information also means information overload.

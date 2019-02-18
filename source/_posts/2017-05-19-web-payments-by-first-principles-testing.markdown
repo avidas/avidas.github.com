@@ -4,7 +4,7 @@ title: "Web Payments by First Principles: Testing"
 date: 2017-05-19 16:21
 comments: true
 published: true
-categories: Software Development, Payments, APIs
+categories: Software Payments, APIs
 ---
 
 In recent years, payment API providers have made integrating payments much easier than it used to be. Instead of dealing with banks and exchanges, ecommerce apps can integrate with payment gateways that will allow accepting any form of credit cards, and most payment methods such as Apple Pay and PayPal. Large pdfs with instructions manuals are replaced by intelligent documentation sites with walkthroughs and tutorials. Despite that, it is not uncommon to hear developers referring payments as their least favorite part of the development process. Payments integrations are often seen as a necessary evil, to be done once, and hopefully be forgotten thereafter. Often the reasoning is that investing in better payments integration is often not a profit center for companies.

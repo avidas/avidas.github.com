@@ -4,7 +4,7 @@ title: "VIPHackathon: Know Your Reps"
 date: 2013-08-04 09:58
 comments: true
 sharing: true
-categories: Hackathon, Windows Phone
+categories: Software Hackathon
 ---
 
 {% img left /images/Obama_eagle.jpg 350 350 Eagle says hack 'Obama eagle' 'Obama eagle' %}

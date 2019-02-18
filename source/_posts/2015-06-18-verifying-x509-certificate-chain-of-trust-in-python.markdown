@@ -3,7 +3,7 @@ layout: post
 title: "Verifying X509 Certificate Chain of Trust in Python"
 date: 2015-06-18 17:07
 comments: true
-categories: Python, X509, Certificate, Security
+categories: Software, Python, X509, Certificate, Security
 ---
 
 Executing network spoofing and man in the middle attacks have become easier than ever. This is more of an issue if a client has an open server for you to send push notifications, since the open port can be detected by methods such as port scanning. As such, it is important to sign data, and ship the signature and metadata about verifying the data against the signature along with the data itself. This provides a way for the client to verify that the data received is unaltered, from the correct sender and indented for the correct recipient. Python's pyopenssl has a handy method called [verify](http://pyopenssl.readthedocs.org/en/latest/api/crypto.html?highlight=verify#OpenSSL.crypto.verify) for checking the authenticity of data.

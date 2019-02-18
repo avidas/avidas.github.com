@@ -3,7 +3,7 @@ layout: post
 title: "Pycon Canada 2015 II: Python for Reliably Delivering Cross Platform Products"
 date: 2015-11-24 20:41
 comments: true
-categories: Python, PyCon
+categories: Software Python PyCon
 ---
 
 This is the second part of the two series blog post about my talk at PyCon Canada. Here is the [first part](http://aviadas.com/blog/2015/11/21/pycon-canada-2015-speaking-at-my-first-conference/).

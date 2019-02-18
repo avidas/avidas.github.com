@@ -6,12 +6,13 @@ date: 2015-09-07 07:21
 comments: false
 sharing: true
 footer: true
+brief: "SaaS for Drip campaigns using Twitter direct messages"
 ---
 
 ## [Dripper](http://www.dripper.io/)
 #### Status: Sunset
 
-SASS Drip campaigns for Twitter direct messages. I was the primary developer on the project and my co founder was split between coding and marketing. The tech stack was chosen primarily due to level of comfort with these tools and also being suitable for rapid prototyping and library availability.
+Build a SaaS for Drip campaigns using Twitter direct messages. I was the primary developer on the project and my co founder was split between coding and marketing. The tech stack was chosen primarily due to level of comfort with these tools and also being suitable for rapid prototyping and library availability.
 
 Key challenges here was to comply with the twitter API, avoiding feature creep.
 

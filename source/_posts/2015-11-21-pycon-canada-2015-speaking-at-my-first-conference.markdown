@@ -3,7 +3,7 @@ layout: post
 title: "Speaking at PyCon Canada 2015: I"
 date: 2015-11-21 12:38
 comments: true
-categories: Python, PyCon
+categories: Software Python PyCon
 ---
 
 ### High Level Takeaways 

@@ -3,7 +3,7 @@ layout: post
 title: "Connected car: Meticulous.io @Angelhack"
 date: 2014-01-07 23:00
 comments: true
-categories: JavaScript, Flask, AngelHack, Hackathon
+categories: Software JavaScript Flask AngelHack Hackathon
 ---
 
 Angelhack looks for startups to come out of hackathons rather than just weekend hacks. As a result, it tends to get very product driven as teams compete for the Angelpad recognition. The theme this year was Apphack, and mobile apps were the key focus. Not really a surprise, as more and more startups build mobile first. 

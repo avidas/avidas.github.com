@@ -3,7 +3,7 @@ layout: post
 title: "Scipy 2014: Python as expression to push boundaries in science"
 date: 2014-07-13 20:22
 comments: true
-categories: Python, SciPy
+categories: Software Python SciPy
 ---
 
 It's not everyday that the person sitting next to you interacts with Mars Rovers everyday or is trying to build a data pipeline to handle petabyte-scale genomics data. But that was perhaps the key takeway from my first [Python conference](https://conference.scipy.org/scipy2014/): a large number of people pushing the boundaries in scientific disciplines and using Python as their means of expression.

@@ -6,6 +6,7 @@ date: 2019-02-17 12:22
 comments: false
 sharing: true
 footer: true
+brief: "Marketing website, CMS and course registration portal for life coaches."
 ---
 
 ## [Your Infinite Life](https://www.yourinfinitelifeonline.com/)
@@ -20,9 +21,9 @@ Biggest challenge here was being on the same page with my client on timelines, d
 ### Tech stack
 - Ruby on Rails
 - Postgres
-- Mailgun
 - SASS and Bootstrap
 - Jquery
 - Braintree
+- Mailgun
 
 {% portfolio Yourinfinitelife %}

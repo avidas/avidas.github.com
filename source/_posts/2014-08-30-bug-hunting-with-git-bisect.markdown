@@ -3,7 +3,7 @@ layout: post
 title: "Bug hunting with git bisect"
 date: 2014-08-30 12:55
 comments: true
-categories: Git, Bash, Debugging, Shell
+categories: Software Git Bash Debugging Shell
 ---
 
 With large projects with Git, feature development tends to happen often in separate branches before they are ready for merge. However, once the merge happens and tests break, it's often challenging to figure out the commit at which the bug got introduced. Git bisect is an excellent tool to triage that commit. It does so in a binary search like fashion, marking good and bad commits and reducing problem space of commits by half every time.

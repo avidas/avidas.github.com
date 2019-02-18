@@ -4,7 +4,7 @@ title: "Takeaways from MicroConf Starter 2017"
 date: 2017-04-21 17:55
 comments: true
 published: true
-categories: Software Development, Conferences
+categories: Software Conferences
 ---
 
 With the rise in VC funded startups, there was not a big community for individuals and small teams launching and supporting digital product businesses with their own profits. Rob Walling and Mike Taber noticed that need and created MicroConf, a conference for self-funded software startups.

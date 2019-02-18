@@ -4,7 +4,7 @@ title: "Lower Degrees of Separation with End Users"
 date: 2018-05-09 10:21
 comments: true
 published: true
-categories: Software, Product
+categories: Software Product
 ---
 
 When working in software, one way to look at our profession is to say that we take architecture docs or designs and make code out of it. After years in the industry, we are trusted to come up with the architecture docs and work with a team to deliver the software. This absolves ourselves of responsibility in a way since even if the product fails, at least our code and systems were great. Companies today, however, are starting to see the limitations of software engineers being removed from the product decision making process.

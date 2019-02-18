@@ -6,7 +6,7 @@ sharing: false
 footer: true
 ---
 
-Here are my current and past projects. Click on each for details and technologies used.
+Here are my past projects. Click on each for details and technologies used.
 
 {% portfolio %}
 

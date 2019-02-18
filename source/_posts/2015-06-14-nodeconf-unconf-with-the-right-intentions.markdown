@@ -4,7 +4,7 @@ title: "Nodeconf 2015: Unconf with the right intentions"
 date: 2015-06-14 16:28
 published: true
 comments: true
-categories: Node.js, Nodeconf, JavaScript
+categories: Software Node.js Nodeconf JavaScript
 ---
 
 Conferences can be a great way to get the creative juices flowing, meet people in the community and share stories and problems. They offer great opportunities to learn from core developers building the frameworks that your software depends on.
