@@ -84,6 +84,365 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2015/09/06/building-realtime-apps-with-react/">Building Realtime Apps With React, Socket.io and Node.js</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-09-06T11:16:00-04:00" pubdate data-updated="true">Sep 6<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote><p>Update: Udemy has generously granted a free coupon for the readers of this blog for their <a href="https://www.udemy.com/learn-and-understand-reactjs/learn/">React JS and Flux</a> course. Use the code <code>avidasreactjs</code> and the first 50 readers will get free access to the course!</p></blockquote>
+
+<p>The importance of delivering realtime feedback to users is more than ever. Gone are the days when chats or games were the only applications of realtime software. Starting from finance, advertising or education, having a realtime component to your web application will elevate the user experience.</p>
+
+<h3>Socket.io</h3>
+
+<p>From <a href="http://socket.io/">socket.io&#8217;s homepage</a>, it is a library that enables real-time bidirectional event-based communication. It has two parts, a client side library that runs in the browser and a server side library for node.js. In recent times, this has become the de facto way of doing realtime web applications in the node.js world. Key reasons behind this has been the way it abstracts away the overhead of maintaining multiple protocols, while carrying on similar primitives from <a href="https://nodejs.org/api/stream.html">Node streams</a> and <a href="https://nodejs.org/api/events.html">eventEmitter</a>. Some of its other powerful features include being able to stream Binary data, broadcast to multiple sockets and being able to manage connected client data from the server.</p>
+
+<h3>Architecture</h3>
+
+<p>The WebSocket protocol is a W3C standard that enables interactive communication between browser and server. It functions as an Upgrade request over HTTP 1.1. However, since all legacy browsers and devices do not have support for WebSockets, it&#8217;s cross-platform abilities get limited.</p>
+
+<p>Socket.io itself is a library to build realtime applications. It will try to upgrade to and use the Websocket protocol if available. Socket.io depends on another libray called Engine.io which exposes a Websocket like API but provides fallbacks to other transport mechanisms such as XHR and JSONP polling. This enables application developers to write realtime codebases that are browser, device and transport implementation independent.</p>
+
+<h3>Getting started with Socket.io</h3>
+
+<p>This tutorial assumes that you have Node.js, npm and Express on your system.</p>
+
+<p>In a directory create two files called index.html and app.js. In your app.js file, add the following</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">)();</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">).</span><span class="nx">Server</span><span class="p">(</span><span class="nx">app</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">swig</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;swig&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// view engine setup</span>
+</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">engine</span><span class="p">(</span><span class="s1">&#39;html&#39;</span><span class="p">,</span> <span class="nx">swig</span><span class="p">.</span><span class="nx">renderFile</span><span class="p">);</span>
+</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;view engine&#39;</span><span class="p">,</span> <span class="s1">&#39;html&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// server and routing</span>
+</span><span class='line'><span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8080</span><span class="p">);</span>
+</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We set up the view engine and serve up a basic index page. If this part looks unfamiliar, please check out <a href="http://expressjs.com/guide/routing.html">Express docs</a>. Now add the following in app.js.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">io</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;socket.io&#39;</span><span class="p">)(</span><span class="nx">server</span><span class="p">);</span>
+</span><span class='line'><span class="c1">// socket.io demo</span>
+</span><span class='line'><span class="nx">io</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;server event&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">foo</span><span class="o">:</span> <span class="s1">&#39;bar&#39;</span> <span class="p">});</span>
+</span><span class='line'>  <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;client event&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> We create a new instance of socket.io and pass in the created express server as a parameter. As the server listens, whenever a new client starts a connection, we emit an event called server event and send the payload { foo : &#8216;bar&#8217; }. It also listens for &#8216;client event&#8217; and logs the payload once it gets the event.</p>
+
+<p>In your index.html file add the following</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;/socket.io/socket.io.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;script&gt;</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">();</span>
+</span><span class='line'>  <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;server event&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;client event&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">socket</span><span class="o">:</span> <span class="s1">&#39;io&#39;</span> <span class="p">});</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'><span class="nt">&lt;/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It includes the client side socket io library. After instantiating a new connection, it listens for the &#8216;server event&#8217; and when that event happens it logs the data and emits &#8216;client event&#8217; and sends the payload { socket: &#8216;io&#8217;}.</p>
+
+<p>Run node app.js and fire up localhost:8080 in your browser. On the terminal you should see { socket: &#8216;io&#8217; } and on the console you should see { foo : &#8216;bar&#8217; } printed out. Congrats, you just did your first Socket.io app!</p>
+
+<h3>Useful Socket.io Concepts</h3>
+
+<h5>Message sending/receiving</h5>
+
+<p>Socket.IO allows you to emit and receive custom events. Besides connect, message and disconnect, you can emit custom events and send with associated payload. Emit and Broadcast are ways to send events and on is the event listener.</p>
+
+<h5>Server vs Client API</h5>
+
+<p>There are some common functions between server and client side, but it is worth looking into the docs and understanding what is possible on the server vs client. Generally, the server side has much more features and capabilites and is capable of creating rooms and namespaces but both sides and send and respond to events.</p>
+
+<h5>Rooms and Namespaces</h5>
+
+<p>Socket.io provides built in abstractions to demultiplex the connected clients. Namespaces, identified by a path, can be connected via the following</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">();</span> <span class="c1">//connects to default namespace &quot;/&quot;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">admin</span> <span class="o">=</span> <span class="nx">io</span><span class="p">(</span><span class="s2">&quot;/admin&quot;</span><span class="p">);</span> <span class="c1">//connects to the namespace specified by the path &quot;/path&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After a client connects with <code>var socket = io('/admin')</code> , we can send message only to the admin namespace.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">admin</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&quot;admin alert&quot;</span><span class="p">,</span> <span class="s2">&quot;website traffic is up!&quot;</span><span class="p">);</span> <span class="c1">//the event will only be sent to the clients who connected to the admin namespace</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This enables more role or other criteria based distribution of socket.io events/messages within your application.</p>
+
+<p>Rooms provide a way to further divide up clients within individual namespaces. Clients within a namespace can join and leave a room. By default, a client always is connected to a room idenfied by the sockets id. Hence it is possible to send targeted messages to a connected client via <code>socket.broadcast.to(&lt;SOCKET.ID&gt;).emit('test', 'message')</code>. Rooms could make more sense for particular themes whereas namespaces seem to fit well for user type/responsibilities.</p>
+
+<h3>React and Socket.io</h3>
+
+<p>Now for the exciting part, integrating React.js and Socket.io into an application. React.js is Javascript UI framework from facebook. You can follow some of the <a href="https://facebook.github.io/react/">initial docs</a> to get started with React. This tutorial will not go into great detail into the terminologies of React.js but refer to the official documentation if any of the React syntax looks confusing.</p>
+
+<p>The basic idea of the app is to have an html input and a label. When someone types in something into the input box, it will update the label for anyone else who have an window open except for the person typing.</p>
+
+<h5>Client side code</h5>
+
+<p>Let&#8217;s start by changing your index.html to the following</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span><span class='line'><span class="nt">&lt;html&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;head&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/react.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/JSXTransformer.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;/socket.io/socket.io.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/head&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;body&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;mount-point&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;label-mount-point&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/jsx&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>     <span class="cm">/** @jsx React.DOM */</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">Input</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+</span><span class='line'>      <span class="nx">_notifyServer</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+</span><span class='line'>        <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;client event&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">value</span><span class="o">:</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span> <span class="p">});</span>
+</span><span class='line'>      <span class="p">},</span>
+</span><span class='line'>      <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>        <span class="k">return</span> <span class="p">(</span>
+</span><span class='line'>          <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;update-label&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>            <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Enter text&quot;</span> <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">_notifyServer</span><span class="p">}</span><span class="o">/&gt;</span>
+</span><span class='line'>          <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span class='line'>        <span class="p">);</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">Label</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+</span><span class='line'>      <span class="nx">_onUpdateLabel</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">(</span><span class="nx">serverValue</span><span class="o">:</span> <span class="nx">data</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+</span><span class='line'>      <span class="p">},</span>
+</span><span class='line'>      <span class="nx">getInitialState</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>        <span class="k">return</span> <span class="p">{</span> <span class="nx">serverValue</span><span class="o">:</span> <span class="s1">&#39;&#39;</span> <span class="p">};</span>
+</span><span class='line'>      <span class="p">},</span>
+</span><span class='line'>      <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>        <span class="k">return</span> <span class="p">(</span>
+</span><span class='line'>          <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;my-label&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>            <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">serverValue</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h2&gt;</span>
+</span><span class='line'>          <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span class='line'>        <span class="p">)</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">input</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Input</span><span class="o">/&gt;</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;mount-point&#39;</span><span class="p">));</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">label</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Label</span><span class="o">/&gt;</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;label-mount-point&#39;</span><span class="p">));</span>
+</span><span class='line'>    <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;update label&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">label</span><span class="p">.</span><span class="nx">_onUpdateLabel</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'>    <span class="nt">&lt;/script&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/body&gt;</span>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>Server side</h5>
+
+<p>The server side of the codebase can mostly stay the same, except we broadcast &#8216;update label&#8217; when &#8216;client event&#8217; is received.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">io</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;server event&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">foo</span><span class="o">:</span> <span class="s1">&#39;bar&#39;</span> <span class="p">});</span>
+</span><span class='line'>  <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;client event&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">socket</span><span class="p">.</span><span class="nx">broadcast</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;update label&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>Explanation</h5>
+
+<p>On the client side, two React components called Input and Label are created and mounted by calling React.render. Input renders an html input box which calls the <em>notifyServer method whenever the someone types into the input field. The </em>notifyServer method then emits socket.io event called &#8216;client event&#8217; with the value of the input box.</p>
+
+<p>On the server side, when &#8216;client event&#8217; is received with the data, the server calls socket.broadcast.emit and passes the data payload along. This means that all the connected clients except for the socket that generated &#8216;client event&#8217; will receive the &#8216;update label&#8217; event and the payload. This sends the message to everyone except for the person typing.</p>
+
+<p>Back to the client side, the Label component consists on a div with a h2 element with is set to the serverValue state of the component. <a href="https://facebook.github.io/react/docs/component-specs.html#getinitialstate">getInitialState</a> sets the initial value to be &#8221; so initially the Label is empty. When &#8216;update label&#8217; is received, we call the _onUpdateLabel on label, which is an instance of Label. It sets the serverValue state of the Label component to data.value. This invokes the render method of the label component, and it generates a h2 header with the updated value of the serverValue.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/09/06/building-realtime-apps-with-react/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/08/21/guide-to-finding-a-technical-cofounder/">Guide to Finding a Technical Cofounder</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-08-21T23:04:00-04:00" pubdate data-updated="true">Aug 21<span>st</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This has been happening at various meetups/hackathons/startup events sufficiently enough to warrant a blogpost. The situation is generally a variant of this, someone has an idea they are really convinced is the next big thing, the only thing stopping that from happening is making an app/website which requires a technical cofounder. The person with the idea is not at a position to afford the costs of hiring a full time/part time developer, so an equity sharing situation makes sense. Hackathons and tech meetups are where developers hang out, so approaching them there seem to be a good idea to find that cofounder.</p>
+
+<p>There are a few problems to approaches like this. Software people who go to events like this gets pitched a fair amount, sometimes repeatedly on the same ideas. Also, we can be a rather cynical bunch, often as result of the kind of work that we do. This can result you not finding that engineer/hacker to build your app during a hackathon. Or they might do so during the hackathon, but simply drop off after.</p>
+
+<p>It can get discouraging, specially if you are convinced about the idea and new to such events. Personally, I like idea people, specially because they bring in ideas from domains and problem spaces I would have no exposure to otherwise. Moreover, I also believe that cross-pollination of people from different groups is healthy and more products coming into the world is a good thing. Therefore, I would rather like to jot down some helpful tips which can maximize your chances of finding a technical cofounder next time you are looking for one.</p>
+
+<ol>
+<li><p><strong>Understand what motivates engineers</strong>: It&#8217;s important to understand what motivates engineers beyond just financial opportunity. If such an opportunity exists, you may be in pretty decent shape already and should really drill down on your exact plans on how the app would make money in the future. If you are less sure, there are still options. Can you prove that the app would have a broad user base? A great way to do this would be to prove that you have tried unscalable ways doing this already, be it door-to-door, personal know how, competitors etc. Most ideas can be validated using non-technical approaches. Knowing your problem space well will not only help you to build a business but also lend credibility when you are looking for a cofounder. Another thing that attracts is interesting technical problems or cutting-edge tech, so if your app involves either, it would be a positive. Good technical co founders can be extremely self-motivated once they realize that they have a problem is really worth spending time on.</p></li>
+<li><p><strong>Manage expectations</strong>: It is best to present the idea and the opportunity and not expect immediate commitment. Generally people are busy, but if you have done your homework and can present the problem well, there is always a good chance. Not all engineers want the same thing, and lot are perfectly happy working where they are. If you do not have a proven user base or revenue plan yet, it does involve a certain risk-taking to get on that journey. As someone who wants to be a founder, you should seek technical co-founders with the same risk appetite as you.</p></li>
+</ol>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/08/21/guide-to-finding-a-technical-cofounder/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2015/08/05/evaluating-react-dot-js-and-flask/">Evaluating React.js and Flask</a></h1>
     
     
@@ -833,122 +1192,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/07/13/scipy-2014-python-as-expression-to-push-boundaries-in-science/">Scipy 2014: Python as Expression to Push Boundaries in Science</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-07-13T20:22:00-04:00" pubdate data-updated="true">Jul 13<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It&#8217;s not everyday that the person sitting next to you interacts with Mars Rovers everyday or is trying to build a data pipeline to handle petabyte-scale genomics data. But that was perhaps the key takeway from my first <a href="https://conference.scipy.org/scipy2014/">Python conference</a>: a large number of people pushing the boundaries in scientific disciplines and using Python as their means of expression.</p>
-
-<p>I have been using Python for a while now, both at work and for hobby projects but until of late have mostly been in the peripheries in contributions to open source projects. When I learned about Scientific Python conference right near to me in Austin, I was immediately interested. If you buy that there is such a thing as language wars, scientific computing has been one of Python&#8217;s key wins. With libraries such as NumPy, Matplotlib and Pandas (and of course IPython), Python have dominated the Scientific Python landscape alongside R and Julia.</p>
-
-<p>When such a strong ecosystem is matched by a very welcoming community, there is a recipe for a conference worth being at. Well, If you can get past the imposter syndrome of being at a place with the highest density of phds of any place I have ever been at.</p>
-
-<h3>Takeaways</h3>
-
-<ol>
-<li><p><strong>Python catching up in areas where it lacked</strong>:
-Performance, distribution, scalibility and reproducability were some of main themes at the conference. This addresses some of the historic lackings of the language. Sometimes this is via adoption of new tools such as docker for containerizing work enviroments for remote co-working researchers. Dependency on other languages has been one of the major pain points in working with the scientific Python libraries, so it is great to see Conda and HashDist (which I just discovered) to take that head on. Interoperability and scalability are two of the main problems Blaze is solving, and Bokeh and Plotly takes on the problems of publishing and sharing interactive visualizations in Python.</p></li>
-<li><p><strong> New tools for my workflow</strong>:
-There are many tools which deserve a space here, but I was primarily exited to discover pyspark, yt, plotly, sumatra/vistrails, hashdist and airspeed velocity. Version control and workflow control are familiar terratories for software engineers, but the idea of event control was new to me, something explored in a Birds of a feather discussion.</p></li>
-<li><p><strong>Birds of a Feather talks are revealing</strong>:
-Birds of a feather discussions were sometimes my favorite, where there was candid sharing of painpoints and their solutions from the community members. It was also good to know what were the open problems in various areas are as they often indicate valuable areas to focus on.</p></li>
-</ol>
-
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/07/13/scipy-2014-python-as-expression-to-push-boundaries-in-science/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/06/01/best-chrome-productivity-extensions/">Best Chrome Productivity Extensions</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-06-01T16:40:00-04:00" pubdate data-updated="true">Jun 1<span>st</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>How much time during the day do you spend on an internet browser? As a software engineer, my answer is a scary amount of time. Something I have personally struggled with is avoiding distracting sites on the internet. There is too much good content on the internet that dries up my rather finite amount of attention.</p>
-
-<p>Chrome has been my weapon of choice for browsing the web for a while now. Intuitive, clean and fast, Chrome&#8217;s ascent has been amazing to see over the past few years. Extensions on chrome allow addition of new features on Chrome made by third party developers. Lately, and there are a few extensions I simply cannot do without. When you need to buckle up and get something done, these extensions will help you get there.</p>
-
-<ol>
-<li><p><a href="http://getpocket.com">Pocket</a>:
-There are enough interesting things to read on the internet for many lifetimes. Just like youtube&#8217;s watch it later does for videos, Pocket lets me save articles for future reading. With clients available for iOS and Android, articles saved can be accessed anywhere. At any time on social websites, be it facebook, quora or hacker news, there is a lot I would like to read. Pocket gives me the convenience to customize articles from the internet into my customized feed or magazine via Flipboard integration.</p></li>
-<li><p><a href="https://chrome.google.com/webstore/detail/session-buddy/edacconmaakjimmfgnblocblbcdcpbko?hl=en">Session Buddy</a> :
-If you are like me, you context switch a lot between projects during a day. Chrome deals with tabs beautifully, and yet I find myself often with 20 or more tabs, usually researching a particular topic. Usually tabs follow a train of thought but fit within a particular context. Session buddy solves this exact problem, allowing me to save a set of tabs and windows which can be resumed later. For example, at the end of the day at work, I save a bunch of tabs, saved as the name of the project I was working on. This allows me to pick up from the chain of thought from when I left off. Switching between contexts is expensive, and session buddy is the best solution I have found.</p></li>
-<li><p><a href="https://www.rescuetime.com/">RescueTime</a>:
-Holding myself accountable for how I spend time on the web has been eye-opening for me. RescueTime not only tracks how much time during a day you spend on distracting sites, but the desktop application also tracks your non browser time. Over time, it subtly moves you to try and improve your productivity score by avoiding distraction, thus getting more productive (Bravo on the gamification aspect, ResueTime team!) I have discovered patterns of my work through the tool as well, such as the benefits of taking regular breaks and how much standing desk really helps productivity. It however, cannot track that even on productive sites, you can find ways to procrastinate. (I am looking at you, StackOverflow).</p></li>
-<li><p><a href="https://chrome.google.com/webstore/detail/block-site/eiimnmioipafcokbfikbljfdeojpcgbh?hl=en">Block site</a>:
-As much as tracking my time spent on the web helps, sometimes I need to simply block distracting sites. Block site makes for a great complement to RescueTime, allowing me to either visit whitelisted sites only or block off blacklisted sites. I have found my productivity levels on RescueTime spike when using block sites. Often its a reflex action for me to go to facebook or twitter without much thinking. Block sites counts such attempts, and shames you with clever 404 comments. I love that with the latest update, with one switch, you can turn off the distracting websites and focus on the task at hand.</p></li>
-<li><p><a href="https://lastpass.com/">LastPass</a>:
-Despite the rise of alternative logins, passwords are still integral parts of the web. With a million sites, having passwords lying around can be rather dangerous. Remembering passwords is time consuming and difficult, adding frustration to the day. LastPass securely stores your passwords for various sites, syncing them across devices. This saves the need to browse through memory trying to dig up a password or worse, store them in flat files. It can also do auto login&#8217;s for your chosen sites. One of my favorite features is that it warns if you are using duplicate passwords for sites, making your web experience more secure.</p></li>
-<li><p><a href="https://adblockplus.org/en/chrome">Adblock Plus</a>:
-Ok, this one is controversial. Adblock will stop advertisements on websites, keeping you focused and saving time particularly for video ads. Now, ads power the web, and any website with ads as primary revenue stream should be aware of adblock. I particularly enjoy the cat and mouse chase between youtube and adblock: youtube refusing to play videos as long as adblock is enabled, adblock gets smarter, youtube catches up. However, it can make certain sites load faster, thus saving time.</p></li>
-</ol>
-
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/06/01/best-chrome-productivity-extensions/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -991,19 +1234,19 @@ Ok, this one is controversial. Adblock will stop advertisements on websites, kee
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2019/03/16/life-lessons-from-doing-improv/">Life lessons from Improv</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2019/03/16/pull-requests-as-gift-exchange/">Pull requests as gift exchange</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2019/02/24/on-button-push-driven-development/">Thoughts on button push driven development</a>
       </li>
     
       <li class="post">
         <a href="/blog/2018/12/24/books-i-read-in-2018/">Books I read in 2018</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2018/11/03/core-tenants-of-effective-software-teams/">Core tenants of highly effective software teams</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2018/05/09/jersey-half-marathon-2018-race-report/">Jersey Half Marathon 2018: Race Report</a>
       </li>
     
   </ul>

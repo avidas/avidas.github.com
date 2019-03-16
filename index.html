@@ -9,7 +9,7 @@
   <meta name="author" content="Avi (Ananya Das)">
 
   
-  <meta name="description" content="I was in a conversation the other day when someone mentioned &#8220;We may only be a couple Moore&#8217;s Law iterations away from all software built &hellip;">
+  <meta name="description" content="I think life should be more like improv and improv should resemble life. On a whim, I went to hideout theatre in Austin, TX for a improv beginner &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -78,6 +78,94 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2019/03/16/life-lessons-from-doing-improv/">Life Lessons From Improv</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2019-03-16T15:07:00-04:00" pubdate data-updated="true">Mar 16<span>th</span>, 2019</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I think life should be more like improv and improv should resemble life.</p>
+
+<p>On a whim, I went to hideout theatre in Austin, TX for a improv beginner class back in 2016 but I have only been consistently doing improv for the past year. In the process, I have tried short and long form improv, and dabbled in musical/rap improv. Having zero theatre/stage background, it has been amazing to me how the lessons learnt from improv apply to life broadly.</p>
+
+<ol>
+<li><p><strong>Yes, and</strong>: A 101 on improv would begin with the encouragement to accept whatever the other person is bringing to the scene. We may have a great idea in mind, but the scene is ruined if we do not accept the other person&#8217;s ideas and bind the scene in a cohesive way. Taking this attitude to life can frame anything in life as a gift. This in turns lends us to be less critical and cynical about our day to day interactions.</p></li>
+<li><p><strong>Go with the first thing that comes to mind</strong>: Perfect is often the enemy of the good. Overthinking can stand in the way of action when spontaneity may have been the right choice. In improv, trying to think of a funny punchline can ruin an act, taking away from it the natural flow of the scene. On the other hand, going with the first thing that comes to mind often leads a scene to wonderful surprises. We probably want to do more thinking when taking real life decisions, but the training against overthinking still holds and can help us leave a more spontaneous and overcome the fear of taking action.</p></li>
+<li><p><strong>Embracing failure</strong>: Making a fool of yourself is encouraged and celebrated in improv. The very act of complete unpreparedness on stage, taking the audience&#8217;s suggestion to theme a scene and strangers as partners means that you don&#8217;t have any semblance of control. There is no guarantee of a scene being funny to the audience or a scene leading anywhere. But everyone in improv understands this, and supports your choices on stage regardless. This empowers improvisers to be authentic on stage. It also makes us realize that the consequences of failure may be less than we realize. This training is so important in life where fear of failure can hold us back.</p></li>
+<li><p><strong>Make the others look good</strong>: In improv, we succeed when we have made the others on stage successful. Supporting their ideas, pointing out the authenticity of their actions and emotions goes a long way into making a scene feel natural and relatable to the audience. This prioritizing of win-win mentality is a great habit for teams, since an effective team should be greater than the sum of its individuals.</p></li>
+<li><p><strong>Make statements, don&#8217;t ask questions</strong>: Making statements adds material to a scene, whereas a question puts the burden on the other to come up with the material. This is why it is encouraged in improv to limit questions and respond with statements. This is great for your communication skills, making conversations feel less like interrogations. People feel more at ease in a conversation when they feel they don&#8217;t have to do all the work.</p></li>
+</ol>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2019/03/16/life-lessons-from-doing-improv/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2019/03/16/pull-requests-as-gift-exchange/">Pull Requests as Gift Exchange</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2019-03-16T15:04:00-04:00" pubdate data-updated="true">Mar 16<span>th</span>, 2019</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -392,110 +480,6 @@ Friday: Rest<br></p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2017/10/25/web-payments-by-first-principles-data-architecture/">Web Payments by First Principles: Data Architecture</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-10-25T20:22:00-04:00" pubdate data-updated="true">Oct 25<span>th</span>, 2017</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Once you start receiving payments on your site, congratulations! You are likely building something people want. But now you are at the point of having to manage payments data. Developers are generally aware that handling payments data should be done with care, but it is not immediately obvious what the different considerations are. In this blog post, we will go over strategies that you can follow to future proof your payments stack from the point of a fledgeling startup to a mature, stable business.</p>
-
-<p>With storing payments data, there are quite a few considerations. What you should store and shouldn’t. In the event of a security breach on your site, you want your users financial information to be protected. Moreover, you want to architect your data storage for any current and future stakeholder requests. When it comes to payments, there are generally many stakeholders, let’s talk about a handful of them.</p>
-
-<p>You are going to have technical stakeholders: your managers and other product teams who have questions about payments. Business entities that have to report their earnings for filing taxes and reporting earnings to shareholders who will need their data from you. As someone buying/selling online, your data needs to be stored in a way to make sure you don’t break compliance (PCI/SOX etc). Support/operations will be your stakeholders when customers have problems paying and come to you for help. Let’s get into how we can address these asks.</p>
-
-<ol>
-<li><p><strong>Avoid storing sensitive personal information</strong>: Any application sending payments information such as credit card numbers, cvv to their server will have to become PCI compliant. This a financial and logistics burden which you can avoid for the most part by using a gateway provider such as Braintree/Stripe/Adyen. Usually your browser/mobile app will authenticate with the gateway and get back a token, which you can relay back to your server. This removes the danger of accidentally logging payments data, since the only data your server will see is a payments token. Even if you do get data breached, these tokens would not be useful to the attacker. This also removes the need for you to be PCI compliant which is tens of thousands of dollars in yearly expenses.  More data you should avoid storing include any plaintext passwords and secret keys, common web best practices.</p></li>
-<li><p><strong>Freeze request/response from external providers</strong>: You need to store every single request/response that you are making to your external providers, ideally in an append-only data storage. One of the common requests that we get in payments is to recreate the transaction as it happened. This is hard to do without storing the data at point in time of the transaction. Moreover, the business logic related to transaction such as taxes, fees calculations also need to be versioned and stored so that you can recreate the transaction at a certain point in time.</p></li>
-<li><p><strong>Encourage immutability and lower side effects</strong>: Similar to the point above, you should never destroy payments or charging data. There are easy ways to archive and hide the data from users. This is very useful for historical financial reporting, triaging potential inefficiencies in your charging/billing process, and dealing with any disputes with your payments provider.</p></li>
-<li><p><strong>Denormalize and index for searchability</strong>: Payments data is generally more write heavy but needs to be stored in a way for ease of triaging. Most payments providers provide unique request ids with their calls, and you should supply your own if that is possible. That way, you can set up bidirectional tracking, so that each individual call to payments is trackable from both sides. Setting indices on those unique ids is helpful for search. If the table is growing too large, it is useful to only keep upto a certain limit in your app and store the rest in a data warehouse such as AWS Redshift or Google Bigquery. The data warehouse strategy also enables you to normalize the data if you want easier access to data in one place and avoid expensive joins.</p></li>
-<li><p><strong>Prefer cents as units instead of dollars</strong>: You can avoid a whole class of floating point bugs by storing in cents and using integers as opposed to float for all your arithmetic. Since floats in computing are really a representation of an infinite number, the can only be approximation and lead to hideous rounding errors. This is a good read on that topic https://stackoverflow.com/questions/3730019/why-not-use-double-or-float-to-represent-currency. Using established tools such as the money gem for currency in ruby is also very useful.</p></li>
-</ol>
-
-
-<p>The above strategies will be useful for both internal and external users of your payments stack and help to protect your money and time when it comes to payments data. Please reach out via comments or <a href="mailto:avi@aviadas.com">email with feedback!</a>.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2017/05/19/web-payments-by-first-principles-testing/">Web Payments by First Principles: Testing</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-05-19T16:21:00-04:00" pubdate data-updated="true">May 19<span>th</span>, 2017</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>In recent years, payment API providers have made integrating payments much easier than it used to be. Instead of dealing with banks and exchanges, ecommerce apps can integrate with payment gateways that will allow accepting any form of credit cards, and most payment methods such as Apple Pay and PayPal. Large pdfs with instructions manuals are replaced by intelligent documentation sites with walkthroughs and tutorials. Despite that, it is not uncommon to hear developers referring payments as their least favorite part of the development process. Payments integrations are often seen as a necessary evil, to be done once, and hopefully be forgotten thereafter. Often the reasoning is that investing in better payments integration is often not a profit center for companies.</p>
-
-<p>I have worked the last few years in the online payments industry, building APIS, sdks and reliability tools. While payments integration has gotten easier, developers still do make mistakes which are easily avoidable. Here are some of the best practices I would recommend for testing payments in your applications.</p>
-
-<ol>
-<li><p><strong>Isolate interation between application code and payment gateway in a package</strong>: Once an app grows to a certain size, it may have different ways of interacting with payments gateways. You may be accepting recurring payments and accepting webhooks from the payments provider, just in time checkout or interact with point of sales systems. Having your own package that abstracts out interaction with the payments APIs can help centralize all outgoing requests back and forth with the payments API. You can add your own logging and monitoring, stub out the interaction with payments API to have faster unit tests and centralize knowledge about how you serialize and deserialize messages from and to your payments provider.</p></li>
-<li><p><strong>Sandbox Testing</strong>: Most payment API/gateways expose a sandbox environments where you can test out a real integration with the API without moving any money. Ideally your integration tests running continously in Jenkins/Travis/Circle CI should be hitting those endpoints.</p></li>
-<li><p><strong>Monitoring</strong>: You should monitor your sandbox integration as well as your live system. What does the graph of 200s vs 400s HTTP response codes from the payments API look like? Are you getting unexpected 400s? How about 500s? What does the response times look like?</p></li>
-<li><p><strong>Automated QA</strong>: To avoid putting undue stress on your computation and database resources, background tasks are common strategies to do break down calculations for common payments needs such as reporting and analytics. When calculations are done in partial chunks, automated jobs that test whether those calculations have been done properly can reduce a lot of load for your support and developers when something goes wrong midway between a job, or failure.</p></li>
-<li><p><strong>Negative/Failure Testing</strong>: Special card numbers provided by payments providers can help you recreate payment declines due to potential denial from processors for reasons such as not enough funds in account. You may also be able to test for rejections due to fraud and compliance. This helps lower the range of potential unknown errors your site may run into, especially when expanding to new markets or accepting more payment methods.</p></li>
-<li><p><strong>Live testing</strong>: Live testing against payment providers is often tricky, and can led to accounts getting shut down if there is undue load on the API. Despite that, some testing in live is absolutely necessary before you can be confident that on release day, your integration is working as expected.</p></li>
-<li><p><strong>Test for absence of sentive information</strong>: Storing user information such as credit card number or passwords is a very common way of violation of PCI compliance. Regex patterns can be used to make sure that neither your logs nor your database is storing sensitive information.</p></li>
-</ol>
-
-
-<p>I intend to write more posts in this series, covering topics such as considerations before and after going live with payments, when scaling up and so on. If you liked this post, please share or comment.</p>
-
-<p>If you have feedback on this blog post or integrating payments, please <a href="mailto:avi@aviadas.com">feel free to reach out!</a>.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -536,19 +520,19 @@ Friday: Rest<br></p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2019/03/16/life-lessons-from-doing-improv/">Life lessons from Improv</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2019/03/16/pull-requests-as-gift-exchange/">Pull requests as gift exchange</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2019/02/24/on-button-push-driven-development/">Thoughts on button push driven development</a>
       </li>
     
       <li class="post">
         <a href="/blog/2018/12/24/books-i-read-in-2018/">Books I read in 2018</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2018/11/03/core-tenants-of-effective-software-teams/">Core tenants of highly effective software teams</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2018/05/09/jersey-half-marathon-2018-race-report/">Jersey Half Marathon 2018: Race Report</a>
       </li>
     
   </ul>

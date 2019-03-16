@@ -4,7 +4,7 @@
   <title><![CDATA[Avi Das]]></title>
   <link href="http://avidas.github.com/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2019-02-24T14:43:15-05:00</updated>
+  <updated>2019-03-16T19:40:47-04:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -12,6 +12,49 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Life lessons from Improv]]></title>
+    <link href="http://avidas.github.com/blog/2019/03/16/life-lessons-from-doing-improv/"/>
+    <updated>2019-03-16T15:07:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2019/03/16/life-lessons-from-doing-improv</id>
+    <content type="html"><![CDATA[<p>I think life should be more like improv and improv should resemble life.</p>
+
+<p>On a whim, I went to hideout theatre in Austin, TX for a improv beginner class back in 2016 but I have only been consistently doing improv for the past year. In the process, I have tried short and long form improv, and dabbled in musical/rap improv. Having zero theatre/stage background, it has been amazing to me how the lessons learnt from improv apply to life broadly.</p>
+
+<ol>
+<li><p><strong>Yes, and</strong>: A 101 on improv would begin with the encouragement to accept whatever the other person is bringing to the scene. We may have a great idea in mind, but the scene is ruined if we do not accept the other person&#8217;s ideas and bind the scene in a cohesive way. Taking this attitude to life can frame anything in life as a gift. This in turns lends us to be less critical and cynical about our day to day interactions.</p></li>
+<li><p><strong>Go with the first thing that comes to mind</strong>: Perfect is often the enemy of the good. Overthinking can stand in the way of action when spontaneity may have been the right choice. In improv, trying to think of a funny punchline can ruin an act, taking away from it the natural flow of the scene. On the other hand, going with the first thing that comes to mind often leads a scene to wonderful surprises. We probably want to do more thinking when taking real life decisions, but the training against overthinking still holds and can help us leave a more spontaneous and overcome the fear of taking action.</p></li>
+<li><p><strong>Embracing failure</strong>: Making a fool of yourself is encouraged and celebrated in improv. The very act of complete unpreparedness on stage, taking the audience&#8217;s suggestion to theme a scene and strangers as partners means that you don&#8217;t have any semblance of control. There is no guarantee of a scene being funny to the audience or a scene leading anywhere. But everyone in improv understands this, and supports your choices on stage regardless. This empowers improvisers to be authentic on stage. It also makes us realize that the consequences of failure may be less than we realize. This training is so important in life where fear of failure can hold us back.</p></li>
+<li><p><strong>Make the others look good</strong>: In improv, we succeed when we have made the others on stage successful. Supporting their ideas, pointing out the authenticity of their actions and emotions goes a long way into making a scene feel natural and relatable to the audience. This prioritizing of win-win mentality is a great habit for teams, since an effective team should be greater than the sum of its individuals.</p></li>
+<li><p><strong>Make statements, don&#8217;t ask questions</strong>: Making statements adds material to a scene, whereas a question puts the burden on the other to come up with the material. This is why it is encouraged in improv to limit questions and respond with statements. This is great for your communication skills, making conversations feel less like interrogations. People feel more at ease in a conversation when they feel they don&#8217;t have to do all the work.</p></li>
+</ol>
+
+
+<!-- more -->
+
+
+<ol>
+<li><p><strong>Leading with emotions</strong>: An audience is watching an improv scene has a fuller experience when they not only hear the words but see the emotions of the performers. Life is certainly more complicated, if you playing poker for example, it is best to hide your emotions. On the other hand, lot of us lack the ability to emote even when situations demand it, because our upbringing has taught us to treat display of emotions as weakness. Improv can help unlearn and be more expressive in situations when we should lead with our emotions.</p></li>
+<li><p><strong>Take the scene somewhere</strong>: In an improv scene, you and your partner create a character and a world which has the shelf life of the scene. The scene can be as short as a minute and half. It is great for the audience when the scene builds up to something, has a beginning, middle and end. In the movie of our lives, we are the protagonists living our story. The practice of improv helps us build a viewpoint of our lives from a third party perspective, and can make us wonder how we want the protagonist to act. To use a computing analogy, it would be similar to seeing life from a debug mode.</p></li>
+<li><p><strong>Listen</strong>: There simply cannot be a good scene where you ignore the words, behavior and actions of your partner. Thus improv helps emphasize the importance of listening, the power of which is well understood.</p></li>
+<li><p><strong>Have fun</strong>: The audience knows when the performers are enjoying themselves, and can feel they are part of it too.</p></li>
+<li><p><strong>Commit to a scene</strong>: A more experienced improviser advised me to commit with your voice, face and your body. The practice of complete immersion in a scene can help us be more present when we show up in life.</p></li>
+</ol>
+
+
+<p>The beauty of improv is that you don&#8217;t have to become a great improviser to see positive effects it can have on your life. Those of us who believe in constant improvement and are interested in living a more examined life will find improv valuable.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Pull requests as gift exchange]]></title>
+    <link href="http://avidas.github.com/blog/2019/03/16/pull-requests-as-gift-exchange/"/>
+    <updated>2019-03-16T15:04:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2019/03/16/pull-requests-as-gift-exchange</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Thoughts on button push driven development]]></title>
@@ -1255,131 +1298,6 @@ componentWillMount is called directly before a react component is initially rend
 <p>Browserify offers a great way to abstract away that issue. With access to a vast amount of modules, there is much less of a need for reinventing the wheel on the client side, and fewer script tags thrown around everywhere. Client side software development is evolving fast, and Browserify has made significant progress to minimize some of that complexity.</p>
 
 <p>If you are using browserify/webpack in production, I would love to know the tradeoffs/issues you have ran into. Comments/feedback here or <a href="mailto:avi@aviadas.com">contact</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Verifying X509 Certificate Chain of Trust in Python]]></title>
-    <link href="http://avidas.github.com/blog/2015/06/18/verifying-x509-certificate-chain-of-trust-in-python/"/>
-    <updated>2015-06-18T17:07:00-04:00</updated>
-    <id>http://avidas.github.com/blog/2015/06/18/verifying-x509-certificate-chain-of-trust-in-python</id>
-    <content type="html"><![CDATA[<p>Executing network spoofing and man in the middle attacks have become easier than ever. This is more of an issue if a client has an open server for you to send push notifications, since the open port can be detected by methods such as port scanning. As such, it is important to sign data, and ship the signature and metadata about verifying the data against the signature along with the data itself. This provides a way for the client to verify that the data received is unaltered, from the correct sender and indented for the correct recipient. Python&#8217;s pyopenssl has a handy method called <a href="http://pyopenssl.readthedocs.org/en/latest/api/crypto.html?highlight=verify#OpenSSL.crypto.verify">verify</a> for checking the authenticity of data.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">OpenSSL</span><span class="o">.</span><span class="n">crypto</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="n">certificate</span><span class="p">,</span> <span class="n">signature</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">digest</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The problem then becomes how to provide the certificate while retaining the flexibility necessary to update the certificate without clients needing to modify their certificate stores every time. Providing a url that can be used to download the cert provides that but leaves the door open for the same kind of attacks.</p>
-
-<p>Therefore, clients will need to ensure that the downloaded certificate is trustworthy before using it to verify the authenticity of a message. The openssl module on the terminal has a <a href="https://www.openssl.org/docs/apps/verify.html">verify method</a> that can be used to verify the certificate against a chain of trusted certificates, going all the way back to the root CA. The builtin ssl module has create_default_context(), which can build a certificate chain while creating a new SSLContext. However, it does not expose that functionality for adhoc post processing when you are not opening new connections.</p>
-
-<p>pyopenssl provides some very handy abstractions for exactly this purpose:</p>
-
-<ul>
-<li><p><a href="http://pyopenssl.readthedocs.org/en/latest/api/crypto.html#x509store-objects">X509Store</a>: The chain of certificates you have chosen to trust going back to root Certificate Authority</p></li>
-<li><p><a href="http://pyopenssl.readthedocs.org/en/latest/api/crypto.html#x509storecontext-objects">X509StoreContext</a> - Takes in a X509Store and a new certificate which you can now validate against your store by calling verify_certificate. It raises exceptions if the intermediate or root CA is missing in the chain or the certificate is invalid.</p></li>
-</ul>
-
-
-<p> The full example of verifying a downloaded certificate against a trust chain is given below</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">requests</span>
-</span><span class='line'><span class="kn">from</span> <span class="nn">OpenSSL</span> <span class="kn">import</span> <span class="n">crypto</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">def</span> <span class="nf">_verify_certificate_chain</span><span class="p">(</span><span class="n">cert_url</span><span class="p">,</span> <span class="n">trusted_certs</span><span class="p">):</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="c"># Download the certificate from the url and load the certificate</span>
-</span><span class='line'>    <span class="n">cert_str</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cert_url</span><span class="p">)</span>
-</span><span class='line'>    <span class="n">certificate</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">load_certificate</span><span class="p">(</span><span class="n">crypto</span><span class="o">.</span><span class="n">FILETYPE_PEM</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">cert_str</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="c">#Create a certificate store and add your trusted certs</span>
-</span><span class='line'>    <span class="k">try</span><span class="p">:</span>
-</span><span class='line'>        <span class="n">store</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">X509Store</span><span class="p">()</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="c"># Assuming the certificates are in PEM format in a trusted_certs list</span>
-</span><span class='line'>        <span class="k">for</span> <span class="n">_cert</span> <span class="ow">in</span> <span class="n">trusted_certs</span><span class="p">:</span>
-</span><span class='line'>            <span class="n">store</span><span class="o">.</span><span class="n">add_cert</span><span class="p">(</span><span class="n">_cert</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="c"># Create a certificate context using the store and the downloaded certificate</span>
-</span><span class='line'>        <span class="n">store_ctx</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">X509StoreContext</span><span class="p">(</span><span class="n">store</span><span class="p">,</span> <span class="n">certificate</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="c"># Verify the certificate, returns None if it can validate the certificate</span>
-</span><span class='line'>        <span class="n">store_ctx</span><span class="o">.</span><span class="n">verify_certificate</span><span class="p">()</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="k">return</span> <span class="bp">True</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-</span><span class='line'>        <span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-</span><span class='line'>        <span class="k">return</span> <span class="bp">False</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Using this can be really useful for client libaries where you cannot rely on the system to provide the certificates, so you can ship your trust chain along with the library. There are also other useful abstractions in the pyopenssl library for some useful checks against the certificate. get_subject() provides information about the certificate such as common name, has_expired() which checks if the certificate is within valid time range and other features such as blacklisting potentially compromised certificates are possible. Thus pyopenssl is really handy when you need ssl abstractions beyond the standard library while not needing to execute the openssl shell calls via a subprocess.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Nodeconf 2015: Unconf with the right intentions]]></title>
-    <link href="http://avidas.github.com/blog/2015/06/14/nodeconf-unconf-with-the-right-intentions/"/>
-    <updated>2015-06-14T16:28:00-04:00</updated>
-    <id>http://avidas.github.com/blog/2015/06/14/nodeconf-unconf-with-the-right-intentions</id>
-    <content type="html"><![CDATA[<p>Conferences can be a great way to get the creative juices flowing, meet people in the community and share stories and problems. They offer great opportunities to learn from core developers building the frameworks that your software depends on.</p>
-
-<p>Nodeconf managed to achieve all this, in the rather unusual form of an unconference. An unconference meant that the structure and events/presentations and talks at the conference were left to be decided by the community rather than a committee. That does make Nodeconf a conference not for everyone. Understanding the format and structure of Nodeconf is important before you make the hike to Walnut Creek Ranch next year.</p>
-
-<p>I thought to distill down the reasons why you might or might not be interested in attending Nodeconf as well as get the most out of it. You might be interested in Nodeconf if you</p>
-
-<ol>
-<li><p><strong>Build for the web</strong>: For a lot of attendees, Nodeconf would feel like living in the future as a lot of attendees are very involved in making the decisions and tradeoff that would shape the future of the web. Specially discussions around packaging and parceling front end assets in npm (Modular UI) was really interesting as was Isomorphic JS, which covered the challenges involved in writing identical client and server side code. The JavaScript landscape is a fast evolving one and Nodeconf offers fantastic perspective on how the decision making can work.</p></li>
-<li><p><strong>Publish on npm/github</strong>: As someone who maintains projects on npm and github, the discussions around distributing node modules were very insightful. Issues such as broadening adoption, getting contributors for github modules and standards for publishing on npm came up and maintainers of hugely popular modules shared their experiences. Picking a good module scope, having really good examples for beginners to start with and publishing with concise yet searchable package descriptions were all emphasized.</p></li>
-</ol>
-
-
-<!-- more -->
-
-
-<ol>
-<li><p><strong>Foster community growth</strong>: The node community is certainly dealing with the growing pains that comes with success. Having a well defined process for integrating new members is really important for large codebases. Broadening mentorship was considered as a possibility for guiding new members through the steep learning curve.</p></li>
-<li><p><strong>Want to get a deeper understanding of Node Core and APIs</strong>: There was unparalleled opportunity to discuss Node core/API and critical libraries such as libuv with the core developers. This was also true for external node libraries, and it can be certainly valuable to take a set of well defined problems that you have on your Node codebases as you are bound to make progress in such an environment.</p></li>
-</ol>
-
-
-<p>You might not be interested in Nodeconf if</p>
-
-<ol>
-<li><p><strong>You expect Nodeconf to be a 3 day training session on Node</strong>: While Nodeconf was full of illuminating discussions and presentations, it was certainly not a series of tutorials on Node.</p></li>
-<li><p><strong>You expect a traditional conference structure</strong>: It did not take place on a hotel, rather a ranch and certainly does not have some of the glamour associated with WWDC or Google I/O.</p></li>
-</ol>
-
 ]]></content>
   </entry>
   
