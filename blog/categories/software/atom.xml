@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Software | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/software/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2019-03-16T19:42:17-04:00</updated>
+  <updated>2019-03-17T13:16:01-04:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -41,7 +41,7 @@
 
 <ol>
 <li>Democratizing building of software applications is the direction in which software should go. Just like literacy, tools of creativity should not be limited to those who have the time to learn or funding to hire people to do it. If information hoarding is one's only advantage, one is asking for disruption.</li>
-<li>If solving problems is what gets you excited about programming, in the next decade you will want to think about focusing on areas more resistance to this change. Infrastructure and tools development are more resistant to this change then application development, but there is less of it to be built compared to applications.</li>
+<li>If solving problems is what gets you excited about programming, in the next decade you will want to think about focusing on areas more resistant to this change. Infrastructure and tools development are more resistant to this change than application development, but there is less of it to be built compared to applications.</li>
 <li>Programming is still a difficult thing to do. Building quality, lasting software is expensive for a business. For a business, the ability to reduce this cost by using WISYWIG tools or code as configuration will always be appealing.</li>
 <li>WISYWIGs encourages dependence on higher level tools which reduces the need to learn about the fundamentals and increases the risk when the tools themselves break.</li>
 </ol>
