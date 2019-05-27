@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Software | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/software/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2019-05-27T16:30:52-04:00</updated>
+  <updated>2019-05-27T16:33:15-04:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -19,9 +19,10 @@
     <updated>2019-04-14T11:16:00-04:00</updated>
     <id>http://avidas.github.com/blog/2019/04/14/react-amsterdam-2019-takeaways</id>
     <content type="html"><![CDATA[<ul>
-<li>Productivity boost as main sales pitch for GraphQL besides (Peggy Rayzis)
+<li>The case of GraphQL(Peggy Rayzis)
 
 <ul>
+<li>Productivity boost across teams</li>
 <li>Smaller payloads</li>
 <li>Fewer client/server round trips</li>
 <li>Preventing over fetching</li>
