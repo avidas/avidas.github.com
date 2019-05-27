@@ -27,9 +27,9 @@ Continuous context switching has real penalties. In [Deep Work](https://www.amaz
 
 That left me with the following thoughts.
 
-1. Democratizing building of software applications is the direction in which software should go. Just like literacy, tools of creativity should not be limited to those who have the time to learn or funding to hire people to do it. If information hoarding is one's only advantage, one is asking for disruption.
-2. If solving problems is what gets you excited about programming, in the next decade you will want to think about focusing on areas more resistant to this change. Infrastructure and tools development are more resistant to this change than application development, but there is less of it to be built compared to applications.
-3. Programming is still a difficult thing to do. Building quality, lasting software is expensive for a business. For a business, the ability to reduce this cost by using WISYWIG tools or code as configuration will always be appealing.
+1. Democratizing building of software applications is the direction in which software should go. _Just like literacy, tools of creativity should not be limited to those who have the time to learn or funding to hire people to do it._ If information hoarding is one's only advantage, one is asking for disruption.
+2. _If solving problems is what gets you excited about programming, in the next decade you will want to think about focusing on areas more resistant to this change_. Infrastructure and tools development are more resistant to this change than application development, but there is less of it to be built compared to applications.
+3. _Programming is still a difficult thing to do. Building quality, lasting software is expensive for a business._ For a business, the ability to reduce this cost by using WISYWIG tools or code as configuration will always be appealing.
 4. WISYWIGs encourages dependence on higher level tools which reduces the need to learn about the fundamentals and increases the risk when the tools themselves break.
 
 I hope this is a blogpost I get to laugh it in five years due to how much things have changed. But I do think this trend in software development has consequences as far as who will be interested in programming in the future and the intention people have when they get into programming.
