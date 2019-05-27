@@ -7,19 +7,17 @@ sharing: true
 categories: Software React Javascript Frontend
 ---
 
-* The case of GraphQL(Peggy Rayzis)
+* The case of GraphQL (Peggy Rayzis)
   * Productivity boost across teams
   * Smaller payloads
   * Fewer client/server round trips
   * Preventing over fetching
-
-
+<br>
 * Great Developer Experience (Peggy Rayzis)
   * Unobtrusive, out of the way e.g. Prettier
   * Predictable and intuitive, e.g. declarative React paradigm
   * Instant Feedback Loop e.g. VSCode/TS
-
-
+<br>
 * Design Systems (Mark Dalgleish & Andrey Okonetchnikov)
   * Universal Language > Technology
   * Set of design related rules as system of instructions that can be reused across products
@@ -27,12 +25,10 @@ categories: Software React Javascript Frontend
   * Design powered development tools
   * Developer workflows as productive as designers
   * UI components and pattern libraries can provide this intermediate abstraction and be a common language for both designers and developers.
-
-
+<br>
 * Micro Frontends (Max Gallo)
   * Autonomy/Responsibility with Teams Innovation
-
-
+<br>
 * Better you understand the abstraction, better you are at using it (Kent C Dodds)
 * Write code that is resilient to future change (Max Stoiber)
 * Use existing solutions for tech problems if you don’t understand deeply (Bias towards conservative choices)
