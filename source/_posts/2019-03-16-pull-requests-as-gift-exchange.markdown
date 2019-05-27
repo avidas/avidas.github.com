@@ -7,7 +7,7 @@ sharing: true
 categories: Software Teams Programming
 ---
 
-The best metaphor I have found for thinking about code reviews is thinking of them as gift exchanges. The terms pull request and code reviews will be used interchangeably in this post.
+The best metaphor I have found for thinking about code reviews is a gift exchange. The terms pull request and code reviews will be used interchangeably in this post.
 
 The balance of writing code vs everything else that is necessary to be a successful member of a software team is one of the key challenges of our job. 
 
