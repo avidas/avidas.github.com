@@ -15,7 +15,7 @@ Code reviews are an interesting mix. You have to understand someone else's point
 
 Moreover, a code review must take into consideration not just the code, but the project, team and the company into consideration.
 
-These qualities make code review a great opportunity to practice interpersonal skills alongside your programming skills. The best engineers I have worked with take code reviews or responding to feedback on their own pull requests very seriously. Specific strategies that engineers use are different. Some review pull requests first time in the day, others end of the day or anything in between.
+These qualities make code review a great opportunity to practice interpersonal skills alongside your programming skills. The best engineers I have worked with take code reviews and responding to feedback on their own pull requests very seriously. Specific strategies that engineers use are different. Some review pull requests first time in the day, others end of the day or anything in between.
 
 Framing is a powerful technique we can use when summoning the energy to do code review everyday. It would be to see every request for a code review or feedback you receive on code review as a gift. Someone values your intelligence enough to ask for your review or taking their valuable time to give you feedback that can only improve you as an engineer. Everyday, you receive these gifts. But you can also offer them to others, which in itself is a meaningful and satisfying act.
 
