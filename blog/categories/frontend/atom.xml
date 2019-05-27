@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Frontend | Avi Das]]></title>
+  <link href="http://avidas.github.com/blog/categories/frontend/atom.xml" rel="self"/>
+  <link href="http://avidas.github.com/"/>
+  <updated>2019-05-27T16:15:57-04:00</updated>
+  <id>http://avidas.github.com/</id>
+  <author>
+    <name><![CDATA[Avi (Ananya Das)]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[React Amsterdam 2019: Takeaways]]></title>
+    <link href="http://avidas.github.com/blog/2019/04/14/react-amsterdam-2019-takeaways/"/>
+    <updated>2019-04-14T11:16:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2019/04/14/react-amsterdam-2019-takeaways</id>
+    <content type="html"><![CDATA[<p>How will we build apps in the future, and breakthrough idea</p>
+
+<p>Conferences are a great way to take pulse of the community, to see the problems the community is facing and how they are solving them. The relative newnewss of the React and Javascript community means that there are still many unsolved problems.</p>
+
+<p>Community is JS core strengths.</p>
+
+<p>I attended React Amsterdam April 10-12. I went to a workshop on Design Systems and GraphQL, went to a meetup and attended the day long conference.</p>
+
+<p>The maturiong of tools around Design Systems <br/>
+Design Systems maturing to bridge the gap between development and design.
+JS is a tools heavy ecosystem, which is why looking under the covers is valuable.
+Schema stiching
+Code splitting
+Next.js as dominant way to do SSR.
+Apollo winning the graphql market
+GraphQL dominant in the world of client side devs writing backend tooling
+Lots of emphasis on gem</p>
+
+<p>Encouragement to see the fundamentals Kent C Dodds. It's very relevant message for a community who can get anything they want by installing another npm package.</p>
+]]></content>
+  </entry>
+  
+</feed>

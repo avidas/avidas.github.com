@@ -9,7 +9,7 @@
   <meta name="author" content="Avi (Ananya Das)">
 
   
-  <meta name="description" content="Update: Udemy has generously granted a free coupon for the readers of this blog for their React JS and Flux course. Use the code avidasreactjs and &hellip;">
+  <meta name="description" content="High Level Takeaways If you are giving a talk, too much content on slides means the audience is reading the slides instead of listening to you. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -78,6 +78,83 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/11/21/pycon-canada-2015-speaking-at-my-first-conference/">Speaking at PyCon Canada 2015: I</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-11-21T12:38:00-05:00" pubdate data-updated="true">Nov 21<span>st</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>High Level Takeaways</h3>
+
+<ul>
+<li>If you are giving a talk, too much content on slides means the audience is reading the slides instead of listening to you.</li>
+<li>Design your talk expecting failure, and assume things like wifi will not work. An analogy would be the non functional escalator still being a staircase.</li>
+<li>Show your talk to as many people as time allows. Every time I showed my talk to someone, I would find a new way to make the talk better.</li>
+<li>It was amazing to hear from a 10 year old about his experience in coding. The barrier to entry to tech will keep falling in a noticeable way.</li>
+<li>Teaching remains the best way to learn alongside with building things.</li>
+<li>Coding for expectability is often as important as any considerations in a software project.</li>
+<li>Science, data, web, systems and infrastructure were dominant themes at PyCon.</li>
+</ul>
+
+
+<h3>Getting to Toronto</h3>
+
+<ul>
+<li>It was really exciting to have my talk accepted at PyCon, since it was my first time speaking at a conference.</li>
+<li>Getting through customs went as painless as they could have.</li>
+<li>Toronto was colder than Austin, big surprise! Reminded me of times back in East Coast.</li>
+<li>T-mobile data roaming was a breeze to set up, and worked mostly well across different providers.</li>
+<li>Toronto had different modes of public transportation getting from downtown to airport: buses, streetcars, subway. Makes a city more interesting, although makes day to day travelling more complicated. Although, it does not take a whole lot to put public transportation in Austin to shame.</li>
+<li>Asked a lady on the Subway for directions. It soon turned into a great conversation with her and her husband about life in Toronto and their experiences in US. For a big city, Toronto scores major points for having friendly people. Canadians have a reputation of being polite and helpful, and I would come to recognize it throughout my trip there.</li>
+<li>My AirBnB was in Kensington Market, close to UoT where PyCon was taking place. It was a vibrant neighborhood, bars, restaurants, transportation nearby. My room was no hotel room, but a bed was all I needed.</li>
+</ul>
+
+
+<h3>Saturday</h3>
+
+<ul>
+<li>Morning started with me feeling the stress of not having all my slides and examples ready. I wanted to take some time to reflect on the great feedback I got from my team, but there was little time left.</li>
+<li>Adding to my anxiety was the wifi connection not working. Thankfully, some organizers helped me out. Once the certificate issues resolved, it worked well for remainder of the conference.</li>
+<li>Continental breakfast consisted of an assortment of cottage cheese, granola/yogurt, muffins, bread and coffee. No complaints.</li>
+<li>Talked to Dusty, a Facebook engineer working on the Facebook infrastructure in Portland. Having lived in Canada, he had a lot to share about his experience there.</li>
+<li>Morning keynote explored the history of Python interpreters and went into benchmarks. Benchmark related conversations can get subjective, but the speaker did a good job avoiding that.</li>
+<li>Talks on application security, Emmy nominated CGI(!) and Docker deployment followed. The CGI talk was offered a very different viewpoint in software problems. Being highly computation intensive and long life cycles means the tradeoffs are very different from the usual SASS app/consumer product.</li>
+</ul>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/11/21/pycon-canada-2015-speaking-at-my-first-conference/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -1090,108 +1167,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/08/30/bug-hunting-with-git-bisect/">Bug Hunting With Git Bisect</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-30T12:55:00-04:00" pubdate data-updated="true">Aug 30<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>With large projects with Git, feature development tends to happen often in separate branches before they are ready for merge. However, once the merge happens and tests break, it&#8217;s often challenging to figure out the commit at which the bug got introduced. Git bisect is an excellent tool to triage that commit. It does so in a binary search like fashion, marking good and bad commits and reducing problem space of commits by half every time.</p>
-
-<p>However, this process can be quite manual so git bisect has a run command. This allows you to set a testing scipt and based on the output of the testing script, it automatically finds the middle commits and continues searching till it finds the breaking commit.</p>
-
-<p>Another neat feature is its ability to log out the output, record and rerun the bisect for further debugging. The git-scm book has some excellent documentation for the <a href="http://git-scm.com/docs/git-bisect">complete api</a> and <a href="http://git-scm.com/docs/git-bisect-lk2009.html">technical details</a>.</p>
-
-<p>There are still a few manual steps, as you would want to stash for saving and recovering state of uncommitted work, get to HEAD and view the log available for record and replay.</p>
-
-<p>For reusability, I wrote the following script to make git bisecting and setup into a handy bash function.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># Stash current work and and git bisect with given good and </span>
-</span><span class='line'><span class="c"># bad commit ids, running given script that exits with 0 on failure</span>
-</span><span class='line'><span class="c"># and positive number on success</span>
-</span><span class='line'>gbisect<span class="o">()</span> <span class="o">{</span>
-</span><span class='line'>    <span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$#&quot;</span> -ne 1 <span class="o">]</span>; <span class="k">then</span>
-</span><span class='line'><span class="k">        </span><span class="nb">echo</span> <span class="s2">&quot;gbisect good-commit-id bad-commit-id script &lt;arguments&gt;&quot;</span>
-</span><span class='line'>    <span class="k">else</span>
-</span><span class='line'><span class="k">        </span>git stash <span class="c"># stash current state</span>
-</span><span class='line'>        git checkout HEAD
-</span><span class='line'>        git bisect start <span class="c"># initialize git bisect</span>
-</span><span class='line'>        git bisect good <span class="nv">$1</span>
-</span><span class='line'>        <span class="nb">shift</span>
-</span><span class='line'><span class="nb">        </span>git bisect bad <span class="nv">$1</span>
-</span><span class='line'>        <span class="nb">shift</span>
-</span><span class='line'><span class="nb">        </span>git bisect run <span class="s2">&quot;$@&quot;</span> <span class="c"># # git bisect </span>
-</span><span class='line'>
-</span><span class='line'>        git bisect log
-</span><span class='line'>        git bisect reset
-</span><span class='line'>
-</span><span class='line'>        git stash list
-</span><span class='line'>        git stash apply
-</span><span class='line'>    <span class="k">fi</span>
-</span><span class='line'><span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you are using mocha as a test runner, you could use the script as following</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>gbisect 23df33 56dg23 mocha -t 15000
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Git is like an iceberg, in a good way. Generally instead of perusing heavy books on something, I like learning as I run into challenges. Once something clicks though, it is great as it has a N times effect into your workflow if you are using git for work and personal projects.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -1234,19 +1209,19 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2019/04/14/react-amsterdam-2019-takeaways/">React Amsterdam 2019: Takeaways</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2019/03/16/life-lessons-from-doing-improv/">Life lessons from Improv</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2019/03/16/pull-requests-as-gift-exchange/">Pull requests as gift exchange</a>
+        <a href="/blog/2019/03/16/pull-requests-as-gift-exchange/">Frame code reviews as gift exchanges</a>
       </li>
     
       <li class="post">
         <a href="/blog/2019/02/24/on-button-push-driven-development/">Thoughts on button push driven development</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2018/12/24/books-i-read-in-2018/">Books I read in 2018</a>
       </li>
     
   </ul>
