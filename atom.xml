@@ -4,7 +4,7 @@
   <title><![CDATA[Avi Das]]></title>
   <link href="http://avidas.github.com/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2019-05-27T16:33:15-04:00</updated>
+  <updated>2019-05-27T16:33:34-04:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -19,7 +19,7 @@
     <updated>2019-04-14T11:16:00-04:00</updated>
     <id>http://avidas.github.com/blog/2019/04/14/react-amsterdam-2019-takeaways</id>
     <content type="html"><![CDATA[<ul>
-<li>The case of GraphQL(Peggy Rayzis)
+<li><p>The case of GraphQL(Peggy Rayzis)</p>
 
 <ul>
 <li>Productivity boost across teams</li>
@@ -53,7 +53,7 @@
 <li>Autonomy/Responsibility with Teams Innovation</li>
 </ul>
 </li>
-<li>Better you understand the abstraction, better you are at using it (Kent C Dodds)</li>
+<li><p>Better you understand the abstraction, better you are at using it (Kent C Dodds)</p></li>
 <li>Write code that is resilient to future change (Max Stoiber)</li>
 <li>Use existing solutions for tech problems if you don’t understand deeply (Bias towards conservative choices)</li>
 <li>Be open about roadmap to learn about users priorities</li>
