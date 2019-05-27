@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Software | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/software/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2019-05-27T16:15:57-04:00</updated>
+  <updated>2019-05-27T16:24:51-04:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -18,25 +18,25 @@
     <link href="http://avidas.github.com/blog/2019/04/14/react-amsterdam-2019-takeaways/"/>
     <updated>2019-04-14T11:16:00-04:00</updated>
     <id>http://avidas.github.com/blog/2019/04/14/react-amsterdam-2019-takeaways</id>
-    <content type="html"><![CDATA[<p>How will we build apps in the future, and breakthrough idea</p>
+    <content type="html"><![CDATA[<ul>
+<li>Universal Language > Technology</li>
+<li>Shared language between designers and developers enforced by tooling</li>
+<li>Design powered development tools</li>
+<li>Developer workflows as productive as designers (speed)</li>
+<li>Autonomy/Responsibility with Teams Innovation (Micro Frontends)</li>
+<li>Design Systems: Set of design related rules as system of instructions that can be reused across products</li>
+<li>UI components and pattern libraries can provide this intermediate abstraction and be a common language for both designers and developers.</li>
+<li>Better you understand the abstraction, better you are at using it (Kent C)</li>
+<li>Write code that is resilient to future change</li>
+<li>Use existing solutions for tech problems if you don’t understand deeply (Bias towards conservative choices)</li>
+<li>Be open about roadmap to learn about users priorities</li>
+<li>Productivity boost as main sales pitch for GraphQL more so than Smaller payloads, Fewer client/server round trips, Preventing over fetching</li>
+<li>Great DX</li>
+<li>Unobtrusive, out of the way e.g. Prettier</li>
+<li>Predictable and intuitive, e.g. declarative React paradigm</li>
+<li>Instant Feedback Loop e.g. VSCode/TS</li>
+</ul>
 
-<p>Conferences are a great way to take pulse of the community, to see the problems the community is facing and how they are solving them. The relative newnewss of the React and Javascript community means that there are still many unsolved problems.</p>
-
-<p>Community is JS core strengths.</p>
-
-<p>I attended React Amsterdam April 10-12. I went to a workshop on Design Systems and GraphQL, went to a meetup and attended the day long conference.</p>
-
-<p>The maturiong of tools around Design Systems <br/>
-Design Systems maturing to bridge the gap between development and design.
-JS is a tools heavy ecosystem, which is why looking under the covers is valuable.
-Schema stiching
-Code splitting
-Next.js as dominant way to do SSR.
-Apollo winning the graphql market
-GraphQL dominant in the world of client side devs writing backend tooling
-Lots of emphasis on gem</p>
-
-<p>Encouragement to see the fundamentals Kent C Dodds. It's very relevant message for a community who can get anything they want by installing another npm package.</p>
 ]]></content>
   </entry>
   
