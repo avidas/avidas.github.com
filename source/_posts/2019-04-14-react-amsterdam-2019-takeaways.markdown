@@ -7,14 +7,18 @@ sharing: true
 categories: Software React Javascript Frontend
 ---
 
-* Productivity boost as main sales pitch for GraphQL besides (Peggy Rayzis)
+* The case of GraphQL(Peggy Rayzis)
+  * Productivity boost across teams
   * Smaller payloads
   * Fewer client/server round trips
   * Preventing over fetching
+
+
 * Great Developer Experience (Peggy Rayzis)
   * Unobtrusive, out of the way e.g. Prettier
   * Predictable and intuitive, e.g. declarative React paradigm
   * Instant Feedback Loop e.g. VSCode/TS
+
 
 * Design Systems (Mark Dalgleish & Andrey Okonetchnikov)
   * Universal Language > Technology
@@ -24,8 +28,11 @@ categories: Software React Javascript Frontend
   * Developer workflows as productive as designers
   * UI components and pattern libraries can provide this intermediate abstraction and be a common language for both designers and developers.
 
+
 * Micro Frontends (Max Gallo)
-  * Autonomy/Responsibility with Teams Innovation 
+  * Autonomy/Responsibility with Teams Innovation
+
+
 * Better you understand the abstraction, better you are at using it (Kent C Dodds)
 * Write code that is resilient to future change (Max Stoiber)
 * Use existing solutions for tech problems if you don’t understand deeply (Bias towards conservative choices)
