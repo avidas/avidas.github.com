@@ -9,7 +9,7 @@ categories: Life Reading Productivity
 
 *Besieged*
 
-When I think about a one line description of the reality of living in NYC during the Covid-19 outbreak, that one word aptly describes it. It feels like being surrounded by an invisible, encroaching army, with no end to the siege in sight.
+That one word captures the reality of living in NYC during the Covid-19 pandemic. It feels like being surrounded by an invisible, encroaching army, with no end to the siege in sight.
 
 Everyday we are exposed to terrible news, how [immigrants are hurting in my beloved Jackson Heights neighborhood](https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html), mass burial grounds either locally or abroad in Italy and China. Bustling businesses in NYC have been reduced to laying off hard working employees.
 
@@ -22,6 +22,10 @@ I am a rational optimist. I like to think that better times can be ahead, but we
 Thanks to the internet, social media and on demand entertainment, simply passing time has stopped being a challenge. Rather, boredom has been a foreign concept to many of us surfing the world of dopamine rushes. Yet, deep inside, many of us feel that they fail to assist deep seated needs of purpose and self-actualization.
 
 So how do we deal with our current consternation? Can we come out on the other side of this and be proud of what these last months meant for us? When we look back into this in five years, how will we think of this time?
+
+**Invest in community**
+
+It's more important than ever to be there for your friends and family. Deepening relationships with our closest people have a way of giving back to our lives. That could just be video chats, and I have noticed myself talking to my folks a lot more since this began. There was also one night when, after some silly games on the House Party app, I realized I haven't laughed this hard in a while and how necessary that was.
 
 **Continue voting for your best self**
 

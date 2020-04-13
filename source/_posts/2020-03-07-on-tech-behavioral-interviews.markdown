@@ -6,3 +6,7 @@ comments: true
 sharing: false
 categories: 
 ---
+
+*To be written :)*
+
+*Axiom: Any software engineer writing a blog about technology will eventually write a post about interviews. - Yours Truly*
