@@ -19,7 +19,7 @@ Like many others, I have struggled with being quarantined in my apartment since 
 
 I am a rational optimist. I like to think that better times can be ahead, but we have to strive towards it.  While my framework of life has been shaken by this crisis, it has yet to be broken, and it has definitely opened up more opportunities for self discovery.
 
-Thanks to the internet, social media and on demand entertainment, simply passing time has stopped being a challenge. Rather, boredom has been a foreign concept to many of us surfing the world of dopamine rushes. Yet, deep inside, many of us feel that they fail to assist deep seated needs of purpose and self-actualization.
+Thanks to the internet, social media and on demand entertainment, simply passing time has stopped being a challenge. Rather, boredom has been a foreign concept to many of us surfing the world of dopamine rushes. Yet, deep inside, many of us feel that they fail to aid deep seated needs of purpose and self-actualization.
 
 So how do we deal with our current consternation? Can we come out on the other side of this and be proud of what these last months meant for us? When we look back into this in five years, how will we think of this time?
 
@@ -31,9 +31,9 @@ It's more important than ever to be there for your friends and family. Deepening
 
 As the dust settled and I got more used to realizing that this is my life for the foreseeable future, I wanted to dig into things I could do but have been putting off due to the __busy-ness__ of life. Not being as busy can be a positive thing, and opens up more time for things I have wanted to do more of.
 
-Since Quarantine began, I have finished three books, and have enjoyed the process of being engrossed in a book more than usual, now that the usual societal stimulation has been removed. Using this time to read books I have been meaning to for a while has been enjoyable, as the mental escape that literature offers.
+Since Quarantine began, I have finished three books, and have enjoyed the process of being engrossed in a book more than usual, now that the usual societal stimulation has been removed. Using this time to read books I have been meaning to for a while has been enjoyable, accepting the mental escape that literature offers.
 
-Cooking has added a lot of value to my life in the past, being able to create something nourishing that is beautiful and delicious is a very fulfilling act. I have been cooking more than I have been in a while and been really enjoying it. A good side effect of this is generally eating better since Quarantine.
+Cooking has added a lot of value to my life in the past, being able to create something nourishing that is beautiful and delicious is a very fulfilling act. I have been cooking more than I have been in a while and been really enjoying it. A good side effect of this is has been generally eating better since Quarantine.
 
 Even before quarantine began, I have been coming off a challenging period in my life. Meditation has been the place I have been going to find center and grounding. It has also been fulfilling to keep a meditation streak of over 100 days and the reinforcement that just breathing can encapsulate all existence is powerful knowledge.
 
