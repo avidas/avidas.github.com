@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Software | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/software/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2020-04-13T18:05:34-04:00</updated>
+  <updated>2020-04-18T16:51:58-04:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mindsets for Tech Behavioral Interviews]]></title>
+    <link href="http://avidas.github.com/blog/2020/03/07/on-tech-behavioral-interviews/"/>
+    <updated>2020-03-07T13:32:00-05:00</updated>
+    <id>http://avidas.github.com/blog/2020/03/07/on-tech-behavioral-interviews</id>
+    <content type="html"><![CDATA[<p><em>Axiom: Any software engineer writing a blog on tech will eventually write a post about interviews. - Yours Truly</em></p>
+
+<p>You walk into a room with one or two people, who may be taking notes in a notepad or a laptop. The most common starter question is tell me about yourself.</p>
+
+<p>This used to be a question I didn't know where to start or end. A possible interpretation of this question is to provide a succinct summary of your career.</p>
+
+<p>The opportunity here is to prime the interviewer towards directions which would highlight your best career experiences. What part of your experience would be the most pertinent for this job? Doing this thinking beforehand would be helpful for the latter part of the interview.</p>
+
+<p>As an interviewee, we are selling ourselves during an interviewee. For engineers, this is not a natural part of our workflow. The best sales, however, are based on truth. Being honest and talking proudly about your best career achievements will aid you in this early phase.</p>
+
+<p>A very common follow up is to ask what your ideal next role would look like. You've just given them the path which got you to where you are. It is now time to lay out what you want for the future.</p>
+
+<p>The opportunity in this question to highlight areas where you want to grow. Do you see yourself going into engineering management? Do you want to become really good at javascript and browsers? Or do you prefer to become an expert in server and cluster management? Again, it serves you to be honest here since this question helps you to evaluate if the growth opportunities you are looking for would be possible at this company.</p>
+
+<p><em>Go in a win-win mentality: It is a lot more about finding a mutual fit rather than getting through a cross examination.</em></p>
+
+<p>After this point, the interview can go in a lot of different directions. Companies may dig deeper into your past experience or go through example scenarios to understand your thinking process. Knowing your resume and being able to talk in depth about each part will be important.</p>
+
+<p>Good luck with your interview process!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[React Amsterdam 2019: Takeaway]]></title>
@@ -144,25 +171,6 @@
 <p><strong>When things fall apart</strong></p>
 
 <p>We do not live in a perfect world. Recessions, unexpected downsizing, market competition and many other forces can impact access to resources which could result in ways in a group of people come in to work together and stop working together. Lot of us have all worked in a team where that magic of a great team existed, and the team achieved things together what could not be achieved by individuals. It is important for us to be thinking with intention and purpose and help each other build and find teams to discover that magic.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Lower Degrees of Separation with End Users]]></title>
-    <link href="http://avidas.github.com/blog/2018/05/09/degrees-of-separation-with-end-users/"/>
-    <updated>2018-05-09T10:21:00-04:00</updated>
-    <id>http://avidas.github.com/blog/2018/05/09/degrees-of-separation-with-end-users</id>
-    <content type="html"><![CDATA[<p>When working in software, one way to look at our profession is to say that we take architecture docs or designs and make code out of it. After years in the industry, we are trusted to come up with the architecture docs and work with a team to deliver the software. This absolves ourselves of responsibility in a way since even if the product fails, at least our code and systems were great. Companies today, however, are starting to see the limitations of software engineers being removed from the product decision making process.</p>
-
-<p>I think we should reframe the problem: it is rather our responsibility as software engineers to ask, how many degrees of separation does it exist between us and the end user? Ideally, the end user would be the person paying for our service, although this gets more complicated certainly by ad funded or venture funded software. The exercise could involve us asking, what would it take to reach 10 users of our software? Would we have to go through our product manager, who then talks to the account manager or product support? These are likely the folks currently dealing with customer calls when our software bresks and waiting for the Zendesk tickets to be picked from the queue.</p>
-
-<p>Who we are "engineering" for is a question we need to frequently ask ourselves. We should strive to be in environments where we are aware of our degree of separation and look for ways to cut down that separation. Without that frame, we can only have vague ideas of what the code we write is leading to, and end of the day limits the impact we can have.</p>
-
-<p>It should also not always be the product manager's job to always acting as the liason to translate user needs to us. When we are aware of user needs, it enables us to be proactive: to avoid that shortcut when building, or deal with that performance bottleneck early before it becomes a problem. We can also free the up the product manager to pursue broader goals such as product vision, market and competitive landscape analysis, etc.</p>
-
-<p>Tomorrow, when you get to work, ask yourself that question. Do you know who your users are and how they use your product? How many degrees of separation would you have to navigate to find that answer? If you are not comfortable with the answer, maybe you can think of a way to change that.</p>
-
-<p>Disclaimer: Thoughts expressed in the article are mine only, and does not represent the positions of current or past employers.</p>
 ]]></content>
   </entry>
   
