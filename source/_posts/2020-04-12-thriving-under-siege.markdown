@@ -31,6 +31,8 @@ It's more important than ever to be there for your friends and family. Deepening
 
 As the dust settled and I got more used to realizing that this is my life for the foreseeable future, I wanted to dig into things I could do but have been putting off due to the __busy-ness__ of life. Not being as busy can be a positive thing, and opens up more time for things I have wanted to do more of.
 
+<!-- more -->
+
 Since Quarantine began, I have finished three books, and have enjoyed the process of being engrossed in a book more than usual, now that the usual societal stimulation has been removed. Using this time to read books I have been meaning to for a while has been enjoyable, accepting the mental escape that literature offers.
 
 Cooking has added a lot of value to my life in the past, being able to create something nourishing that is beautiful and delicious is a very fulfilling act. I have been cooking more than I have been in a while and been really enjoying it. A good side effect of this is has been generally eating better since Quarantine.
