@@ -15,7 +15,7 @@ This used to be a question I didn't know where to start or end. A possible inter
 
 The opportunity here is to prime the interviewer towards directions which would highlight your best career experiences. What part of your experience would be the most pertinent for this job? Doing this thinking beforehand would be helpful for the latter part of the interview.
 
-As an interviewee, we are selling ourselves during an interview. For engineers, this is not a natural part of our workflow. The best sales, however, are based on truth. Being honest and talking proudly about your best career achievements will aid you in this early phase.
+As an interviewee, we are in a sales role and the product is our skills, experience and future potential. For engineers, this is not a natural part of our workflow. The best sales, however, is based on truth. Being honest and talking proudly about your best career achievements will aid you in this early phase.
 
 A very common follow up is _what your ideal next role would look like_? You've just given them the path which got you to where you are. It is now time to lay out what you want for the future.
 
