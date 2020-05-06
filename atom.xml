@@ -4,7 +4,7 @@
   <title><![CDATA[Avi Das]]></title>
   <link href="http://avidas.github.com/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2020-04-18T22:20:42-04:00</updated>
+  <updated>2020-05-06T13:21:36-04:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Quotes I have loved]]></title>
+    <link href="http://avidas.github.com/blog/2020/05/06/favorite-quotes/"/>
+    <updated>2020-05-06T12:51:00-04:00</updated>
+    <id>http://avidas.github.com/blog/2020/05/06/favorite-quotes</id>
+    <content type="html"><![CDATA[<p>A brilliant and succint quote that says so much about our being.</p>
+
+<blockquote><p>The negativity bias is a well intentioned learning disability.</p><footer><strong>Tara Brach</strong></footer></blockquote>
+
+
+<p>Two quotes from the best book I have ever read.</p>
+
+<blockquote><p>Everything can be taken from a man but one thing: the last of the human freedoms—to choose one’s attitude in any given set of circumstances, to choose one’s own way.</p><p>Between stimulus and response there is a space. In that space is our power to choose our response. In our response lies our growth and our freedom.</p><footer><strong>Viktor Frankl</strong> <cite>Man&#8217;s Search for Meaning</cite></footer></blockquote>
+
+
+<p>Insight into how running can be a source of meaning.</p>
+
+<!-- more -->
+
+
+
+
+<blockquote><p>It&#8217;s not something most human beings would give a moment of consideration to, that it is actually possible to be living for years in a state of constant betterment.  To consider that you are better today than you were yesterday or a year ago, and that you will be better still tomorrow or next week or at tournament time your senior year.  That if you&#8217;re doing it right you are an organism constantly evolving toward some agreed-upon approximation of excellence.  Wouldn&#8217;t that be at least one definition of a spiritual state?</p><footer><strong>John L. Parker Jr</strong> <cite>Again to Carthage</cite></footer></blockquote>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Thriving Under Siege]]></title>
@@ -772,87 +799,6 @@ There are lot of things in life that can drag on, get pushed on and not have a c
 <h3>Github Repo</h3>
 
 <p><a href="https://github.com/avidas/reliability-demo">Reliability Demo</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Speaking at PyCon Canada 2015: I]]></title>
-    <link href="http://avidas.github.com/blog/2015/11/21/pycon-canada-2015-speaking-at-my-first-conference/"/>
-    <updated>2015-11-21T12:38:00-05:00</updated>
-    <id>http://avidas.github.com/blog/2015/11/21/pycon-canada-2015-speaking-at-my-first-conference</id>
-    <content type="html"><![CDATA[<h3>High Level Takeaways</h3>
-
-<ul>
-<li>If you are giving a talk, too much content on slides means the audience is reading the slides instead of listening to you.</li>
-<li>Design your talk expecting failure, and assume things like wifi will not work. An analogy would be the non functional escalator still being a staircase.</li>
-<li>Show your talk to as many people as time allows. Every time I showed my talk to someone, I would find a new way to make the talk better.</li>
-<li>It was amazing to hear from a 10 year old about his experience in coding. The barrier to entry to tech will keep falling in a noticeable way.</li>
-<li>Teaching remains the best way to learn alongside with building things.</li>
-<li>Coding for expectability is often as important as any considerations in a software project.</li>
-<li>Science, data, web, systems and infrastructure were dominant themes at PyCon.</li>
-</ul>
-
-
-<h3>Getting to Toronto</h3>
-
-<ul>
-<li>It was really exciting to have my talk accepted at PyCon, since it was my first time speaking at a conference.</li>
-<li>Getting through customs went as painless as they could have.</li>
-<li>Toronto was colder than Austin, big surprise! Reminded me of times back in East Coast.</li>
-<li>T-mobile data roaming was a breeze to set up, and worked mostly well across different providers.</li>
-<li>Toronto had different modes of public transportation getting from downtown to airport: buses, streetcars, subway. Makes a city more interesting, although makes day to day travelling more complicated. Although, it does not take a whole lot to put public transportation in Austin to shame.</li>
-<li>Asked a lady on the Subway for directions. It soon turned into a great conversation with her and her husband about life in Toronto and their experiences in US. For a big city, Toronto scores major points for having friendly people. Canadians have a reputation of being polite and helpful, and I would come to recognize it throughout my trip there.</li>
-<li>My AirBnB was in Kensington Market, close to UoT where PyCon was taking place. It was a vibrant neighborhood, bars, restaurants, transportation nearby. My room was no hotel room, but a bed was all I needed.</li>
-</ul>
-
-
-<h3>Saturday</h3>
-
-<ul>
-<li>Morning started with me feeling the stress of not having all my slides and examples ready. I wanted to take some time to reflect on the great feedback I got from my team, but there was little time left.</li>
-<li>Adding to my anxiety was the wifi connection not working. Thankfully, some organizers helped me out. Once the certificate issues resolved, it worked well for remainder of the conference.</li>
-<li>Continental breakfast consisted of an assortment of cottage cheese, granola/yogurt, muffins, bread and coffee. No complaints.</li>
-<li>Talked to Dusty, a Facebook engineer working on the Facebook infrastructure in Portland. Having lived in Canada, he had a lot to share about his experience there.</li>
-<li>Morning keynote explored the history of Python interpreters and went into benchmarks. Benchmark related conversations can get subjective, but the speaker did a good job avoiding that.</li>
-<li>Talks on application security, Emmy nominated CGI(!) and Docker deployment followed. The CGI talk was offered a very different viewpoint in software problems. Being highly computation intensive and long life cycles means the tradeoffs are very different from the usual SASS app/consumer product.</li>
-</ul>
-
-
-<!-- more -->
-
-
-<ul>
-<li>Fully vegetarian lunch would have made some of my friends in Austin very happy.</li>
-<li>Talks on code quality and scaling followed in the afternoon. The scaling talk did not cover scaling a python service, but rather maintaining OpenStack, in the order of 4-5 million lines of code written in Python.</li>
-<li>SaltStack for deployment and fraud detection were next on the agenda. Fraud is very relevant for those in the payments industry, so I was very interested in the talk. Most of the talk focused on Apache Spark, and the fraud aspects covered some of the usual signals such as checking location of IP against location of the credit card.</li>
-<li>Karen Rubin&#8217;s ending keynote was the highlight of the day. As a director in Quantopian, she benchmarked placing bets on companies with female CEOs and bet them against the S&amp;500. She presented her initial model, and presented various tunings to her model. Factoring in arbitrage during the initial period when a female CEO got brought in, divergence due to outliers such as Meg Whitman or Marissa Mayer, and female CEOs brought on to replace poorly performing male CEOs were some of the considerations. Even with all, her strategy still handily beat the S&amp;P500! This makes one wonder how segmenting CEOs further by backgrounds would perform against the market.</li>
-<li>At the end of the day, I got to talk to some engineers from Dropbox and Heroku. Pain points with experiences doing online payments came up, when the tradeoff was unfortunately often to trade integration pain points with services more susceptible to fraud.</li>
-<li>Over dinner, I chatted with a core group who have grown the Python meetup scene in Toronto from a handful of people to a conference with many hundreds of people today. We talked about their efforts in teaching Python to children and disparity on expectations as a software engineer based on location and industry.</li>
-<li>In the evening, I spent more time going through the presentation, trying to replace more slides with workflow diagrams.</li>
-</ul>
-
-
-<h3>Sunday</h3>
-
-<ul>
-<li>Sunday was the day of my talk. The day started later than first, and I took full advantage by going for a run around downtown Toronto. As I ran by the CN tower and the financial district, the tourist density went up significantly. It was a colder morning, but running in a new city is a tradition.</li>
-<li>Greenroom at PyCon Toronto very wisely offered speakers the chance to check on their presentation before the actual event. There were issues with fonts, color schemes, and terminal positioning that I was happy to discover. The talk would switch between terminal, emulator, sublime text and slides. I had to make sure that the transition would be as smooth as possible.</li>
-<li>It was great to run into old acquaintances from NYC, James Powell of dontusethiscode fame, and Paul Longston. Both are doing terrific things for the Python community.</li>
-<li>Morning talks were heavy on REST, Django and Web. One unfortunate thing about speaking at a conference is that you can miss some interesting talks. I definitely would have checked out the other talk given in my time slot on legacy code by Scott Triglia, an Yelp engineer. But that&#8217;s what videos are for!</li>
-<li>It was time for my presentation, with a good number of people in the audience. Checked in with Gabriel, the host at my room. After mike and projector check, it was time. Here we go.</li>
-<li>During my talk, I focused on slowing down and focusing on the audience instead of the slides. The demos worked as well as I could have expected! Having the commands stored in the terminal which I could Ctrl+R through avoided a lot of potential issues. One issue that came up was spacing issues in the terminal. As far as things that could have gone wrong, that was a minor one.</li>
-<li>Talk lasted for about 29 minutes, and I was pretty happy to get a couple questions at the end. Someone reached out and mentioned that the whole setup was awesome. It was very relieving to have it finally be over and feel the sense of closure.</li>
-<li>As a productivity junkie, the afternoon talk on deliberate practice and learning to code was a great one. How can we better realize if we are actually practicing deliberately? It raised some compelling discussion at the end.</li>
-<li>At the end of the conference, it was great to see the organizers taking some time to do some well earned celebration.</li>
-</ul>
-
-
-<h3>Part II</h3>
-
-<ul>
-<li>I intend to do a followup blog post with the contents of my talk, so stay tuned!</li>
-</ul>
-
 ]]></content>
   </entry>
   
