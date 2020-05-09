@@ -36,6 +36,8 @@ Life shrinks or expands in proportion to one's courage.
 
 [Naval](https://nav.al/) may be the most quotable person around today.
 
+<!-- more -->
+
 {% blockquote Naval Ravikant %}
 Desire is a contract that you make with yourself to be unhappy until you get what you want.
 
@@ -50,8 +52,9 @@ The rising tide lifts all boats.
 
 Insight into how running can be a source of meaning.
 
-<!-- more -->
-
 {% blockquote John L. Parker Jr, Again to Carthage %}
 It's not something most human beings would give a moment of consideration to, that it is actually possible to be living for years in a state of constant betterment.  To consider that you are better today than you were yesterday or a year ago, and that you will be better still tomorrow or next week or at tournament time your senior year.  That if you're doing it right you are an organism constantly evolving toward some agreed-upon approximation of excellence.  Wouldn't that be at least one definition of a spiritual state?
 {% endblockquote %}
+
+
+{% img center /images/just_breathe.jpg 500 500 'Breathe' 'Breathe' %}

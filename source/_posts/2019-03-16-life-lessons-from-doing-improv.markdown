@@ -11,7 +11,10 @@ I think life should be more like improv and improv should resemble life.
 
 On a whim, I went to hideout theatre in Austin, TX for a improv beginner class back in 2016 but I have only been consistently doing improv for the past year. In the process, I have tried short and long form improv, and dabbled in musical/rap improv. Having zero theatre/stage background, it has been amazing to me how the lessons learnt from improv apply to life broadly.
 
+{% img left /images/improv.jpg 350 350 'Improv' 'Improv' %}
+
 1. **Yes, and..**: A 101 on improv would begin with the encouragement to accept whatever the other person is bringing to the scene. We may have a great idea in mind, but the scene is ruined if we do not accept the other person's ideas and bind the scene in a cohesive way. Taking this attitude to life can frame anything in life as a gift. This in turns lends us to be less critical and cynical about our day to day interactions.
+
 
 2. **Go with the first thing that comes to mind**: Perfect is often the enemy of the good. Overthinking can stand in the way of action when spontaneity may have been the right choice. In improv, trying to think of a funny punchline can ruin an act, taking away from it the natural flow of the scene. On the other hand, going with the first thing that comes to mind often leads a scene to wonderful surprises. Real life decisions do involve more thought, but the training against overthinking still holds and can help us live a more spontaneous life and overcome the fear of taking action.
 
@@ -34,3 +37,5 @@ An audience is watching an improv scene has a fuller experience when they not on
 10. **Commit to a scene**: A more experienced improviser advised me to commit with your voice, face and your body. The practice of complete immersion in a scene can help us be more present when we show up in life.
 
 The beauty of improv is that you don't have to become a great improviser to see the positive effects it can have on your life. Those of us who believe in constant improvement and are interested in living a more examined life and will find improv valuable.
+
+{% img center /images/improv2.jpg 500 500 'Improv Last' 'Improv Last' %}

@@ -11,7 +11,9 @@ The best metaphor I have found for thinking about code reviews is a gift exchang
 
 The balance of writing code vs everything else that is necessary to be a successful member of a software team is one of the key challenges of our job. 
 
-Code reviews are an interesting mix. You have to understand someone else's point of view, their journey through solving a problem in form of code. Or you have to face up to what everyone else thinks about code that you worked hard to write. Those reviews stand in your way of getting your code up to users and getting the emotional payoff from releasing something. The engagement or catharsis from building software is not an available reward when you are in code review mode. 
+Code reviews are an interesting mix. You have to understand someone else's point of view, their journey through solving a problem in form of code. Or you have to face up to what everyone else thinks about code that you worked hard to write. Those reviews stand in your way of getting your code up to users and getting the emotional payoff from releasing something. The engagement or catharsis from building software is not an available reward when you are in code review mode.
+
+{% img left /images/code_review1.jpg 350 350 'Code Review' 'Code Review' %}
 
 Moreover, a code review must take into consideration not just the code, but the project, team and the company into consideration.
 

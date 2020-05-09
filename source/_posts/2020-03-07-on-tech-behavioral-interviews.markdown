@@ -13,9 +13,13 @@ categories: Tech Interviews Software
 
 You walk into a room with one or two people, who may be taking notes in a notepad or a laptop. The most common starter question is _tell me about yourself_.
 
+{% img left /images/behavioral_interview.jpg 350 350 'Interview Chair' 'Interview Chair' %}
+
 This used to be a question I didn't know where to start or end. A possible interpretation of this question is to provide a succinct summary of your career.
 
 The opportunity here is to prime the interviewer towards directions which would highlight your best career experiences. What part of your experience would be the most pertinent for this job? Doing this thinking beforehand would be helpful for the latter part of the interview.
+
+
 
 As an interviewee, we are in a sales role and the product is our skills, experience and future potential. For engineers, this is not a natural part of our workflow. The best sales, however, is based on truth. Being honest and talking proudly about your best career achievements will aid you in this early phase.
 

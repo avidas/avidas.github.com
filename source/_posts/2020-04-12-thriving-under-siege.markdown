@@ -17,6 +17,8 @@ There is no how-to manual for this current crisis, so devastating and foreign to
 
 Like many others, I have struggled with being quarantined in my apartment since March. I have immersed myself with the energy and drive that permeates NYC, and losing that has felt like being in withdrawal. At times, it has been a fearsome cocktail of loneliness, helplessness and concern.
 
+{% img center /images/alone.jpg 500 500 'Alone' 'Alone' %}
+
 I am a rational optimist. I like to think that better times can be ahead, but we have to strive towards it.  While my framework of life has been shaken by this crisis, it has yet to be broken, and it has definitely opened up more opportunities for self discovery.
 
 Thanks to the internet, social media and on demand entertainment, simply passing time has stopped being a challenge. Rather, boredom has been a foreign concept to many of us surfing the world of dopamine rushes. Yet, deep inside, many of us feel that they fail to aid deep seated needs of purpose and self-actualization.
@@ -68,3 +70,5 @@ It's important to not beat yourself over achieving goals, especially during this
 In the same vein, there may be guilt which stems from the nagging feeling that you are not doing enough, that we could do more. It's wonderful how some of us have risen to the needs and led efforts for mask production, test kit distribution etc, but those are not the only ways to add value to others.   
 
 Where we will end up is unknown, but isn't that always the case? Existential threats and uncertainty can add a lot of suffering to our lives. Suffering is a side effect of being alive, but it is not where the goalpost is. Choosing to thrive in these times, taking actions that vote towards that direction and continue nurturing our deepest selves are some of the best things we can do in these times. I sincerely hope that manifests for you, dear reader.
+
+{% img center /images/sunset_alone.jpg 550 550 'Sunset Alone' 'Sunset Alone' %}
