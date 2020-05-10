@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Software | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/software/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2020-05-09T16:35:15-04:00</updated>
+  <updated>2020-05-10T15:02:09-04:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -148,6 +148,8 @@
 <p>Lately, I have been very curious about voice as a computing platform and what that will do for applications we use in future. Thankfully, as software engineers, we don't have to hypothesize. We can build it.</p>
 
 <p>Digging into Alexa skills development has been interesting. While the technical documentation and development for Alexa is quite good, I felt a fair amount of internal resistance during the project. The potential of this new computing platform and the possibilities it will bring kept me going.</p>
+
+<p><img class="left" src="/images/yes_code.jpg" width="350" height="350" title="Yes Code" alt="Yes Code"></p>
 
 <p>The building blocks of working with Alexa are intents, utterances and lambda functions. After a series of thirty or so steps of wiring up buttons, copying and moving templates around, setting up attributes gives you a working voice enabled app, upload zip files, deploy it and submit for app review in the Alexa app store.</p>
 
