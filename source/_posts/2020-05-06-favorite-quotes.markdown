@@ -42,6 +42,8 @@ Life shrinks or expands in proportion to one's courage.
 Desire is a contract that you make with yourself to be unhappy until you get what you want.
 
 It is the mark of a charlatan to explain a simple concept in a complex way and it is the mark of a genius to explain a complex topic in a simple way.
+
+A busy mind and a busy calendar will destroy your ability to create anything great.
 {% endblockquote %}
 
 Often quoted to JFK, this quote originated in the early 19th century.
