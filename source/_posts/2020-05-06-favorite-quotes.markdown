@@ -32,6 +32,8 @@ Anais Nin should be more well known.
 
 {% blockquote Anais Nin %}
 Life shrinks or expands in proportion to one's courage.
+
+We write to taste life twice, in the moment and in retrospection. We write, like Proust, to render all of it eternal, and to persuade ourselves that it is eternal. We write to be able to transcend our life, to reach beyond it.
 {% endblockquote %}
 
 [Naval](https://nav.al/) may be the most quotable person around today.
