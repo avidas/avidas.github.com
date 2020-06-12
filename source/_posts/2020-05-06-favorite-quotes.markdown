@@ -54,6 +54,10 @@ Often quoted to JFK, this quote originated in the early 19th century.
 The rising tide lifts all boats.
 {% endblockquote %}
 
+{% blockquote Archilochus %}
+We don't rise to the level of our expectations, we fall to the level of our training.
+{% endblockquote %}
+
 Insight into how running can be a source of meaning.
 
 {% blockquote John L. Parker Jr, Again to Carthage %}
