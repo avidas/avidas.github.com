@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Frontend | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/frontend/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2020-06-19T20:31:19-04:00</updated>
+  <updated>2020-06-19T20:32:43-04:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -28,14 +28,7 @@
 <li>Preventing over fetching</li>
 </ul>
 </li>
-<li>Great Developer Experience (Peggy Rayzis)
-
-<ul>
-<li>Unobtrusive, out of the way e.g. Prettier</li>
-<li>Predictable and intuitive, e.g. declarative React paradigm</li>
-<li>Instant Feedback Loop e.g. VSCode/TS</li>
-</ul>
-</li>
+<li>Great Developer Experience (Peggy Rayzis)</li>
 </ul>
 
 
@@ -43,6 +36,9 @@
 
 
 <ul>
+<li>Unobtrusive, out of the way e.g. Prettier</li>
+<li>Predictable and intuitive, e.g. declarative React paradigm</li>
+<li>Instant Feedback Loop e.g. VSCode/TS</li>
 <li>Design Systems (Mark Dalgleish &amp; Andrey Okonetchnikov)
 
 <ul>
