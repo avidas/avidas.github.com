@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Frontend | Avi Das]]></title>
   <link href="http://avidas.github.com/blog/categories/frontend/atom.xml" rel="self"/>
   <link href="http://avidas.github.com/"/>
-  <updated>2020-06-12T10:47:43-04:00</updated>
+  <updated>2020-06-19T20:31:19-04:00</updated>
   <id>http://avidas.github.com/</id>
   <author>
     <name><![CDATA[Avi (Ananya Das)]]></name>
@@ -36,6 +36,13 @@
 <li>Instant Feedback Loop e.g. VSCode/TS</li>
 </ul>
 </li>
+</ul>
+
+
+<!-- more -->
+
+
+<ul>
 <li>Design Systems (Mark Dalgleish &amp; Andrey Okonetchnikov)
 
 <ul>
