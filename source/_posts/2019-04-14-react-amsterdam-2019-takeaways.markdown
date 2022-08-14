@@ -13,6 +13,7 @@ categories: Software React Javascript Frontend
   * Fewer client/server round trips
   * Preventing over fetching
 * Great Developer Experience (Peggy Rayzis)
+<!-- more -->
   * Unobtrusive, out of the way e.g. Prettier
   * Predictable and intuitive, e.g. declarative React paradigm
   * Instant Feedback Loop e.g. VSCode/TS
