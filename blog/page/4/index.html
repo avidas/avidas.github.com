@@ -9,7 +9,7 @@
   <meta name="author" content="Avi (Ananya Das)">
 
   
-  <meta name="description" content="For a more modular, maintainable Frontend As Single Page Applications gain in popularity, the size of front end codebases keeps growing rapidly. For &hellip;">
+  <meta name="description" content="This has been happening at various meetups/hackathons/startup events sufficiently enough to warrant a blogpost. The situation is generally a variant &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -78,6 +78,287 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/08/21/guide-to-finding-a-technical-cofounder/">Guide to Finding a Technical Cofounder</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-08-21T23:04:00-04:00" pubdate data-updated="true">Aug 21<span>st</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This has been happening at various meetups/hackathons/startup events sufficiently enough to warrant a blogpost. The situation is generally a variant of this, someone has an idea they are really convinced is the next big thing, the only thing stopping that from happening is making an app/website which requires a technical cofounder. The person with the idea is not at a position to afford the costs of hiring a full time/part time developer, so an equity sharing situation makes sense. Hackathons and tech meetups are where developers hang out, so approaching them there seem to be a good idea to find that cofounder.</p>
+
+<p>There are a few problems to approaches like this. Software people who go to events like this gets pitched a fair amount, sometimes repeatedly on the same ideas. Also, we can be a rather cynical bunch, often as result of the kind of work that we do. This can result you not finding that engineer/hacker to build your app during a hackathon. Or they might do so during the hackathon, but simply drop off after.</p>
+
+<p>It can get discouraging, specially if you are convinced about the idea and new to such events. Personally, I like idea people, specially because they bring in ideas from domains and problem spaces I would have no exposure to otherwise. Moreover, I also believe that cross-pollination of people from different groups is healthy and more products coming into the world is a good thing. Therefore, I would rather like to jot down some helpful tips which can maximize your chances of finding a technical cofounder next time you are looking for one.</p>
+
+<ol>
+<li><p><strong>Understand what motivates engineers</strong>: It&#8217;s important to understand what motivates engineers beyond just financial opportunity. If such an opportunity exists, you may be in pretty decent shape already and should really drill down on your exact plans on how the app would make money in the future. If you are less sure, there are still options. Can you prove that the app would have a broad user base? A great way to do this would be to prove that you have tried unscalable ways doing this already, be it door-to-door, personal know how, competitors etc. Most ideas can be validated using non-technical approaches. Knowing your problem space well will not only help you to build a business but also lend credibility when you are looking for a cofounder. Another thing that attracts is interesting technical problems or cutting-edge tech, so if your app involves either, it would be a positive. Good technical co founders can be extremely self-motivated once they realize that they have a problem is really worth spending time on.</p></li>
+<li><p><strong>Manage expectations</strong>: It is best to present the idea and the opportunity and not expect immediate commitment. Generally people are busy, but if you have done your homework and can present the problem well, there is always a good chance. Not all engineers want the same thing, and lot are perfectly happy working where they are. If you do not have a proven user base or revenue plan yet, it does involve a certain risk-taking to get on that journey. As someone who wants to be a founder, you should seek technical co-founders with the same risk appetite as you.</p></li>
+</ol>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/08/21/guide-to-finding-a-technical-cofounder/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/08/05/evaluating-react-dot-js-and-flask/">Evaluating React.js and Flask</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-08-05T10:39:00-04:00" pubdate data-updated="true">Aug 5<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote><p>Update: Udemy has generously granted a free coupon for the readers of this blog for their <a href="https://www.udemy.com/learn-and-understand-reactjs/learn/">React JS and Flux</a> course. Use the code <code>avidasreactjs</code> and the first 50 readers will get free access to the course!</p></blockquote>
+
+<p>As a connoisseur of the web, front-end frameworks have been been a fertile area of late. React.js from Facebook has taken much fanfare, and this post evaluates key ideas on react, and digs into why you could be interested in React. Staying true to single responsibility principle, React is a highly useful tool if you are doing web programming.</p>
+
+<p>In this post, we will dive into building a Frontend using React.js and Backend built using the Python framework Flask. Flask is a minimalistic framework, and excellent when your backend becomes more and more of an API. Moreover, this facilitates the microservices architecture, where the decoupling of your your app into small unit of services can make it more maintainable and scalable.</p>
+
+<p>We will cover some of the key ideas of React and Flask here, but it would be worth referring to the official documentation for <a href="https://facebook.github.io/react/">React</a> and <a href="http://flask.pocoo.org/">Flask</a> for getting started and understanding the philosophies of each framework.</p>
+
+<h3>Key Ideas of React</h3>
+
+<p>The core idea of React is the developers are better of leaving manipulating the DOM to battle tested framework code. Since the DOM has a tree structure, finding elements and manipulating them would need many traversals of a potentially very large tree.  Instead, what you modify is a virtual DOM, and React runs its intelligent diffing algorithm to directly update the DOM.</p>
+
+<h5>React</h5>
+
+<p>React itself is the UI library that will manage all the DOM updates as data changes. It&#8217;s takes the V of MVC frameworks, hence it can be used with other MVC frameworks such as Angular, Backbone or Meteor. It is quite easy to use React to manage specific areas of your application&#8217;s UI, rather than the entire app.</p>
+
+<h5>Virtual Dom</h5>
+
+<p>The virtual Dom is an abstraction layer between nodes in the real DOM and the view of the code you are modifying. When React selectively renders subtrees of the nodes in DOM based upon state changes, it achieves the following</p>
+
+<pre><code> 1. Ensures that your DOM is always up to date with current state
+ 2. Reduces the need to re-render the DOM every time there is change in state
+ 3. Updating only the individual components on state change ensures high performance
+</code></pre>
+
+<h5>JSX</h5>
+
+<p>JSX is a JavaScript syntax extension and it brings in a HTML/XML like familiar syntax for defining a tree structure with attributes. This is the syntax you can use to declare the changes in layout code and React will update the UI. It&#8217;s a bold approach, since developers are conditioned to keep layout code separate from Javascript. We will explain more React terminology later as we dive into some code.</p>
+
+<h3>Key Ideas of Flask</h3>
+
+<p>Flask is a microframework, which means that it trades a short learning curve for fewer out of the box functionalities, compared to heavier frameworks such as Django or Rails. It gives developers more freedom to use their preferable tools and libraries. However, it does have a list of officially supported <a href="http://flask.pocoo.org/extensions/">extensions</a> which when plugged in provide a wide breath of functionalities for a standard web app. Extensions behave as if they are native flask code.</p>
+
+<p>We strongly recommend that you set up a <a href="http://www.virtualenv.org/">virtualenv</a> for this project, and you may also want to check out <a href="http://virtualenvwrapper.readthedocs.org/">virtualenvwrapper</a> for convenience. This is to provide your app with a sandboxed environment.</p>
+
+<h5>Getting up and running with Flask</h5>
+
+<p>Lets first install Flask</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>pip install Flask
+</span><span class='line'>
+</span><span class='line'><span class="c"># For viewing and reusing app dependencies</span>
+</span><span class='line'>pip freeze &gt; requirements.txt
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Set up the following directory structure in your app.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>├── README.md
+</span><span class='line'>├── app.py
+</span><span class='line'>├── requirements.txt
+</span><span class='line'>└── templates
+</span><span class='line'>    └── index.html
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Modify your app.py code to include the following</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@app.route</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">&#39;index.html&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We start by importing Flask and creating a new instance of a flask application. In flask, app.route is used to describe the behavior when users hit particular endpoints in the application. Here when user hits the index route, we render a template called hello world. By default Flask uses the Jinja2 templating language, but you can use any other templating language. In fact, we will not be covering Jinja2 in this blog post. Finally we tell python to call the run method of the app when invoked as a main function.</p>
+
+<p>Let&#8217;s populate index.html with the following basic HTML boilerplate</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span><span class='line'><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;head&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;UTF-8&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;title&gt;</span>Flask React Tutorial<span class="nt">&lt;/title&gt;</span>
+</span><span class='line'><span class="nt">&lt;/head&gt;</span>
+</span><span class='line'><span class="nt">&lt;body&gt;</span>
+</span><span class='line'>     <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;mount-point&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>         <span class="nt">&lt;p1&gt;</span>Hello world.<span class="nt">&lt;/p1&gt;</span>
+</span><span class='line'>     <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;/body&gt;</span>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now run the app with</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>python app.py
+</span><span class='line'>// * Running on http://127.0.0.0:5000/
+</span><span class='line'>// * Restarting with reloader
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>By default it runs on port 5000. Navigate to the endpoint and you should see the html page you just created. You are now up and running with Flask!</p>
+
+<h5>Integrate React</h5>
+
+<p>Easiest way to include React would be to just include them from a cdn. Let&#8217;s update the index.html to include React and and port our existing html to React. index.html will now look like</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span><span class='line'><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;head&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;UTF-8&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;title&gt;</span>Flask React Tutorial<span class="nt">&lt;/title&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/react.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/JSXTransformer.js&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/head&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
+</span><span class='line'>     <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;mount-point&quot;</span><span class="o">&gt;&lt;</span><span class="err">/div&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/body&gt;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/jsx&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>     <span class="cm">/*** @jsx React.DOM */</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">FirstComponent</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+</span><span class='line'>        <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>            <span class="k">return</span> <span class="p">(</span><span class="o">&lt;</span><span class="nx">p1</span><span class="o">&gt;</span><span class="nx">Hello</span> <span class="nx">world</span><span class="p">.</span><span class="o">&lt;</span><span class="err">/p1&gt;);</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'>    <span class="nx">React</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">FirstComponent</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;mount-point&#39;</span><span class="p">)</span> <span class="p">);</span>
+</span><span class='line'>     <span class="nt">&lt;/script&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/08/05/evaluating-react-dot-js-and-flask/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -660,113 +941,6 @@ Birds of a feather discussions were sometimes my favorite, where there was candi
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/06/01/best-chrome-productivity-extensions/">Best Chrome Productivity Extensions</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-06-01T16:40:00-04:00" pubdate data-updated="true">Jun 1<span>st</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>How much time during the day do you spend on an internet browser? As a software engineer, my answer is a scary amount of time. Something I have personally struggled with is avoiding distracting sites on the internet. There is too much good content on the internet that dries up my rather finite amount of attention.</p>
-
-<p>Chrome has been my weapon of choice for browsing the web for a while now. Intuitive, clean and fast, Chrome&#8217;s ascent has been amazing to see over the past few years. Extensions on chrome allow addition of new features on Chrome made by third party developers. Lately, and there are a few extensions I simply cannot do without. When you need to buckle up and get something done, these extensions will help you get there.</p>
-
-<ol>
-<li><p><a href="http://getpocket.com">Pocket</a>:
-There are enough interesting things to read on the internet for many lifetimes. Just like youtube&#8217;s watch it later does for videos, Pocket lets me save articles for future reading. With clients available for iOS and Android, articles saved can be accessed anywhere. At any time on social websites, be it facebook, quora or hacker news, there is a lot I would like to read. Pocket gives me the convenience to customize articles from the internet into my customized feed or magazine via Flipboard integration.</p></li>
-<li><p><a href="https://chrome.google.com/webstore/detail/session-buddy/edacconmaakjimmfgnblocblbcdcpbko?hl=en">Session Buddy</a> :
-If you are like me, you context switch a lot between projects during a day. Chrome deals with tabs beautifully, and yet I find myself often with 20 or more tabs, usually researching a particular topic. Usually tabs follow a train of thought but fit within a particular context. Session buddy solves this exact problem, allowing me to save a set of tabs and windows which can be resumed later. For example, at the end of the day at work, I save a bunch of tabs, saved as the name of the project I was working on. This allows me to pick up from the chain of thought from when I left off. Switching between contexts is expensive, and session buddy is the best solution I have found.</p></li>
-<li><p><a href="https://www.rescuetime.com/">RescueTime</a>:
-Holding myself accountable for how I spend time on the web has been eye-opening for me. RescueTime not only tracks how much time during a day you spend on distracting sites, but the desktop application also tracks your non browser time. Over time, it subtly moves you to try and improve your productivity score by avoiding distraction, thus getting more productive (Bravo on the gamification aspect, ResueTime team!) I have discovered patterns of my work through the tool as well, such as the benefits of taking regular breaks and how much standing desk really helps productivity. It however, cannot track that even on productive sites, you can find ways to procrastinate. (I am looking at you, StackOverflow).</p></li>
-<li><p><a href="https://chrome.google.com/webstore/detail/block-site/eiimnmioipafcokbfikbljfdeojpcgbh?hl=en">Block site</a>:
-As much as tracking my time spent on the web helps, sometimes I need to simply block distracting sites. Block site makes for a great complement to RescueTime, allowing me to either visit whitelisted sites only or block off blacklisted sites. I have found my productivity levels on RescueTime spike when using block sites. Often its a reflex action for me to go to facebook or twitter without much thinking. Block sites counts such attempts, and shames you with clever 404 comments. I love that with the latest update, with one switch, you can turn off the distracting websites and focus on the task at hand.</p></li>
-<li><p><a href="https://lastpass.com/">LastPass</a>:
-Despite the rise of alternative logins, passwords are still integral parts of the web. With a million sites, having passwords lying around can be rather dangerous. Remembering passwords is time consuming and difficult, adding frustration to the day. LastPass securely stores your passwords for various sites, syncing them across devices. This saves the need to browse through memory trying to dig up a password or worse, store them in flat files. It can also do auto login&#8217;s for your chosen sites. One of my favorite features is that it warns if you are using duplicate passwords for sites, making your web experience more secure.</p></li>
-<li><p><a href="https://adblockplus.org/en/chrome">Adblock Plus</a>:
-Ok, this one is controversial. Adblock will stop advertisements on websites, keeping you focused and saving time particularly for video ads. Now, ads power the web, and any website with ads as primary revenue stream should be aware of adblock. I particularly enjoy the cat and mouse chase between youtube and adblock: youtube refusing to play videos as long as adblock is enabled, adblock gets smarter, youtube catches up. However, it can make certain sites load faster, thus saving time.</p></li>
-</ol>
-
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/06/01/best-chrome-productivity-extensions/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/01/07/connected-car-at-angelhack/">Connected Car: Meticulous.io @Angelhack</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-07T23:00:00-05:00" pubdate data-updated="true">Jan 7<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Angelhack looks for startups to come out of hackathons rather than just weekend hacks. As a result, it tends to get very product driven as teams compete for the Angelpad recognition. The theme this year was Apphack, and mobile apps were the key focus. Not really a surprise, as more and more startups build mobile first.</p>
-
-<p>We worked on the verizon telematics data. <a href="http://www.verizontelematics.com/">Verizon telematics</a> is something I did not know about before. Car companies have been working with Verizon to install a device in the cars that could send data about speed, location, rpm, condition of the car in terms of last time since gas, particular model of car, wear and tear to the cloud. I expect Verizon is able to collect a lot more than the columns we saw. Needless to say, this would be a very powerful dataset and it is surprising that there aren&#8217;t more going on in this space.</p>
-
-<p><a href="http://ipython.org/">iPython</a> and <a href="http://pandas.pydata.org/">Pandas</a> are built for analyzing and visualizing tabular data like this. Questions such as which brand of car gave the best milage per gallon, which brand was driven more on the highway vs which was more popular on the city roads were fairly easy to answer. It was not clear if the data given to us was indeed an uniform sample, but results were interesting. However, they are hardly hackathon worthy ideas.</p>
-
-<p>Needed an idea. One set of data had trip ids tied to driver ids, the other set had per trip latitudes and longitudes. Aggregating them somehow would be interesting. Geographical history of most visited places can be found since trips could be tied to drivers. Historical driving records could be obtained from individual trips and the overall history of the driver measured. Global driving records could be obtained so that the best driver&#8217;s can be found.</p>
-
-<p>Once noting those features, the next step was to think how this would make sense as a product. Context sensitive software is hugely in demand and this is a great dataset for revealing patterns of drivers. Buisnesses aware of customers frequenting particular location can push deals and coupons to those individuals to drive buisness. Timeliness of visit can be used to fine tune the deals even more, e.g. lunch deals would make sense around the Grand Central area in NYC to a busy professional. The brand of car can be used to push vehicle specific ads. This would also be a treasure trove of information for car insurance companies figuring out insurance rates. Finally, it is quite possible that driving patterns can be used to trigger alert that may detect an accident ahead of time.</p>
-
-<p>Its hard to argue that driving patterns are valuable data. However, as with any user specific information used for personalization experiences curated by businesses, privacy would be a big concern. It was not entirely clear who would own the data, the driver, the provider, or else. It should be made very clear to the driver of the nature of the tracking going on and how the data may be used. Since data like this could easily be used by a malicious third party to monitor you in real time when you are driving, there is inherent danger in it being available without the driver being informed. Tracking is an issue users of any clowd aware system needs to be aware of.</p>
-
-<p>We did win the Verizon prize for the hackathon, and it was nice having our idea at the eleventh hour being well accepted. Angelhack put on a good show, and I must mention the apps &#8220;Make it Rain&#8221; (literally, on the phone screen) and &#8220;Kanye&#8221;(alerts if you are nearby Kanye West) for the hilarity during the presentation!</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/5/">&larr; Older</a>
@@ -809,19 +983,19 @@ Ok, this one is controversial. Adblock will stop advertisements on websites, kee
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2022/08/14/reflections-on-wework-relentless-change-and-unrealized-potential/">Reflections on WeWork: Relentless Change and Unrealized Potential</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2020/06/22/finding-the-right-team-at-a-new-company/">Finding the right team at a new company</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2020/05/06/favorite-quotes/">Quotes I have loved</a>
       </li>
     
       <li class="post">
         <a href="/blog/2020/04/12/thriving-under-siege/">Thriving Under Siege</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2020/03/07/on-tech-behavioral-interviews/">Mindsets for Tech Behavioral Interviews</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2019/11/23/chicago-marathon-2019-race-report/">Chicago Marathon 2019 Race Report</a>
       </li>
     
   </ul>
@@ -870,7 +1044,7 @@ Ok, this one is controversial. Adblock will stop advertisements on websites, kee
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2020 - Avi (Ananya Das) -
+  Copyright &copy; 2022 - Avi (Ananya Das) -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
