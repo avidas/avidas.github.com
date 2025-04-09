@@ -1,0 +1,28 @@
+# Debugging the Bundle Issue
+
+This site was built with an older version of Jekyll and Octopress which has dependencies that are difficult to install on modern systems due to compatibility issues. Here's what was attempted:
+
+1. Installing yajl-ruby 1.1.0 which fails on modern Ruby due to `rb_cFixnum` no longer existing
+2. Patching yajl-ruby to replace `rb_cFixnum` with `rb_cInteger`
+3. Installing a Docker container with Ruby 1.9.3 or 2.3 which has been challenging due to outdated repositories and compatibility issues
+4. Updating to a modern Jekyll version, which breaks compatibility with Octopress plugins
+
+## Current Workaround
+
+The easiest approach is to either:
+
+1. Use GitHub Pages to host this site, which will handle the build process for you
+2. Use a Ruby version manager like rbenv to install an older Ruby version (1.9.3) specifically for this project
+3. Use Docker to build the site - but with more complex setup than demonstrated so far
+
+## Running with Newer Jekyll
+
+If you want to update to a newer Jekyll:
+
+1. Update the Gemfile with modern Jekyll and plugins
+2. Update the theme and layouts to be compatible
+3. Migrate away from Octopress-specific functionality
+
+## For Help
+
+Seek help from the Octopress community or Jekyll forums about migrating from older Octopress to newer Jekyll versions.

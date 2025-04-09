@@ -1,0 +1,7 @@
+FROM ruby:2.7
+
+WORKDIR /app
+
+COPY . .
+
+CMD ["echo", "This Docker container can be used to generate the site."]

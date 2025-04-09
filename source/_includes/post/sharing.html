@@ -1,11 +1,10 @@
 <div class="sharing">
   {% if site.twitter_tweet_button %}
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-via="{{ site.twitter_user }}" data-counturl="{{ site.url }}{{ page.url }}" >Tweet</a>
-  {% endif %}
-  {% if site.google_plus_one %}
-  <div class="g-plusone" data-size="{{ site.google_plus_one_size }}"></div>
+  <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ site.url }}{{ page.url | uri_escape }}&via={{ site.twitter_user }}" class="twitter" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
   {% endif %}
   {% if site.facebook_like %}
-    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url | uri_escape }}" class="facebook" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
   {% endif %}
+  <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url | uri_escape }}" class="linkedin" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+  <a href="https://www.reddit.com/submit?url={{ site.url }}{{ page.url | uri_escape }}&title={{ page.title | uri_escape }}" class="reddit" target="_blank"><i class="fab fa-reddit-alien"></i> Reddit</a>
 </div>

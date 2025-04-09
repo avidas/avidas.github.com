@@ -1,43 +1,61 @@
-// Here you can easily change your sites's color scheme.
-// To give it a try, uncomment some of the lines below rebuild your blog, and see how it works.
-// If you need a handy color picker try http://hslpicker.com
+// 2025 Modern Theme Colors
+// Primary palette
+$primary-color: #2563eb;       // Modern blue
+$secondary-color: #0f172a;     // Deep navy
+$tertiary-color: #f8fafc;      // Light gray/white
+$accent-color: #6366f1;        // Indigo accent
 
-//$header-bg: #263347;
-//$subtitle-color: lighten($header-bg, 58);
-//$nav-bg: desaturate(lighten(#8fc17a, 18), 5);
-//$nav-bg-front: image-url('noise.png');
-//$nav-bg-back: linear-gradient(lighten($nav-bg, 8), $nav-bg, darken($nav-bg, 11));
-//$sidebar-bg: desaturate(#eceff5, 8);
-//$sidebar-link-color: saturate(#526f9a, 10);
-//$sidebar-link-color-hover: darken(#7ab662, 9);
-//$footer-bg: #ccc !default;
-//$footer-bg-front: image-url('noise.png');
-//$footer-bg-back: linear-gradient(lighten($footer-bg, 8), $footer-bg, darken($footer-bg, 11));
+// Text colors
+$text-color: #0f172a;          // Near black for main text
+$text-color-light: #64748b;    // Slate gray for secondary text
 
+// Background colors
+$page-bg: #f8fafc;             // Light background
+$main-bg: white;               // White content area
+$sidebar-bg: #f1f5f9;          // Slightly darker sidebar
 
-/* To use the light Solarized highlighting theme uncomment the following line */
-//$solarized: light;
+// Link colors
+$link-color: $primary-color;
+$link-color-hover: lighten($primary-color, 10);
+$link-color-visited: darken($primary-color, 10);
+$link-color-active: $accent-color;
 
-/* If you want to tweak the Solarized colors you can do that here */
-//$base03:          #002b36; //darkest blue
-//$base02:          #073642; //dark blue
-//$base01:          #586e75; //darkest gray
-//$base00:          #657b83; //dark gray
-//$base0:           #839496; //medium gray
-//$base1:           #93a1a1; //medium light gray
-//$base2:           #eee8d5; //cream
-//$base3:           #fdf6e3; //white
-//$solar-yellow:    #b58900;
-//$solar-orange:    #cb4b16;
-//$solar-red:       #dc322f;
-//$solar-magenta:   #d33682;
-//$solar-violet:    #6c71c4;
-//$solar-blue:      #268bd2;
-//$solar-cyan:      #2aa198;
-//$solar-green:     #859900;
+// Header colors
+$header-bg: $secondary-color;
+$header-border: lighten($secondary-color, 10);
+$title-color: white;
+$subtitle-color: #cbd5e1;
 
+// Navigation colors
+$nav-bg: $tertiary-color;
+$nav-color: $secondary-color;
+$nav-color-hover: $primary-color;
+$nav-bg-front: none;
+$nav-bg-back: none;
+$nav-border: #e2e8f0;
+$nav-border-top: #e2e8f0;
+$nav-border-bottom: #e2e8f0;
+$nav-border-left: #e2e8f0;
+$nav-border-right: #e2e8f0;
 
-/* Non highlighted code colors */
-//$pre-bg: $base03;
-//$pre-border: darken($base02, 5);
-//$pre-color: $base1;
+// Border colors
+$article-border: #e2e8f0;
+$type-border: #e2e8f0;
+
+// Footer colors
+$footer-bg: $tertiary-color;
+$footer-color: $text-color-light;
+$footer-bg-front: none;
+$footer-bg-back: none;
+
+// Sidebar colors
+$sidebar-link-color: $text-color;
+$sidebar-link-color-hover: $primary-color;
+
+// Syntax highlighting - using light theme
+$solarized: light;
+
+// Code block colors
+$pre-bg: #f1f5f9;
+$pre-border: #e2e8f0;
+$pre-color: $text-color;

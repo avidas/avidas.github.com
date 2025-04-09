@@ -1,2 +1,329 @@
-// This File is imported last, and will override other styles in the cascade
-// Add styles here to make changes without digging in too much
+// 2025 Modern Additional Styles - This file is imported last to override other styles
+
+// Card style for posts in index page
+.blog-index article {
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 2em;
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+}
+
+// Modern blockquote
+blockquote {
+  background-color: #f8fafc;
+  border-left: 4px solid $primary-color;
+  padding: 1em 1.5em;
+  border-radius: 0 8px 8px 0;
+  position: relative;
+  margin: 1.5em 0;
+  
+  &:before {
+    content: "\201C";
+    font-size: 4em;
+    color: rgba($primary-color, 0.2);
+    position: absolute;
+    top: -0.2em;
+    left: 0.1em;
+    font-family: $serif;
+  }
+  
+  cite {
+    display: block;
+    margin-top: 1em;
+    font-weight: 500;
+    
+    &:before {
+      content: "— ";
+    }
+  }
+}
+
+// Modern pagination
+.pagination {
+  margin: 2em 0;
+  padding: 1em 0;
+  text-align: center;
+  
+  a, .current-page {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 0 0.2em;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+  
+  a {
+    background: #f1f5f9;
+    color: $text-color;
+    border: 1px solid #e2e8f0;
+    
+    &:hover {
+      background: white;
+      color: $primary-color;
+      border-color: $primary-color;
+      text-decoration: none;
+    }
+  }
+  
+  .current-page {
+    background: $primary-color;
+    color: white;
+    border: 1px solid $primary-color;
+  }
+  
+  .disabled {
+    color: $text-color-light;
+    border-color: #e2e8f0;
+    background: #f8fafc;
+    cursor: not-allowed;
+    
+    &:hover {
+      color: $text-color-light;
+      border-color: #e2e8f0;
+      background: #f8fafc;
+    }
+  }
+}
+
+// Modern sharing buttons
+.sharing {
+  margin: 2em 0;
+  
+  a {
+    display: inline-block;
+    margin-right: 0.5em;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    font-weight: 500;
+    color: white;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      text-decoration: none;
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+    
+    i {
+      margin-right: 0.3em;
+    }
+  }
+  
+  .twitter {
+    background-color: #1DA1F2;
+  }
+  
+  .facebook {
+    background-color: #4267B2;
+  }
+  
+  .linkedin {
+    background-color: #0077B5;
+  }
+  
+  .reddit {
+    background-color: #FF4500;
+  }
+}
+
+// Tables
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  
+  th {
+    background-color: #f1f5f9;
+    text-align: left;
+    padding: 0.8em 1em;
+    font-weight: 600;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  
+  td {
+    padding: 0.8em 1em;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  tr:last-child td {
+    border-bottom: none;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f8fafc;
+  }
+  
+  tr:hover {
+    background-color: #f1f5f9;
+  }
+}
+
+// Code improvements
+code {
+  background-color: #f1f5f9;
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+  font-family: $mono;
+  font-size: 0.9em;
+  color: $secondary-color;
+  border: 1px solid #e2e8f0;
+}
+
+// Image improvements
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+// Sidebar improvements
+aside.sidebar {
+  section {
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+    
+    h1 {
+      font-size: 1.2em;
+      font-weight: 600;
+      margin-bottom: 1em;
+      color: $secondary-color;
+      letter-spacing: -0.01em;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.5em;
+    }
+    
+    ul {
+      margin-bottom: 0;
+      
+      li {
+        border-bottom: 1px solid #f1f5f9;
+        padding: 0.5em 0;
+        
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+// Dark mode toggle button
+.dark-mode-toggle {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  i {
+    font-size: 1.2em;
+  }
+}
+
+// Dark mode support (enabled/disabled via JS)
+:root.dark-mode {
+  --bg-color: #0f172a;
+  --main-bg: #1e293b;
+  --text-color: #f8fafc;
+  --text-color-light: #94a3b8;
+  --link-color: #3b82f6;
+  --border-color: #334155;
+  --code-bg: #1e293b;
+  --blockquote-bg: #1e293b;
+  --table-alt-bg: #1e293b;
+  --table-border: #334155;
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  a {
+    color: var(--link-color);
+  }
+  
+  body > div {
+    background: var(--bg-color) !important;
+    > div {
+      background: var(--main-bg) !important;
+    }
+  }
+  
+  article {
+    border-color: var(--border-color);
+  }
+  
+  code {
+    background-color: var(--code-bg);
+    border-color: var(--border-color);
+  }
+  
+  blockquote {
+    background-color: var(--blockquote-bg);
+    border-color: var(--link-color);
+  }
+  
+  table {
+    border-color: var(--table-border);
+    
+    th {
+      background-color: var(--code-bg);
+      border-color: var(--border-color);
+    }
+    
+    td {
+      border-color: var(--border-color);
+    }
+    
+    tr:nth-child(even) {
+      background-color: var(--table-alt-bg);
+    }
+  }
+  
+  aside.sidebar section {
+    background-color: var(--main-bg);
+    border-color: var(--border-color);
+  }
+  
+  .pagination a {
+    background-color: var(--code-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+    
+    &:hover {
+      background-color: var(--link-color);
+      color: white;
+    }
+  }
+  
+  .dark-mode-toggle {
+    color: white;
+  }
+}

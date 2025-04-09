@@ -1,21 +1,198 @@
-// Here you can easily change your sites's layout.
-// To give it a try, uncomment some of the lines below, make changes, rebuild your blog, and see how it works.
+// Modern layout improvements for 2025
 
-//$header-font-size: 1em;
-//$header-padding-top: 1.5em;
-//$header-padding-bottom: 1.5em;
-
-//$max-width: 1350px;
-//$indented-lists: true;
+// Layout variables
+$max-width: 1200px;
+$indented-lists: true;
 
 // Padding used for layout margins
-//$pad-min: 18px;
-//$pad-narrow: 25px;
-//$pad-medium: 35px;
-//$pad-wide: 55px;
+$pad-min: 20px;
+$pad-narrow: 30px;
+$pad-medium: 40px;
+$pad-wide: 60px;
 
 // Sidebar widths used in media queries
-//$sidebar-width-medium: 240px;
-//$sidebar-pad-medium: 15px;
-//$sidebar-pad-wide: 20px;
-//$sidebar-width-wide: 300px;
+$sidebar-width-medium: 260px;
+$sidebar-pad-medium: 20px;
+$sidebar-pad-wide: 25px;
+$sidebar-width-wide: 320px;
+
+// Remove textured backgrounds
+html {
+  background: $page-bg !important;
+}
+
+body {
+  > div {
+    background: $page-bg !important;
+    border-bottom: none !important;
+    > div {
+      background: $main-bg !important;
+      border-right: none !important;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      border-radius: 8px;
+      margin-bottom: 2em;
+    }
+  }
+}
+
+// Modern header
+body > header {
+  background: $header-bg !important;
+  border-radius: 8px 8px 0 0;
+  padding: 2.5em 0;
+  text-align: center;
+  
+  h1 {
+    font-size: 2.8em;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    a {
+      transition: all 0.2s ease;
+      &:hover {
+        text-decoration: none;
+        opacity: 0.8;
+      }
+    }
+  }
+  
+  h2 {
+    font-weight: 400;
+    font-size: 1.1em;
+  }
+}
+
+// Clean navigation
+nav {
+  border: none !important;
+  background: none !important;
+  padding: 1.5em 0 !important;
+  margin-bottom: 1em !important;
+  
+  form.search {
+    padding-left: 0;
+    input.search {
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      color: $text-color;
+      transition: all 0.2s ease;
+      
+      &:focus {
+        background: white;
+        border-color: $primary-color;
+        box-shadow: 0 0 0 3px rgba($primary-color, 0.2);
+      }
+    }
+  }
+  
+  ul.main-navigation {
+    a {
+      font-weight: 500;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        background: rgba($primary-color, 0.1);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// Article improvements
+article {
+  padding: 2em !important;
+  margin-bottom: 2em;
+  
+  header {
+    h1 {
+      margin-bottom: 0.5em;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      
+      a {
+        transition: all 0.2s ease;
+        
+        &:hover {
+          text-decoration: none;
+          color: $primary-color;
+        }
+      }
+    }
+    
+    p.meta {
+      color: $text-color-light;
+      margin-bottom: 1.5em;
+    }
+  }
+}
+
+// Better code blocks
+figure.code {
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid $pre-border;
+  
+  pre {
+    border-radius: 4px;
+    padding: 1em;
+    
+    code {
+      font-family: $mono;
+      font-size: 0.9em;
+    }
+  }
+}
+
+// Buttons and inputs
+input, button, .button {
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  font-family: $sans;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+// Better footer
+footer {
+  background: none !important;
+  border-top: none !important;
+  padding: 1.5em 0 3em !important;
+  color: $text-color-light;
+  text-align: center;
+  font-size: 0.9em;
+  
+  p {
+    margin-bottom: 0.5em;
+  }
+}
+
+// Responsive improvements
+@media only screen and (min-width: 992px) {
+  body > header {
+    padding: 3em 0;
+    
+    h1 {
+      font-size: 3.2em;
+    }
+  }
+  
+  article {
+    padding: 3em !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body > header {
+    padding: 2em 0;
+    
+    h1 {
+      font-size: 2.4em;
+    }
+  }
+  
+  article {
+    padding: 1.5em !important;
+  }
+}

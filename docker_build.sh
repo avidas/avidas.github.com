@@ -1,10 +1,13 @@
+#!/bin/bash
+
+# Create an explicitly defined Gemfile.lock to force a specific version
+cat > /tmp/Gemfile.lock.forced << 'EOF'
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     RedCloth (4.2.9)
-    RedCloth (4.2.9-x86-mingw32)
     chunky_png (1.3.5)
-    classifier (1.3.4)
+    classifier (1.3.3)
       fast-stemmer (>= 1.0.0)
     compass (0.12.7)
       chunky_png (~> 1.2)
@@ -43,11 +46,9 @@ GEM
     stringex (1.4.0)
     tilt (1.4.1)
     yajl-ruby (1.1.0)
-    yajl-ruby (1.1.0-x86-mingw32)
 
 PLATFORMS
   ruby
-  x86-mingw32
 
 DEPENDENCIES
   RedCloth (~> 4.2.9)
@@ -63,3 +64,40 @@ DEPENDENCIES
   rubypants (~> 0.2.0)
   sinatra (~> 1.3.3)
   stringex (~> 1.4.0)
+
+BUNDLED WITH
+   1.17.3
+EOF
+
+# Create a script to run inside the Docker container
+cat > /tmp/run_in_docker.sh << 'EOF'
+#!/bin/bash
+set -e
+
+cd /app
+
+# Use the forced Gemfile.lock
+cp /tmp/Gemfile.lock.forced Gemfile.lock
+
+# Install dependencies
+apt-get update && apt-get install -y make gcc g++ python2.7
+ln -sf /usr/bin/python2.7 /usr/bin/python
+
+# Install a compatible bundler
+gem install bundler -v 1.17.3
+
+# Install dependencies
+bundle _1.17.3_ install
+
+# Generate the site
+bundle exec rake generate
+
+# Show the generated files
+echo "Site successfully generated. Files in the public directory:"
+ls -la public/
+EOF
+
+chmod +x /tmp/run_in_docker.sh
+
+# Run the Docker container with Ruby 2.0
+docker run --rm -v $(pwd):/app -v /tmp/Gemfile.lock.forced:/tmp/Gemfile.lock.forced -v /tmp/run_in_docker.sh:/tmp/run_in_docker.sh ruby:2.0 /tmp/run_in_docker.sh

@@ -1,5 +1,23 @@
 # Octopress Changelog
 
+## 3.0 (2025 Modern Update)
+
+- Complete design modernization for 2025 aesthetic
+- Modern color palette with primary blue and neutral tones
+- Updated typography with Inter and JetBrains Mono fonts
+- Cleaned up layout with modern spacing and borders
+- Added dark mode with system preference detection and toggle
+- Enhanced responsive design for modern devices
+- Improved card-style blog post design
+- Modern sharing features with LinkedIn and Reddit support
+- Added smooth animation effects for content
+- Image zoom functionality for better visual experience
+- Reading time estimates for articles
+- Improved table and code block styling
+- Better accessibility with modern contrast ratios
+- Enhanced blockquote styling
+- Mobile-first approach with better small screen experience
+
 ## 2.0
 
 - Now based on [mojombo/jekyll](http://github.com/mojombo/jekyll)
